@@ -33,9 +33,7 @@
 						</h1>
 					</div>
 					<div id="tagline">Лична Интернет Страница</div>
-					</div>
-					
-										
+					</div>									
 			</div>						
 			<div id="content">
 				<div id="main">
@@ -45,7 +43,7 @@
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
-							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="5px" ImageAlign="Left" />                                							
+							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="7px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" Text="Label"></asp:Label>
 							</div>
 						</div>

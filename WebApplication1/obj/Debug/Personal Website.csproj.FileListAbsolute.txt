@@ -1,0 +1,6 @@
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\bin\WebApplication1.dll
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Debug\Personal Website.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.pdb
