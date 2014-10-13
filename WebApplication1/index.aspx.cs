@@ -35,58 +35,102 @@ namespace WebApplication1
             "<br><br>Френски – четене - основно, писане - основно, разговор - основно.<br><br><hr><br><br><h1>Трудов опит</h1><br><br>12/2009 - 07/2014 Сътрудник" +
             " впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\".<br><br>11/2012 - 04/2013 Оператор въвеждане на данни в “Highstyle” Ltd." +
             "<br><br><hr><br><br><h1>Други</h1><br><br><b>Езици за програмиране:</b><br><br>C#, C++, Java, JavaScript...<br><br><b>Технологии и стандарти:</b>" +
-            "<br><br>HTML/DHTML, CSS, ASP.NET, ADO.NET, jQuery, MySQL...<br><br><b>Програми:</b><br><br>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
+            "<br><br>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br><br><b>Програми:</b><br><br>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
+
+        string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             mainContent.Text = aboutMeBul;
+            visibilities();
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
             mainContent.Text = aboutMeEng;
             lang.Text = "English";
-            title.Text = "About me";
+            artTitle.Text = "About me";
             navigation.Text = "Navigation";
-            ivanpopov.Visible = false;
+            visibilities();
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
         {
             mainContent.Text = aboutMeBul;
             lang.Text = "Български";
-            title.Text = "За мен";
+            artTitle.Text = "За мен";
             navigation.Text = "Навигация";
-            ivanpopov.Visible = false;
+            visibilities();
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
         {
             mainContent.Text = aboutMeBul;
             lang.Text = "Български";
-            title.Text = "За мен";
+            artTitle.Text = "За мен";
             navigation.Text = "Навигация";
-            ivanpopov.Visible = false;
+            visibilities();
         }
 
         protected void biography_Click(object sender, EventArgs e)
         {
             mainContent.Text = biographyBul;
             lang.Text = "Български";
-            title.Text = "Автобиография";
+            artTitle.Text = "Автобиография";
             navigation.Text = "Навигация";
-            ivanpopov.Visible = true;            
+            visibilities();
         }
 
         protected void projects_Click(object sender, EventArgs e)
         {
-            ivanpopov.Visible = false;
+            mainContent.Text = projectsBul;
+            lang.Text = "Български";
+            artTitle.Text = "Проекти";
+            navigation.Text = "Навигация";
+            visibilities();
         }
 
         protected void contacts_Click(object sender, EventArgs e)
         {
-            ivanpopov.Visible = false;
+            lang.Text = "Български";
+            artTitle.Text = "Контакти";
+            navigation.Text = "Навигация";
+            visibilities();
+        }
+
+        protected void visibilities()
+        {
+            if (artTitle.Text == "Автобиография")
+            {
+                ivanpopov.Visible = true;
+            }
+            else
+            {
+                ivanpopov.Visible = false;
+            }
+
+            if (artTitle.Text == "Проекти")
+            {
+                converter.Visible = true;
+                countdown.Visible = true;
+                ryu.Visible = true;
+                projectsContent.Visible = true;
+            }
+            else
+            {
+                converter.Visible = false;
+                countdown.Visible = false;
+                ryu.Visible = false;
+                projectsContent.Visible = false;
+                projectsContent.Text = "";
+            }
+        }
+
+        protected void converter_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = "ajaj";
+            mainContent.Text = projectsBul;
         }
         
     }

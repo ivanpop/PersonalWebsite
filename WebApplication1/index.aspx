@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebApplication1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -6,19 +6,19 @@
 <head runat="server">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<title>Иван Попов</title>
-	<link rel="shortcut icon" href="resources\favicon.ico" type="image/x-icon">
-	<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/">	
-	<meta name="description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя.">
-	<meta name="dcterms.description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя.">
-	<meta name="keywords" content="Ivan Popov ,Иван Попов">
+	<link rel="shortcut icon" href="resources\favicon.ico" type="image/x-icon" />
+	<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />	
+	<meta name="description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
+	<meta name="dcterms.description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
+	<meta name="keywords" content="Ivan Popov ,Иван Попов" />
 	<meta name="geo.region" content="BG-16" />
 	<meta name="geo.placename" content="Plovdiv" />
 	<meta name="geo.position" content="42.135408;24.74529" />
 	<meta name="ICBM" content="42.135408, 24.74529" />
-	<link rel="canonical" href="http://ivanpop.altervista.org/bg">
-	<meta name="revisit-after" content="1 day">
-	<meta name="dcterms.publisher" content="Ivan Popov">
-	<link type="text/css" rel="stylesheet" media="all" href="Resources/css_styles.css">
+	<link rel="canonical" href="http://ivanpop.altervista.org/bg" />
+	<meta name="revisit-after" content="1 day" />
+	<meta name="dcterms.publisher" content="Ivan Popov" />
+	<link type="text/css" rel="stylesheet" media="all" href="Resources/css_styles.css" />
 	<script type="text/javascript" src="resources/jquery-2.1.1.js"></script>
 </head>
 
@@ -38,13 +38,17 @@
 			<div id="content">
 				<div id="main">
 					<h1 class="title">
-                        <asp:Label ID="title" runat="server" Text="За мен"></asp:Label><br><br>
+                        <asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label><br><br>
 					</h1>
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
 							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="7px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" Text="Label"></asp:Label>
+							    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />&nbsp;&nbsp;&nbsp;
+                                <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" />&nbsp;&nbsp;&nbsp;
+                                <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" />
+							    <asp:Label ID="projectsContent" runat="server" Text="Label"></asp:Label>
 							</div>
 						</div>
 					</div>
