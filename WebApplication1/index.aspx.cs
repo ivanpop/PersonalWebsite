@@ -38,6 +38,11 @@ namespace WebApplication1
             "<br><br>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br><br><b>Програми:</b><br><br>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
+        string converterText = "<br><br><h1>Converter</h1><br><em>Програма за преобразуване на мерни единици.</em><br><br>Програмата е написана на" +
+            " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br>" +
+            "<img src=\"/Resources/convertor1.jpg\"><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\">" +
+            "<b><u>Github</u></b></a>";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -129,7 +134,7 @@ namespace WebApplication1
 
         protected void converter_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = "ajaj";
+            projectsContent.Text = converterText;
             mainContent.Text = projectsBul;
         }
         

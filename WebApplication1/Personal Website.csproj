@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\bg.jpg" />
+    <Content Include="Resources\convertor1.jpg" />
     <Content Include="Resources\css_styles.css" />
     <Content Include="Resources\header_footer.jpg" />
     <Content Include="Resources\icons.gif" />
