@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\bg.jpg" />
+    <Content Include="Resources\convertor.exe" />
     <Content Include="Resources\convertor1.jpg" />
     <Content Include="Resources\css_styles.css" />
     <Content Include="Resources\header_footer.jpg" />
@@ -73,7 +74,7 @@
     <Content Include="Resources\ivanpopov.jpg" />
     <Content Include="Resources\light.gif" />
     <Content Include="Resources\menu-leaf.png" />
-    <Content Include="Resources\menu.gif" />
+    <Content Include="Resources\mime-16.png" />
     <Content Include="Resources\sidesep.gif" />
     <Content Include="Resources\widgetsep.png" />
     <Content Include="Web.config" />

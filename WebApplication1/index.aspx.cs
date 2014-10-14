@@ -23,11 +23,11 @@ namespace WebApplication1
             "степен, в същия университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br><br>&nbsp;От декември 2009г, четири месеца след"+
             " записването ми в &nbsp;университета, работя в магазин \"Метро Пловдив 2\", от &nbsp;начало като обикновен сътрудник и впоследствие " +
             "като &nbsp;продуктов консултант.<br><br>&nbsp;Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
-            "работния ден и приоритизирам задачите си.<br><br>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\">"+
-            "<b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\">" +
-            "<b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\">" +
-            "<b><u>Github</u></b></a><br><br>Като хоби имам YouTube канал, в който качвам кадри от игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)" + 
-            "<a href=\"https://www.youtube.com/user/unfragablegaming/\">" + "<b><u>Unfragable Gaming</u></b></a><br><br>Целта ми е да работя в IT-сферата " + 
+            "работния ден и приоритизирам задачите си.<br><br>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
+            "<b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\">" +
+            "<b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><br><br>Като хоби имам YouTube канал, в който качвам кадри от игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)" +
+            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br><br>Целта ми е да работя в IT-сферата " + 
             "и да продължавам да си развивам уменията на програмист.<br><br><hr><br><br><h1>Образование</h1><br><br>2014 г. ПУ \"Паисий Хилендарски\" " + 
             "- Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br><br>2013 г. ПУ \"Паисий Хилендарски\" - Пловдив, " + 
             " висше образование, степен бакалавър, специалност \"Информатика\".<br><br>1997 г. ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br><br> " +
@@ -40,8 +40,10 @@ namespace WebApplication1
 
         string converterText = "<br><br><h1>Converter</h1><br><em>Програма за преобразуване на мерни единици.</em><br><br>Програмата е написана на" +
             " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br>" +
-            "<img src=\"/Resources/convertor1.jpg\"><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\">" +
-            "<b><u>Github</u></b></a>";
+            "<img src=\"/Resources/convertor1.jpg\"><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">converter.exe</a></td><td class=\"size\">49.0 KB</td> " + 
+            " </tr></tbody></table>";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
 
