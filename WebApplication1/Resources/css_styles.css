@@ -145,7 +145,6 @@ td.revision-current{background:#ffc;}
 fieldset{margin-bottom:1em;padding:.5em;}
 form{margin:0;padding:0;}
 hr{height:2px;border:2px solid grey;}
-img{border:0;}
 table{border-collapse:collapse;}
 th{text-align:left;padding-right:1em;border-bottom:3px solid #ccc;}
 .clear-block:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
@@ -558,3 +557,4 @@ ul.pager{padding:10px 0 0 5px;}
 .node{clear:left;margin-bottom:40px;}
 .block-addtoany img{padding:0;}
 span.tab{padding: 0 15px;}
+img {border:2px solid #021a40;padding: 1px;}

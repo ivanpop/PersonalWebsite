@@ -68,7 +68,10 @@
     <Content Include="Resources\bg.jpg" />
     <Content Include="Resources\convertor.exe" />
     <Content Include="Resources\convertor1.jpg" />
+    <Content Include="Resources\countdown timer.exe" />
     <Content Include="Resources\css_styles.css" />
+    <Content Include="Resources\CT1.jpg" />
+    <Content Include="Resources\CT2.jpg" />
     <Content Include="Resources\header_footer.jpg" />
     <Content Include="Resources\icons.gif" />
     <Content Include="Resources\ivanpopov.jpg" />

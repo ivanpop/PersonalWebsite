@@ -21,8 +21,8 @@ namespace WebApplication1
             "Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г. &nbsp;"+
             "със специалност \"Информатика\".<br><br>&nbsp;Непосредствено след завършването си записах магистърска &nbsp;"+
             "степен, в същия университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br><br>&nbsp;От декември 2009г, четири месеца след"+
-            " записването ми в &nbsp;университета, работя в магазин \"Метро Пловдив 2\", от &nbsp;начало като обикновен сътрудник и впоследствие " +
-            "като &nbsp;продуктов консултант.<br><br>&nbsp;Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
+            " записването ми в &nbsp;университета, работя в магазин \"Метро Пловдив 2\", от начало &nbsp;като обикновен сътрудник и впоследствие " +
+            "като продуктов &nbsp;консултант.<br><br>&nbsp;Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
             "работния ден и приоритизирам задачите си.<br><br>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
             "<b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\">" +
             "<b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
@@ -39,10 +39,19 @@ namespace WebApplication1
             "MS Visual Studio 2013 for Web, Notepad++;<br>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
         string converterText = "<br><br><h1>Converter</h1><br><em>Програма за преобразуване на мерни единици.</em><br><br>Програмата е написана на" +
-            " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br>" +
-            "<img src=\"/Resources/convertor1.jpg\"><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
+            " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br><br>" +
+            "<img src=\"/Resources/convertor1.jpg\"><br><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">converter.exe</a></td><td class=\"size\">49.0 KB</td> " + 
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " + 
+            " </tr></tbody></table>";
+
+        string stopwatchText = "<br><br><h1>Countdown timer and stopwatch</h1><br><em>Обратно броене и секундомер.</em><br><br>Написана е на C# и представлява програма " + 
+            " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " + 
+            "Перфектна програма, ако често варите яйца или готвите. ;) <br> Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " + 
+            "записване на времената на обиколките като текстов файл.<br>Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br><br>" +
+            "<img src=\"/Resources/CT1.jpg\"><br><br><img src=\"/Resources/CT2.jpg\"><br><br><b>Source: </b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\">" + 
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
             " </tr></tbody></table>";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
@@ -139,6 +148,11 @@ namespace WebApplication1
             projectsContent.Text = converterText;
             mainContent.Text = projectsBul;
         }
-        
+
+        protected void countdown_Click1(object sender, EventArgs e)
+        {
+            projectsContent.Text = stopwatchText;
+            mainContent.Text = projectsBul;
+        }       
     }
 }

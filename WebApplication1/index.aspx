@@ -43,10 +43,10 @@
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
-							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="7px" ImageAlign="Left"  />                                							
+							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" Text="Label"></asp:Label>
 							    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" />&nbsp;&nbsp;&nbsp;
+                                <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" />
 							    <asp:Label ID="projectsContent" runat="server" Text="Label"></asp:Label>
 							</div>
