@@ -78,6 +78,9 @@
     <Content Include="Resources\light.gif" />
     <Content Include="Resources\menu-leaf.png" />
     <Content Include="Resources\mime-16.png" />
+    <Content Include="Resources\ryu1.png" />
+    <Content Include="Resources\ryu2.jpg" />
+    <Content Include="Resources\ryu3.png" />
     <Content Include="Resources\sidesep.gif" />
     <Content Include="Resources\widgetsep.png" />
     <Content Include="Web.config" />

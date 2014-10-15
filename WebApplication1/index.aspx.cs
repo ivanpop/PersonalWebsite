@@ -38,14 +38,14 @@ namespace WebApplication1
             "<br><br>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br><br><b>Програми:</b><br><br>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
-        string converterText = "<br><br><h1>Converter</h1><br><em>Програма за преобразуване на мерни единици.</em><br><br>Програмата е написана на" +
+        string converterTextBul = "<br><br><h1>Converter</h1><br><em>Програма за преобразуване на мерни единици.</em><br><br>Програмата е написана на" +
             " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br><br>" +
             "<img src=\"/Resources/convertor1.jpg\"><br><br><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " + 
             " </tr></tbody></table>";
 
-        string stopwatchText = "<br><br><h1>Countdown timer and stopwatch</h1><br><em>Обратно броене и секундомер.</em><br><br>Написана е на C# и представлява програма " + 
+        string stopwatchTextBul = "<br><br><h1>Countdown timer and stopwatch</h1><br><em>Обратно броене и секундомер.</em><br><br>Написана е на C# и представлява програма " + 
             " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " + 
             "Перфектна програма, ако често варите яйца или готвите. ;) <br> Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " + 
             "записване на времената на обиколките като текстов файл.<br>Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br><br>" +
@@ -54,8 +54,22 @@ namespace WebApplication1
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
             " </tr></tbody></table>";
 
-        string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
+        string ryuTextBul1 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "<h3><span class=\"tab\">Описание</span></h3><br><b>Ryu: The Big Adventure</b> е подобие на аркадните игри <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> и още много други." +
+            "<br><br><h3><span class=\"tab\">Функции</span></h3><br>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален beat 'em up симулатор." + 
+            " Beat 'em up е жанр в компютърните игри, който включва ръкопашен бой между главният герой и голям брой врагове. Игрите са най-често 2D, като героят се движи хоризонтално" +
+            " по нивото, в посока надясно. Тези игри са познати с простия си и лесен за научаване геймплей, като първата подобна игра датира от 1984г.<br>При стартиране на играта, " +
+            "потребителя влиза в ролята на героят Ryu, който има за цел да победи всички врагове в нивото.<br>Ryu е герой от видео игри, създаден от Capcom още през 1987 година, играещ " +
+            " основна роля в Street Fighter серията. Той владее бойни изкуства смесени с изкуствата на убиец.Освен върховните си умения в ръкопашният бой, Ryu разполага и с някои уникални" +
+            " умения към арсенала си.<br><br><li><b>Hadouken</b> - В превод „Юмрук от енергия“.Това е вълна от енергия, която Ryu изстрелва от ръцете си, за да покоси врагове, които се намират на" +
+            " разстояние от него. За да изпълни това умение Ryu трябва да има достатъчно вътрешна енергия или MP (Magic Points).<br><img src=\"/Resources/ryu3.png\"><br>" +
+            "</li><br><li><b>Shoryuken</b> - В превод „Издигащ се драконов юмрук“, е друго 	специално умение, предназначено за близък бой. Ryu 	използва юмрука си за да се изстреля нагоре " +
+            "и така да нанесе убийствен ъперкът към противника, който се намира непосредствено до него. Както Hadouken и Shoryuken изисква 	вътрешна енергия.<br><img src=\"/Resources/ryu1.png\"><br></li>" +
+            "<br><li><b>Tatsumaki</b> - В превод „Торнадо“. Ryu има умението да скочи и да изпълни торнадо от ритници докато е във въздуха. Това е най-силната атака на Ryu и изисква най-много" +
+            " вътрешна 	енергия.<br><img src=\"/Resources/ryu2.jpg\"><br><br></li><span class=\"tab\"></span>Страница:&nbsp;";
 
+        string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             mainContent.Text = aboutMeBul;
@@ -141,18 +155,44 @@ namespace WebApplication1
                 projectsContent.Visible = false;
                 projectsContent.Text = "";
             }
+
+            ryuPages(0);
         }
 
         protected void converter_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = converterText;
+            projectsContent.Text = converterTextBul;
             mainContent.Text = projectsBul;
+            visibilities();
         }
 
         protected void countdown_Click1(object sender, EventArgs e)
         {
-            projectsContent.Text = stopwatchText;
+            projectsContent.Text = stopwatchTextBul;
             mainContent.Text = projectsBul;
-        }       
+            visibilities();
+        }
+
+        protected void ryu_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul1;
+            mainContent.Text = projectsBul;            
+            ryuPages(1);
+        }
+
+        protected void ryuPages(int page)
+        {            
+            if (page == 1)
+            {
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;                
+            }
+            if (page == 0)
+            {
+                ryuPage1.Visible = false;
+                ryuPage2.Visible = false; 
+            }          
+        }
+        
     }
 }

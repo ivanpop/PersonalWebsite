@@ -47,8 +47,10 @@
 							    <asp:Label ID="mainContent" runat="server" Text="Label"></asp:Label>
 							    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" />&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" />
+                                <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" OnClick="ryu_Click" />
 							    <asp:Label ID="projectsContent" runat="server" Text="Label"></asp:Label>
+							    <asp:Button ID="ryuPage1" runat="server" Enabled="False" Text="1" Visible="False" Width="20px" />
+                                <asp:Button ID="ryuPage2" runat="server" Text="2" Visible="False" Width="20px" />
 							</div>
 						</div>
 					</div>
