@@ -119,6 +119,7 @@ namespace WebApplication1
             artTitle.Text = "Проекти";
             navigation.Text = "Навигация";
             visibilities();
+            projectsContent.Text = "";
         }
 
         protected void contacts_Click(object sender, EventArgs e)
@@ -162,21 +163,21 @@ namespace WebApplication1
         protected void converter_Click(object sender, EventArgs e)
         {
             projectsContent.Text = converterTextBul;
-            mainContent.Text = projectsBul;
+            mainContent.Text = "";
             visibilities();
         }
 
         protected void countdown_Click1(object sender, EventArgs e)
         {
             projectsContent.Text = stopwatchTextBul;
-            mainContent.Text = projectsBul;
+            mainContent.Text = "";
             visibilities();
         }
 
         protected void ryu_Click(object sender, EventArgs e)
         {
             projectsContent.Text = ryuTextBul1;
-            mainContent.Text = projectsBul;            
+            mainContent.Text = "";            
             ryuPages(1);
         }
 
