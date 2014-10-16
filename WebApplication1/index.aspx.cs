@@ -66,7 +66,11 @@ namespace WebApplication1
             "</li><br><li><b>Shoryuken</b> - В превод „Издигащ се драконов юмрук“, е друго 	специално умение, предназначено за близък бой. Ryu 	използва юмрука си за да се изстреля нагоре " +
             "и така да нанесе убийствен ъперкът към противника, който се намира непосредствено до него. Както Hadouken и Shoryuken изисква 	вътрешна енергия.<br><img src=\"/Resources/ryu1.png\"><br></li>" +
             "<br><li><b>Tatsumaki</b> - В превод „Торнадо“. Ryu има умението да скочи и да изпълни торнадо от ритници докато е във въздуха. Това е най-силната атака на Ryu и изисква най-много" +
-            " вътрешна 	енергия.<br><img src=\"/Resources/ryu2.jpg\"><br><br></li><span class=\"tab\"></span>Страница:&nbsp;";
+            " вътрешна 	енергия.<br><img src=\"/Resources/ryu2.jpg\">";
+
+        string ryuTextBul2 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "Вътрешната енергия се изобразява в долният ляв ъгъл на екрана, под формата на 8 сини правоъгълника, обозначени с MP. Тя е нужна за изпълнението на специалните " +
+            " умения на Ryu. След нейното използване, енергията се запълва по малко, с времето. Когато героят няма достатъчно енергия, той не може да изпълнява специалните си умения.";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
@@ -74,6 +78,7 @@ namespace WebApplication1
         {
             mainContent.Text = aboutMeBul;
             visibilities();
+            pageLbl.Text = "<br><br>Страница: ";
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
@@ -186,13 +191,39 @@ namespace WebApplication1
             if (page == 1)
             {
                 ryuPage1.Visible = true;
-                ryuPage2.Visible = true;                
+                ryuPage2.Visible = true;
+                pageLbl.Visible = true;
             }
             if (page == 0)
             {
                 ryuPage1.Visible = false;
-                ryuPage2.Visible = false; 
-            }          
+                ryuPage2.Visible = false;
+                pageLbl.Visible = false;
+            }
+            if (page == 2)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = false;
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;
+                pageLbl.Visible = true;
+            }  
+        }
+
+        protected void ryuPage2_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul2;
+            mainContent.Text = ""; 
+            ryuPages(2);
+        }
+
+        protected void ryuPage1_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul1;
+            mainContent.Text = "";
+            ryuPages(1);
+            ryuPage1.Enabled = false;
+            ryuPage2.Enabled = true;
         }
         
     }

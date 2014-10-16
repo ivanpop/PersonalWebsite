@@ -49,8 +49,9 @@
                                 <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" OnClick="ryu_Click" />
 							    <asp:Label ID="projectsContent" runat="server" Text="Label"></asp:Label>
-							    <asp:Button ID="ryuPage1" runat="server" Enabled="False" Text="1" Visible="False" Width="20px" />
-                                <asp:Button ID="ryuPage2" runat="server" Text="2" Visible="False" Width="20px" />
+							    <asp:Label ID="pageLbl" runat="server" Text="Страница" Visible="False"></asp:Label>
+							    <asp:Button ID="ryuPage1" runat="server" Enabled="False" Text="1" Visible="False" Width="20px" OnClick="ryuPage1_Click" />
+                                <asp:Button ID="ryuPage2" runat="server" Text="2" Visible="False" Width="20px" OnClick="ryuPage2_Click" />
 							</div>
 						</div>
 					</div>
