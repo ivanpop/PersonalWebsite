@@ -103,6 +103,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button ryuPage2;
         
         /// <summary>
+        /// ryuPage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ryuPage3;
+        
+        /// <summary>
         /// navigation control.
         /// </summary>
         /// <remarks>

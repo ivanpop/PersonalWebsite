@@ -88,6 +88,8 @@ namespace WebApplication1
             "елементите на една софтуерна система.<br><br><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"" +
             "target=\"_blank\"><b><u>Оригинален размер</u></b></a>";
 
+        string ryuTextBul3 = "ьтьт";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
         protected void Page_Load(object sender, EventArgs e)
@@ -208,22 +210,39 @@ namespace WebApplication1
             {
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
+                ryuPage3.Visible = true;
                 pageLbl.Visible = true;
             }
             if (page == 0)
             {
                 ryuPage1.Visible = false;
                 ryuPage2.Visible = false;
+                ryuPage3.Visible = false;
+                ryuPage1.Enabled = false;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
             {
                 ryuPage1.Enabled = true;
                 ryuPage2.Enabled = false;
+                ryuPage3.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
+                ryuPage3.Visible = true;
                 pageLbl.Visible = true;
-            }  
+            }
+            if (page == 3)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = false;
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;
+                ryuPage3.Visible = true;                
+                pageLbl.Visible = true;                
+            }
         }
 
         protected void ryuPage2_Click(object sender, EventArgs e)
@@ -240,7 +259,14 @@ namespace WebApplication1
             ryuPages(1);
             ryuPage1.Enabled = false;
             ryuPage2.Enabled = true;
+            ryuPage3.Enabled = true;
         }
-        
+
+        protected void ryuPage3_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul3;
+            mainContent.Text = "";
+            ryuPages(3);
+        }
     }
 }
