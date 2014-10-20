@@ -106,6 +106,32 @@ namespace WebApplication1
             " състояние. То показва информация за създателите на приложението, под формата на слайдващ се нагоре текст. Информацията всъщност представлява едно голямо изображение, което се движи нагоре по екрана" + 
             " през определен интервал от време.";
 
+        string ryuTextBul4 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "<h2>Реализация</h2><br><h3>Play</h3><br><span class=\"tab\"></span>Класът Play е основното състояние на играта. В него са реализирани главният герой, " +
+            "враговете му, структурата на нивото, обектите по картата и взаимоотношението между всички тях.<br><h4>Начална анимация</h4><br>Нивото ни приветства с начална " + 
+            "анимация - „Round One“ и съпътстващ я звук. За целта се използва изображение (round1Image) и мащабиращ ефект, като така се добавя допълнителна динамика. За постигане " + 
+            " на ефекта се използва командата round1Image.draw() заедно с променливата round1Scale, която отговаря за мащаба на изображението. Когато използваме командата round1Scale++;" + 
+            " в update метода, променливата ще се увеличава с единица, с всеки един цикъл. По този начин и мащаба на началното изображение се увеличава и ефекта е постигнат. При стигане" +
+            " до определен мащаб, началната анимация приключва, таймера се включва и потребителя получава контрол над героя.<table><tr><th>public void round1Animation()<br><span class=\"tab\"> " +
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>//round1 animation and sound<br><span class=\"tab\"></span><span class=\"tab\"></span>if (round1Bool)<br><span class=\"tab\">" + 
+            "</span><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Scale += 4;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>if (round1Scale >= 100 && round1Scale <= 105 && Menu.soundOn)<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"> " + 
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Snd.play(1, Menu.soundVolume);<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span> " +
+            "<span class=\"tab\"></span>if (round1Scale >= 600 && round1Scale <= 610)<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span> " +
+            "<span class=\"tab\"></span>round1Bool = false;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>enableInput = true;<br><span class=\"tab\"></span><span class " +
+            "=\"tab\"></span><span class=\"tab\"></span>round1Scale = 1;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><br><span class=\"tab\"> " + 
+            "</span>Методът е round1Animation(). round1Bool се грижи за приключването на анимацията. При достигане на размер 100 се включва съпътстващият звук, а при достигане на размер 600 анимацията приключва. " + 
+            " Освен за началната анимация и звук, при изпълнението на метода се променя и трудността на противниците, според въведената настройка за трудност в менюто за настройки. enableInput булевата се използва " + 
+            "за позволяване и забраняване на управлението на героя. Освен при началото на играта, булевата се използва и на други места, като по време на менюто за пауза.<br><br><h3>Карта на нивото</h3><br>" +
+            "<span class=\"tab\"></span>Картата представлява едно голямо изображение със зелен фон наподобяващ трева. Първо, изображението е оразмерено до точната големина, за да се получи достатъчно продължително ниво. Освен тревата" + 
+            " имаме и гора, от горната и долната част. Тази гора представлява обструкция, която има за цел да не позволява на героя да излиза извън границите на нивото. Гората е изградена от един единствен спрайт " +
+            " на дърво. Спрайтът е взет от сайтът <a href=\"http://www.deviantart.com\" target=\"_blank\">" +
+            "<b><u>www.deviantart.com</u></b></a>, сайт за публикуване на произведения на изкуството, на потребители от цял свят.<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>" +
+            "<span class=\"tab\"></span><span class=\"tab\"></span><img src=\"/Resources/ryu7.png\" width=\"300\"><br><span class=\"tab\"></span>След намиране на подходящият спрайт, с помощта на Photoshop, дървото" + 
+            " се дублира многократно, за да се постигне ефект на гора. Процесът по изграждането на нивото е сравнително лесен, но изображението трябва да е в .png формат, поради лимитация на slick2D. Това означава," +
+            " че крайният резултат от картата е файл с размер от 10MB или близо 3 пъти по-голям от еквивалента си в .jpg формат.<br><span class=\"tab\"></span>При създаване на картата, създаваме и две променливи – " + 
+            "shiftX и shiftY. Те се използват за да движат изображението в прозореца на програмата. Така когато движим героя, ние всъщност движим картата под него. Неговите координати си остават едни и същи, но получаваме ефект на движение на героя.";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
         protected void Page_Load(object sender, EventArgs e)
@@ -227,6 +253,7 @@ namespace WebApplication1
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
                 pageLbl.Visible = true;
             }
             if (page == 0)
@@ -234,9 +261,11 @@ namespace WebApplication1
                 ryuPage1.Visible = false;
                 ryuPage2.Visible = false;
                 ryuPage3.Visible = false;
+                ryuPage4.Visible = false;
                 ryuPage1.Enabled = false;
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
@@ -244,9 +273,11 @@ namespace WebApplication1
                 ryuPage1.Enabled = true;
                 ryuPage2.Enabled = false;
                 ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
                 pageLbl.Visible = true;
             }
             if (page == 3)
@@ -254,10 +285,24 @@ namespace WebApplication1
                 ryuPage1.Enabled = true;
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = false;
+                ryuPage4.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
-                ryuPage3.Visible = true;                
+                ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
                 pageLbl.Visible = true;                
+            }
+            if (page == 4)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = false;
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;
+                ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
+                pageLbl.Visible = true;
             }
         }
 
@@ -283,6 +328,13 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul3;
             mainContent.Text = "";
             ryuPages(3);
+        }
+
+        protected void ryuPage4_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul4;
+            mainContent.Text = "";
+            ryuPages(4);
         }
     }
 }
