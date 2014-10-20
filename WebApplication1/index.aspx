@@ -38,13 +38,13 @@
 			<div id="content">
 				<div id="main">
 					<h1 class="title">
-                        <asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label><br><br>
+                        <asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label><br/><br/>
 					</h1>
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
 							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
-							    <asp:Label ID="mainContent" runat="server" Text="Label"></asp:Label>
+							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
 							    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" OnClick="ryu_Click" />
@@ -86,29 +86,17 @@
 				<div id="footer">
 					<a id="gotop" href="#">Горе</a>
 					<p>"© 2014" <a href="bg/contact.html">Иван Попов</a>". Всички права са запазени."</p>
-					<br>
+					<br/>
 				</div>
 			</div>
 		</div>
 	</div>	
-	<script type="text/javascript">
-		<!--//--><![CDATA[//><!--
-		window.___gcfg = {lang:"bg"};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
-		//--><!]]>
-	</script>
-	<script type="text/javascript">	
-		<!--//--><![CDATA[//><!--
-		var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-7841815-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
-		//--><!]]>
-	</script>	
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-51152907-1', 'altervista.org');
-		ga('send', 'pageview');
-</script>		
-</form></body>
+</form>
+  <script type='text/javascript'>
+    $(function () {
+        $('#main').hide();
+        $("#main").fadeIn(1000);
+    });
+  </script>
+</body>
 </html>

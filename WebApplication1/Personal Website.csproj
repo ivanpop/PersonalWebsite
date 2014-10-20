@@ -75,6 +75,7 @@
     <Content Include="Resources\header_footer.jpg" />
     <Content Include="Resources\icons.gif" />
     <Content Include="Resources\ivanpopov.jpg" />
+    <Content Include="Resources\jquery-2.1.1.js" />
     <Content Include="Resources\light.gif" />
     <Content Include="Resources\menu-leaf.png" />
     <Content Include="Resources\mime-16.png" />
