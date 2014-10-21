@@ -132,6 +132,27 @@ namespace WebApplication1
             " че крайният резултат от картата е файл с размер от 10MB или близо 3 пъти по-голям от еквивалента си в .jpg формат.<br><span class=\"tab\"></span>При създаване на картата, създаваме и две променливи – " + 
             "shiftX и shiftY. Те се използват за да движат изображението в прозореца на програмата. Така когато движим героя, ние всъщност движим картата под него. Неговите координати си остават едни и същи, но получаваме ефект на движение на героя.";
 
+        string ryuTextBul5 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "<h2>Реализация</h2><br><h3>Създаване на Ryu</h3><br><span class=\"tab\"></span>За анимиране на главният герой на играта са използвани общо 14 различни анимации. Всяка една анимация е изградена от спрайтшийтове.<br><span class=\"tab\"></span>" +
+            "Spritesheet представлява едно изображение, в което се намират няколко подизображения от анимацията наречени спрайтове.<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><img src=\"/Resources/ryu8.png\" width=\"400\"><br>" +
+            "<span class=\"tab\"></span>При декларацията използваме пътя към спрайт-изображението и x и y, които отговарят съответно за вертикалния и хоризонталния размер на кадъра в спрайта. И тук както при анимирането с отделни кадри, спрайта трябва да е в png формат и с прозрачен фон." +
+            "<br><img src=\"/Resources/ryu9.png\" width=\"594\"><br><span class=\"tab\"></span>Кадрите в спрайта трябва да са на точно разстояние един от друг. x се сформира като се вземе хоризонталната резолюция и се раздели на броят кадри в спрайта." +
+            " При несъответствие, се получават неточности, в изобразяването на анимацията.<br><span class=\"tab\"></span>Анимацията се декларира, като за източник се използва спрайта, следван от х, отговарящ за времетраенето" +
+            " на всеки един кадър в милисекунди. След изтичане на времето, кадъра се заменя автоматично от следващия в спрайта.<br><br><li><b>ryuStatic</b>. Това е статичната анимация. Използва се по всяко време, когато героят не" +
+            " се движи или не извършва някакво действие. Освен по време на игра, спрайтът се използва и в началното меню.</li><br><li><b>ryuReady</b>. Анимацията се използва в началното и при благополучно приключване на играта. Тя представлява " +
+            " действието на Ryu, за завързване на лентата на главата си.<br><li><b>ryuLeft</b>. Използва се при вървене назад и илюстрира отстъпване назад.</li><br><li><b>ryuRight</b>. Използва се при движение напред/надясно, нагоре и надолу." +
+            "</li><br><li><b>ryuPunch</b>. Това е юмрукът на Ryu</li><br><li><b>ryuLowKick</b>. Ритникът на Ryu.</li><br><li><b>ryuHadouken</b><b>ryuShoryuken</b> и <b>ryuTatsaku</b>. Тези анимации илюстрират трите специални умения на героя.<b>ryuHadouken</b> се" +
+            " използва в комбинация с <b>ryuHadoukenBall</b>, която е анимацията на изстреляната от Ryu топка от енергия.</li><br><li><b>ryuHurt</b>. Тази анимация илюстрира как Ryu поема удър от противник.</li><br><li><b>ryuWin1</b> и <b>ryuWin2</b>. Това" +
+            " са две отделни анимации, които вървят в комбинация и се използват при благополучното приключване на играта. Те илюстрират Ryu като победител.<br><br><span class=\"tab\"></span>Освен за визуализацията, Ryu използва и редица звукови ефекти, взети " +
+            "от различни източници от Интернет.<br><span class=\"tab\"></span>За реализацията на героя, са използвани и множество от променливи и методи, които вдъхват живот в героя.<br><span class=\"tab\"></span>Методът ryuPhysics() отговаря за движението," + 
+            " привключването на различните анимации, ударите, специалните умения  и жизнените показатели на главният герой. Методът слуша за въвеждания от клавиатурата и движи и илюстрира героя според тях. Тук са записани продължителностите на анимацийте," + 
+            " границите на нивото, които не могат да бъдат преминавани,  взаимоотношението на Ryu с препядствията и обектите за събиране по картата и следенето на неговите жизнени показатели. За да се избегне дублирането на анимацийте, всяка една от тях" + 
+            " е групирана със собствена булева стойност. Когато Ryu е в статично положение, булевата ryuStatic е true и всички останали са false. Във всеки един момент, само една булева стойност може да е истина. В противен случай, на картата могат да" + 
+            " се появят две различни анимации едновременно или два главни героя един върху друг. За справяне с този проблем идва още един метод, наречен removeDuplications(). Той се грижи за това да има само една булева, която да е истина и променя " +
+            "останалите в неистина.<br><span class=\"tab\"></span>Координатите на Ryu са описани от общо 4 променливи. Първите, shiftX и shiftY, определят местоположението му върху прозореца на играта. Тези координати са едни и същи и не се променят" + 
+            " през цялата игра. Втората двойка променливи са ryuPositionX и ryuPositionY. Те определят местоположението му върху картата на нивото. Те описват движението на картата зад Ryu. Така получаваме ефекта, че Ryu се движи, но всъщност самата" + 
+            " му фигура не се премества от горният ляв ъгъл на прозореца.";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
         protected void Page_Load(object sender, EventArgs e)
@@ -254,6 +275,7 @@ namespace WebApplication1
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
                 ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
                 pageLbl.Visible = true;
             }
             if (page == 0)
@@ -262,10 +284,12 @@ namespace WebApplication1
                 ryuPage2.Visible = false;
                 ryuPage3.Visible = false;
                 ryuPage4.Visible = false;
+                ryuPage5.Visible = false;
                 ryuPage1.Enabled = false;
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
@@ -274,10 +298,12 @@ namespace WebApplication1
                 ryuPage2.Enabled = false;
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
                 ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
                 pageLbl.Visible = true;
             }
             if (page == 3)
@@ -286,10 +312,12 @@ namespace WebApplication1
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = false;
                 ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
                 ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
                 pageLbl.Visible = true;                
             }
             if (page == 4)
@@ -298,10 +326,26 @@ namespace WebApplication1
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = false;
+                ryuPage5.Enabled = true;
                 ryuPage1.Visible = true;
                 ryuPage2.Visible = true;
                 ryuPage3.Visible = true;
                 ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
+                pageLbl.Visible = true;
+            }
+            if (page == 5)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
+                ryuPage5.Enabled = false;
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;
+                ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
                 pageLbl.Visible = true;
             }
         }
@@ -317,10 +361,7 @@ namespace WebApplication1
         {
             projectsContent.Text = ryuTextBul1;
             mainContent.Text = "";
-            ryuPages(1);
-            ryuPage1.Enabled = false;
-            ryuPage2.Enabled = true;
-            ryuPage3.Enabled = true;
+            ryuPages(1);            
         }
 
         protected void ryuPage3_Click(object sender, EventArgs e)
@@ -335,6 +376,13 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul4;
             mainContent.Text = "";
             ryuPages(4);
+        }
+
+        protected void ryuPage5_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul5;
+            mainContent.Text = "";
+            ryuPages(5);
         }
     }
 }
