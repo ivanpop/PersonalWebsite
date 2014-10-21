@@ -153,6 +153,23 @@ namespace WebApplication1
             " през цялата игра. Втората двойка променливи са ryuPositionX и ryuPositionY. Те определят местоположението му върху картата на нивото. Те описват движението на картата зад Ryu. Така получаваме ефекта, че Ryu се движи, но всъщност самата" + 
             " му фигура не се премества от горният ляв ъгъл на прозореца.";
 
+        string ryuTextBul6 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "<h2>Реализация</h2><br><h3>Създаване на противниците</h3><br><span class=\"tab\"></span>Другата основна част от играта е създаването на противници, които да ни държат заети. Тяхната реализация е сходна с тази на главният герой – създадени" +
+            " са със спрайтове, издават звуци, имат жизнени показатели и могат да удрят. Разликата тук е, че те трябва да се контролират от компютъра, чрез изкуствен интелект (A.I.), вместо от клавиатурата.<br><span class=\"tab\"></span>" +
+            "Всеки един противник е създаден от 5 различни спрайта: статично положение, ходене, удряне, бивайки ударен и спрайт за умиране.<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
+            "<span class=\"tab\"></span><span class=\"tab\"></span></span><img src=\"/Resources/ryu10.png\" width=\"250\"><br><span class=\"tab\"></span>Противниците се намират на точно определени координати на нивото. За разлика от Ryu, противниците нямат" +
+            " специални умения следователно нямат магически точки (MP) а единствено здраве (HP), което се определя от зададеното ниво на трудност.<br><br><h3>Създаване на изкуствен интелект</h3><br><span class=\"tab\"></span><li><b>Общи сведения</b></li><br>" +
+            "<span class=\"tab\"></span>Изкуственият интелект позволява на компютрите да правят неща, които за хората изглеждат разумни. Той има способност да анализира окръжаващата го среда и да предприема действия, които увеличават възможността за постигане " +
+            "на определени цели.<br><span class=\"tab\"></span>Създаването на изкуственият интелект е един от най-сложните етапи, при проектирането на компютърна игра. За него има обособен отделен дял в информатиката и се изучава като академична дисциплина." +
+            "<br><span class=\"tab\"></span>Пример за много добър A.I. е този в играта F.E.A.R.: First Encounter Assault Recon. Това е FPS шуутър, в който противниците имат широк набор от действия. Те могат да клякат и да минават под препядствия, да скачат" + 
+            " през прозорци, да се подават през парапети, да изкачват стълби и да бутат обекти за да създадат прикритие от насрешната стрелба. Различни врагове могат да работят в екип, използвайки обиколни пътеки, за да изненадат играча в гръб, да използват" + 
+            " потискаща стрелба и да скачат зад стени, когато биват обстрелвани. Често изкуственият интелект на F.E.A.R. е посочван като високо развит и неговата ефективност помага на играта да спечели наградите „2005 Best AI Award“ на GameSpot и „Most" +
+            " Infuental AI Games“ на AIGameDev's.<br><span class=\"tab\"></span>За целта на проекта е създаден по-просто устроен изкуствен интелект. Той е един и същ за всеки противник. Това което той прави е да следи за местоположението на главният герой," +
+            " да се придвижва по посока към него и да изпълнява удари върху играча.<br><span class=\"tab\"></span>При започването на играта, всеки един противник е предварително създаден на нивото, но е в пасивно положение и ние не го виждаме. Те имат " +
+            "определен обхват на действие, в което Ryu трябва да влезне, за да могат да се активират. За да не се получи претрупване на врагове, на едно и също място, те се създадени със собствени уникални координати и обхвати на действие.<br><span " +
+            "class=\"tab\"></span>Обхватът е такъв, че когато противника се появи на екрана, той вече е в активно положение и вече се движи към нас. Веднъж задействан, противника ще е активен до края на жизненият си цикъл, който е до смъртта му, смъртта" +
+            " на Ryu или изтичане на времето.<br><img src=\"/Resources/ryu11.jpg\" width=\"592\">";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
         protected void Page_Load(object sender, EventArgs e)
@@ -267,16 +284,22 @@ namespace WebApplication1
             ryuPages(1);
         }
 
+        protected void visiblePages()
+        {
+            pageLbl.Visible = true;
+            ryuPage1.Visible = true;
+            ryuPage2.Visible = true;
+            ryuPage3.Visible = true;
+            ryuPage4.Visible = true;
+            ryuPage5.Visible = true;
+            ryuPage6.Visible = true;
+        }
+
         protected void ryuPages(int page)
         {            
             if (page == 1)
             {
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                pageLbl.Visible = true;
+                visiblePages();
             }
             if (page == 0)
             {
@@ -285,11 +308,13 @@ namespace WebApplication1
                 ryuPage3.Visible = false;
                 ryuPage4.Visible = false;
                 ryuPage5.Visible = false;
+                ryuPage6.Visible = false;
                 ryuPage1.Enabled = false;
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
+                ryuPage6.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
@@ -299,12 +324,8 @@ namespace WebApplication1
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                pageLbl.Visible = true;
+                ryuPage6.Enabled = true;
+                visiblePages();
             }
             if (page == 3)
             {
@@ -313,12 +334,8 @@ namespace WebApplication1
                 ryuPage3.Enabled = false;
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                pageLbl.Visible = true;                
+                ryuPage6.Enabled = true;
+                visiblePages();
             }
             if (page == 4)
             {
@@ -327,12 +344,8 @@ namespace WebApplication1
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = false;
                 ryuPage5.Enabled = true;
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                pageLbl.Visible = true;
+                ryuPage6.Enabled = true;
+                visiblePages();
             }
             if (page == 5)
             {
@@ -341,12 +354,18 @@ namespace WebApplication1
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = false;
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                pageLbl.Visible = true;
+                ryuPage6.Enabled = true;
+                visiblePages();
+            }
+            if (page == 6)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
+                ryuPage6.Enabled = false;
+                visiblePages();
             }
         }
 
@@ -383,6 +402,13 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul5;
             mainContent.Text = "";
             ryuPages(5);
+        }
+
+        protected void ryuPage6_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul6;
+            mainContent.Text = "";
+            ryuPages(6);
         }
     }
 }
