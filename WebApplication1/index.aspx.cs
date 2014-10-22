@@ -112,14 +112,14 @@ namespace WebApplication1
             "анимация - „Round One“ и съпътстващ я звук. За целта се използва изображение (round1Image) и мащабиращ ефект, като така се добавя допълнителна динамика. За постигане " + 
             " на ефекта се използва командата round1Image.draw() заедно с променливата round1Scale, която отговаря за мащаба на изображението. Когато използваме командата round1Scale++;" + 
             " в update метода, променливата ще се увеличава с единица, с всеки един цикъл. По този начин и мащаба на началното изображение се увеличава и ефекта е постигнат. При стигане" +
-            " до определен мащаб, началната анимация приключва, таймера се включва и потребителя получава контрол над героя.<table><tr><th>public void round1Animation()<br><span class=\"tab\"> " +
-            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>//round1 animation and sound<br><span class=\"tab\"></span><span class=\"tab\"></span>if (round1Bool)<br><span class=\"tab\">" + 
-            "</span><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Scale += 4;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
-            "<span class=\"tab\"></span><span class=\"tab\"></span>if (round1Scale >= 100 && round1Scale <= 105 && Menu.soundOn)<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"> " + 
-            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Snd.play(1, Menu.soundVolume);<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span> " +
-            "<span class=\"tab\"></span>if (round1Scale >= 600 && round1Scale <= 610)<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span> " +
+            " до определен мащаб, началната анимация приключва, таймера се включва и потребителя получава контрол над героя.<table><tr><th>public void round1Animation()<br><span class=\"tab\"></span>" +
+            "{<br><span class=\"tab\"></span><span class=\"tab\"></span>//round1 animation and sound<br><span class=\"tab\"></span><span class=\"tab\"></span>if (round1Bool)<br><span class=\"tab\">" + 
+            "</span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Scale += 4;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>if (round1Scale >= 100 && round1Scale <= 105 && Menu.soundOn)<br><span class=\"tab\"></span><span class=\"tab\">" + 
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>round1Snd.play(1, Menu.soundVolume);<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span> " +
+            "<span class=\"tab\"></span>if (round1Scale >= 600 && round1Scale <= 610)<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>" +
             "<span class=\"tab\"></span>round1Bool = false;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>enableInput = true;<br><span class=\"tab\"></span><span class " +
-            "=\"tab\"></span><span class=\"tab\"></span>round1Scale = 1;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><br><span class=\"tab\"> " + 
+            "=\"tab\"></span><span class=\"tab\"></span>round1Scale = 1;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><span class=\"tab\"> " + 
             "</span>Методът е round1Animation(). round1Bool се грижи за приключването на анимацията. При достигане на размер 100 се включва съпътстващият звук, а при достигане на размер 600 анимацията приключва. " + 
             " Освен за началната анимация и звук, при изпълнението на метода се променя и трудността на противниците, според въведената настройка за трудност в менюто за настройки. enableInput булевата се използва " + 
             "за позволяване и забраняване на управлението на героя. Освен при началото на играта, булевата се използва и на други места, като по време на менюто за пауза.<br><br><h3>Карта на нивото</h3><br>" +
@@ -158,7 +158,7 @@ namespace WebApplication1
             " са със спрайтове, издават звуци, имат жизнени показатели и могат да удрят. Разликата тук е, че те трябва да се контролират от компютъра, чрез изкуствен интелект (A.I.), вместо от клавиатурата.<br><span class=\"tab\"></span>" +
             "Всеки един противник е създаден от 5 различни спрайта: статично положение, ходене, удряне, бивайки ударен и спрайт за умиране.<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
             "<span class=\"tab\"></span><span class=\"tab\"></span></span><img src=\"/Resources/ryu10.png\" width=\"250\"><br><span class=\"tab\"></span>Противниците се намират на точно определени координати на нивото. За разлика от Ryu, противниците нямат" +
-            " специални умения следователно нямат магически точки (MP) а единствено здраве (HP), което се определя от зададеното ниво на трудност.<br><br><h3>Създаване на изкуствен интелект</h3><br><span class=\"tab\"></span><li><b>Общи сведения</b></li><br>" +
+            " специални умения следователно нямат магически точки (MP) а единствено здраве (HP), което се определя от зададеното ниво на трудност.<br><br><h3>Създаване на изкуствен интелект</h3><span class=\"tab\"></span><li><b>Общи сведения</b></li><br>" +
             "<span class=\"tab\"></span>Изкуственият интелект позволява на компютрите да правят неща, които за хората изглеждат разумни. Той има способност да анализира окръжаващата го среда и да предприема действия, които увеличават възможността за постигане " +
             "на определени цели.<br><span class=\"tab\"></span>Създаването на изкуственият интелект е един от най-сложните етапи, при проектирането на компютърна игра. За него има обособен отделен дял в информатиката и се изучава като академична дисциплина." +
             "<br><span class=\"tab\"></span>Пример за много добър A.I. е този в играта F.E.A.R.: First Encounter Assault Recon. Това е FPS шуутър, в който противниците имат широк набор от действия. Те могат да клякат и да минават под препядствия, да скачат" + 
@@ -169,6 +169,38 @@ namespace WebApplication1
             "определен обхват на действие, в което Ryu трябва да влезне, за да могат да се активират. За да не се получи претрупване на врагове, на едно и също място, те се създадени със собствени уникални координати и обхвати на действие.<br><span " +
             "class=\"tab\"></span>Обхватът е такъв, че когато противника се появи на екрана, той вече е в активно положение и вече се движи към нас. Веднъж задействан, противника ще е активен до края на жизненият си цикъл, който е до смъртта му, смъртта" +
             " на Ryu или изтичане на времето.<br><img src=\"/Resources/ryu11.jpg\" width=\"592\">";
+
+        string ryuTextBul7 = "<br><br><h1>Ryu: The Big Adventure!</h1><br><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br><br>" +
+            "<h2>Реализация</h2><br><h3>Създаване на противниците</h3><span class=\"tab\"></span><span class=\"tab\"></span><li><b>Придвижване към Ryu</b></li><br><span class=\"tab\"></span>Противника се движи когато Ryu навлезе в обхватът му, докато" + 
+            " самият противник е жив и докато той не се намира до Ryu. Когато тези две условия са изпълнени, противникът започва да се придвижва към shiftX и shiftY координатите със скорост delta * .1f. По време на придвижването аналогично се променя" +
+            " и анимацията на противника, към анимация на придвижване.<table><tr><th>if (ryuPositionX < -170 && thugHP > 0)<br><span class=\"tab\"> " +
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>if (thugPosY < 117)<br><span class=\"tab\">" +
+            "</span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>moveY += delta * .1f;<br><span class=\"tab\"></span><span " + 
+            "class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>if (thugPosY > 120)<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" + 
+            "</span>moveY -= delta * .1f;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span" + 
+            "thugSprite = thugWalkAnimation;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span> " +
+            "<span class=\"tab\"></span>if (thugPosX > 170)<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>" +
+            "<span class=\"tab\"></span>moveX -= delta * .1f;<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span " +
+            "class=\"tab\"></span>}</th></tr></table><br><span class=\"tab\"></span>Когато стигне до играча той спира, защото тогава едно от условията за движение не е изпълнено – това да не се намира до него.<br><br><li><b>Удряне</b></li><br><span class=\"tab\"></span>" +
+            "За да можем да ударим главният герой, първо трябва да сме изпълнили серия от условия. Противника трябва да се намира в непосредствена близост до Ryu, Ryu трябва да не изпълнява удари или умения и самият противник трябва да е жив.<br><span class=\"tab\"></span>" +
+            "Първо булевият метод thugAtRyu()следи дали противника се намира на точното място, за да изпълни удар и връща true.<br><table><tr><th>public boolean thugAtRyu(float thugPosX, float thugPosY)<br><span class=\"tab\"> " +
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>if (thugPosX < 190 && thugPosX > 115 && thugPosY < 130 &&<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>thugPosY > 70)<br><span class=\"tab\">" +
+            "</span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>else<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><span class=\"tab\"></span>Със следващият булев метод, наречен ryuAttack(), ние следим дали героят" +
+            " не извършва някакъв удар или специално умение.<br><table><tr><th>public boolean ryuAttack()<br><span class=\"tab\"> " +
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>if (ryuHadouken || ryuLowKick || ryuPunch || ryuShoryuken ||<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>ryuShoryuken || ryuTatsaku)<br><span class=\"tab\">" +
+            "</span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>else<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><span class=\"tab\"></span>Както споменахме, за всяко едно действие на Ryu има съответна булева стойност. В този случай, чрез" +
+            " тях можем да следим действията на главният герой и да ги използваме в нашия метод.<br><span class=\"tab\"></span>Противникът трябва да удря през определено време, когато вече се намира срещу Ryu, за да се придобие реалност към действията му. За целта се " +
+            "използва метода enemyAttackChance().<br><span class=\"tab\"></span>enemyAttackChance()е шансът врагът да удари, когато се намира в непосредствена близост до Ryu.<br><table><tr><th>public boolean enemyAttackChance()<br><span class=\"tab\"> " +
+            "</span>{<br><span class=\"tab\"></span><span class=\"tab\"></span>Random rand = new Random();<br><br><span class=\"tab\"></span><span class=\"tab\"></span>if (rand.nextInt(1000) > 900)<br><span class=\"tab\">" +
+            "</span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br> " +
+            "<span class=\"tab\"></span><span class=\"tab\"></span>else<br><span class=\"tab\"></span><span class=\"tab\"></span>{<br><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br><span class=\"tab\"></span><span class=\"tab\"></span>}<br><span class=\"tab\"></span>}</th></tr></table><br><span class=\"tab\"></span>Метода създава случайно число в интервала от 1 до 1000, с всеки един цикъл на играта. " +
+            "Когато числото е по-голямо от 900, метода изпраща сигнал за изпълняване на удар.<br><span class=\"tab\"></span>Когато всички тези условия са изпълнени преминаваме към изпълнението на удара.";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br><br>";
         
@@ -293,6 +325,7 @@ namespace WebApplication1
             ryuPage4.Visible = true;
             ryuPage5.Visible = true;
             ryuPage6.Visible = true;
+            ryuPage7.Visible = true;
         }
 
         protected void ryuPages(int page)
@@ -309,12 +342,15 @@ namespace WebApplication1
                 ryuPage4.Visible = false;
                 ryuPage5.Visible = false;
                 ryuPage6.Visible = false;
+                ryuPage7.Visible = false;
+
                 ryuPage1.Enabled = false;
                 ryuPage2.Enabled = true;
                 ryuPage3.Enabled = true;
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
                 ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
@@ -325,6 +361,7 @@ namespace WebApplication1
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
                 ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
                 visiblePages();
             }
             if (page == 3)
@@ -335,6 +372,7 @@ namespace WebApplication1
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
                 ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
                 visiblePages();
             }
             if (page == 4)
@@ -345,6 +383,7 @@ namespace WebApplication1
                 ryuPage4.Enabled = false;
                 ryuPage5.Enabled = true;
                 ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
                 visiblePages();
             }
             if (page == 5)
@@ -355,6 +394,7 @@ namespace WebApplication1
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = false;
                 ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
                 visiblePages();
             }
             if (page == 6)
@@ -365,6 +405,18 @@ namespace WebApplication1
                 ryuPage4.Enabled = true;
                 ryuPage5.Enabled = true;
                 ryuPage6.Enabled = false;
+                ryuPage7.Enabled = true;
+                visiblePages();
+            }
+            if (page == 7)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
+                ryuPage6.Enabled = true;
+                ryuPage7.Enabled = false;
                 visiblePages();
             }
         }
@@ -409,6 +461,13 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul6;
             mainContent.Text = "";
             ryuPages(6);
+        }
+
+        protected void ryuPage7_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul7;
+            mainContent.Text = "";
+            ryuPages(7);
         }
     }
 }
