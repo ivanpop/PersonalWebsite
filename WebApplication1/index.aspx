@@ -57,6 +57,7 @@
                                 <asp:Button ID="ryuPage5" runat="server" Text="5" Visible="False" Width="20px" OnClick="ryuPage5_Click" />
                                 <asp:Button ID="ryuPage6" runat="server" Text="6" Visible="False" Width="20px" OnClick="ryuPage6_Click" />
                                 <asp:Button ID="ryuPage7" runat="server" Text="7" Visible="False" Width="20px" OnClick="ryuPage7_Click" />
+                                <asp:Button ID="ryuPage8" runat="server" Text="8" Visible="False" Width="20px" OnClick="ryuPage8_Click" />
 							</div>
 						</div>
 					</div>
