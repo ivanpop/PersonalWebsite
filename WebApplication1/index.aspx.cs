@@ -239,6 +239,35 @@ namespace WebApplication1
             "<span class=\"tab\"></span>}<br/>" +
             "}</th></tr></table>";
 
+        string ryuTextBul9 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
+            "<h2>Реализация</h2><br/><span class=\"tab\"></span>Метода се нарича youWinAnimation. Той се обхожда с всеки един цикъл на играта," +
+            " но се активира, когато булевата winState върне стойност на вярно.  winState връща вярна стойност, когато всички противници са убити. Проверката става като се" +
+            " прочетат стойностите на жизнените точки на всички противници и те са равни на 0. Самата проверка се намира в update(), следователно тя се проверява с всеки" +
+            " цикъл на играта.<br/><img src=\"/Resources/ryu12.png\" width=\"592\"><br/><span class=\"tab\"></span>При вярност youWinImage изображението се изрисува на" + 
+            " екрана, като  youWinScale1 и  youWinScale2 са неговите вертикални и хоризонтални размери. Тези стойности постепенно се увеличават, за да се създаде " + 
+            "необходимата анимация. Когато стойността на  youWinScale1 премине 100, се възпроизвежда и звук, за успешно завършване на играта. Когато стойността на  " + 
+            "youWinScale1 премине 600, изображението вече е в пълния си размер и скалирането приключва и малко след това играча бива прехвърлен към началното меню," +
+            " чрез sbg.enterState(0);.<br/><span class=\"tab\"></span>Споменахме и че Ryu също извършва анимация. Първо движението на героя се забранява с enableInput" + 
+            " = false;.  След това преминаваме към първият спрайт ryuReadyAnimation, който е изграден от 6 кадъра. Спираме анимацията на последния 6-ти кадър с " + 
+            "ryuSprite.stopAt(6);, правим проверка дали тя е спряла с ryuSprite.isStopped() и  ако това е вярно преминаваме към втория спрайт - ryuWin1Animation." + 
+            " Отново спираме спрайта на последният кадър, в случая кадър 3, проверяваме за спиране на анимацията и привключваме към последната анимация " +
+            "ryuWin2Animation.<br/><span class=\"tab\"></span>Всички тези анимации и спрайтове придават усещане са успешно приключила игра.<br/><br/><h2>" +
+            "Заключение</h2><br/><span class=\"tab\"></span>В проекта бяха описани основните компоненти, за изграждането на нашата игра. Бяха споменати, " + 
+            "без да бъдат детайлно изследвани – LWJGL и Slick2D библиотеките, които макар и изградени от трети страни, са необходими компоненти на средата." + 
+            " Разгледана беше в основи логиката на анимирането чрез спрайтове и бяха изложени някои идеи за реализация, използвани при създаването на логиката" +
+            " на играта Ryu: The Big Adventure.<br/><span class=\"tab\"></span>Оттук нататък възможностите за развитие и подобрение на средата са много:<br/><span " +
+            "class=\"tab\"></span>От функционална гледна точка може да бъде подобрен изкуственият интелект на опонентите. Всеки един от опонентите е създаден отделно," + 
+            " което означава че и характерите им могат да се направят различни. В игрите се използват различни класове герои като танк, лечител, стрелец и войн, всеки един" +
+            " специализиран в определени умения и с различни предимства и недостатъци.<br/><span class=\"tab\"></span>Танкът e герой който има за цел да поема ударите и да предпазва" +
+            " останалите от щети. Той върши малко щети, но за сметка на това е много здрав и труден за убиване.<br/><span class=\"tab\"></span>Лечителят използва магически сили за да" + 
+            " лекува събратята си и да увеличава тяхната сила. Той е лесен за убиване и не извършва никакви щети и затова мястото му е в най-задните части на боя, от където използва" +
+            " магията си за лекуване.<br/><span class=\"tab\"></span>Стрелецът и войнът са класовете които извършват най-много щети. Докато танкът задържа вниманието на враговете, лечителят " +
+            "поддържа всички живи, стрелецът и войнът трябва да вършат щети, които да доведат до победа за екипа.<br/><span class=\"tab\"></span>Всеки един клас опонент ще изисква свой собствен" + 
+            " изкуствен интелект, коренно различен от на останалите. Комбинацията от тези класове могат да създадат много проблеми за главният герой, принуждавайки го да използва " +
+            "различни стратегии за всеки един от тях.<br/><span class=\"tab\"></span>Може да бъде добавена и база данни, която да съхранява резултати. Резултатите ще се бъзират на това, за колко" +
+            " време е преминато нивото, на каква трудност е преминато нивото, колко здраве е останало на героя в края на нивото и др.<br/><span class=\"tab\"></span>Могат да се търсят" + 
+            " други платформи за представяне, например да се създадат портове на играта за уеб браузър и за мобилни устройства, като iOS, Windows Mobile, Android и Blackberry.";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
         
         protected void Page_Load(object sender, EventArgs e)
@@ -364,6 +393,7 @@ namespace WebApplication1
             ryuPage6.Visible = true;
             ryuPage7.Visible = true;
             ryuPage8.Visible = true;
+            ryuPage9.Visible = true;
         }
 
         protected void ryuPages(int page)
@@ -382,6 +412,7 @@ namespace WebApplication1
                 ryuPage6.Visible = false;
                 ryuPage7.Visible = false;
                 ryuPage8.Visible = false;
+                ryuPage9.Visible = false;
 
                 ryuPage1.Enabled = false;
                 ryuPage2.Enabled = true;
@@ -391,6 +422,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 pageLbl.Visible = false;
             }
             if (page == 2)
@@ -403,6 +435,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 3)
@@ -415,6 +448,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 4)
@@ -427,6 +461,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 5)
@@ -439,6 +474,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 6)
@@ -451,6 +487,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = false;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 7)
@@ -463,6 +500,7 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = false;
                 ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
                 visiblePages();
             }
             if (page == 8)
@@ -475,6 +513,20 @@ namespace WebApplication1
                 ryuPage6.Enabled = true;
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = false;
+                ryuPage9.Enabled = true;
+                visiblePages();
+            }
+            if (page == 9)
+            {
+                ryuPage1.Enabled = true;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
+                ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
+                ryuPage8.Enabled = true;
+                ryuPage9.Enabled = false;
                 visiblePages();
             }
         }
@@ -533,6 +585,13 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul8;
             mainContent.Text = "";
             ryuPages(8);
+        }
+
+        protected void ryuPage9_Click(object sender, EventArgs e)
+        {
+            projectsContent.Text = ryuTextBul9;
+            mainContent.Text = "";
+            ryuPages(9);
         }
     }
 }
