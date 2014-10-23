@@ -29,10 +29,13 @@
 				<div id="headertext">
 					<div id="title">
 						<h1>
-							<a href="/" title="Начало">Иван Попов</a>
-						</h1>
+							<a href="/" title="Начало">
+                            <asp:Label ID="header1" runat="server" Text="Иван Попов"></asp:Label>
+                            </a></h1>
 					</div>
-					<div id="tagline">Лична Интернет Страница</div>
+					<div id="tagline">
+                        <asp:Label ID="header2" runat="server" Text="Лична Интернет Страница"></asp:Label>
+                    </div>
 					</div>									
 			</div>						
 			<div id="content">
@@ -68,7 +71,7 @@
 						<h2><asp:Label ID="navigation" runat="server" Text="Навигация"></asp:Label></h2>
 						<div class="menu">
 							<ul>
-								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="102px"/></li>
+								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="102px" Enabled="False"/></li>
 								<li><asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="102px"/></li>
                                 <li><asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="102px"/></li>
                                 <li><asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="102px"/></li>
@@ -81,7 +84,7 @@
                         </h2>
 						<div class="content">
 							<ul>
-								<li><asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="85px" /></li>
+								<li><asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="85px" Enabled="False" /></li>
 								<li><asp:Button ID="switchEngBtn" runat="server" Text="English" OnClick="switchEngBtn_Click" Width="85px"/></li>
 							</ul>
 						</div>
@@ -90,8 +93,8 @@
 				<div class="clear">
 				</div>
 				<div id="footer">
-					<a id="gotop" href="#">Горе</a>
-					<p>"© 2014" <a href="bg/contact.html">Иван Попов</a>". Всички права са запазени."</p>
+					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
+					<p>© 2014 Иван Попов</p>
 					<br/>
 				</div>
 			</div>

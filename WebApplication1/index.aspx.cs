@@ -265,8 +265,12 @@ namespace WebApplication1
             "поддържа всички живи, стрелецът и войнът трябва да вършат щети, които да доведат до победа за екипа.<br/><span class=\"tab\"></span>Всеки един клас опонент ще изисква свой собствен" + 
             " изкуствен интелект, коренно различен от на останалите. Комбинацията от тези класове могат да създадат много проблеми за главният герой, принуждавайки го да използва " +
             "различни стратегии за всеки един от тях.<br/><span class=\"tab\"></span>Може да бъде добавена и база данни, която да съхранява резултати. Резултатите ще се бъзират на това, за колко" +
-            " време е преминато нивото, на каква трудност е преминато нивото, колко здраве е останало на героя в края на нивото и др.<br/><span class=\"tab\"></span>Могат да се търсят" + 
-            " други платформи за представяне, например да се създадат портове на играта за уеб браузър и за мобилни устройства, като iOS, Windows Mobile, Android и Blackberry.";
+            " време е преминато нивото, на каква трудност е преминато нивото, колко здраве е останало на героя в края на нивото и др.<br/><span class=\"tab\"></span>Могат да се търсят" +
+            " други платформи за представяне, например да се създадат портове на играта за уеб браузър и за мобилни устройства, като iOS, Windows Mobile, Android и Blackberry." + 
+            "<br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Ryu\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/ryu.zip\">Ryu: The Big Adventure!</a></td><td class=\"size\">24.8 MB</td> " +
+            " </tr></tbody></table>";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
         
@@ -274,38 +278,72 @@ namespace WebApplication1
         {
             mainContent.Text = aboutMeBul;
             visibilities();
-            pageLbl.Text = "<br/><br/>Страница: ";
+            pageLbl.Text = "<br/><br/>Страница: ";            
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
+            switchBulBtn.Enabled = true;
+            switchEngBtn.Enabled = false;
             mainContent.Text = aboutMeEng;
             lang.Text = "English";
             artTitle.Text = "About me";
             navigation.Text = "Navigation";
-            visibilities();
+            visibilities();            
+            aboutMe.Text = "About me";
+            biography.Text = "Biography";
+            projects.Text = "Projects";
+            contacts.Text = "Contacts";
+            header1.Text = "Ivan Popov";
+            header2.Text = "Personal website";
+            goTop.Text = "Top";
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
         {
+            switchBulBtn.Enabled = false;
+            switchEngBtn.Enabled = true;
             mainContent.Text = aboutMeBul;
             lang.Text = "Български";
             artTitle.Text = "За мен";
             navigation.Text = "Навигация";
-            visibilities();
+            visibilities();            
+            aboutMe.Text = "За мен";
+            biography.Text = "Автобиография";
+            projects.Text = "Проекти";
+            contacts.Text = "Контакти";
+            header1.Text = "Иван Попов";
+            header2.Text = "Лична Интернет Страница";
+            goTop.Text = "Горе";
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
-        {            
-            mainContent.Text = aboutMeBul;
-            lang.Text = "Български";
-            artTitle.Text = "За мен";
-            navigation.Text = "Навигация";
-            visibilities();
+        {
+            aboutMe.Enabled = false;
+            biography.Enabled = true;
+            contacts.Enabled = true;
+            projects.Enabled = true;
+
+            if (aboutMe.Text == "За мен")
+            {
+                mainContent.Text = aboutMeBul;                
+                visibilities();
+            }
+            else
+            {
+                mainContent.Text = aboutMeEng;
+                switchBulBtn.Enabled = true;
+                visibilities();
+            }
         }
 
         protected void biography_Click(object sender, EventArgs e)
         {
+            biography.Enabled = false;
+            aboutMe.Enabled = true;            
+            contacts.Enabled = true;
+            projects.Enabled = true;
+
             mainContent.Text = biographyBul;
             lang.Text = "Български";
             artTitle.Text = "Автобиография";
@@ -315,6 +353,12 @@ namespace WebApplication1
 
         protected void projects_Click(object sender, EventArgs e)
         {
+            projects.Enabled = false;
+            aboutMe.Enabled = true;
+            biography.Enabled = true;
+            contacts.Enabled = true;
+            
+
             mainContent.Text = projectsBul;
             lang.Text = "Български";
             artTitle.Text = "Проекти";
@@ -325,6 +369,11 @@ namespace WebApplication1
 
         protected void contacts_Click(object sender, EventArgs e)
         {
+            contacts.Enabled = false;
+            aboutMe.Enabled = true;
+            biography.Enabled = true;            
+            projects.Enabled = true;
+
             lang.Text = "Български";
             artTitle.Text = "Контакти";
             navigation.Text = "Навигация";
@@ -358,11 +407,15 @@ namespace WebApplication1
                 projectsContent.Text = "";
             }
 
-            ryuPages(0);
+            ryuPages(0);            
         }
 
         protected void converter_Click(object sender, EventArgs e)
         {
+            converter.Enabled = false;
+            ryu.Enabled = true;
+            countdown.Enabled = true;
+
             projectsContent.Text = converterTextBul;
             mainContent.Text = "";
             visibilities();
@@ -370,6 +423,10 @@ namespace WebApplication1
 
         protected void countdown_Click1(object sender, EventArgs e)
         {
+            converter.Enabled = true;
+            ryu.Enabled = true;
+            countdown.Enabled = false;
+
             projectsContent.Text = stopwatchTextBul;
             mainContent.Text = "";
             visibilities();
@@ -377,6 +434,10 @@ namespace WebApplication1
 
         protected void ryu_Click(object sender, EventArgs e)
         {
+            converter.Enabled = true;
+            ryu.Enabled = false;
+            countdown.Enabled = true;
+
             projectsContent.Text = ryuTextBul1;
             mainContent.Text = "";            
             ryuPages(1);
