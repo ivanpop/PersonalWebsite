@@ -305,8 +305,7 @@ namespace WebApplication1
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
             switchBulBtn.Enabled = true;
-            switchEngBtn.Enabled = false;
-            mainContent.Text = aboutMeEng;
+            switchEngBtn.Enabled = false;            
             lang.Text = "English";
             artTitle.Text = "About me";
             navigation.Text = "Navigation";
@@ -318,6 +317,15 @@ namespace WebApplication1
             header1.Text = "Ivan Popov";
             header2.Text = "Personal website";
             goTop.Text = "Top";
+
+            if (!aboutMe.Enabled)
+            {
+                aboutMe_Click(aboutMe, null);
+            }
+            if (!biography.Enabled)
+            {
+                biography_Click(biography, null);
+            }
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
@@ -336,6 +344,15 @@ namespace WebApplication1
             header1.Text = "Иван Попов";
             header2.Text = "Лична Интернет Страница";
             goTop.Text = "Горе";
+
+            if (!aboutMe.Enabled)
+            {
+                aboutMe_Click(aboutMe, null);
+            }
+            if (!biography.Enabled)
+            {
+                biography_Click(biography, null);
+            }
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
@@ -352,6 +369,7 @@ namespace WebApplication1
             }
             else
             {
+                artTitle.Text = "About me";
                 mainContent.Text = aboutMeEng;
                 switchBulBtn.Enabled = true;
                 visibilities();
@@ -376,9 +394,9 @@ namespace WebApplication1
             else
             {
                 mainContent.Text = biographyEng;
-                lang.Text = "Български";
-                artTitle.Text = "Автобиография";
-                navigation.Text = "Навигация";
+                lang.Text = "Bulgarian";
+                artTitle.Text = "Biography";
+                navigation.Text = "Navigation";
                 visibilities();
             }
         }
@@ -414,7 +432,7 @@ namespace WebApplication1
 
         protected void visibilities()
         {
-            if (artTitle.Text == "Автобиография")
+            if (artTitle.Text == "Автобиография" || artTitle.Text == "Biography")
             {
                 ivanpopov.Visible = true;
             }
