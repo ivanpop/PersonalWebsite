@@ -38,6 +38,27 @@ namespace WebApplication1
             "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Програми:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
+        string biographyEng = "&nbspI'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;" +
+            "I graduated from &nbsp;Plovdiv University \"Paisii Hilendarski\" in 2013, &nbsp;with a bachelor degree in Informatics." +
+            "<br/><br/>&nbsp;Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
+            "which I graduated &nbsp;in 2014.<br/><br/>&nbsp;From December 2009, four months after" +
+            " becoming a student in the &nbsp;university, I started working in \"Metro Cash&Carry Plovdiv 2\", from &nbsp;the beginning as a regular associate and afterwards " +
+            "as a product &nbsp;consultant.<br/><br/>&nbsp;My work in the magazine taught me to work in a team, to work with clients, to plan " +
+            "my working day and to prioritize my tasks.<br/><br/>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
+            "<b><u>Software Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\">" +
+            "<b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github account. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><br/><br/>As a hobby I have a YouTube channel, where I upload gameplay videos in which I show my years of experience with the sniper and the shotgun. ;)" +
+            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>My goal is to work in the field of IT " +
+            "and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/>2014 PU \"Paisii Hilendarski\" " +
+            "- Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/>2013 PU \"Paisii Hilendarski\" - Plovdiv, " +
+            " Bachelors degree, field of \"Informatics\".<br/><br/>1997 Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> " +
+            "<hr><br/><br/><h1>Languages</h1><br/><br/>Bulgarian – mother's language.<br/><br/>English – reading - great, writing - great, speaking - great." +
+            "<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working experience</h1><br/><br/>12/2009 - 07/2014 Associate" +
+            " and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/>11/2012 - 04/2013 Data entry operator in “Highstyle” Ltd." +
+            "<br/><br/><hr><br/><br/><h1>Other</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/><b>Technologies and standarts:</b>" +
+            "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Programs:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
+            "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
+
         string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/>Програмата е написана на" +
             " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/>" +
             "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
@@ -344,11 +365,22 @@ namespace WebApplication1
             contacts.Enabled = true;
             projects.Enabled = true;
 
-            mainContent.Text = biographyBul;
-            lang.Text = "Български";
-            artTitle.Text = "Автобиография";
-            navigation.Text = "Навигация";
-            visibilities();
+            if (!switchBulBtn.Enabled)
+            {
+                mainContent.Text = biographyBul;
+                lang.Text = "Български";
+                artTitle.Text = "Автобиография";
+                navigation.Text = "Навигация";
+                visibilities();
+            }
+            else
+            {
+                mainContent.Text = biographyEng;
+                lang.Text = "Български";
+                artTitle.Text = "Автобиография";
+                navigation.Text = "Навигация";
+                visibilities();
+            }
         }
 
         protected void projects_Click(object sender, EventArgs e)
