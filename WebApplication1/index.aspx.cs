@@ -17,67 +17,76 @@ namespace WebApplication1
             "This is my personal web page. Here you will find information about me and project, I work on.<br/><br/>"+
             "My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
 
-        string biographyBul = "&nbsp;Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/>&nbsp;"+
-            "Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г."+
-            "със &nbsp;специалност \"Информатика\".<br/><br/>&nbsp;Непосредствено след завършването си записах магистърска &nbsp;" +
-            "степен, в същия университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br/><br/>&nbsp;От декември 2009г, четири месеца след"+
+        string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/>" +
+            "<span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г." +
+            "със &nbsp;специалност \"Информатика\".<br/><br/><span class=\"tab\"></span>Непосредствено след завършването си записах магистърска &nbsp;" +
+            "степен, в същия университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br/><br/><span class=\"tab\"></span>От декември 2009г, четири месеца след" +
             " записването ми в &nbsp;университета, работя в магазин \"Метро Пловдив 2\", от начало &nbsp;като обикновен сътрудник и впоследствие " +
-            "като продуктов &nbsp;консултант.<br/><br/>Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
-            "работния ден и приоритизирам задачите си.<br/><br/>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
+            "като продуктов &nbsp;консултант.<br/><br/><span class=\"tab\"></span>Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
+            "работния ден и приоритизирам задачите си.<br/><br/><span class=\"tab\"></span>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
             "<b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\">" +
             "<b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><br/><br/>Като хоби имам YouTube канал, в който качвам кадри от игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)" +
-            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>Целта ми е да работя в IT-сферата " + 
-            "и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/>2014 г. ПУ \"Паисий Хилендарски\" " + 
-            "- Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br/><br/>2013 г. ПУ \"Паисий Хилендарски\" - Пловдив, " + 
-            " висше образование, степен бакалавър, специалност \"Информатика\".<br/><br/>1997 г. ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br/><br/> " +
+            "<b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>Като хоби имам YouTube канал, в който качвам кадри от игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)" +
+            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span class=\"tab\"></span>Целта ми е да работя в IT-сферата " + 
+            "и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar\">2014 г.</span> ПУ \"Паисий Хилендарски\" " +
+            "- Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br/><br/><span class=\"round-bar blue-bar\">2013 г.</span> ПУ \"Паисий Хилендарски\" - Пловдив, " +
+            " висше образование, степен бакалавър, специалност \"Информатика\".<br/><br/><span class=\"round-bar blue-bar\">1997 г.</span> ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br/><br/> " +
             "<hr><br/><br/><h1>Езици</h1><br/><br/>Български – майчин език.<br/><br/>Английски – четене - отлично, писане - много добро, разговор - много добро." +
-            "<br/><br/>Френски – четене - основно, писане - основно, разговор - основно.<br/><br/><hr><br/><br/><h1>Трудов опит</h1><br/><br/>12/2009 - 07/2014 Сътрудник" +
-            " впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\".<br/><br/>11/2012 - 04/2013 Оператор въвеждане на данни в “Highstyle” Ltd." +
+            "<br/><br/>Френски – четене - основно, писане - основно, разговор - основно.<br/><br/><hr><br/><br/><h1>Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник" +
+            " впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в “Highstyle” Ltd." +
             "<br/><br/><hr><br/><br/><h1>Други</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/><b>Технологии и стандарти:</b>" +
             "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Програми:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
-        string biographyEng = "&nbspI'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;" +
-            "I graduated from &nbsp;Plovdiv University \"Paisii Hilendarski\" in 2013, &nbsp;with a bachelor degree in Informatics." +
-            "<br/><br/>&nbsp;Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
-            "which I graduated &nbsp;in 2014.<br/><br/>&nbsp;From December 2009, four months after" +
-            " becoming a student in the &nbsp;university, I started working in \"Metro Cash&Carry Plovdiv 2\", from &nbsp;the beginning as a regular associate and afterwards " +
-            "as a product &nbsp;consultant.<br/><br/>&nbsp;My work in the magazine taught me to work in a team, to work with clients, to plan " +
-            "my working day and to prioritize my tasks.<br/><br/>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
+        string biographyEng = "<span class=\"tab\"></span>I'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;" +
+            "<span class=\"tab\"></span>I graduated from Plovdiv University \"Paisii Hilendarski\" in &nbsp;2013, with a bachelor degree in Informatics." +
+            "<br/><br/><span class=\"tab\"></span>Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
+            "which I graduated &nbsp;in 2014.<br/><br/><span class=\"tab\"></span>From December 2009, four months after" +
+            " becoming a student in &nbsp;the university, I started working in \"Metro Cash&Carry Plovdiv 2\", &nbsp;from the beginning as a regular associate and afterwards " +
+            "as a &nbsp;product consultant.<br/><br/><span class=\"tab\"></span>My work in the magazine taught me to work in a team, to work with clients, to plan " +
+            "my working day and to prioritize my tasks.<br/><br/><span class=\"tab\"></span>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
             "<b><u>Software Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\">" +
             "<b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github account. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><br/><br/>As a hobby I have a YouTube channel, where I upload gameplay videos in which I show my years of experience with the sniper and the shotgun. ;)" +
-            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>My goal is to work in the field of IT " +
-            "and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/>2014 PU \"Paisii Hilendarski\" " +
-            "- Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/>2013 PU \"Paisii Hilendarski\" - Plovdiv, " +
-            " Bachelors degree, field of \"Informatics\".<br/><br/>1997 Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> " +
+            "<b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>As a hobby I have a YouTube channel, where I upload gameplay videos in which I show my years of experience with the sniper and the shotgun. ;)" +
+            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span class=\"tab\"></span>My goal is to work in the field of IT " +
+            "and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar\">2014</span> PU \"Paisii Hilendarski\" " +
+            "- Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/><span class=\"round-bar blue-bar\">2013</span> PU \"Paisii Hilendarski\" - Plovdiv, " +
+            " Bachelors degree, field of \"Informatics\".<br/><br/><span class=\"round-bar blue-bar\">1997</span> Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> " +
             "<hr><br/><br/><h1>Languages</h1><br/><br/>Bulgarian – mother's language.<br/><br/>English – reading - great, writing - great, speaking - great." +
-            "<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working experience</h1><br/><br/>12/2009 - 07/2014 Associate" +
-            " and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/>11/2012 - 04/2013 Data entry operator in “Highstyle” Ltd." +
+            "<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate" +
+            " and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Data entry operator in “Highstyle” Ltd." +
             "<br/><br/><hr><br/><br/><h1>Other</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/><b>Technologies and standarts:</b>" +
             "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Programs:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
-        string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/>Програмата е написана на" +
+        string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на" +
             " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/>" +
             "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " + 
             " </tr></tbody></table>";
 
-        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/>The program is written in" +
+        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/><span class=\"tab\"></span>The program is written in" +
             " C# and it's a simple converter of metric units. Different metric units can be seen in the screenshot.<br/><br/>" +
             "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " +
             " </tr></tbody></table>";
 
-        string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/>Написана е на C# и представлява програма " + 
-            " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " + 
-            "Перфектна програма, ако често варите яйца или готвите. ;) <br/> Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " + 
-            "записване на времената на обиколките като текстов файл.<br/>Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/>" +
+        string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма " + 
+            " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " +
+            "Перфектна програма, ако често варите яйца или готвите. ;) <br/><span class=\"tab\"></span>Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " +
+            "записване на времената на обиколките като текстов файл.<br/><span class=\"tab\"></span>Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/>" +
             "<img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\">" + 
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
+            " </tr></tbody></table>";
+
+        string stopwatchTextEng = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a " +
+            " countdown timer and a stopwatch. When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. " +
+            "Perfect if you often boil eggs or cook. ;) <br/><span class=\"tab\"></span>The stopwatch has a precision of a millisecond. There is an option to count a lap, pause and " +
+            "to save the lap times in a text file.<br/><span class=\"tab\"></span>The countdown timer and the stopwatch are completly independent on from the other and can work simultaneously.<br/><br/>" +
+            "<img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
             " </tr></tbody></table>";
@@ -343,6 +352,10 @@ namespace WebApplication1
             {
                 converter_Click(converter, null);
             }
+            if (!countdown.Enabled)
+            {
+                countdown_Click1(countdown, null);
+            }
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
@@ -377,6 +390,10 @@ namespace WebApplication1
             if (!converter.Enabled)
             {
                 converter_Click(converter, null);
+            }
+            if (!countdown.Enabled)
+            {
+                countdown_Click1(countdown, null);
             }
         }
 
@@ -528,9 +545,17 @@ namespace WebApplication1
             ryu.Enabled = true;
             countdown.Enabled = false;
 
-            projectsContent.Text = stopwatchTextBul;
             mainContent.Text = "";
             visibilities();
+
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = stopwatchTextBul;
+            }
+            else
+            {
+                projectsContent.Text = stopwatchTextEng;
+            }
         }
 
         protected void ryu_Click(object sender, EventArgs e)

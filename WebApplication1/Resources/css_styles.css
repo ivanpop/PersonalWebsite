@@ -551,7 +551,8 @@ ul.pager{padding:10px 0 0 5px;}
 .item-list .pager li{padding:0;}
 .pager strong,.pager a{background:#ecf3fb none repeat scroll 0 0;border:1px solid #ccc;padding:0px 3px 0px 3px;margin:0;}
 .pager li.pager-current{background:#2666C3 none repeat scroll 0 0;padding:0px 3px 0px 3px;color:#FFFFFF;margin:0;}
-.round-bar{border-bottom-left-radius:3px 3px;border-bottom-left-radius:3px 3px;border-bottom-right-radius:3px 3px;border-bottom-right-radius:3px 3px;border-top-left-radius:3px 3px;border-top-left-radius:3px 3px;border-top-right-radius:3px 3px;border-top-right-radius:3px 3px;padding:1px 3px;}.blue-bar{background:#B6CEE9;color:#5D91CD;}
+.round-bar{border-bottom-left-radius:3px 3px;border-bottom-left-radius:3px 3px;border-bottom-right-radius:3px 3px;border-bottom-right-radius:3px 3px;border-top-left-radius:3px 3px;border-top-left-radius:3px 3px;border-top-right-radius:3px 3px;border-top-right-radius:3px 3px;padding:1px 3px;}
+.blue-bar{background:#ccc; font-weight:bold;}
 .gray-bar{background:#ccc;color:#000;}
 .node{clear:left;margin-bottom:40px;}
 .block-addtoany img{padding:0;}
