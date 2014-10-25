@@ -66,6 +66,13 @@ namespace WebApplication1
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " + 
             " </tr></tbody></table>";
 
+        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/>The program is written in" +
+            " C# and it's a simple converter of metric units. Different metric units can be seen in the screenshot.<br/><br/>" +
+            "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " +
+            " </tr></tbody></table>";
+
         string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/>Написана е на C# и представлява програма " + 
             " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " + 
             "Перфектна програма, ако често варите яйца или готвите. ;) <br/> Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " + 
@@ -294,6 +301,8 @@ namespace WebApplication1
             " </tr></tbody></table>";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
+
+        string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -326,6 +335,14 @@ namespace WebApplication1
             {
                 biography_Click(biography, null);
             }
+            if (!projects.Enabled)
+            {
+                projects_Click(projects, null);
+            }
+            if (!converter.Enabled)
+            {
+                converter_Click(converter, null);
+            }
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
@@ -353,6 +370,14 @@ namespace WebApplication1
             {
                 biography_Click(biography, null);
             }
+            if (!projects.Enabled)
+            {
+                projects_Click(projects, null);
+            }
+            if (!converter.Enabled)
+            {
+                converter_Click(converter, null);
+            }
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
@@ -362,18 +387,22 @@ namespace WebApplication1
             contacts.Enabled = true;
             projects.Enabled = true;
 
-            if (aboutMe.Text == "За мен")
+            ryu.Enabled = true;
+            converter.Enabled = true;
+            countdown.Enabled = true;
+
+            if (!switchBulBtn.Enabled)
             {
+                artTitle.Text = "За мен";
                 mainContent.Text = aboutMeBul;                
                 visibilities();
             }
             else
             {
                 artTitle.Text = "About me";
-                mainContent.Text = aboutMeEng;
-                switchBulBtn.Enabled = true;
+                mainContent.Text = aboutMeEng;                
                 visibilities();
-            }
+            }            
         }
 
         protected void biography_Click(object sender, EventArgs e)
@@ -382,6 +411,10 @@ namespace WebApplication1
             aboutMe.Enabled = true;            
             contacts.Enabled = true;
             projects.Enabled = true;
+
+            ryu.Enabled = true;
+            converter.Enabled = true;
+            countdown.Enabled = true;
 
             if (!switchBulBtn.Enabled)
             {
@@ -407,12 +440,18 @@ namespace WebApplication1
             aboutMe.Enabled = true;
             biography.Enabled = true;
             contacts.Enabled = true;
-            
 
-            mainContent.Text = projectsBul;
-            lang.Text = "Български";
-            artTitle.Text = "Проекти";
-            navigation.Text = "Навигация";
+            if (!switchBulBtn.Enabled)
+            {
+                mainContent.Text = projectsBul;                
+                artTitle.Text = "Проекти";                
+            }
+            else
+            {
+                mainContent.Text = projectsEng;                
+                artTitle.Text = "Projects";                
+            }
+
             visibilities();
             projectsContent.Text = "";
         }
@@ -423,6 +462,10 @@ namespace WebApplication1
             aboutMe.Enabled = true;
             biography.Enabled = true;            
             projects.Enabled = true;
+
+            ryu.Enabled = true;
+            converter.Enabled = true;
+            countdown.Enabled = true;
 
             lang.Text = "Български";
             artTitle.Text = "Контакти";
@@ -441,7 +484,7 @@ namespace WebApplication1
                 ivanpopov.Visible = false;
             }
 
-            if (artTitle.Text == "Проекти")
+            if (artTitle.Text == "Проекти" || artTitle.Text == "Projects")
             {
                 converter.Visible = true;
                 countdown.Visible = true;
@@ -465,10 +508,18 @@ namespace WebApplication1
             converter.Enabled = false;
             ryu.Enabled = true;
             countdown.Enabled = true;
-
-            projectsContent.Text = converterTextBul;
+            
             mainContent.Text = "";
             visibilities();
+
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = converterTextBul;
+            }
+            else
+            {
+                projectsContent.Text = converterTextEng;
+            }
         }
 
         protected void countdown_Click1(object sender, EventArgs e)
@@ -703,6 +754,6 @@ namespace WebApplication1
             projectsContent.Text = ryuTextBul9;
             mainContent.Text = "";
             ryuPages(9);
-        }
+        }        
     }
 }
