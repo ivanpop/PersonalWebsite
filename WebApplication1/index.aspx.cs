@@ -93,7 +93,7 @@ namespace WebApplication1
 
         string ryuTextBul1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Описание</h2><br/><span class=\"tab\"></span><b>Ryu: The Big Adventure</b> е подобие на аркадните игри <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> и още много други." +
-            "<br/><br/><h2>Функции</h2><br/><span class=\"tab\"></span>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален beat 'em up симулатор." + 
+            "<br/><br/><h2>Функции</h2><br/><span class=\"tab\"></span>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален Beat 'em up симулатор." + 
             " Beat 'em up е жанр в компютърните игри, който включва ръкопашен бой между главният герой и голям брой врагове. Игрите са най-често 2D, като героят се движи хоризонтално" +
             " по нивото, в посока надясно. Тези игри са познати с простия си и лесен за научаване геймплей, като първата подобна игра датира от 1984г.<br/><span class=\"tab\"></span>При стартиране на играта, " +
             "потребителя влиза в ролята на героят Ryu, който има за цел да победи всички врагове в нивото.<br/><span class=\"tab\"></span>Ryu е герой от видео игри, създаден от Capcom още през 1987 година, играещ " +
@@ -104,6 +104,20 @@ namespace WebApplication1
             "и така да нанесе убийствен ъперкът към противника, който се намира непосредствено до него. Както Hadouken и Shoryuken изисква 	вътрешна енергия.<br/><img src=\"/Resources/ryu1.png\"><br/></li>" +
             "<br/><li><b>Tatsumaki</b> - В превод „Торнадо“. Ryu има умението да скочи и да изпълни торнадо от ритници докато е във въздуха. Това е най-силната атака на Ryu и изисква най-много" +
             " вътрешна 	енергия.<br/><img src=\"/Resources/ryu2.jpg\">";
+
+        string ryuTextEng1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<h2>Description</h2><br/><span class=\"tab\"></span><b>Ryu: The Big Adventure</b> is simmilar to arcade games like <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> and many others." +
+            "<br/><br/><h2>Functions</h2><br/><span class=\"tab\"></span>„Ryu: The Big Adventure” gives the user the chance to play a tipical horizontal Beat 'em up simulator." +
+            " Beat 'em up is a computer game genre, which involves hand-to-hand combat between the main hero and numerous enemies. These type of games are mostly in 2D, where the player moves horizontaly" +
+            " to the right. These games are famous for they're easy to learn gameplay, with the first of this type of games dating from 1984<br/><span class=\"tab\"></span>When starting the game, " +
+            "the user goes in the role of Ryu, which have to beat all the enemies in the level.<br/><span class=\"tab\"></span>Ryu is a superhero from video games, created by Capcom in 1987, which plays " +
+            " the main role in the Street Fighter series. He knows mixed martial arts and assassin skills. Also Ryu possesses some unique abilities in his arsenal." +
+            " .<br/><br/><li><b>Hadouken</b> - Translated „Fist of energy“. This is a projectile of energy, which Ryu shoots from his hands, to hit enemies from distance." +
+            " To do this ability Ryu must have enough energy or MP (Magic Points).<br/><img src=\"/Resources/ryu3.png\"><br/>" +
+            "</li><br/><li><b>Shoryuken</b> - Translated „Rising dragon fist“, is another special ability, designet for close combat. Ryu uses his fist to shoots himself up " +
+            "and in that way to deliver a deadly upercut to his oponent, which is directly in front of him. Just like Hadouken Shoryuken also requires spirit energy.<br/><img src=\"/Resources/ryu1.png\"><br/></li>" +
+            "<br/><li><b>Tatsumaki</b> - Translated „Tornado“. Ryu haves the ability to jump and to perform a tornato from kicks while in mid air. This is the most powerful attack that Ryu possesses and it" +
+            " requires most spirit energy.<br/><img src=\"/Resources/ryu2.jpg\">";
 
         string ryuTextBul2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<span class=\"tab\"></span>Вътрешната енергия се изобразява в долният ляв ъгъл на екрана, под формата на 8 сини правоъгълника, обозначени с MP. Тя е нужна за изпълнението на специалните " +
@@ -320,21 +334,9 @@ namespace WebApplication1
             pageLbl.Text = "<br/><br/>Страница: ";            
         }
 
-        protected void switchEngBtn_Click(object sender, EventArgs e)
+        protected void langSwitch()
         {
-            switchBulBtn.Enabled = true;
-            switchEngBtn.Enabled = false;            
-            lang.Text = "English";
-            artTitle.Text = "About me";
-            navigation.Text = "Navigation";
-            visibilities();            
-            aboutMe.Text = "About me";
-            biography.Text = "Biography";
-            projects.Text = "Projects";
-            contacts.Text = "Contacts";
-            header1.Text = "Ivan Popov";
-            header2.Text = "Personal website";
-            goTop.Text = "Top";
+            visibilities();
 
             if (!aboutMe.Enabled)
             {
@@ -356,6 +358,28 @@ namespace WebApplication1
             {
                 countdown_Click1(countdown, null);
             }
+            if (!ryuPage1.Enabled && !ryu.Enabled)
+            {
+                ryuPage1_Click(ryuPage1, null);
+            }
+        }
+
+        protected void switchEngBtn_Click(object sender, EventArgs e)
+        {
+            switchBulBtn.Enabled = true;
+            switchEngBtn.Enabled = false;            
+            lang.Text = "English";
+            artTitle.Text = "About me";
+            navigation.Text = "Navigation";                       
+            aboutMe.Text = "About me";
+            biography.Text = "Biography";
+            projects.Text = "Projects";
+            contacts.Text = "Contacts";
+            header1.Text = "Ivan Popov";
+            header2.Text = "Personal website";
+            goTop.Text = "Top";
+
+            langSwitch();
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
@@ -365,8 +389,7 @@ namespace WebApplication1
             mainContent.Text = aboutMeBul;
             lang.Text = "Български";
             artTitle.Text = "За мен";
-            navigation.Text = "Навигация";
-            visibilities();            
+            navigation.Text = "Навигация";                     
             aboutMe.Text = "За мен";
             biography.Text = "Автобиография";
             projects.Text = "Проекти";
@@ -375,26 +398,7 @@ namespace WebApplication1
             header2.Text = "Лична Интернет Страница";
             goTop.Text = "Горе";
 
-            if (!aboutMe.Enabled)
-            {
-                aboutMe_Click(aboutMe, null);
-            }
-            if (!biography.Enabled)
-            {
-                biography_Click(biography, null);
-            }
-            if (!projects.Enabled)
-            {
-                projects_Click(projects, null);
-            }
-            if (!converter.Enabled)
-            {
-                converter_Click(converter, null);
-            }
-            if (!countdown.Enabled)
-            {
-                countdown_Click1(countdown, null);
-            }
+            langSwitch();
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
@@ -564,7 +568,15 @@ namespace WebApplication1
             ryu.Enabled = false;
             countdown.Enabled = true;
 
-            projectsContent.Text = ryuTextBul1;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul1;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng1;
+            }
+            
             mainContent.Text = "";            
             ryuPages(1);
         }
@@ -727,7 +739,15 @@ namespace WebApplication1
 
         protected void ryuPage1_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul1;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul1;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng1;
+            }
+            
             mainContent.Text = "";
             ryuPages(1);            
         }
