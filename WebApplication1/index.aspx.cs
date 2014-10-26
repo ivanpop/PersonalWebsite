@@ -133,12 +133,33 @@ namespace WebApplication1
             "<b><u>Link</u></b></a><br/><br/><h2>Допускания и зависимости</h2><br/><span class=\"tab\"></span>Достъпът до дистрибуцията на играта е зависим от GitHub, уеб хранилището" +
             "за разполагане на софтуерни проекти и техните съвместни разработки върху отдалечен интернет сървър.<br/><span class=\"tab\"></span>Проектът прави допускането и разчита, че порталът GitHub, който се" +
             "поддържа от трета страна, е достъпен и в изправност.<br/><span class=\"tab\"></span>Прави се също допускането, че крайните потребители разполагат със съвместим персонален компютър с инсталират Java Runtime" +
-            "Environment. Към момента на създаването на дипломната работа, Java езикът е с голяма популярност и повечето компютри имат инсталиран нужният пакет, което спомага за лесното " +
+            "Environment. Към момента на създаването на проекта, Java езикът е с голяма популярност и повечето компютри имат инсталиран нужният пакет, което спомага за лесното " +
             "разпространение на играта.<br/><br/><h2>Диаграма на състоянията</h2><br/><span class=\"tab\"></span>Диаграмата на състоянията в този раздел показва как играта Ryu: The Big Adventure " +
             "трябва да обработва заявките на крайния потребител.<br/><span class=\"tab\"></span>Диаграмата е изградена чрез Унифицираният език за моделиране (UML), който е графичен език за конструиране и документиране на " +
             "елементите на една софтуерна система.<br/><br/><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"" +
             "target=\"_blank\"><b><u>Оригинален размер</u></b></a><br/><br/><span class=\"tab\"></span>В проекта се използват 4 различни състояния, едно за менюто, второто за настройките, третото е „За Автора“ и" +
             "последното е за самата игра. Описани са и начините, по които може да се премине от едно състояние към друго, чрез насочени стрелки. Черните точки илюстрират пускането на програмата и съответно изключването й.";
+
+        string ryuTextEng2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<span class=\"tab\"></span>Spirit energy is displayed in the lower left corner of the screen, in the form of 8 blue rectangles. It's used when performing special " +
+            " moves. After being used, energy regenerates slowly over time. When the player doesn't have enough energy, he can't use special abilities.<br/>" +
+            "<span class=\"tab\"></span>Over the energy indicator there is another one, for the health of Ryu, described as HP. It's displayed in the same way, but with red rectangles. Unlike energy," +
+            " health doesn't regenerate over time. To restore health Ryu must find food which is dropped randomly on the map. Health is taken when the player gets hit or" +
+            " when he goes through some obsticle like fire. When all of our health is depleted Ryu dies and the game ends.<br/><span class=\"tab\"></span>Other than those two indicators there is alos time." +
+            "Time is displayer at the bottom of the screen in the middle. It shows how much time we have to complete the level. When the time ends the game ends. We get more time" +
+            "by reaching certain part of the level.<br/><span class=\"tab\"></span>There are also in-game options. The user can stop and start" +
+            " the sound of the game, to change the volume, to change the game difficulty and to quit at any time. The game can also be" +
+            " minimized.<br/><br/><h2>Software limitations</h2><br/><span class=\"tab\"></span>To play Ryu: The Big Adventure we need JRE " +
+            "(Java Runtime Environment). JRE is available from Oracle's website.&nbsp;<a href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" target=\"_blank\">" +
+            "<b><u>Link</u></b></a><br/><br/><h2>Acceptances and dependencies</h2><br/><span class=\"tab\"></span>The source code can be found on GitHub, a web-based hosting service" +
+            "for source code management (SCM) and distributed revision control.<br/><span class=\"tab\"></span>The project makes the assumption that GitHub, which is" +
+            " managed by third-party administration is accessible.<br/><span class=\"tab\"></span>There is also the acceptance, that the users have compatible computer with Java Runtime" +
+            "Environment installed on it. At the moment of creating the project, The Java programming language is very popular and most computers have the required package installed, which helps " +
+            "the easy distribution of the game.<br/><br/><h2>State diagram</h2><br/><span class=\"tab\"></span>The state diagram shows how the game Ryu: The Big Adventure " +
+            "handles user commands.<br/><span class=\"tab\"></span>The diagram is created using The Unified Modeling Language (UML), a general-purpose modeling language in the field of software engineering, which is designed to provide a standard way to visualize the design of a system. " +
+            ".<br/><br/><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"" +
+            "target=\"_blank\"><b><u>Original size</u></b></a><br/><br/><span class=\"tab\"></span>There are 4 different states in the project - menu, options, credits and" +
+            "the game itself. We can see the ways we can pass through different states.";
 
         string ryuTextBul3 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Потребителско меню</h3><br/><span class=\"tab\"></span>Първата цел при създаването на проекта е да се направи начално потребителско меню.<br/><br/><img src=\"/Resources/ryu5.jpg\" width=\"592\">" +
@@ -358,10 +379,18 @@ namespace WebApplication1
             {
                 countdown_Click1(countdown, null);
             }
-            if (!ryuPage1.Enabled && !ryu.Enabled)
+            if (!ryu.Enabled)
             {
-                ryuPage1_Click(ryuPage1, null);
+                if (!ryuPage1.Enabled)
+                {
+                    ryuPage1_Click(ryuPage1, null);
+                }
+                if (!ryuPage2.Enabled)
+                {
+                    ryuPage2_Click(ryuPage2, null);
+                }
             }
+            
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
@@ -599,6 +628,16 @@ namespace WebApplication1
         {            
             if (page == 1)
             {
+                ryuPage1.Enabled = false;
+                ryuPage2.Enabled = true;
+                ryuPage3.Enabled = true;
+                ryuPage4.Enabled = true;
+                ryuPage5.Enabled = true;
+                ryuPage6.Enabled = true;
+                ryuPage7.Enabled = true;
+                ryuPage8.Enabled = true;
+                ryuPage9.Enabled = true;
+                pageLbl.Visible = false;
                 visiblePages();
             }
             if (page == 0)
@@ -611,18 +650,7 @@ namespace WebApplication1
                 ryuPage6.Visible = false;
                 ryuPage7.Visible = false;
                 ryuPage8.Visible = false;
-                ryuPage9.Visible = false;
-
-                ryuPage1.Enabled = false;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-                pageLbl.Visible = false;
+                ryuPage9.Visible = false;                
             }
             if (page == 2)
             {
@@ -732,7 +760,15 @@ namespace WebApplication1
 
         protected void ryuPage2_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul2;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul2;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng2;
+            }
+
             mainContent.Text = ""; 
             ryuPages(2);
         }
