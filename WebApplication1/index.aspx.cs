@@ -178,6 +178,22 @@ namespace WebApplication1
             " състояние. То показва информация за създателите на приложението, под формата на слайдващ се нагоре текст. Информацията всъщност представлява едно голямо изображение, което се движи нагоре по екрана" + 
             " през определен интервал от време.";
 
+        string ryuTextEng3 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<h2>Realization</h2><br/><h3>User menu</h3><br/><span class=\"tab\"></span>The first part of the project is to create a main menu.<br/><br/><img src=\"/Resources/ryu5.jpg\" width=\"592\">" +
+            "<span class=\"tab\"></span>The menu provides options to start a new game, to go to the settings screen, go ot the credits screen and exit the game." +
+            " In the menu we can see the main character.<br/><br/><h3Options</h3><br/><span class=\"tab\"></span>The options menu contains to tickable squares, for turning music and sounds on and off" +
+            " , two sliders for controling sound volume and an option to control game difficulty, also there is a back button.<br/>" +
+            "<span class=\"tab\"></span>In the settings menu I've used global variables, which are available in every class. They are declared in the main menu, can be changed in the settings menu and can be red from all states." +
+            " This way sound and music can work in the same way in every part of the game.<br/><br/><img src=\"/Resources/ryu6.jpg\" width=\"592\"><span class=\"tab\"></span>Difficulty changes enemies health by increasing or decreasing it." +
+            " When the difficulty is set on Hard, enemies are much harder and require much more effort to kill. To make this I've used a global variable named Difficulty, which can take three different numbers" +
+            " : 0 for Easy, 1 for Normal and 2 for Hard. At 0 health of enemies is decreased by 50% from normal, at 1 health isn't changed and at 2 " +
+            ", it's increased by 50%.<br/><span class=\"tab\"></span>The music slider uses the method music.setVolume(float volume); for changing music volume and music.getVolume(float volume); to read the current volume " +
+            "and to change it's state accordingly.<br/><span class=\"tab\"></span>The sound slider uses it's own global variable unlike setVolume and getVolumе because sound volume is declared," +
+            " at the moment they are played and can be different for every each sound. The global variable is declared in the main manu and it's named soundVolume. It's used every time a sound is played" +
+            " in the following way: <br/>punchedSnd.play(1, Menu.soundVolume);<br/><span class=\"tab\"></span>In this command punchedSnd is been played using the method play. 1 is the pitch and the variable soundVolume is " +
+            "called from the menu class and sets the volume of the sound.<br/><span class=\"tab\"></span>For the thicking squares I've used the variables soundOn and musicOn.<br/><br/><h3>Credits</h3><br/><span class=\"tab\"></span>Credits is the most " +
+            " simple made state. It shows information about the creator of the game by sliding text through the screen. The text is actually an image which is moved up the screen";
+
         string ryuTextBul4 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Play</h3><br/><span class=\"tab\"></span>Класът Play е основното състояние на играта. В него са реализирани главният герой, " +
             "враговете му, структурата на нивото, обектите по картата и взаимоотношението между всички тях.<br/><h4>Начална анимация</h4><br/>Нивото ни приветства с начална " + 
@@ -388,6 +404,10 @@ namespace WebApplication1
                 if (!ryuPage2.Enabled)
                 {
                     ryuPage2_Click(ryuPage2, null);
+                }
+                if (!ryuPage3.Enabled)
+                {
+                    ryuPage3_Click(ryuPage3, null);
                 }
             }
             
@@ -790,7 +810,15 @@ namespace WebApplication1
 
         protected void ryuPage3_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul3;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul3;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng3;
+            }
+
             mainContent.Text = "";
             ryuPages(3);
         }
