@@ -218,6 +218,30 @@ namespace WebApplication1
             " че крайният резултат от картата е файл с размер от 10MB или близо 3 пъти по-голям от еквивалента си в .jpg формат.<br/><span class=\"tab\"></span>При създаване на картата, създаваме и две променливи – " + 
             "shiftX и shiftY. Те се използват за да движат изображението в прозореца на програмата. Така когато движим героя, ние всъщност движим картата под него. Неговите координати си остават едни и същи, но получаваме ефект на движение на героя.";
 
+        string ryuTextEng4 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<h2>Realization</h2><br/><h3>Play</h3><br/><span class=\"tab\"></span>The Play class is the main state of the game. In it the main character, " +
+            "his enemies, the structure of the level and the objects on the map have been initialized.<br/><h4>Start animation</h4><br/>Starting a new game present us " +
+            "with an animation - „Round One“ and a corresponding sound. For this purpose we use an image (round1Image) and a scaling effect. To create the effect " +
+            " we use the command round1Image.draw() and the variable round1Scale, which scales the image. When we use the command round1Scale++;" +
+            " in the update method, the variable gets increased with every cicle of the game. This way the scale is increased and the animation is complete. When reaching a certain scale" +
+            " , the starting animation stops, the timer starts and the user takes control over the main character.<table><tr><th>public void round1Animation()<br/>" +
+            "{<br/><span class=\"tab\"></span><font color=\"green\">//round1 animation and sound</font><br/><span class=\"tab\"></span>if (round1Bool)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>round1Scale += 4;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>if (round1Scale >= 100 && round1Scale <= 105 && Menu.soundOn)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>round1Snd.play(1, Menu.soundVolume);<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span> " +
+            "if (round1Scale >= 600 && round1Scale <= 610)<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>" +
+            "round1Bool = false;<br/><span class=\"tab\"></span><span class=\"tab\"></span>enableInput = true;<br/><span class=\"tab\"></span><span class=\"tab\"></span>round1Scale = 1;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"> " +
+            "</span>The method is round1Animation(). round1Bool takes care of the completion of the animation. When reaching scale of 100 a sound starts to play, and when reaching scale of 600 the animation ends. " +
+            " Beside the animation, this method is also responsible for changing the enemies health according to the difficulty, set in the options menu. The boolean enableInput is used " +
+            "to give or inhibit control over the main character. Beside at the beginning of the game, the boolean is used in other places, like when the pause menu is open.<br/><br/><h3>Map of the level</h3><br/>" +
+            "<span class=\"tab\"></span>The map is one huge image, with greenish background imitating grass. First the image is scaled to an exact size so the level can be long enough. Other than the grass" +
+            " there is also a forest from the top and bottom. This forest is an obstruction, which haves the purpose to not allow the main character to go outside the boundries of the map. The forest is made of " +
+            " only one sprite, that of a tree. The sprite is downloaded from <a href=\"http://www.deviantart.com\" target=\"_blank\">" +
+            "<b><u>www.deviantart.com</u></b></a>, a website for publication of user-made artwork.<br/><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>" +
+            "<span class=\"tab\"></span><span class=\"tab\"></span><img src=\"/Resources/ryu7.png\" width=\"300\"><br/><span class=\"tab\"></span>After finding the correct sprite, using Photoshop, the tree" +
+            " is duplicated multiple times so the effect of a forest can be made. The process of building the map is fairly simple, the image must be in .png format because of a limitation in Slick2D. This means," +
+            " that the resulting file is 10MB in size or nearly 3 larger than the equivalent in .jpg.<br/><span class=\"tab\"></span>When creating the map we also create two variables – " +
+            "shiftX and shiftY. They are used to move the image in the window ot the program. This way when moving Ryu we actually move the image below him. His coordinates remain the same but we get the effect of moving the character.";
+
         string ryuTextBul5 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Създаване на Ryu</h3><br/><span class=\"tab\"></span>За анимиране на главният герой на играта са използвани общо 14 различни анимации. Всяка една анимация е изградена от спрайтшийтове.<br/><span class=\"tab\"></span>" +
             "Spritesheet представлява едно изображение, в което се намират няколко подизображения от анимацията наречени спрайтове.<br/><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><img src=\"/Resources/ryu8.png\" width=\"400\"><br/>" +
@@ -409,8 +433,11 @@ namespace WebApplication1
                 {
                     ryuPage3_Click(ryuPage3, null);
                 }
-            }
-            
+                if (!ryuPage4.Enabled)
+                {
+                    ryuPage4_Click(ryuPage4, null);
+                }
+            }            
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
@@ -464,15 +491,15 @@ namespace WebApplication1
             if (!switchBulBtn.Enabled)
             {
                 artTitle.Text = "За мен";
-                mainContent.Text = aboutMeBul;                
-                visibilities();
+                mainContent.Text = aboutMeBul;
             }
             else
             {
                 artTitle.Text = "About me";
-                mainContent.Text = aboutMeEng;                
-                visibilities();
-            }            
+                mainContent.Text = aboutMeEng;
+            }
+
+            visibilities();
         }
 
         protected void biography_Click(object sender, EventArgs e)
@@ -492,16 +519,16 @@ namespace WebApplication1
                 lang.Text = "Български";
                 artTitle.Text = "Автобиография";
                 navigation.Text = "Навигация";
-                visibilities();
             }
             else
             {
                 mainContent.Text = biographyEng;
                 lang.Text = "Bulgarian";
                 artTitle.Text = "Biography";
-                navigation.Text = "Navigation";
-                visibilities();
+                navigation.Text = "Navigation";                
             }
+
+            visibilities();
         }
 
         protected void projects_Click(object sender, EventArgs e)
@@ -521,9 +548,9 @@ namespace WebApplication1
                 mainContent.Text = projectsEng;                
                 artTitle.Text = "Projects";                
             }
-
-            visibilities();
+            
             projectsContent.Text = "";
+            visibilities();
         }
 
         protected void contacts_Click(object sender, EventArgs e)
@@ -825,7 +852,15 @@ namespace WebApplication1
 
         protected void ryuPage4_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul4;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul4;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng4;
+            }            
+            
             mainContent.Text = "";
             ryuPages(4);
         }
