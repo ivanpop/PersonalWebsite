@@ -263,6 +263,27 @@ namespace WebApplication1
             " през цялата игра. Втората двойка променливи са ryuPositionX и ryuPositionY. Те определят местоположението му върху картата на нивото. Те описват движението на картата зад Ryu. Така получаваме ефекта, че Ryu се движи, но всъщност самата" + 
             " му фигура не се премества от горният ляв ъгъл на прозореца.";
 
+        string ryuTextEng5 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<h2>Realization</h2><br/><h3>Creating Ryu</h3><br/><span class=\"tab\"></span>To animate the main character in the game I've used a total of 14 different animations. Each animation is made of spritesheets.<br/><span class=\"tab\"></span>" +
+            "A spritesheet is an image in which there are a couple of sub-images or frames of the animation called sprites.<br/><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><img src=\"/Resources/ryu8.png\" width=\"400\"><br/>" +
+            "<span class=\"tab\"></span>When declaring the spritesheet we give the path to the image, x and y, which correspond to the vertical and horizontal size of the sprite frame. The spritesheet must be in .png format and with transparent background." +
+            "<br/><img src=\"/Resources/ryu9.png\" width=\"594\"><br/><span class=\"tab\"></span>The frames of the sprite have to be in an exact distance between each other. x is formed when we take the horizontal size of the spritesheet and we divide it by the count of frames inside it." +
+            " If the distance isn't messured corectly, there will be inadequacyies when drawing the animation.<br/><span class=\"tab\"></span>The animation is declared with the spritesheet as source file followed by х which stands for the duration" +
+            " of each frame messured in milliseconds. After this duration has passed the framed is followed by the next in the spritesheet.<br/><br/><li><b>ryuStatic</b>. This is the static animation. It's used each time Ryu isn't" +
+            " moving or doing some action. Other than inside the game, this sprite is also used in the main menu.</li><br/><li><b>ryuReady</b>. This animation is used when starting and finishing the game. It represents " +
+            " the action of Ryu when tying his headband.<br/><li><b>ryuLeft</b>. Used when walking back.</li><br/><li><b>ryuRight</b>. Used when walking forward/right, up and down." +
+            "</li><br/><li><b>ryuPunch</b>. This is Ryu hitting with fist</li><br/><li><b>ryuLowKick</b>. Ryu hitting with kick.</li><br/><li><b>ryuHadouken</b><b>ryuShoryuken</b> and <b>ryuTatsaku</b>. These animations represent the three special abilities that Ryu posses.<b>ryuHadouken</b> is" +
+            " used in combination with <b>ryuHadoukenBall</b>, which is the animation of the fired ball of energy.</li><br/><li><b>ryuHurt</b>. This is the animation of Ryu when he gets hurt.</li><br/><li><b>ryuWin1</b> and <b>ryuWin2</b>. These" +
+            " are two different animations which work in combination and are used when finishing the game. They illustrate Ryu as a winner.<br/><br/><span class=\"tab\"></span>Other the visual Ryu also uses a variety of sound effects, taken " +
+            "from different sources from the web.<br/><span class=\"tab\"></span>For the realization of Ryu there are also a variety of variables and methods, which are created for his needs.<br/><span class=\"tab\"></span>ryuPhysics() takes care of moving," +
+            " Ryu, switching between basic animations, hits, special abilities, his health and energy. This method listens to input from the keyboard and does the corresponding animation. Here there are the durations of the animations," +
+            " the boundries of the level which cannot be passed, the relationship between Ryu and the traps and objects on the map and the monitoring of his HP and MP. To avoid duplications of animations each on of them " +
+            " is grouped with it's own boolean. When Ryu is in static position, the boolean ryuStatic is true and all other are false. In every moment only one boolean can be true. Otherwise we can see" +
+            " two different animations at the same time. To avoid this problem there is another method called removeDuplications(). It takes care of this, that only one boolean can be true and it switches " +
+            "all the others to false.<br/><span class=\"tab\"></span>The coordinates of Ryu are described with 4 variables. First two, shiftX and shiftY determine his location on the window of the application. These coordinates are always the same and don't change" +
+            ". The other two are ryuPositionX and ryuPositionY. They determine his location on the map. They describe the movement of the background image behind Ryu. This way we get the effect that Ryu is moving, but actually" +
+            " his figure doesn't move from the left corner of the window.";
+
         string ryuTextBul6 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><br/><span class=\"tab\"></span>Другата основна част от играта е създаването на противници, които да ни държат заети. Тяхната реализация е сходна с тази на главният герой – създадени" +
             " са със спрайтове, издават звуци, имат жизнени показатели и могат да удрят. Разликата тук е, че те трябва да се контролират от компютъра, чрез изкуствен интелект (A.I.), вместо от клавиатурата.<br/><span class=\"tab\"></span>" +
@@ -436,6 +457,10 @@ namespace WebApplication1
                 if (!ryuPage4.Enabled)
                 {
                     ryuPage4_Click(ryuPage4, null);
+                }
+                if (!ryuPage5.Enabled)
+                {
+                    ryuPage5_Click(ryuPage5, null);
                 }
             }            
         }
@@ -867,7 +892,15 @@ namespace WebApplication1
 
         protected void ryuPage5_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul5;
+            if (!switchBulBtn.Enabled)
+            {
+                projectsContent.Text = ryuTextBul5;
+            }
+            else
+            {
+                projectsContent.Text = ryuTextEng5;
+            }  
+            
             mainContent.Text = "";
             ryuPages(5);
         }
