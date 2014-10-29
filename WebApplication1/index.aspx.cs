@@ -407,124 +407,126 @@ namespace WebApplication1
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
 
-        string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
-        
+        string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";     
+
         protected void Page_Load(object sender, EventArgs e)
-        {
-            mainContent.Text = aboutMeBul;
-            visibilities();
-            pageLbl.Text = "<br/><br/>Страница: ";            
+        {            
+            if (Request.QueryString["l"] == null)
+            {
+                visibilities();
+            }
+            if (Request.QueryString["l"] == "en")
+            {
+                visibilities(1);
+            }                          
         }
 
         protected void langSwitch()
         {
-            visibilities();
+            if (Request.QueryString["l"] == null)
+            {
+                switchBulBtn.Enabled = false;
+                switchEngBtn.Enabled = true;
+                lang.Text = "Български";
+                artTitle.Text = "За мен";
+                navigation.Text = "Навигация";
+                aboutMe.Text = "За мен";
+                biography.Text = "Автобиография";
+                projects.Text = "Проекти";
+                contacts.Text = "Контакти";
+                header1.Text = "Иван Попов";
+                header2.Text = "Лична Интернет Страница";
+                goTop.Text = "Горе";
+            }
+            else
+            {
+                switchBulBtn.Enabled = true;
+                switchEngBtn.Enabled = false;
+                lang.Text = "English";
+                artTitle.Text = "About me";
+                navigation.Text = "Navigation";
+                aboutMe.Text = "About me";
+                biography.Text = "Biography";
+                projects.Text = "Projects";
+                contacts.Text = "Contacts";
+                header1.Text = "Ivan Popov";
+                header2.Text = "Personal website";
+                goTop.Text = "Top";
+            }
+        }
 
-            if (!aboutMe.Enabled)
+        protected void visibilities(int id = 0)
+        {
+            if (Request.QueryString["p"] == "proj")
             {
-                aboutMe_Click(aboutMe, null);
-            }
-            if (!biography.Enabled)
-            {
-                biography_Click(biography, null);
-            }
-            if (!projects.Enabled)
-            {
-                projects_Click(projects, null);
-            }
-            if (!converter.Enabled)
-            {
-                converter_Click(converter, null);
-            }
-            if (!countdown.Enabled)
-            {
-                countdown_Click1(countdown, null);
-            }
-            if (!ryu.Enabled)
-            {
-                if (!ryuPage1.Enabled)
+                projects.Enabled = false;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                contacts.Enabled = true;
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                if (id == 0)
                 {
-                    ryuPage1_Click(ryuPage1, null);
+                    mainContent.Text = projectsBul;
+                    artTitle.Text = "Проекти";
                 }
-                if (!ryuPage2.Enabled)
+                else
                 {
-                    ryuPage2_Click(ryuPage2, null);
+                    mainContent.Text = projectsEng;
+                    artTitle.Text = "Projects";
                 }
-                if (!ryuPage3.Enabled)
+            }
+
+            if (Request.QueryString["p"] == null)
+            {
+                aboutMe.Enabled = false;
+                biography.Enabled = true;
+                contacts.Enabled = true;
+                projects.Enabled = true;
+
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+
+                if (id == 0)
                 {
-                    ryuPage3_Click(ryuPage3, null);
+                    artTitle.Text = "За мен";
+                    mainContent.Text = aboutMeBul;
                 }
-                if (!ryuPage4.Enabled)
+                else
                 {
-                    ryuPage4_Click(ryuPage4, null);
+                    artTitle.Text = "About me";
+                    mainContent.Text = aboutMeEng;
                 }
-                if (!ryuPage5.Enabled)
-                {
-                    ryuPage5_Click(ryuPage5, null);
-                }
-            }            
+            }
+
+            langSwitch();
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
-            switchBulBtn.Enabled = true;
-            switchEngBtn.Enabled = false;            
-            lang.Text = "English";
-            artTitle.Text = "About me";
-            navigation.Text = "Navigation";                       
-            aboutMe.Text = "About me";
-            biography.Text = "Biography";
-            projects.Text = "Projects";
-            contacts.Text = "Contacts";
-            header1.Text = "Ivan Popov";
-            header2.Text = "Personal website";
-            goTop.Text = "Top";
-
-            langSwitch();
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("l", "en");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url); 
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
         {
-            switchBulBtn.Enabled = false;
-            switchEngBtn.Enabled = true;
-            mainContent.Text = aboutMeBul;
-            lang.Text = "Български";
-            artTitle.Text = "За мен";
-            navigation.Text = "Навигация";                     
-            aboutMe.Text = "За мен";
-            biography.Text = "Автобиография";
-            projects.Text = "Проекти";
-            contacts.Text = "Контакти";
-            header1.Text = "Иван Попов";
-            header2.Text = "Лична Интернет Страница";
-            goTop.Text = "Горе";
-
-            langSwitch();
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Remove("l");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url); 
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
         {
-            aboutMe.Enabled = false;
-            biography.Enabled = true;
-            contacts.Enabled = true;
-            projects.Enabled = true;
-
-            ryu.Enabled = true;
-            converter.Enabled = true;
-            countdown.Enabled = true;
-
-            if (!switchBulBtn.Enabled)
-            {
-                artTitle.Text = "За мен";
-                mainContent.Text = aboutMeBul;
-            }
-            else
-            {
-                artTitle.Text = "About me";
-                mainContent.Text = aboutMeEng;
-            }
-
-            visibilities();
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Remove("p");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url); 
         }
 
         protected void biography_Click(object sender, EventArgs e)
@@ -557,25 +559,11 @@ namespace WebApplication1
         }
 
         protected void projects_Click(object sender, EventArgs e)
-        {
-            projects.Enabled = false;
-            aboutMe.Enabled = true;
-            biography.Enabled = true;
-            contacts.Enabled = true;
-
-            if (!switchBulBtn.Enabled)
-            {
-                mainContent.Text = projectsBul;                
-                artTitle.Text = "Проекти";                
-            }
-            else
-            {
-                mainContent.Text = projectsEng;                
-                artTitle.Text = "Projects";                
-            }
-            
-            projectsContent.Text = "";
-            visibilities();
+        {            
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "proj");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();                
+            Response.Redirect(url);            
         }
 
         protected void contacts_Click(object sender, EventArgs e)
@@ -593,37 +581,7 @@ namespace WebApplication1
             artTitle.Text = "Контакти";
             navigation.Text = "Навигация";
             visibilities();
-        }
-
-        protected void visibilities()
-        {
-            if (artTitle.Text == "Автобиография" || artTitle.Text == "Biography")
-            {
-                ivanpopov.Visible = true;
-            }
-            else
-            {
-                ivanpopov.Visible = false;
-            }
-
-            if (artTitle.Text == "Проекти" || artTitle.Text == "Projects")
-            {
-                converter.Visible = true;
-                countdown.Visible = true;
-                ryu.Visible = true;
-                projectsContent.Visible = true;
-            }
-            else
-            {
-                converter.Visible = false;
-                countdown.Visible = false;
-                ryu.Visible = false;
-                projectsContent.Visible = false;
-                projectsContent.Text = "";
-            }
-
-            ryuPages(0);            
-        }
+        }        
 
         protected void converter_Click(object sender, EventArgs e)
         {
