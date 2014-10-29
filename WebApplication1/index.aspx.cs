@@ -17,6 +17,10 @@ namespace WebApplication1
             "This is my personal web page. Here you will find information about me and project, I work on.<br/><br/>"+
             "My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
 
+        string contactsBul = "аджаджаджа";
+
+        string contactsEng = "ajajaj";
+
         string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/>" +
             "<span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г." +
             "със &nbsp;специалност \"Информатика\".<br/><br/><span class=\"tab\"></span>Непосредствено след завършването си записах магистърска &nbsp;" +
@@ -301,12 +305,54 @@ namespace WebApplication1
             "class=\"tab\"></span>Обхватът е такъв, че когато противника се появи на екрана, той вече е в активно положение и вече се движи към нас. Веднъж задействан, противника ще е активен до края на жизненият си цикъл, който е до смъртта му, смъртта" +
             " на Ryu или изтичане на времето.<br/><img src=\"/Resources/ryu11.jpg\" width=\"592\">";
 
+        string ryuTextEng6 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
+            "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><br/><span class=\"tab\"></span>Другата основна част от играта е създаването на противници, които да ни държат заети. Тяхната реализация е сходна с тази на главният герой – създадени" +
+            " са със спрайтове, издават звуци, имат жизнени показатели и могат да удрят. Разликата тук е, че те трябва да се контролират от компютъра, чрез изкуствен интелект (A.I.), вместо от клавиатурата.<br/><span class=\"tab\"></span>" +
+            "Всеки един противник е създаден от 5 различни спрайта: статично положение, ходене, удряне, бивайки ударен и спрайт за умиране.<br/><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\">" +
+            "<span class=\"tab\"></span><span class=\"tab\"></span></span><img src=\"/Resources/ryu10.png\" width=\"250\"><br/><span class=\"tab\"></span>Противниците се намират на точно определени координати на нивото. За разлика от Ryu, противниците нямат" +
+            " специални умения следователно нямат магически точки (MP) а единствено здраве (HP), което се определя от зададеното ниво на трудност.<br/><br/><h3>Създаване на изкуствен интелект</h3><span class=\"tab\"></span><li><b>Общи сведения</b></li><br/>" +
+            "<span class=\"tab\"></span>Изкуственият интелект позволява на компютрите да правят неща, които за хората изглеждат разумни. Той има способност да анализира окръжаващата го среда и да предприема действия, които увеличават възможността за постигане " +
+            "на определени цели.<br/><span class=\"tab\"></span>Създаването на изкуственият интелект е един от най-сложните етапи, при проектирането на компютърна игра. За него има обособен отделен дял в информатиката и се изучава като академична дисциплина." +
+            "<br/><span class=\"tab\"></span>Пример за много добър A.I. е този в играта F.E.A.R.: First Encounter Assault Recon. Това е FPS шуутър, в който противниците имат широк набор от действия. Те могат да клякат и да минават под препядствия, да скачат" +
+            " през прозорци, да се подават през парапети, да изкачват стълби и да бутат обекти за да създадат прикритие от насрешната стрелба. Различни врагове могат да работят в екип, използвайки обиколни пътеки, за да изненадат играча в гръб, да използват" +
+            " потискаща стрелба и да скачат зад стени, когато биват обстрелвани. Често изкуственият интелект на F.E.A.R. е посочван като високо развит и неговата ефективност помага на играта да спечели наградите „2005 Best AI Award“ на GameSpot и „Most" +
+            " Infuental AI Games“ на AIGameDev's.<br/><span class=\"tab\"></span>За целта на проекта е създаден по-просто устроен изкуствен интелект. Той е един и същ за всеки противник. Това което той прави е да следи за местоположението на главният герой," +
+            " да се придвижва по посока към него и да изпълнява удари върху играча.<br/><span class=\"tab\"></span>При започването на играта, всеки един противник е предварително създаден на нивото, но е в пасивно положение и ние не го виждаме. Те имат " +
+            "определен обхват на действие, в което Ryu трябва да влезне, за да могат да се активират. За да не се получи претрупване на врагове, на едно и също място, те се създадени със собствени уникални координати и обхвати на действие.<br/><span " +
+            "class=\"tab\"></span>Обхватът е такъв, че когато противника се появи на екрана, той вече е в активно положение и вече се движи към нас. Веднъж задействан, противника ще е активен до края на жизненият си цикъл, който е до смъртта му, смъртта" +
+            " на Ryu или изтичане на времето.<br/><img src=\"/Resources/ryu11.jpg\" width=\"592\">";
+
         string ryuTextBul7 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><span class=\"tab\"></span><span class=\"tab\"></span><li><b>Придвижване към Ryu</b></li><br/><span class=\"tab\"></span>Противника се движи когато Ryu навлезе в обхватът му, докато" + 
             " самият противник е жив и докато той не се намира до Ryu. Когато тези две условия са изпълнени, противникът започва да се придвижва към shiftX и shiftY координатите със скорост delta * .1f. По време на придвижването аналогично се променя" +
             " и анимацията на противника, към анимация на придвижване.<table><tr><th>if (ryuPositionX < -170 && thugHP > 0)<br/>{<br/><span class=\"tab\"></span>if (thugPosY < 117)<br/><span class=\"tab\">" +
             "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>moveY += delta * .1f;<br/><span class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br/><span class=\"tab\"></span>}<br/> " +
             "<span class=\"tab\"></span>if (thugPosY > 120)<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" + 
+            "</span>moveY -= delta * .1f;<br/><span class=\"tab\"></span><spanthugSprite = thugWalkAnimation;<br/>}<br/><span class=\"tab\"></span>if (thugPosX > 170)<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span>" +
+            "<span class=\"tab\"></span>moveX -= delta * .1f;<br/><span class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br/><span class=\"tab\"></span>}<br/>" +
+            "}</th></tr></table><br/><span class=\"tab\"></span>Когато стигне до играча той спира, защото тогава едно от условията за движение не е изпълнено – това да не се намира до него.<br/><br/><li><b>Удряне</b></li><br/><span class=\"tab\"></span>" +
+            "За да можем да ударим главният герой, първо трябва да сме изпълнили серия от условия. Противника трябва да се намира в непосредствена близост до Ryu, Ryu трябва да не изпълнява удари или умения и самият противник трябва да е жив.<br/><span class=\"tab\"></span>" +
+            "Първо булевият метод thugAtRyu()следи дали противника се намира на точното място, за да изпълни удар и връща true.<br/><table><tr><th>public boolean thugAtRyu(float thugPosX, float thugPosY)<br/>" +
+            "{<br/><span class=\"tab\"></span>if (thugPosX < 190 && thugPosX > 115 && thugPosY < 130 &&<br/><span class=\"tab\"></span><span class=\"tab\"></span>thugPosY > 70)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>else<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>Със следващият булев метод, наречен ryuAttack(), ние следим дали героят" +
+            " не извършва някакъв удар или специално умение.<br/><table><tr><th>public boolean ryuAttack()<br/>" +
+            "{<br/><span class=\"tab\"></span>if (ryuHadouken || ryuLowKick || ryuPunch || ryuShoryuken ||<br/><span class=\"tab\"></span><span class=\"tab\"></span>ryuShoryuken || ryuTatsaku)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>else<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>Както споменахме, за всяко едно действие на Ryu има съответна булева стойност. В този случай, чрез" +
+            " тях можем да следим действията на главният герой и да ги използваме в нашия метод.<br/><span class=\"tab\"></span>Противникът трябва да удря през определено време, когато вече се намира срещу Ryu, за да се придобие реалност към действията му. За целта се " +
+            "използва метода enemyAttackChance().<br/><span class=\"tab\"></span>enemyAttackChance()е шансът врагът да удари, когато се намира в непосредствена близост до Ryu.<br/><table><tr><th>public boolean enemyAttackChance()<br/>" +
+            "{<br/><span class=\"tab\"></span>Random rand = new Random();<br/><br/><span class=\"tab\"></span>if (rand.nextInt(1000) > 900)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>else<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
+            "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>Метода създава случайно число в интервала от 1 до 1000, с всеки един цикъл на играта. " +
+            "Когато числото е по-голямо от 900, метода изпраща сигнал за изпълняване на удар.<br/><span class=\"tab\"></span>Когато всички тези условия са изпълнени преминаваме към изпълнението на удара.";
+
+        string ryuTextEng7 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
+            "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><span class=\"tab\"></span><span class=\"tab\"></span><li><b>Придвижване към Ryu</b></li><br/><span class=\"tab\"></span>Противника се движи когато Ryu навлезе в обхватът му, докато" +
+            " самият противник е жив и докато той не се намира до Ryu. Когато тези две условия са изпълнени, противникът започва да се придвижва към shiftX и shiftY координатите със скорост delta * .1f. По време на придвижването аналогично се променя" +
+            " и анимацията на противника, към анимация на придвижване.<table><tr><th>if (ryuPositionX < -170 && thugHP > 0)<br/>{<br/><span class=\"tab\"></span>if (thugPosY < 117)<br/><span class=\"tab\">" +
+            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>moveY += delta * .1f;<br/><span class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br/><span class=\"tab\"></span>}<br/> " +
+            "<span class=\"tab\"></span>if (thugPosY > 120)<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
             "</span>moveY -= delta * .1f;<br/><span class=\"tab\"></span><spanthugSprite = thugWalkAnimation;<br/>}<br/><span class=\"tab\"></span>if (thugPosX > 170)<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span>" +
             "<span class=\"tab\"></span>moveX -= delta * .1f;<br/><span class=\"tab\"></span><span class=\"tab\"></span>thugSprite = thugWalkAnimation;<br/><span class=\"tab\"></span>}<br/>" +
             "}</th></tr></table><br/><span class=\"tab\"></span>Когато стигне до играча той спира, защото тогава едно от условията за движение не е изпълнено – това да не се намира до него.<br/><br/><li><b>Удряне</b></li><br/><span class=\"tab\"></span>" +
@@ -372,6 +418,52 @@ namespace WebApplication1
             "<span class=\"tab\"></span>}<br/>" +
             "}</th></tr></table>";
 
+        string ryuTextEng8 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
+           "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><br/><table><tr><th>if (thugAtRyu(thugPosX, thugPosY) && !ryuAttack() && enemyAttackChance() &&<br/><span class=\"tab\"></span>showThug && thugHitRyu)<br/>" +
+           "{<br/><span class=\"tab\"></span>thugSprite = thugHitAnimation;<br/><span class=\"tab\"></span>getInitialTime = time;<br/><br/><span class=\"tab\"></span>if (!punchedSnd.playing() && Menu.soundOn)<br/><span class=\"tab\">" +
+           "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>punchedSnd.play(1, Menu.soundVolume);<br/><span class=\"tab\"></span>}<br/><br/> " +
+           "<span class=\"tab\"></span>ryuHurt = true;<br/><span class=\"tab\"></span>ryuHP--;<br/><span class=\"tab\"></span>thugHitRyu = false;<br/>" +
+           "}</th></tr></table><br/><span class=\"tab\"></span>Първо, анимацията на врагът се променя към такава на удряне. След това създаваме таймер, който да връща противника към " +
+           "статичното си положение, след като вече е изпълнил удара. Проверяваме дали звуците са позволени в тази сесия на играта и изпълняваме звук на удряне. Също така проверяваме дали конкретният звук не" +
+           " се изпълнява в момента, чрез punchedSnd.playing(), който връща true когато това е вярно. Целта е да не се получава застъпване на звука, което може да доведе до какафония. Променяме анимацията на" +
+           " Ryu със съответната, изобразяваща състояние на болка и отнемаме от неговите жизнени точки. Накрая същият таймер връща и Ryu към статичното му положение.<br/><span class=\"tab\"></span>За " +
+           "създаването на таймера използваме метода delay().<br/><table><tr><th>public boolean delay(long startTime, int number)<br/>{<br/></span><span class=\"tab\"></span>if (startTime + number <= time)<br/><span class=\"tab\">" +
+           "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>else<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
+           "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>Този метод използва променливата time, която представлява системното времето под формата" +
+           " на цифра. StartTime е времето когато е започнал таймера, а  number е интервала от време до неговото приключване. Когато интервалът изтече метода връща стойност  true и таймера приключва.<br/><span class=\"tab\">" +
+           "По сходен начин се изпълняват и ударите на Ryu.<br/><span class=\"tab\">За да нанесем удар първо проверяваме за противник в близост до Ryu и дали противника е жив. След това изсвирваме звука за удряне, по абсолютно" +
+           " същия начин, привключваме анимацийте на двата героя, създаваме таймер и отнемаме от жизнените точки на врага. След приключване на таймера, героите се връщат към началното си състояние и можем " +
+           "да започнем от начало.<br/><br/><li><b>Анимация за край</b></li><br/><span class=\"tab\"></span>Анимацията за благополучен край е създадена по сходен модел с тази за начало. Тук обаче освен само " +
+           "нея използваме и три спрайта на Ryu, чрез които го изобразяваме в доволно състояние – състояние на успех.<br><table><tr><th>public void youWinAnimation(StateBasedGame sbg)<br/>" +
+           "{<br/><span class=\"tab\"></span>if (winState)<br/><span class=\"tab\"></span>{<br/><span " +
+           "class=\"tab\"></span><span class=\"tab\"></span>youWinScale1 += 3;<br/><span class=\"tab\"></span><span class=\"tab\"></span>" +
+           "youWinScale2 += 2;<br/><span class=\"tab\"></span><span class=\"tab\"></span>enableInput = false;<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>ryuSprite = ryuReadyAnimation;<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>ryuSprite.stopAt(6);<br/><br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>if (ryuSprite.isStopped())<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>{<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>ryuSprite = ryuWin1Animation;<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>ryuSprite.stopAt(3);<br/><br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>if (ryuSprite.isStopped())<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>{<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>ryuSprite = ryuWin2Animation;<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span><span class=\"tab\"></span>}<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>}<br/>" +
+           "<span class=\"tab\"></span>}<br/><br/>" +
+           "<span class=\"tab\"></span>if (youWinScale1 >= 100 && youWinScale1 <= 105 &&  Menu.soundOn)<br/>" +
+           "<span class=\"tab\"></span>{<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>youWinSnd.play(1, Menu.soundVolume);<br/>" +
+           "<span class=\"tab\"></span>}<br/><br/>" +
+           "<span class=\"tab\"></span>if (youWinScale1 >= 600 && youWinScale1 <= 610 <br/>" +
+           "<span class=\"tab\"></span>{<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>youWinScale1 -= 3;<br/>" +
+           "<span class=\"tab\"></span>}<br/><br/>" +
+           "<span class=\"tab\"></span>if (youWinScale2 >= 1200)<br/>" +
+           "<span class=\"tab\"></span>{<br/>" +
+           "<span class=\"tab\"></span><span class=\"tab\"></span>sbg.enterState(0);<br/>" +
+           "<span class=\"tab\"></span>}<br/>" +
+           "}</th></tr></table>";
+
         string ryuTextBul9 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><span class=\"tab\"></span>Метода се нарича youWinAnimation. Той се обхожда с всеки един цикъл на играта," +
             " но се активира, когато булевата winState върне стойност на вярно.  winState връща вярна стойност, когато всички противници са убити. Проверката става като се" +
@@ -405,6 +497,39 @@ namespace WebApplication1
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/ryu.zip\">Ryu: The Big Adventure!</a></td><td class=\"size\">24.8 MB</td> " +
             " </tr></tbody></table>";
 
+        string ryuTextEng9 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
+            "<h2>Реализация</h2><br/><span class=\"tab\"></span>Метода се нарича youWinAnimation. Той се обхожда с всеки един цикъл на играта," +
+            " но се активира, когато булевата winState върне стойност на вярно.  winState връща вярна стойност, когато всички противници са убити. Проверката става като се" +
+            " прочетат стойностите на жизнените точки на всички противници и те са равни на 0. Самата проверка се намира в update(), следователно тя се проверява с всеки" +
+            " цикъл на играта.<br/><img src=\"/Resources/ryu12.png\" width=\"592\"><br/><span class=\"tab\"></span>При вярност youWinImage изображението се изрисува на" +
+            " екрана, като  youWinScale1 и  youWinScale2 са неговите вертикални и хоризонтални размери. Тези стойности постепенно се увеличават, за да се създаде " +
+            "необходимата анимация. Когато стойността на  youWinScale1 премине 100, се възпроизвежда и звук, за успешно завършване на играта. Когато стойността на  " +
+            "youWinScale1 премине 600, изображението вече е в пълния си размер и скалирането приключва и малко след това играча бива прехвърлен към началното меню," +
+            " чрез sbg.enterState(0);.<br/><span class=\"tab\"></span>Споменахме и че Ryu също извършва анимация. Първо движението на героя се забранява с enableInput" +
+            " = false;.  След това преминаваме към първият спрайт ryuReadyAnimation, който е изграден от 6 кадъра. Спираме анимацията на последния 6-ти кадър с " +
+            "ryuSprite.stopAt(6);, правим проверка дали тя е спряла с ryuSprite.isStopped() и  ако това е вярно преминаваме към втория спрайт - ryuWin1Animation." +
+            " Отново спираме спрайта на последният кадър, в случая кадър 3, проверяваме за спиране на анимацията и привключваме към последната анимация " +
+            "ryuWin2Animation.<br/><span class=\"tab\"></span>Всички тези анимации и спрайтове придават усещане са успешно приключила игра.<br/><br/><h2>" +
+            "Заключение</h2><br/><span class=\"tab\"></span>В проекта бяха описани основните компоненти, за изграждането на нашата игра. Бяха споменати, " +
+            "без да бъдат детайлно изследвани – LWJGL и Slick2D библиотеките, които макар и изградени от трети страни, са необходими компоненти на средата." +
+            " Разгледана беше в основи логиката на анимирането чрез спрайтове и бяха изложени някои идеи за реализация, използвани при създаването на логиката" +
+            " на играта Ryu: The Big Adventure.<br/><span class=\"tab\"></span>Оттук нататък възможностите за развитие и подобрение на средата са много:<br/><span " +
+            "class=\"tab\"></span>От функционална гледна точка може да бъде подобрен изкуственият интелект на опонентите. Всеки един от опонентите е създаден отделно," +
+            " което означава че и характерите им могат да се направят различни. В игрите се използват различни класове герои като танк, лечител, стрелец и войн, всеки един" +
+            " специализиран в определени умения и с различни предимства и недостатъци.<br/><span class=\"tab\"></span>Танкът e герой който има за цел да поема ударите и да предпазва" +
+            " останалите от щети. Той върши малко щети, но за сметка на това е много здрав и труден за убиване.<br/><span class=\"tab\"></span>Лечителят използва магически сили за да" +
+            " лекува събратята си и да увеличава тяхната сила. Той е лесен за убиване и не извършва никакви щети и затова мястото му е в най-задните части на боя, от където използва" +
+            " магията си за лекуване.<br/><span class=\"tab\"></span>Стрелецът и войнът са класовете които извършват най-много щети. Докато танкът задържа вниманието на враговете, лечителят " +
+            "поддържа всички живи, стрелецът и войнът трябва да вършат щети, които да доведат до победа за екипа.<br/><span class=\"tab\"></span>Всеки един клас опонент ще изисква свой собствен" +
+            " изкуствен интелект, коренно различен от на останалите. Комбинацията от тези класове могат да създадат много проблеми за главният герой, принуждавайки го да използва " +
+            "различни стратегии за всеки един от тях.<br/><span class=\"tab\"></span>Може да бъде добавена и база данни, която да съхранява резултати. Резултатите ще се бъзират на това, за колко" +
+            " време е преминато нивото, на каква трудност е преминато нивото, колко здраве е останало на героя в края на нивото и др.<br/><span class=\"tab\"></span>Могат да се търсят" +
+            " други платформи за представяне, например да се създадат портове на играта за уеб браузър и за мобилни устройства, като iOS, Windows Mobile, Android и Blackberry." +
+            "<br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Ryu\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/ryu.zip\">Ryu: The Big Adventure!</a></td><td class=\"size\">24.8 MB</td> " +
+            " </tr></tbody></table>";
+
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
 
         string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";     
@@ -421,14 +546,13 @@ namespace WebApplication1
             }                          
         }
 
-        protected void langSwitch()
+        protected void langSwitch(int id = 0)
         {
-            if (Request.QueryString["l"] == null)
+            if (id == 0)
             {
                 switchBulBtn.Enabled = false;
                 switchEngBtn.Enabled = true;
                 lang.Text = "Български";
-                artTitle.Text = "За мен";
                 navigation.Text = "Навигация";
                 aboutMe.Text = "За мен";
                 biography.Text = "Автобиография";
@@ -443,7 +567,6 @@ namespace WebApplication1
                 switchBulBtn.Enabled = true;
                 switchEngBtn.Enabled = false;
                 lang.Text = "English";
-                artTitle.Text = "About me";
                 navigation.Text = "Navigation";
                 aboutMe.Text = "About me";
                 biography.Text = "Biography";
@@ -457,7 +580,7 @@ namespace WebApplication1
 
         protected void visibilities(int id = 0)
         {
-            if (Request.QueryString["p"] == "proj")
+            if (Request.QueryString["a"] == "proj")
             {
                 projects.Enabled = false;
                 aboutMe.Enabled = true;
@@ -479,7 +602,7 @@ namespace WebApplication1
                 }
             }
 
-            if (Request.QueryString["p"] == null)
+            if (Request.QueryString["a"] == null)
             {
                 aboutMe.Enabled = false;
                 biography.Enabled = true;
@@ -502,7 +625,187 @@ namespace WebApplication1
                 }
             }
 
-            langSwitch();
+            if (Request.QueryString["a"] == "bio")
+            {
+                aboutMe.Enabled = true;
+                biography.Enabled = false;
+                contacts.Enabled = true;
+                projects.Enabled = true;
+
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+                ivanpopov.Visible = true;
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Автобиография";
+                    mainContent.Text = biographyBul;                    
+                }
+                else
+                {
+                    artTitle.Text = "Biography";
+                    mainContent.Text = biographyEng;                    
+                }
+            }
+            else
+            {
+                ivanpopov.Visible = false;
+            }
+
+            if (Request.QueryString["a"] == "con")
+            {
+                contacts.Enabled = false;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = true;
+
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Контакти";
+                    mainContent.Text = contactsBul;
+                }
+                else
+                {
+                    artTitle.Text = "Contacts";
+                    mainContent.Text = contactsEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "converter")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;                
+
+                converter.Enabled = false;
+                ryu.Enabled = true;
+                countdown.Enabled = true;
+
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+                    projectsContent.Text = converterTextBul;
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+                    projectsContent.Text = converterTextEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "countdown")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;
+
+                converter.Enabled = true;
+                ryu.Enabled = true;
+                countdown.Enabled = false;
+
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+                    projectsContent.Text = stopwatchTextBul;
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+                    projectsContent.Text = stopwatchTextEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "ryu")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;
+
+                converter.Enabled = true;
+                ryu.Enabled = true;
+                countdown.Enabled = false;
+
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+
+                    switch (Request.QueryString["p"])
+                    {                        
+                        case "2": projectsContent.Text = ryuTextBul2;
+                            break;
+                        case "3": projectsContent.Text = ryuTextBul3;
+                            break;
+                        case "4": projectsContent.Text = ryuTextBul4;
+                            break;
+                        case "5": projectsContent.Text = ryuTextBul5;
+                            break;
+                        case "6": projectsContent.Text = ryuTextBul6;
+                            break;
+                        case "7": projectsContent.Text = ryuTextBul7;
+                            break;
+                        case "8": projectsContent.Text = ryuTextBul8;
+                            break;
+                        case "9": projectsContent.Text = ryuTextBul9;
+                            break;
+                         default: projectsContent.Text = ryuTextBul1; 
+                            break;
+                    }                    
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+
+                    switch (Request.QueryString["p"])
+                    {
+                        case "2": projectsContent.Text = ryuTextEng2;
+                            break;
+                        case "3": projectsContent.Text = ryuTextEng3;
+                            break;
+                        case "4": projectsContent.Text = ryuTextEng4;
+                            break;
+                        case "5": projectsContent.Text = ryuTextEng5;
+                            break;
+                        case "6": projectsContent.Text = ryuTextEng6;
+                            break;
+                        case "7": projectsContent.Text = ryuTextEng7;
+                            break;
+                        case "8": projectsContent.Text = ryuTextEng8;
+                            break;
+                        case "9": projectsContent.Text = ryuTextEng9;
+                            break;
+                        default: projectsContent.Text = ryuTextEng1;
+                            break;
+                    } 
+                }
+            }
+
+            langSwitch(id);
         }
 
         protected void switchEngBtn_Click(object sender, EventArgs e)
@@ -524,134 +827,88 @@ namespace WebApplication1
         protected void aboutMe_Click(object sender, EventArgs e)
         {
             var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Remove("p");
+            nvc.Remove("a");
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
             Response.Redirect(url); 
         }
 
         protected void biography_Click(object sender, EventArgs e)
         {
-            biography.Enabled = false;
-            aboutMe.Enabled = true;            
-            contacts.Enabled = true;
-            projects.Enabled = true;
-
-            ryu.Enabled = true;
-            converter.Enabled = true;
-            countdown.Enabled = true;
-
-            if (!switchBulBtn.Enabled)
-            {
-                mainContent.Text = biographyBul;
-                lang.Text = "Български";
-                artTitle.Text = "Автобиография";
-                navigation.Text = "Навигация";
-            }
-            else
-            {
-                mainContent.Text = biographyEng;
-                lang.Text = "Bulgarian";
-                artTitle.Text = "Biography";
-                navigation.Text = "Navigation";                
-            }
-
-            visibilities();
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("a", "bio");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url); 
         }
 
         protected void projects_Click(object sender, EventArgs e)
         {            
             var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "proj");
+            nvc.Set("a", "proj");
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();                
             Response.Redirect(url);            
         }
 
         protected void contacts_Click(object sender, EventArgs e)
         {
-            contacts.Enabled = false;
-            aboutMe.Enabled = true;
-            biography.Enabled = true;            
-            projects.Enabled = true;
-
-            ryu.Enabled = true;
-            converter.Enabled = true;
-            countdown.Enabled = true;
-
-            lang.Text = "Български";
-            artTitle.Text = "Контакти";
-            navigation.Text = "Навигация";
-            visibilities();
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("a", "con");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);
         }        
 
         protected void converter_Click(object sender, EventArgs e)
         {
-            converter.Enabled = false;
-            ryu.Enabled = true;
-            countdown.Enabled = true;
-            
-            mainContent.Text = "";
-            visibilities();
-
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = converterTextBul;
-            }
-            else
-            {
-                projectsContent.Text = converterTextEng;
-            }
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("a", "converter");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);
         }
 
         protected void countdown_Click1(object sender, EventArgs e)
         {
-            converter.Enabled = true;
-            ryu.Enabled = true;
-            countdown.Enabled = false;
-
-            mainContent.Text = "";
-            visibilities();
-
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = stopwatchTextBul;
-            }
-            else
-            {
-                projectsContent.Text = stopwatchTextEng;
-            }
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("a", "countdown");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);
         }
 
         protected void ryu_Click(object sender, EventArgs e)
         {
-            converter.Enabled = true;
-            ryu.Enabled = false;
-            countdown.Enabled = true;
-
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul1;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng1;
-            }
-            
-            mainContent.Text = "";            
-            ryuPages(1);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("a", "ryu");
+            nvc.Set("p", "1");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);
         }
 
-        protected void visiblePages()
+        protected void visiblePages(int i = 0)
         {
-            pageLbl.Visible = true;
-            ryuPage1.Visible = true;
-            ryuPage2.Visible = true;
-            ryuPage3.Visible = true;
-            ryuPage4.Visible = true;
-            ryuPage5.Visible = true;
-            ryuPage6.Visible = true;
-            ryuPage7.Visible = true;
-            ryuPage8.Visible = true;
-            ryuPage9.Visible = true;
+            if (i == 0)
+            {
+                pageLbl.Visible = true;
+                ryuPage1.Visible = true;
+                ryuPage2.Visible = true;
+                ryuPage3.Visible = true;
+                ryuPage4.Visible = true;
+                ryuPage5.Visible = true;
+                ryuPage6.Visible = true;
+                ryuPage7.Visible = true;
+                ryuPage8.Visible = true;
+                ryuPage9.Visible = true;
+            }  
+            else
+            {
+                pageLbl.Visible = false;
+                ryuPage1.Visible = false;
+                ryuPage2.Visible = false;
+                ryuPage3.Visible = false;
+                ryuPage4.Visible = false;
+                ryuPage5.Visible = false;
+                ryuPage6.Visible = false;
+                ryuPage7.Visible = false;
+                ryuPage8.Visible = false;
+                ryuPage9.Visible = false;
+            }                      
         }
 
         protected void ryuPages(int page)
@@ -667,21 +924,7 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                pageLbl.Visible = false;
-                visiblePages();
-            }
-            if (page == 0)
-            {
-                ryuPage1.Visible = false;
-                ryuPage2.Visible = false;
-                ryuPage3.Visible = false;
-                ryuPage4.Visible = false;
-                ryuPage5.Visible = false;
-                ryuPage6.Visible = false;
-                ryuPage7.Visible = false;
-                ryuPage8.Visible = false;
-                ryuPage9.Visible = false;                
-            }
+            }            
             if (page == 2)
             {
                 ryuPage1.Enabled = true;
@@ -693,7 +936,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 3)
             {
@@ -706,7 +948,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 4)
             {
@@ -719,7 +960,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 5)
             {
@@ -732,7 +972,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 6)
             {
@@ -745,7 +984,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 7)
             {
@@ -758,7 +996,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = false;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 8)
             {
@@ -771,7 +1008,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = false;
                 ryuPage9.Enabled = true;
-                visiblePages();
             }
             if (page == 9)
             {
@@ -784,7 +1020,6 @@ namespace WebApplication1
                 ryuPage7.Enabled = true;
                 ryuPage8.Enabled = true;
                 ryuPage9.Enabled = false;
-                visiblePages();
             }
         }
 
