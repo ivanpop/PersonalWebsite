@@ -94,6 +94,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label projectsContent;
         
         /// <summary>
+        /// pagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pagePanel;
+        
+        /// <summary>
         /// pageLbl control.
         /// </summary>
         /// <remarks>
@@ -103,85 +112,85 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label pageLbl;
         
         /// <summary>
-        /// ryuPage1 control.
+        /// pageBtn1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage1;
+        protected global::System.Web.UI.WebControls.Button pageBtn1;
         
         /// <summary>
-        /// ryuPage2 control.
+        /// pageBtn2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage2;
+        protected global::System.Web.UI.WebControls.Button pageBtn2;
         
         /// <summary>
-        /// ryuPage3 control.
+        /// pageBtn3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage3;
+        protected global::System.Web.UI.WebControls.Button pageBtn3;
         
         /// <summary>
-        /// ryuPage4 control.
+        /// pageBtn4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage4;
+        protected global::System.Web.UI.WebControls.Button pageBtn4;
         
         /// <summary>
-        /// ryuPage5 control.
+        /// pageBtn5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage5;
+        protected global::System.Web.UI.WebControls.Button pageBtn5;
         
         /// <summary>
-        /// ryuPage6 control.
+        /// pageBtn6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage6;
+        protected global::System.Web.UI.WebControls.Button pageBtn6;
         
         /// <summary>
-        /// ryuPage7 control.
+        /// pageBtn7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage7;
+        protected global::System.Web.UI.WebControls.Button pageBtn7;
         
         /// <summary>
-        /// ryuPage8 control.
+        /// pageBtn8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage8;
+        protected global::System.Web.UI.WebControls.Button pageBtn8;
         
         /// <summary>
-        /// ryuPage9 control.
+        /// pageBtn9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ryuPage9;
+        protected global::System.Web.UI.WebControls.Button pageBtn9;
         
         /// <summary>
         /// navigation control.

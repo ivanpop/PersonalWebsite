@@ -348,7 +348,9 @@ fieldset#edit-appearance div#groupLayout,div#allButtons{border:0;padding:0 0 0 0
 .filefield-element div.ahah-progress-bar{display:none;margin-top:4px;width:28em;padding:0;}.filefield-element div.ahah-progress-bar div.bar{margin:0;}
 span.ext{background:url(/sites/all/modules/extlink/extlink.png) right center no-repeat;padding-right:12px;}span.mailto{background:url(/sites/all/modules/extlink/mailto.png) right center no-repeat;padding-right:12px;}@media print{span.ext,span.mailto{display:none;padding:0;}}
 div.fieldgroup{margin:.5em 0 1em 0;}div.fieldgroup .content{padding-left:1em;}
-*{margin:0;padding:0;}
+*{margin:0 0 0 0px;
+padding:0;
+}
 abbr[title],acronym[title]{border-bottom:thin dotted;cursor:help;}
 body{background:#BEC3C6 url(bg.jpg) repeat-x;color:#555;font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;font-size:12px;}
 h1,h2,h3,h4,h5,h6{font-weight:bolder;letter-spacing:-0.07em;font-family:Arial;padding-top:0.25em;padding-bottom:0.5em;}

@@ -532,18 +532,239 @@ namespace WebApplication1
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
 
-        string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";     
+        string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
+
+        int id = 0;
 
         protected void Page_Load(object sender, EventArgs e)
-        {            
-            if (Request.QueryString["l"] == null)
-            {
-                visibilities();
-            }
+        {
             if (Request.QueryString["l"] == "en")
             {
-                visibilities(1);
-            }                          
+                id++;
+            }
+
+            if (Request.QueryString["a"] == "proj")
+            {
+                projects.Enabled = false;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                contacts.Enabled = true;
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                if (id == 0)
+                {
+                    mainContent.Text = projectsBul;
+                    artTitle.Text = "Проекти";
+                }
+                else
+                {
+                    mainContent.Text = projectsEng;
+                    artTitle.Text = "Projects";
+                }
+            }
+
+            if (Request.QueryString["a"] == null)
+            {
+                aboutMe.Enabled = false;
+                biography.Enabled = true;
+                contacts.Enabled = true;
+                projects.Enabled = true;
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+
+                if (id == 0)
+                {
+                    artTitle.Text = "За мен";
+                    mainContent.Text = aboutMeBul;
+                }
+                else
+                {
+                    artTitle.Text = "About me";
+                    mainContent.Text = aboutMeEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "bio")
+            {
+                aboutMe.Enabled = true;
+                biography.Enabled = false;
+                contacts.Enabled = true;
+                projects.Enabled = true;
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+                ivanpopov.Visible = true;
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Автобиография";
+                    mainContent.Text = biographyBul;
+                }
+                else
+                {
+                    artTitle.Text = "Biography";
+                    mainContent.Text = biographyEng;
+                }
+            }
+            else
+            {
+                ivanpopov.Visible = false;
+            }
+
+            if (Request.QueryString["a"] == "con")
+            {
+                contacts.Enabled = false;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = true;
+                ryu.Enabled = true;
+                converter.Enabled = true;
+                countdown.Enabled = true;
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Контакти";
+                    mainContent.Text = contactsBul;
+                }
+                else
+                {
+                    artTitle.Text = "Contacts";
+                    mainContent.Text = contactsEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "converter")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;
+                converter.Enabled = false;
+                ryu.Enabled = true;
+                countdown.Enabled = true;
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+                    projectsContent.Text = converterTextBul;
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+                    projectsContent.Text = converterTextEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "countdown")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;
+                converter.Enabled = true;
+                ryu.Enabled = true;
+                countdown.Enabled = false;
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+                    projectsContent.Text = stopwatchTextBul;
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+                    projectsContent.Text = stopwatchTextEng;
+                }
+            }
+
+            if (Request.QueryString["a"] == "ryu")
+            {
+                contacts.Enabled = true;
+                aboutMe.Enabled = true;
+                biography.Enabled = true;
+                projects.Enabled = false;
+                converter.Enabled = true;
+                ryu.Enabled = false;
+                countdown.Enabled = true;
+                ryu.Visible = true;
+                converter.Visible = true;
+                countdown.Visible = true;
+                pagePanel.Visible = true;
+
+                mainContent.Text = "";
+
+                if (id == 0)
+                {
+                    artTitle.Text = "Проекти";
+
+                    switch (Request.QueryString["p"])
+                    {
+                        case "2": projectsContent.Text = ryuTextBul2;
+                            break;
+                        case "3": projectsContent.Text = ryuTextBul3;
+                            break;
+                        case "4": projectsContent.Text = ryuTextBul4;
+                            break;
+                        case "5": projectsContent.Text = ryuTextBul5;
+                            break;
+                        case "6": projectsContent.Text = ryuTextBul6;
+                            break;
+                        case "7": projectsContent.Text = ryuTextBul7;
+                            break;
+                        case "8": projectsContent.Text = ryuTextBul8;
+                            break;
+                        case "9": projectsContent.Text = ryuTextBul9;
+                            break;
+                        default: projectsContent.Text = ryuTextBul1;
+                            break;
+                    }
+                }
+                else
+                {
+                    artTitle.Text = "Projects";
+
+                    switch (Request.QueryString["p"])
+                    {
+                        case "2": projectsContent.Text = ryuTextEng2;
+                            break;
+                        case "3": projectsContent.Text = ryuTextEng3;
+                            break;
+                        case "4": projectsContent.Text = ryuTextEng4;
+                            break;
+                        case "5": projectsContent.Text = ryuTextEng5;
+                            break;
+                        case "6": projectsContent.Text = ryuTextEng6;
+                            break;
+                        case "7": projectsContent.Text = ryuTextEng7;
+                            break;
+                        case "8": projectsContent.Text = ryuTextEng8;
+                            break;
+                        case "9": projectsContent.Text = ryuTextEng9;
+                            break;
+                        default: projectsContent.Text = ryuTextEng1;
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                pagePanel.Visible = false;
+            }
+
+            langSwitch(id);                     
         }
 
         protected void langSwitch(int id = 0)
@@ -575,239 +796,9 @@ namespace WebApplication1
                 header1.Text = "Ivan Popov";
                 header2.Text = "Personal website";
                 goTop.Text = "Top";
-            }
+            }            
         }
-
-        protected void visibilities(int id = 0)
-        {
-            if (Request.QueryString["a"] == "proj")
-            {
-                projects.Enabled = false;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                contacts.Enabled = true;
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
-                if (id == 0)
-                {
-                    mainContent.Text = projectsBul;
-                    artTitle.Text = "Проекти";
-                }
-                else
-                {
-                    mainContent.Text = projectsEng;
-                    artTitle.Text = "Projects";
-                }
-            }
-
-            if (Request.QueryString["a"] == null)
-            {
-                aboutMe.Enabled = false;
-                biography.Enabled = true;
-                contacts.Enabled = true;
-                projects.Enabled = true;
-
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
-
-                if (id == 0)
-                {
-                    artTitle.Text = "За мен";
-                    mainContent.Text = aboutMeBul;
-                }
-                else
-                {
-                    artTitle.Text = "About me";
-                    mainContent.Text = aboutMeEng;
-                }
-            }
-
-            if (Request.QueryString["a"] == "bio")
-            {
-                aboutMe.Enabled = true;
-                biography.Enabled = false;
-                contacts.Enabled = true;
-                projects.Enabled = true;
-
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
-                ivanpopov.Visible = true;
-
-                if (id == 0)
-                {
-                    artTitle.Text = "Автобиография";
-                    mainContent.Text = biographyBul;                    
-                }
-                else
-                {
-                    artTitle.Text = "Biography";
-                    mainContent.Text = biographyEng;                    
-                }
-            }
-            else
-            {
-                ivanpopov.Visible = false;
-            }
-
-            if (Request.QueryString["a"] == "con")
-            {
-                contacts.Enabled = false;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                projects.Enabled = true;
-
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
-
-                if (id == 0)
-                {
-                    artTitle.Text = "Контакти";
-                    mainContent.Text = contactsBul;
-                }
-                else
-                {
-                    artTitle.Text = "Contacts";
-                    mainContent.Text = contactsEng;
-                }
-            }
-
-            if (Request.QueryString["a"] == "converter")
-            {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                projects.Enabled = false;                
-
-                converter.Enabled = false;
-                ryu.Enabled = true;
-                countdown.Enabled = true;
-
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
-                mainContent.Text = "";
-
-                if (id == 0)
-                {
-                    artTitle.Text = "Проекти";
-                    projectsContent.Text = converterTextBul;
-                }
-                else
-                {
-                    artTitle.Text = "Projects";
-                    projectsContent.Text = converterTextEng;
-                }
-            }
-
-            if (Request.QueryString["a"] == "countdown")
-            {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                projects.Enabled = false;
-
-                converter.Enabled = true;
-                ryu.Enabled = true;
-                countdown.Enabled = false;
-
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
-                mainContent.Text = "";
-
-                if (id == 0)
-                {
-                    artTitle.Text = "Проекти";
-                    projectsContent.Text = stopwatchTextBul;
-                }
-                else
-                {
-                    artTitle.Text = "Projects";
-                    projectsContent.Text = stopwatchTextEng;
-                }
-            }
-
-            if (Request.QueryString["a"] == "ryu")
-            {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                projects.Enabled = false;
-
-                converter.Enabled = true;
-                ryu.Enabled = true;
-                countdown.Enabled = false;
-
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
-                mainContent.Text = "";
-
-                if (id == 0)
-                {
-                    artTitle.Text = "Проекти";
-
-                    switch (Request.QueryString["p"])
-                    {                        
-                        case "2": projectsContent.Text = ryuTextBul2;
-                            break;
-                        case "3": projectsContent.Text = ryuTextBul3;
-                            break;
-                        case "4": projectsContent.Text = ryuTextBul4;
-                            break;
-                        case "5": projectsContent.Text = ryuTextBul5;
-                            break;
-                        case "6": projectsContent.Text = ryuTextBul6;
-                            break;
-                        case "7": projectsContent.Text = ryuTextBul7;
-                            break;
-                        case "8": projectsContent.Text = ryuTextBul8;
-                            break;
-                        case "9": projectsContent.Text = ryuTextBul9;
-                            break;
-                         default: projectsContent.Text = ryuTextBul1; 
-                            break;
-                    }                    
-                }
-                else
-                {
-                    artTitle.Text = "Projects";
-
-                    switch (Request.QueryString["p"])
-                    {
-                        case "2": projectsContent.Text = ryuTextEng2;
-                            break;
-                        case "3": projectsContent.Text = ryuTextEng3;
-                            break;
-                        case "4": projectsContent.Text = ryuTextEng4;
-                            break;
-                        case "5": projectsContent.Text = ryuTextEng5;
-                            break;
-                        case "6": projectsContent.Text = ryuTextEng6;
-                            break;
-                        case "7": projectsContent.Text = ryuTextEng7;
-                            break;
-                        case "8": projectsContent.Text = ryuTextEng8;
-                            break;
-                        case "9": projectsContent.Text = ryuTextEng9;
-                            break;
-                        default: projectsContent.Text = ryuTextEng1;
-                            break;
-                    } 
-                }
-            }
-
-            langSwitch(id);
-        }
-
+        
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
             var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
@@ -879,251 +870,75 @@ namespace WebApplication1
             nvc.Set("p", "1");
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
             Response.Redirect(url);
-        }
-
-        protected void visiblePages(int i = 0)
-        {
-            if (i == 0)
-            {
-                pageLbl.Visible = true;
-                ryuPage1.Visible = true;
-                ryuPage2.Visible = true;
-                ryuPage3.Visible = true;
-                ryuPage4.Visible = true;
-                ryuPage5.Visible = true;
-                ryuPage6.Visible = true;
-                ryuPage7.Visible = true;
-                ryuPage8.Visible = true;
-                ryuPage9.Visible = true;
-            }  
-            else
-            {
-                pageLbl.Visible = false;
-                ryuPage1.Visible = false;
-                ryuPage2.Visible = false;
-                ryuPage3.Visible = false;
-                ryuPage4.Visible = false;
-                ryuPage5.Visible = false;
-                ryuPage6.Visible = false;
-                ryuPage7.Visible = false;
-                ryuPage8.Visible = false;
-                ryuPage9.Visible = false;
-            }                      
-        }
-
-        protected void ryuPages(int page)
-        {            
-            if (page == 1)
-            {
-                ryuPage1.Enabled = false;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }            
-            if (page == 2)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = false;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 3)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = false;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 4)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = false;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 5)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = false;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 6)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = false;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 7)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = false;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 8)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = false;
-                ryuPage9.Enabled = true;
-            }
-            if (page == 9)
-            {
-                ryuPage1.Enabled = true;
-                ryuPage2.Enabled = true;
-                ryuPage3.Enabled = true;
-                ryuPage4.Enabled = true;
-                ryuPage5.Enabled = true;
-                ryuPage6.Enabled = true;
-                ryuPage7.Enabled = true;
-                ryuPage8.Enabled = true;
-                ryuPage9.Enabled = false;
-            }
-        }
+        }       
 
         protected void ryuPage2_Click(object sender, EventArgs e)
         {
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul2;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng2;
-            }
-
-            mainContent.Text = ""; 
-            ryuPages(2);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);            
+            nvc.Set("p", "2");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);            
         }
 
         protected void ryuPage1_Click(object sender, EventArgs e)
         {
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul1;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng1;
-            }
-            
-            mainContent.Text = "";
-            ryuPages(1);            
+            ryu_Click(ryu, null);        
         }
 
         protected void ryuPage3_Click(object sender, EventArgs e)
         {
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul3;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng3;
-            }
-
-            mainContent.Text = "";
-            ryuPages(3);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "3");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);           
         }
 
         protected void ryuPage4_Click(object sender, EventArgs e)
         {
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul4;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng4;
-            }            
-            
-            mainContent.Text = "";
-            ryuPages(4);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "4");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }
 
         protected void ryuPage5_Click(object sender, EventArgs e)
         {
-            if (!switchBulBtn.Enabled)
-            {
-                projectsContent.Text = ryuTextBul5;
-            }
-            else
-            {
-                projectsContent.Text = ryuTextEng5;
-            }  
-            
-            mainContent.Text = "";
-            ryuPages(5);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "5");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }
 
         protected void ryuPage6_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul6;
-            mainContent.Text = "";
-            ryuPages(6);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "6");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }
 
         protected void ryuPage7_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul7;
-            mainContent.Text = "";
-            ryuPages(7);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "7");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }
 
         protected void ryuPage8_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul8;
-            mainContent.Text = "";
-            ryuPages(8);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "8");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }
 
         protected void ryuPage9_Click(object sender, EventArgs e)
         {
-            projectsContent.Text = ryuTextBul9;
-            mainContent.Text = "";
-            ryuPages(9);
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+            nvc.Set("p", "9");
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url);  
         }        
     }
 }

@@ -52,16 +52,18 @@
                                 <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" Visible="False" />&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" OnClick="ryu_Click" Visible="False" />
 							    <asp:Label ID="projectsContent" runat="server"></asp:Label>
-							    <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: " Visible="False"></asp:Label>
-							    <asp:Button ID="ryuPage1" runat="server" Enabled="False" Text="1" Visible="False" Width="20px" OnClick="ryuPage1_Click" />
-                                <asp:Button ID="ryuPage2" runat="server" Text="2" Visible="False" Width="20px" OnClick="ryuPage2_Click" />
-                                <asp:Button ID="ryuPage3" runat="server" Text="3" Visible="False" Width="20px" OnClick="ryuPage3_Click" />
-                                <asp:Button ID="ryuPage4" runat="server" Text="4" Visible="False" Width="20px" OnClick="ryuPage4_Click" />
-                                <asp:Button ID="ryuPage5" runat="server" Text="5" Visible="False" Width="20px" OnClick="ryuPage5_Click" />
-                                <asp:Button ID="ryuPage6" runat="server" Text="6" Visible="False" Width="20px" OnClick="ryuPage6_Click" />
-                                <asp:Button ID="ryuPage7" runat="server" Text="7" Visible="False" Width="20px" OnClick="ryuPage7_Click" />
-                                <asp:Button ID="ryuPage8" runat="server" Text="8" Visible="False" Width="20px" OnClick="ryuPage8_Click" />
-                                <asp:Button ID="ryuPage9" runat="server" Text="9" Visible="False" Width="20px" OnClick="ryuPage9_Click" />
+							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
+                                    <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
+                                    <asp:Button ID="pageBtn1" runat="server" Enabled="False" OnClick="ryuPage1_Click" Text="1" Width="20px" />
+                                    <asp:Button ID="pageBtn2" runat="server" OnClick="ryuPage2_Click" Text="2" Width="20px" />
+                                    <asp:Button ID="pageBtn3" runat="server" OnClick="ryuPage3_Click" Text="3" Width="20px" />
+                                    <asp:Button ID="pageBtn4" runat="server" OnClick="ryuPage4_Click" Text="4" Width="20px" />
+                                    <asp:Button ID="pageBtn5" runat="server" OnClick="ryuPage5_Click" Text="5" Width="20px" />
+                                    <asp:Button ID="pageBtn6" runat="server" OnClick="ryuPage6_Click" Text="6" Width="20px" />
+                                    <asp:Button ID="pageBtn7" runat="server" OnClick="ryuPage7_Click" Text="7" Width="20px" />
+                                    <asp:Button ID="pageBtn8" runat="server" OnClick="ryuPage8_Click" Text="8" Width="20px" />
+                                    <asp:Button ID="pageBtn9" runat="server" OnClick="ryuPage9_Click" Text="9" Width="20px" />
+                                </asp:Panel>
 							</div>
 						</div>
 					</div>
@@ -94,7 +96,7 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов</p>
+					<p>© 2014 Иван Попов/p>
 					<br/>
 				</div>
 			</div>
