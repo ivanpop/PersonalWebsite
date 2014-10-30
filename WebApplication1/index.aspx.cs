@@ -541,24 +541,28 @@ namespace WebApplication1
             if (Request.QueryString["l"] == "en")
             {
                 id++;
+                switchBulBtn.Enabled = true;
+                switchEngBtn.Enabled = false;
+                lang.Text = "English";
+                navigation.Text = "Navigation";
+                aboutMe.Text = "About me";
+                biography.Text = "Biography";
+                projects.Text = "Projects";
+                contacts.Text = "Contacts";
+                header1.Text = "Ivan Popov";
+                header2.Text = "Personal website";
+                goTop.Text = "Top";
             }
 
             if (Request.QueryString["a"] == "proj")
             {
                 projects.Enabled = false;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                contacts.Enabled = true;
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
+                projectsPanel.Visible = true;
 
-                if (id == 0)
-                {
-                    mainContent.Text = projectsBul;
-                    artTitle.Text = "Проекти";
-                }
-                else
+                mainContent.Text = projectsBul;
+                artTitle.Text = "Проекти";
+
+                if (id == 1)
                 {
                     mainContent.Text = projectsEng;
                     artTitle.Text = "Projects";
@@ -568,19 +572,10 @@ namespace WebApplication1
             if (Request.QueryString["a"] == null)
             {
                 aboutMe.Enabled = false;
-                biography.Enabled = true;
-                contacts.Enabled = true;
-                projects.Enabled = true;
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
+                  
+                mainContent.Text = aboutMeBul;
 
-                if (id == 0)
-                {
-                    artTitle.Text = "За мен";
-                    mainContent.Text = aboutMeBul;
-                }
-                else
+                if (id == 1)
                 {
                     artTitle.Text = "About me";
                     mainContent.Text = aboutMeEng;
@@ -589,47 +584,27 @@ namespace WebApplication1
 
             if (Request.QueryString["a"] == "bio")
             {
-                aboutMe.Enabled = true;
                 biography.Enabled = false;
-                contacts.Enabled = true;
-                projects.Enabled = true;
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
                 ivanpopov.Visible = true;
 
-                if (id == 0)
-                {
-                    artTitle.Text = "Автобиография";
-                    mainContent.Text = biographyBul;
-                }
-                else
+                artTitle.Text = "Автобиография";
+                mainContent.Text = biographyBul;
+
+                if (id == 1)
                 {
                     artTitle.Text = "Biography";
                     mainContent.Text = biographyEng;
                 }
             }
-            else
-            {
-                ivanpopov.Visible = false;
-            }
 
             if (Request.QueryString["a"] == "con")
             {
                 contacts.Enabled = false;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
-                projects.Enabled = true;
-                ryu.Enabled = true;
-                converter.Enabled = true;
-                countdown.Enabled = true;
 
-                if (id == 0)
-                {
-                    artTitle.Text = "Контакти";
-                    mainContent.Text = contactsBul;
-                }
-                else
+                artTitle.Text = "Контакти";
+                mainContent.Text = contactsBul;
+
+                if (id == 1)
                 {
                     artTitle.Text = "Contacts";
                     mainContent.Text = contactsEng;
@@ -638,25 +613,15 @@ namespace WebApplication1
 
             if (Request.QueryString["a"] == "converter")
             {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
                 projects.Enabled = false;
                 converter.Enabled = false;
-                ryu.Enabled = true;
-                countdown.Enabled = true;
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
+                projectsPanel.Visible = true;
                 mainContent.Text = "";
 
-                if (id == 0)
-                {
-                    artTitle.Text = "Проекти";
-                    projectsContent.Text = converterTextBul;
-                }
-                else
+                artTitle.Text = "Проекти";
+                projectsContent.Text = converterTextBul;
+
+                if (id == 1)
                 {
                     artTitle.Text = "Projects";
                     projectsContent.Text = converterTextEng;
@@ -665,25 +630,15 @@ namespace WebApplication1
 
             if (Request.QueryString["a"] == "countdown")
             {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
                 projects.Enabled = false;
-                converter.Enabled = true;
-                ryu.Enabled = true;
                 countdown.Enabled = false;
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
-
+                projectsPanel.Visible = true;
                 mainContent.Text = "";
 
-                if (id == 0)
-                {
-                    artTitle.Text = "Проекти";
-                    projectsContent.Text = stopwatchTextBul;
-                }
-                else
+                artTitle.Text = "Проекти";
+                projectsContent.Text = stopwatchTextBul;
+
+                if (id == 1)
                 {
                     artTitle.Text = "Projects";
                     projectsContent.Text = stopwatchTextEng;
@@ -692,24 +647,41 @@ namespace WebApplication1
 
             if (Request.QueryString["a"] == "ryu")
             {
-                contacts.Enabled = true;
-                aboutMe.Enabled = true;
-                biography.Enabled = true;
                 projects.Enabled = false;
-                converter.Enabled = true;
                 ryu.Enabled = false;
-                countdown.Enabled = true;
-                ryu.Visible = true;
-                converter.Visible = true;
-                countdown.Visible = true;
+                projectsPanel.Visible = true;
                 pagePanel.Visible = true;
-
                 mainContent.Text = "";
+                                
+                byte page;
+                byte.TryParse(Request.QueryString["p"], out page);
+
+                switch (page)
+                {                        
+                    case 2: pageBtn2.Enabled = false;
+                        break;
+                    case 3: pageBtn3.Enabled = false;
+                        break;
+                    case 4: pageBtn4.Enabled = false;
+                        break;
+                    case 5: pageBtn5.Enabled = false;
+                        break;
+                    case 6: pageBtn6.Enabled = false;
+                        break;
+                    case 7: pageBtn7.Enabled = false;
+                        break;
+                    case 8: pageBtn8.Enabled = false;
+                        break;
+                    case 9: pageBtn9.Enabled = false;
+                        break;
+                    default: pageBtn1.Enabled = false;
+                        break;
+                }
+
+                artTitle.Text = "Проекти";
 
                 if (id == 0)
                 {
-                    artTitle.Text = "Проекти";
-
                     switch (Request.QueryString["p"])
                     {
                         case "2": projectsContent.Text = ryuTextBul2;
@@ -756,189 +728,121 @@ namespace WebApplication1
                             break;
                         default: projectsContent.Text = ryuTextEng1;
                             break;
-                    }
+                    }                    
                 }
             }
-            else
-            {
-                pagePanel.Visible = false;
-            }
-
-            langSwitch(id);                     
         }
 
-        protected void langSwitch(int id = 0)
+        protected void setQueryString(string s1, string s2 = null)
         {
-            if (id == 0)
+            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
+
+            if (s2 == null)
             {
-                switchBulBtn.Enabled = false;
-                switchEngBtn.Enabled = true;
-                lang.Text = "Български";
-                navigation.Text = "Навигация";
-                aboutMe.Text = "За мен";
-                biography.Text = "Автобиография";
-                projects.Text = "Проекти";
-                contacts.Text = "Контакти";
-                header1.Text = "Иван Попов";
-                header2.Text = "Лична Интернет Страница";
-                goTop.Text = "Горе";
+                nvc.Remove(s1);
             }
             else
             {
-                switchBulBtn.Enabled = true;
-                switchEngBtn.Enabled = false;
-                lang.Text = "English";
-                navigation.Text = "Navigation";
-                aboutMe.Text = "About me";
-                biography.Text = "Biography";
-                projects.Text = "Projects";
-                contacts.Text = "Contacts";
-                header1.Text = "Ivan Popov";
-                header2.Text = "Personal website";
-                goTop.Text = "Top";
-            }            
+                nvc.Set(s1, s2);
+            }
+
+            if (s1 != "p" && s1 != "l")
+            {
+                nvc.Remove("p");
+            }
+
+            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
+            Response.Redirect(url); 
         }
         
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("l", "en");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url); 
+            setQueryString("l", "en");
         }
 
         protected void switchBulBtn_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Remove("l");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url); 
+            setQueryString("l");
         }
 
         protected void aboutMe_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Remove("a");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url); 
+            setQueryString("a");
         }
 
         protected void biography_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "bio");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url); 
+            setQueryString("a", "bio");
         }
 
         protected void projects_Click(object sender, EventArgs e)
-        {            
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "proj");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();                
-            Response.Redirect(url);            
+        {
+            setQueryString("a", "proj");
         }
 
         protected void contacts_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "con");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);
-        }        
+            setQueryString("a", "con");
+        }
 
         protected void converter_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "converter");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);
+            setQueryString("a", "converter");
         }
 
         protected void countdown_Click1(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "countdown");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);
+            setQueryString("a", "countdown");
         }
 
         protected void ryu_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("a", "ryu");
-            nvc.Set("p", "1");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);
-        }       
+            setQueryString("a", "ryu");
+        }
 
         protected void ryuPage2_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);            
-            nvc.Set("p", "2");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);            
+            setQueryString("p", "2");
         }
 
         protected void ryuPage1_Click(object sender, EventArgs e)
         {
-            ryu_Click(ryu, null);        
+            setQueryString("a", "ryu");
         }
 
         protected void ryuPage3_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "3");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);           
+            setQueryString("p", "3");
         }
 
         protected void ryuPage4_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "4");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
+            setQueryString("p", "4");
         }
 
         protected void ryuPage5_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "5");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
+            setQueryString("p", "5");
         }
 
         protected void ryuPage6_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "6");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
+            setQueryString("p", "6");
         }
 
         protected void ryuPage7_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "7");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
+            setQueryString("p", "7");
         }
 
         protected void ryuPage8_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "8");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
+            setQueryString("p", "8");
         }
 
         protected void ryuPage9_Click(object sender, EventArgs e)
         {
-            var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            nvc.Set("p", "9");
-            string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url);  
-        }        
+            setQueryString("p", "9");
+        }
     }
 }

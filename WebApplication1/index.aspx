@@ -48,13 +48,17 @@
 							<div class="content">                                							
 							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
-							    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" Visible="False" />&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="countdown" runat="server" Height="41px" Text="Countdown timer &amp; Stopwatch" Width="190px" OnClick="countdown_Click1" Visible="False" />&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="ryu" runat="server" Height="41px" Text="Ryu: The Big Adventure!" Width="170px" OnClick="ryu_Click" Visible="False" />
-							    <asp:Label ID="projectsContent" runat="server"></asp:Label>
+							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
+                                    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />
+                                    <asp:Button ID="countdown" runat="server" Height="41px" OnClick="countdown_Click1" Text="Countdown timer &amp; Stopwatch" Width="190px" />
+                                    <asp:Button ID="ryu" runat="server" Height="41px" OnClick="ryu_Click" Text="Ryu: The Big Adventure!" Width="170px" />
+                                </asp:Panel>
+                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="projectsContent" runat="server"></asp:Label>
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
-                                    <asp:Button ID="pageBtn1" runat="server" Enabled="False" OnClick="ryuPage1_Click" Text="1" Width="20px" />
+                                    <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
                                     <asp:Button ID="pageBtn2" runat="server" OnClick="ryuPage2_Click" Text="2" Width="20px" />
                                     <asp:Button ID="pageBtn3" runat="server" OnClick="ryuPage3_Click" Text="3" Width="20px" />
                                     <asp:Button ID="pageBtn4" runat="server" OnClick="ryuPage4_Click" Text="4" Width="20px" />
@@ -73,7 +77,7 @@
 						<h2><asp:Label ID="navigation" runat="server" Text="Навигация"></asp:Label></h2>
 						<div class="menu">
 							<ul>
-								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="102px" Enabled="False"/></li>
+								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="102px"/></li>
 								<li><asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="102px"/></li>
                                 <li><asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="102px"/></li>
                                 <li><asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="102px"/></li>
