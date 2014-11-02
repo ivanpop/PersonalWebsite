@@ -418,23 +418,23 @@ namespace WebApplication1
             "<span class=\"tab\"></span>}<br/>" +
             "}</th></tr></table>";
 
-        string ryuTextEng8 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
-           "<h2>Реализация</h2><br/><h3>Създаване на противниците</h3><br/><table><tr><th>if (thugAtRyu(thugPosX, thugPosY) && !ryuAttack() && enemyAttackChance() &&<br/><span class=\"tab\"></span>showThug && thugHitRyu)<br/>" +
+        string ryuTextEng8 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+           "<h2>Realization</h2><br/><h3>Creating enemies</h3><br/><table><tr><th>if (thugAtRyu(thugPosX, thugPosY) && !ryuAttack() && enemyAttackChance() &&<br/><span class=\"tab\"></span>showThug && thugHitRyu)<br/>" +
            "{<br/><span class=\"tab\"></span>thugSprite = thugHitAnimation;<br/><span class=\"tab\"></span>getInitialTime = time;<br/><br/><span class=\"tab\"></span>if (!punchedSnd.playing() && Menu.soundOn)<br/><span class=\"tab\">" +
            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>punchedSnd.play(1, Menu.soundVolume);<br/><span class=\"tab\"></span>}<br/><br/> " +
            "<span class=\"tab\"></span>ryuHurt = true;<br/><span class=\"tab\"></span>ryuHP--;<br/><span class=\"tab\"></span>thugHitRyu = false;<br/>" +
-           "}</th></tr></table><br/><span class=\"tab\"></span>Първо, анимацията на врагът се променя към такава на удряне. След това създаваме таймер, който да връща противника към " +
-           "статичното си положение, след като вече е изпълнил удара. Проверяваме дали звуците са позволени в тази сесия на играта и изпълняваме звук на удряне. Също така проверяваме дали конкретният звук не" +
-           " се изпълнява в момента, чрез punchedSnd.playing(), който връща true когато това е вярно. Целта е да не се получава застъпване на звука, което може да доведе до какафония. Променяме анимацията на" +
-           " Ryu със съответната, изобразяваща състояние на болка и отнемаме от неговите жизнени точки. Накрая същият таймер връща и Ryu към статичното му положение.<br/><span class=\"tab\"></span>За " +
-           "създаването на таймера използваме метода delay().<br/><table><tr><th>public boolean delay(long startTime, int number)<br/>{<br/></span><span class=\"tab\"></span>if (startTime + number <= time)<br/><span class=\"tab\">" +
+           "}</th></tr></table><br/><span class=\"tab\"></span>First, the animation of the enemy changes to a hitting one. After that we create a timer, which returns him " +
+           "to static position after an interval of time. We check to see if sounds have been enabled and we execute a hitting sound. Also we check that this certain sound" +
+           " isn't been used at the moment using punchedSnd.playing(), which returns true if it's used. The reason of doing this is to prevent overlap of the sound. We change the animation to" +
+           " Ryu with the one which represents him in pain and we decrease his hit points. Finally, the timer returns Ryu to his static position.<br/><span class=\"tab\"></span>To " +
+           "create the timer we use the method delay().<br/><table><tr><th>public boolean delay(long startTime, int number)<br/>{<br/></span><span class=\"tab\"></span>if (startTime + number <= time)<br/><span class=\"tab\">" +
            "</span>{<br/><span class=\"tab\"></span><span class=\"tab\"></span>return true;<br/><span class=\"tab\"></span>}<br/><span class=\"tab\"></span>else<br/><span class=\"tab\"></span>{<br/><span class=\"tab\"></span><span class=\"tab\">" +
-           "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>Този метод използва променливата time, която представлява системното времето под формата" +
-           " на цифра. StartTime е времето когато е започнал таймера, а  number е интервала от време до неговото приключване. Когато интервалът изтече метода връща стойност  true и таймера приключва.<br/><span class=\"tab\">" +
-           "По сходен начин се изпълняват и ударите на Ryu.<br/><span class=\"tab\">За да нанесем удар първо проверяваме за противник в близост до Ryu и дали противника е жив. След това изсвирваме звука за удряне, по абсолютно" +
-           " същия начин, привключваме анимацийте на двата героя, създаваме таймер и отнемаме от жизнените точки на врага. След приключване на таймера, героите се връщат към началното си състояние и можем " +
-           "да започнем от начало.<br/><br/><li><b>Анимация за край</b></li><br/><span class=\"tab\"></span>Анимацията за благополучен край е създадена по сходен модел с тази за начало. Тук обаче освен само " +
-           "нея използваме и три спрайта на Ryu, чрез които го изобразяваме в доволно състояние – състояние на успех.<br><table><tr><th>public void youWinAnimation(StateBasedGame sbg)<br/>" +
+           "</span>return false;<br/><span class=\"tab\"></span>}<br/>}</th></tr></table><br/><span class=\"tab\"></span>This method uses the variable time, which represents system time." +
+           " StartTime is the time at which the timer has started, and number is the interval of time until his end. When the interval is over the method returns true and the timer stops.<br/><span class=\"tab\">" +
+           "Ryu's punches are done in the same way.<br/><span class=\"tab\">To do a hit we first have to check if there is an enemy close to Ryu and if he is alive. After that we play a punching sound " +
+           "in the exact same way, we change the animations of the two characters, create a timer and we decrease the enemy's hit points. After the timer has completed, they return to they're starting position and we can " +
+           "start all over again.<br/><br/><li><b>Animation for ending</b></li><br/><span class=\"tab\"></span>This animation is used when the user completes the level and it's made in the same way as the starting animation." +
+           " In here we also use three sprites of Ryu, with which we show him as a winner.<br><table><tr><th>public void youWinAnimation(StateBasedGame sbg)<br/>" +
            "{<br/><span class=\"tab\"></span>if (winState)<br/><span class=\"tab\"></span>{<br/><span " +
            "class=\"tab\"></span><span class=\"tab\"></span>youWinScale1 += 3;<br/><span class=\"tab\"></span><span class=\"tab\"></span>" +
            "youWinScale2 += 2;<br/><span class=\"tab\"></span><span class=\"tab\"></span>enableInput = false;<br/>" +
