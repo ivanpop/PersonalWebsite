@@ -497,34 +497,34 @@ namespace WebApplication1
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/ryu.zip\">Ryu: The Big Adventure!</a></td><td class=\"size\">24.8 MB</td> " +
             " </tr></tbody></table>";
 
-        string ryuTextEng9 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
-            "<h2>Реализация</h2><br/><span class=\"tab\"></span>Метода се нарича youWinAnimation. Той се обхожда с всеки един цикъл на играта," +
-            " но се активира, когато булевата winState върне стойност на вярно.  winState връща вярна стойност, когато всички противници са убити. Проверката става като се" +
-            " прочетат стойностите на жизнените точки на всички противници и те са равни на 0. Самата проверка се намира в update(), следователно тя се проверява с всеки" +
-            " цикъл на играта.<br/><img src=\"/Resources/ryu12.png\" width=\"592\"><br/><span class=\"tab\"></span>При вярност youWinImage изображението се изрисува на" +
-            " екрана, като  youWinScale1 и  youWinScale2 са неговите вертикални и хоризонтални размери. Тези стойности постепенно се увеличават, за да се създаде " +
-            "необходимата анимация. Когато стойността на  youWinScale1 премине 100, се възпроизвежда и звук, за успешно завършване на играта. Когато стойността на  " +
-            "youWinScale1 премине 600, изображението вече е в пълния си размер и скалирането приключва и малко след това играча бива прехвърлен към началното меню," +
-            " чрез sbg.enterState(0);.<br/><span class=\"tab\"></span>Споменахме и че Ryu също извършва анимация. Първо движението на героя се забранява с enableInput" +
-            " = false;.  След това преминаваме към първият спрайт ryuReadyAnimation, който е изграден от 6 кадъра. Спираме анимацията на последния 6-ти кадър с " +
-            "ryuSprite.stopAt(6);, правим проверка дали тя е спряла с ryuSprite.isStopped() и  ако това е вярно преминаваме към втория спрайт - ryuWin1Animation." +
-            " Отново спираме спрайта на последният кадър, в случая кадър 3, проверяваме за спиране на анимацията и привключваме към последната анимация " +
-            "ryuWin2Animation.<br/><span class=\"tab\"></span>Всички тези анимации и спрайтове придават усещане са успешно приключила игра.<br/><br/><h2>" +
-            "Заключение</h2><br/><span class=\"tab\"></span>В проекта бяха описани основните компоненти, за изграждането на нашата игра. Бяха споменати, " +
-            "без да бъдат детайлно изследвани – LWJGL и Slick2D библиотеките, които макар и изградени от трети страни, са необходими компоненти на средата." +
-            " Разгледана беше в основи логиката на анимирането чрез спрайтове и бяха изложени някои идеи за реализация, използвани при създаването на логиката" +
-            " на играта Ryu: The Big Adventure.<br/><span class=\"tab\"></span>Оттук нататък възможностите за развитие и подобрение на средата са много:<br/><span " +
-            "class=\"tab\"></span>От функционална гледна точка може да бъде подобрен изкуственият интелект на опонентите. Всеки един от опонентите е създаден отделно," +
-            " което означава че и характерите им могат да се направят различни. В игрите се използват различни класове герои като танк, лечител, стрелец и войн, всеки един" +
-            " специализиран в определени умения и с различни предимства и недостатъци.<br/><span class=\"tab\"></span>Танкът e герой който има за цел да поема ударите и да предпазва" +
-            " останалите от щети. Той върши малко щети, но за сметка на това е много здрав и труден за убиване.<br/><span class=\"tab\"></span>Лечителят използва магически сили за да" +
-            " лекува събратята си и да увеличава тяхната сила. Той е лесен за убиване и не извършва никакви щети и затова мястото му е в най-задните части на боя, от където използва" +
-            " магията си за лекуване.<br/><span class=\"tab\"></span>Стрелецът и войнът са класовете които извършват най-много щети. Докато танкът задържа вниманието на враговете, лечителят " +
-            "поддържа всички живи, стрелецът и войнът трябва да вършат щети, които да доведат до победа за екипа.<br/><span class=\"tab\"></span>Всеки един клас опонент ще изисква свой собствен" +
-            " изкуствен интелект, коренно различен от на останалите. Комбинацията от тези класове могат да създадат много проблеми за главният герой, принуждавайки го да използва " +
-            "различни стратегии за всеки един от тях.<br/><span class=\"tab\"></span>Може да бъде добавена и база данни, която да съхранява резултати. Резултатите ще се бъзират на това, за колко" +
-            " време е преминато нивото, на каква трудност е преминато нивото, колко здраве е останало на героя в края на нивото и др.<br/><span class=\"tab\"></span>Могат да се търсят" +
-            " други платформи за представяне, например да се създадат портове на играта за уеб браузър и за мобилни устройства, като iOS, Windows Mobile, Android и Blackberry." +
+        string ryuTextEng9 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
+            "<h2>Realization</h2><br/><span class=\"tab\"></span>The method is called youWinAnimation. It's executed with every cicle of the game," +
+            " but it's activated when the boolean winState returns true. winState returns true when all enemies have been killed. It checks" +
+            " the hit points of each entity and executes when they all are at 0. The check itself is inside update(), which means that it's executed" +
+            " with every cicle of the game.<br/><img src=\"/Resources/ryu12.png\" width=\"592\"><br/><span class=\"tab\"></span>When true youWinImage is drawn" +
+            " on the screen, with  youWinScale1 and youWinScale2 as it's vertical and horizontal size. These variables increase so that " +
+            "the animation can be done. When youWinScale1 reaches 100 a sound is played. When  " +
+            "youWinScale1 reaches 600, the image is at it's full size, the scaling stops and a short time after that the user gets moved to the main menu," +
+            " using sbg.enterState(0);.<br/><span class=\"tab\"></span>I mentioned that Ryu also has an animation for the ending. First, user movement is disabled using enableInput" +
+            " = false;. After that we move to the first sprite ryuReadyAnimation, which is made out of 6 sprites. We stop the animation at the 6th frame using " +
+            "ryuSprite.stopAt(6);, we do a check to see if it's stopped with ryuSprite.isStopped() and if that's true we move to the next sprite - ryuWin1Animation." +
+            " Again we stop the sprite at the last frame, in this case frame 3, we check for the stopping of the animation and we go to the last animation " +
+            "ryuWin2Animation.<br/><span class=\"tab\"></span><br/><br/><h2>" +
+            "Conclusion</h2><br/><span class=\"tab\"></span>In this project I've shown some of the most important components for building this game. I've mentioned " +
+            "LWJGL and Slick2D, which are needed for this purpose." +
+            " I've shown the logic of the animation using spritesheets and I've shown some methods of realization, which I've used to create the logic" +
+            " of the game Ryu: The Big Adventure.<br/><span class=\"tab\"></span>From here there are many posibilities for further developing the game:<br/><span " +
+            "class=\"tab\"></span>The artificial intelligence can be drastically improved. Each of the enemies is create independently," +
+            " which meants that they can have a different A.I. and can do they're own things which can differ them from the others. There are different types of character classes in each game, like a tank, healer, archer and warrior," +
+            " each of them specialized in a certain set of skills, with different advantages and disadvantages.<br/><span class=\"tab\"></span>The tank is a class which has the purpose to take hits and to protect" +
+            " the rest from damage. He does small amounts of damage, but has a lot of HP and is very hard to kill.<br/><span class=\"tab\"></span>The healer uses magical skills to" +
+            " heal his allies and to buff them, increasing they're power. He's easy to kill and doesn't do any kind of damage and so he has to be protected and in the back of every formation, where" +
+            " he uses his healings.<br/><span class=\"tab\"></span>The archer and the warrior are the classes which do the most damage. The tank takes the enemies attention, the healer " +
+            "keeps everyone alive and the archer and warrior do the damage.<br/><span class=\"tab\"></span>Each class will need it's own type of A.I." +
+            " ,which has to be a lot different from the others. This combination of classes can cause a lot of problems for the player, forcing him to " +
+            "use different type of strategies for each one of them.<br/><span class=\"tab\"></span>A database can be added, which can keep high scores. The score can be based on" +
+            " how long it took to complete the level, on what difficulty, how much HP remaining does the player haves at the end and others.<br/><span class=\"tab\"></span>" +
+            "The game can be ported to other platforms like iOS, Windows Mobile, Android and Blackberry or it can be played online using an internet browser." +
             "<br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Ryu\" target=\"_blank\">" +
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
             " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/ryu.zip\">Ryu: The Big Adventure!</a></td><td class=\"size\">24.8 MB</td> " +
