@@ -17,9 +17,11 @@ namespace WebApplication1
             "This is my personal web page. Here you will find information about me and project, I work on.<br/><br/>"+
             "My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
 
-        string contactsBul = "аджаджаджа";
+        string contactsBul = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>" + 
+            "Също така можете да ми изпратите съобщение като използвате формата за контакти.<br><br>";
 
-        string contactsEng = "ajajaj";
+        string contactsEng = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>" +
+            "Also you can send me a message using the contacts form below.<br><br>";
 
         string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/>" +
             "<span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г." +
@@ -600,6 +602,7 @@ namespace WebApplication1
             if (Request.QueryString["a"] == "con")
             {
                 contacts.Enabled = false;
+                contactsPanel.Visible = true;
 
                 artTitle.Text = "Контакти";
                 mainContent.Text = contactsBul;
@@ -608,6 +611,9 @@ namespace WebApplication1
                 {
                     artTitle.Text = "Contacts";
                     mainContent.Text = contactsEng;
+                    subjectLabel.Text = "Subject:";
+                    messageLabel.Text = "Message:";
+                    submitEmailBtn.Text = "Submit";
                 }
             }
 

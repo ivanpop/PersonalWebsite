@@ -48,6 +48,20 @@
 							<div class="content">                                							
 							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
+							    <asp:Panel ID="contactsPanel" runat="server" Visible="False">
+                                    E-mail:<br />
+                                    <asp:TextBox ID="emailTextBox" runat="server" Width="248px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="subjectLabel" runat="server" Text="Тема:"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="subjectBox" runat="server" Width="248px"></asp:TextBox>
+                                    <br />
+                                    <asp:Label ID="messageLabel" runat="server" Text="Съобщение:"></asp:Label>
+                                    <br />
+                                    <asp:TextBox ID="messageBox" runat="server" Height="99px" TextMode="MultiLine" Width="403px"></asp:TextBox>
+                                    <br />
+                                    <asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" />
+                                </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
                                     <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />
                                     <asp:Button ID="countdown" runat="server" Height="41px" OnClick="countdown_Click1" Text="Countdown timer &amp; Stopwatch" Width="190px" />
@@ -100,7 +114,7 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов/p>
+					<p>© 2014 Иван Попов</p>
 					<br/>
 				</div>
 			</div>
