@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 
 namespace WebApplication1
 {
@@ -850,5 +852,24 @@ namespace WebApplication1
         {
             setQueryString("p", "9");
         }
+
+        protected void submitEmailBtn_Click(object sender, EventArgs e)
+        {
+            using (MailMessage message = new MailMessage())
+            {                
+                message.From = new MailAddress(emailTextBox.Text.ToString());
+                message.To.Add(new MailAddress("unfragablegaming@gmail.com"));
+                message.Subject = "Message from My Site: " + subjectBox.Text.ToString();
+                message.Body = messageBox.Text.ToString();
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtpcorp.com";
+                smtp.Port = 2525;
+                smtp.EnableSsl = true;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("ivanpop@abv.bg", "ipb123");
+                smtp.Send(message);
+            }
+        } 
     }
 }
