@@ -11,163 +11,134 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        string aboutMeBul = "<p>Здравейте,<br/><br/><span class=\"tab\"></span>Казвам се Иван Попов и съм новозавършил във ФМИТ на Пловдивския Университет \"Паисий Хилендарски\"." +
-            "<br/><br/><span class=\"tab\"></span>Това е моята лична интернет страница.Тук ще намерите информация за мен и актуалните проекти, по които работя активно.<br/><br/>" +
-            "<span class=\"tab\"></span>Моите интереси са основно в областта на Информационните Технологии, Езиците за програмиране и Средите за програмиране.";
+        string aboutMeBul = "<p>Здравейте,<br/><br/><span class=\"tab\"></span>Казвам се Иван Попов и съм новозавършил във ФМИТ на Пловдивския Университет \"Паисий Хилендарски\".<br/><br/><span class=\"tab\"></span> " + 
+            "Това е моята лична интернет страница.Тук ще намерите информация за мен и актуалните проекти, по които работя активно.<br/><br/><span class=\"tab\"></span>Моите интереси са основно в областта на " + 
+            "Информационните Технологии, Езиците за програмиране и Средите за програмиране.";
 
-        string aboutMeEng = "<p>Hello,<br/><br/>My name is Ivan Popov and I am a graduate in FMIT in Plovdiv University \"Paisii Hilendasrki\".<br/><br/>"+
-            "This is my personal web page. Here you will find information about me and project, I work on.<br/><br/>"+
-            "My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
+        string aboutMeEng = "<p>Hello,<br/><br/>My name is Ivan Popov and I am a graduate in FMIT in Plovdiv University \"Paisii Hilendasrki\".<br/><br/>This is my personal web page. Here you will find information" + 
+            " about me and project, I work on.<br/><br/>My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
 
-        string contactsBul = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>" + 
-            "Също така можете да ми изпратите съобщение като използвате формата за контакти.<br><br>";
+        string contactsBul = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>Също така можете да ми изпратите съобщение като използвате формата за контакти.<br><br>";
 
-        string contactsEng = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>" +
-            "Also you can send me a message using the contacts form below.<br><br>";
+        string contactsEng = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>Also you can send me a message using the contacts form below.<br><br>";
 
-        string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/>" +
-            "<span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски университет \"Паисий Хилендарски\" през 2013 г." +
-            "със &nbsp;специалност \"Информатика\".<br/><br/><span class=\"tab\"></span>Непосредствено след завършването си записах магистърска &nbsp;" +
-            "степен, в същия университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br/><br/><span class=\"tab\"></span>От декември 2009г, четири месеца след" +
-            " записването ми в &nbsp;университета, работя в магазин \"Метро Пловдив 2\", от начало &nbsp;като обикновен сътрудник и впоследствие " +
-            "като продуктов &nbsp;консултант.<br/><br/><span class=\"tab\"></span>Работата ми в магазина ме научи да работя в екип, да работя с клиенти, да си планирам " +
-            "работния ден и приоритизирам задачите си.<br/><br/><span class=\"tab\"></span>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
-            "<b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\">" +
-            "<b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>Като хоби имам YouTube канал, в който качвам кадри от игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)" +
-            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span class=\"tab\"></span>Целта ми е да работя в IT-сферата " + 
-            "и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar\">2014 г.</span> ПУ \"Паисий Хилендарски\" " +
-            "- Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br/><br/><span class=\"round-bar blue-bar\">2013 г.</span> ПУ \"Паисий Хилендарски\" - Пловдив, " +
-            " висше образование, степен бакалавър, специалност \"Информатика\".<br/><br/><span class=\"round-bar blue-bar\">1997 г.</span> ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br/><br/> " +
-            "<hr><br/><br/><h1>Езици</h1><br/><br/>Български – майчин език.<br/><br/>Английски – четене - отлично, писане - много добро, разговор - много добро." +
-            "<br/><br/>Френски – четене - основно, писане - основно, разговор - основно.<br/><br/><hr><br/><br/><h1>Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник" +
-            " впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в “Highstyle” Ltd." +
-            "<br/><br/><hr><br/><br/><h1>Други</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/><b>Технологии и стандарти:</b>" +
-            "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Програми:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
+        string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/><span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски " + 
+            "университет \"Паисий Хилендарски\" през 2013 г. със &nbsp;специалност \"Информатика\".<br/><br/><span class=\"tab\"></span>Непосредствено след завършването си записах магистърска &nbsp;степен, в същия" + 
+            " университет, със специалност \"Софтуерни &nbsp;технологии\", която също завърших успешно.<br/><br/><span class=\"tab\"></span>От декември 2009г, четири месеца след записването ми в &nbsp;университета," + 
+            " работя в магазин \"Метро Пловдив 2\", от начало &nbsp;като обикновен сътрудник и впоследствие като продуктов &nbsp;консултант.<br/><br/><span class=\"tab\"></span>Работата ми в магазина ме научи да " + 
+            "работя в екип, да работя с клиенти, да си планирам работния ден и приоритизирам задачите си.<br/><br/><span class=\"tab\"></span>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\"" + 
+            " target=\"_blank\"><b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат" + 
+            "да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>Като хоби имам YouTube канал, в който качвам кадри от " + 
+            "игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>" + 
+            "<span class=\"tab\"></span>Целта ми е да работя в IT-сферата и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar" + 
+            "\">2014 г.</span> ПУ \"Паисий Хилендарски\" - Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br/><br/><span class=\"round-bar blue-bar\">2013 г.</span> ПУ \"Паисий Хиле" + 
+            "ндарски\" - Пловдив, висше образование, степен бакалавър, специалност \"Информатика\".<br/><br/><span class=\"round-bar blue-bar\">1997 г.</span> ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br/><br/> " +
+            "<hr><br/><br/><h1>Езици</h1><br/><br/>Български – майчин език.<br/><br/>Английски – четене - отлично, писане - много добро, разговор - много добро.<br/><br/>Френски – четене - основно, писане - основно, " + 
+            "разговор - основно.<br/><br/><hr><br/><br/><h1>Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\"" + 
+            ".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в “Highstyle” Ltd.<br/><br/><hr><br/><br/><h1>Други</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#," + 
+            " C++, Java, JavaScript...<br/><br/><b>Технологии и стандарти:</b><br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Програми:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
             "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
-        string biographyEng = "<span class=\"tab\"></span>I'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;" +
-            "<span class=\"tab\"></span>I graduated from Plovdiv University \"Paisii Hilendarski\" in &nbsp;2013, with a bachelor degree in Informatics." +
-            "<br/><br/><span class=\"tab\"></span>Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
-            "which I graduated &nbsp;in 2014.<br/><br/><span class=\"tab\"></span>From December 2009, four months after" +
-            " becoming a student in &nbsp;the university, I started working in \"Metro Cash&Carry Plovdiv 2\", &nbsp;from the beginning as a regular associate and afterwards " +
-            "as a &nbsp;product consultant.<br/><br/><span class=\"tab\"></span>My work in the magazine taught me to work in a team, to work with clients, to plan " +
-            "my working day and to prioritize my tasks.<br/><br/><span class=\"tab\"></span>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\">" +
-            "<b><u>Software Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\">" +
-            "<b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github account. <a href=\"https://github.com/ivanpop\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>As a hobby I have a YouTube channel, where I upload gameplay videos in which I show my years of experience with the sniper and the shotgun. ;)" +
-            "<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span class=\"tab\"></span>My goal is to work in the field of IT " +
-            "and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar\">2014</span> PU \"Paisii Hilendarski\" " +
-            "- Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/><span class=\"round-bar blue-bar\">2013</span> PU \"Paisii Hilendarski\" - Plovdiv, " +
-            " Bachelors degree, field of \"Informatics\".<br/><br/><span class=\"round-bar blue-bar\">1997</span> Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> " +
-            "<hr><br/><br/><h1>Languages</h1><br/><br/>Bulgarian – mother's language.<br/><br/>English – reading - great, writing - great, speaking - great." +
-            "<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate" +
-            " and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Data entry operator in “Highstyle” Ltd." +
-            "<br/><br/><hr><br/><br/><h1>Other</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/><b>Technologies and standarts:</b>" +
-            "<br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Programs:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
-            "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
+        string biographyEng = "<span class=\"tab\"></span>I'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;<span class=\"tab\"></span>I graduated from Plovdiv University \"Paisii Hilendarski\" in &nbsp;2013," + 
+            " with a bachelor degree in Informatics.<br/><br/><span class=\"tab\"></span>Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
+            "which I graduated &nbsp;in 2014.<br/><br/><span class=\"tab\"></span>From December 2009, four months after becoming a student in &nbsp;the university, I started working in \"Metro Cash&Carry Plovdiv 2\"," +
+            " &nbsp;from the beginning as a regular associate and afterwards as a &nbsp;product consultant.<br/><br/><span class=\"tab\"></span>My work in the magazine taught me to work in a team, to work with clients," +
+            " to plan my working day and to prioritize my tasks.<br/><br/><span class=\"tab\"></span>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\"><b><u>Software " +
+            "Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github " +
+            "account. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>As a hobby I have a YouTube channel, where I upload gameplay videos in which " +
+            "I show my years of experience with the sniper and the shotgun. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span " +
+            "class=\"tab\"></span>My goal is to work in the field of IT and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar\">" +
+            "2014</span> PU \"Paisii Hilendarski\" - Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/><span class=\"round-bar blue-bar\">2013</span> PU \"Paisii Hilendarski\" - Plovdiv, Bachelors" +
+            " degree, field of \"Informatics\".<br/><br/><span class=\"round-bar blue-bar\">1997</span> Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> <hr><br/><br/><h1>Languages</h1><br/><br/>Bulgarian – " +
+            "mother's language.<br/><br/>English – reading - great, writing - great, speaking - great.<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working " +
+            "experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/><span class=\"round-bar " +
+            "blue-bar\">11/2012 - 04/2013</span> Data entry operator in “Highstyle” Ltd.<br/><br/><hr><br/><br/><h1>Other</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/>" +
+            "<b>Technologies and standarts:</b><br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Programs:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE,MS Visual Studio 2013 for Web, " + 
+            "Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
 
-        string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на" +
-            " C# и представлява прост конвертор или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/>" +
-            "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " + 
-            " </tr></tbody></table>";
+        string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на C# и представлява прост конвертор" +
+            " или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a " + 
+            "href=\"https://github.com/ivanpop/Converter\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td></tr></tbody></table>";
 
-        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/><span class=\"tab\"></span>The program is written in" +
-            " C# and it's a simple converter of metric units. Different metric units can be seen in the screenshot.<br/><br/>" +
-            "<img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td> " +
-            " </tr></tbody></table>";
+        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/><span class=\"tab\"></span>The program is written in C# and it's a simple converter of metric " + 
+            "units. Different metric units can be seen in the screenshot.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
+            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class=\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a " + 
+            "href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td></tr></tbody></table>";
 
-        string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма " + 
-            " за обратно броене и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. " +
-            "Перфектна програма, ако често варите яйца или готвите. ;) <br/><span class=\"tab\"></span>Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и " +
-            "записване на времената на обиколките като текстов файл.<br/><span class=\"tab\"></span>Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/>" +
-            "<img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\">" + 
-            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
-            " </tr></tbody></table>";
+        string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма за обратно броене" +
+            " и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. Перфектна програма, ако често варите яйца или готвите. ;) <br/><span " +
+            "class=\"tab\"></span>Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и записване на времената на обиколките като текстов файл.<br/><span class=\"tab\"></span>" +
+            "Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: " +
+            "</b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr " + 
+            "class =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td></tr></tbody></table>";
 
-        string stopwatchTextEng = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a " +
-            " countdown timer and a stopwatch. When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. " +
-            "Perfect if you often boil eggs or cook. ;) <br/><span class=\"tab\"></span>The stopwatch has a precision of a millisecond. There is an option to count a lap, pause and " +
-            "to save the lap times in a text file.<br/><span class=\"tab\"></span>The countdown timer and the stopwatch are completly independent on from the other and can work simultaneously.<br/><br/>" +
-            "<img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td> " +
-            " </tr></tbody></table>";
+        string stopwatchTextEng = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a countdown timer and a stopwatch" +
+            ". When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. Perfect if you often boil eggs or cook. ;) <br/><span class=\"tab\"></span>The stopwatch" +
+            " has a precision of a millisecond. There is an option to count a lap, pause and to save the lap times in a text file.<br/><span class=\"tab\"></span>The countdown timer and the stopwatch are completly " +
+            "independent on from the other and can work simultaneously.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=" + 
+            "\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
+            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td></tr></tbody></table>";
 
-        string ryuTextBul1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
-            "<h2>Описание</h2><br/><span class=\"tab\"></span><b>Ryu: The Big Adventure</b> е подобие на аркадните игри <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> и още много други." +
-            "<br/><br/><h2>Функции</h2><br/><span class=\"tab\"></span>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален Beat 'em up симулатор." + 
-            " Beat 'em up е жанр в компютърните игри, който включва ръкопашен бой между главният герой и голям брой врагове. Игрите са най-често 2D, като героят се движи хоризонтално" +
-            " по нивото, в посока надясно. Тези игри са познати с простия си и лесен за научаване геймплей, като първата подобна игра датира от 1984г.<br/><span class=\"tab\"></span>При стартиране на играта, " +
-            "потребителя влиза в ролята на героят Ryu, който има за цел да победи всички врагове в нивото.<br/><span class=\"tab\"></span>Ryu е герой от видео игри, създаден от Capcom още през 1987 година, играещ " +
-            " основна роля в Street Fighter серията. Той владее бойни изкуства смесени с изкуствата на убиец.Освен върховните си умения в ръкопашният бой, Ryu разполага и с някои уникални" +
-            " умения към арсенала си.<br/><br/><li><b>Hadouken</b> - В превод „Юмрук от енергия“.Това е вълна от енергия, която Ryu изстрелва от ръцете си, за да покоси врагове, които се намират на" +
-            " разстояние от него. За да изпълни това умение Ryu трябва да има достатъчно вътрешна енергия или MP (Magic Points).<br/><img src=\"/Resources/ryu3.png\"><br/>" +
-            "</li><br/><li><b>Shoryuken</b> - В превод „Издигащ се драконов юмрук“, е друго 	специално умение, предназначено за близък бой. Ryu 	използва юмрука си за да се изстреля нагоре " +
-            "и така да нанесе убийствен ъперкът към противника, който се намира непосредствено до него. Както Hadouken и Shoryuken изисква 	вътрешна енергия.<br/><img src=\"/Resources/ryu1.png\"><br/></li>" +
-            "<br/><li><b>Tatsumaki</b> - В превод „Торнадо“. Ryu има умението да скочи и да изпълни торнадо от ритници докато е във въздуха. Това е най-силната атака на Ryu и изисква най-много" +
-            " вътрешна 	енергия.<br/><img src=\"/Resources/ryu2.jpg\">";
+        string ryuTextBul1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/><h2>Описание</h2><br/><span class=\"tab\"></span>" +
+            "<b>Ryu: The Big Adventure</b> е подобие на аркадните игри <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> и още много други.<br/><br/><h2>Функции</h2><br/><span class=\"tab\">" +
+            "</span>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален Beat 'em up симулатор. Beat 'em up е жанр в компютърните игри, който включва ръкопашен бой" +
+            " между главният герой и голям брой врагове. Игрите са най-често 2D, като героят се движи хоризонтално по нивото в посока надясно. Тези игри са познати с простия си и лесен за научаване геймплей, като първата" +
+            " подобна игра датира от 1984г.<br/><span class=\"tab\"></span>При стартиране на играта, потребителя влиза в ролята на героят Ryu, който има за цел да победи всички врагове в нивото.<br/><span class=\"tab\">" +
+            "</span>Ryu е герой от видео игри, създаден от Capcom още през 1987 година, играещ основна роля в Street Fighter серията. Той владее бойни изкуства смесени с изкуствата на убиец.Освен върховните си умения в " +
+            "ръкопашният бой, Ryu разполага и с някои уникални умения към арсенала си.<br/><br/><li><b>Hadouken</b> - В превод „Юмрук от енергия“.Това е вълна от енергия, която Ryu изстрелва от ръцете си, за да покоси " +
+            "врагове, които се намират на разстояние от него. За да изпълни това умение Ryu трябва да има достатъчно вътрешна енергия или MP (Magic Points).<br/><img src=\"/Resources/ryu3.png\"><br/></li><br/><li><b>" +
+            "Shoryuken</b> - В превод „Издигащ се драконов юмрук“, е друго 	специално умение, предназначено за близък бой. Ryu 	използва юмрука си за да се изстреля нагоре и така да нанесе убийствен ъперкът към противника," +
+            " който се намира непосредствено до него. Както Hadouken и Shoryuken изисква 	вътрешна енергия.<br/><img src=\"/Resources/ryu1.png\"><br/></li><br/><li><b>Tatsumaki</b> - В превод „Торнадо“. Ryu има умението " + 
+            "да скочи и да изпълни торнадо от ритници докато е във въздуха. Това е най-силната атака на Ryu и изисква най-много вътрешна енергия.<br/><img src=\"/Resources/ryu2.jpg\">";
 
-        string ryuTextEng1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
-            "<h2>Description</h2><br/><span class=\"tab\"></span><b>Ryu: The Big Adventure</b> is simmilar to arcade games like <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> and many others." +
-            "<br/><br/><h2>Functions</h2><br/><span class=\"tab\"></span>„Ryu: The Big Adventure” gives the user the chance to play a tipical horizontal Beat 'em up simulator." +
-            " Beat 'em up is a computer game genre, which involves hand-to-hand combat between the main hero and numerous enemies. These type of games are mostly in 2D, where the player moves horizontaly" +
-            " to the right. These games are famous for they're easy to learn gameplay, with the first of this type of games dating from 1984<br/><span class=\"tab\"></span>When starting the game, " +
-            "the user goes in the role of Ryu, which have to beat all the enemies in the level.<br/><span class=\"tab\"></span>Ryu is a superhero from video games, created by Capcom in 1987, which plays " +
-            " the main role in the Street Fighter series. He knows mixed martial arts and assassin skills. Also Ryu possesses some unique abilities in his arsenal." +
-            " .<br/><br/><li><b>Hadouken</b> - Translated „Fist of energy“. This is a projectile of energy, which Ryu shoots from his hands, to hit enemies from distance." +
-            " To do this ability Ryu must have enough energy or MP (Magic Points).<br/><img src=\"/Resources/ryu3.png\"><br/>" +
-            "</li><br/><li><b>Shoryuken</b> - Translated „Rising dragon fist“, is another special ability, designet for close combat. Ryu uses his fist to shoots himself up " +
-            "and in that way to deliver a deadly upercut to his oponent, which is directly in front of him. Just like Hadouken Shoryuken also requires spirit energy.<br/><img src=\"/Resources/ryu1.png\"><br/></li>" +
-            "<br/><li><b>Tatsumaki</b> - Translated „Tornado“. Ryu haves the ability to jump and to perform a tornato from kicks while in mid air. This is the most powerful attack that Ryu possesses and it" +
-            " requires most spirit energy.<br/><img src=\"/Resources/ryu2.jpg\">";
+        string ryuTextEng1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/><h2>Description</h2><br/><span class=\"tab\"></span>" +
+            "<b>Ryu: The Big Adventure</b> is simmilar to arcade games like <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> and many others.<br/><br/><h2>Functions</h2><br/><span " +
+            "class=\"tab\"></span>„Ryu: The Big Adventure” gives the user the chance to play a tipical horizontal Beat 'em up simulator. Beat 'em up is a computer game genre, which involves hand-to-hand combat between the" +
+            " main hero and numerous enemies. These type of games are mostly in 2D, where the player moves horizontaly to the right. These games are famous for they're easy to learn gameplay, with the first of this type of" +
+            " games dating from 1984<br/><span class=\"tab\"></span>When starting the game, the user goes in the role of Ryu, which have to beat all the enemies in the level.<br/><span class=\"tab\"></span>Ryu is a " +
+            "superhero from video games, created by Capcom in 1987, which plays the main role in the Street Fighter series. He knows mixed martial arts and assassin skills. Also Ryu possesses some unique abilities in his" +
+            " arsenal.<br/><br/><li><b>Hadouken</b> - Translated „Fist of energy“. This is a projectile of energy, which Ryu shoots from his hands, to hit enemies from distance. To do this ability Ryu must have enough" +
+            " energy or MP (Magic Points).<br/><img src=\"/Resources/ryu3.png\"><br/></li><br/><li><b>Shoryuken</b> - Translated „Rising dragon fist“, is another special ability, designet for close combat. Ryu uses his" +
+            " fist to shoots himself up and in that way to deliver a deadly upercut to his oponent, which is directly in front of him. Just like Hadouken Shoryuken also requires spirit energy.<br/><img " +
+            "src=\"/Resources/ryu1.png\"><br/></li><br/><li><b>Tatsumaki</b> - Translated „Tornado“. Ryu haves the ability to jump and to perform a tornato from kicks while in midair. This is the most powerful attack" + 
+            " that Ryu possesses and it requires most spirit energy.<br/><img src=\"/Resources/ryu2.jpg\">";
 
-        string ryuTextBul2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
-            "<span class=\"tab\"></span>Вътрешната енергия се изобразява в долният ляв ъгъл на екрана, под формата на 8 сини правоъгълника, обозначени с MP. Тя е нужна за изпълнението на специалните " +
-            " умения на Ryu. След нейното използване, енергията се запълва по малко, с времето. Когато героят няма достатъчно енергия, той не може да изпълнява специалните си умения.<br/>" +
-            "<span class=\"tab\"></span>Над индикатора за енергията има и още един индикатор за здравето на Ryu, обозначен като HP. То също е изобразено чрез 8 правоъгълника, но в червено. За разлика от енергията," +
-            " здравето не се възобновява с времето. За целта Ryu трябва да намери храна, която е пръсната из нивото. Здравето ни се отнема когато биваме ударени от някой противник или" +
-            " когато преминем през някакво препядствие, като огън. Когато здравето ни се изчерпа нашият герой умира и играта приключва.<br/><span class=\"tab\"></span>Освен тези два индикатора имаме и време." +
-            "Времето се изписва в долната част на екрана, по средата. То показва, колко време имаме за да преминем нивото. Когато времето изтече, играта приключва с лош край. Времето" +
-            "се възобновява след като преминем част от нивото, примерно средата на нивото.<br/><span class=\"tab\"></span>Освен да използва основната игрова функционалност, потребителят може също да спира и пуска" +
-            "звука на приложението, да променя силата на звука и на музиката и да променя преди игровата сесия трудността и да напусне играта по всяко време. Играта също може да бъде" +
-            "минимизирана.<br/><br/><h2>Софтуерни ограничения</h2><br/><span class=\"tab\"></span>За ползване на играта Ryu: The Big Adventure е необходима инсталацията на JRE " +
-            "(Java Runtime Environment). JRE е достъпен от сайта на Oracle.&nbsp;<a href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" target=\"_blank\">" +
-            "<b><u>Link</u></b></a><br/><br/><h2>Допускания и зависимости</h2><br/><span class=\"tab\"></span>Достъпът до дистрибуцията на играта е зависим от GitHub, уеб хранилището" +
-            "за разполагане на софтуерни проекти и техните съвместни разработки върху отдалечен интернет сървър.<br/><span class=\"tab\"></span>Проектът прави допускането и разчита, че порталът GitHub, който се" +
-            "поддържа от трета страна, е достъпен и в изправност.<br/><span class=\"tab\"></span>Прави се също допускането, че крайните потребители разполагат със съвместим персонален компютър с инсталират Java Runtime" +
-            "Environment. Към момента на създаването на проекта, Java езикът е с голяма популярност и повечето компютри имат инсталиран нужният пакет, което спомага за лесното " +
-            "разпространение на играта.<br/><br/><h2>Диаграма на състоянията</h2><br/><span class=\"tab\"></span>Диаграмата на състоянията в този раздел показва как играта Ryu: The Big Adventure " +
+        string ryuTextBul2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/><span class=\"tab\"></span>Вътрешната енергия се" +
+            " изобразява в долният ляв ъгъл на екрана, под формата на 8 сини правоъгълника, обозначени с MP. Тя е нужна за изпълнението на специалните умения на Ryu. След нейното използване, енергията се запълва по малко," +
+            " с времето. Когато героят няма достатъчно енергия, той не може да изпълнява специалните си умения.<br/><span class=\"tab\"></span>Над индикатора за енергията има и още един индикатор за здравето на Ryu, " +
+            "обозначен като HP. То също е изобразено чрез 8 правоъгълника, но в червено. За разлика от енергията, здравето не се възобновява с времето. За целта Ryu трябва да намери храна, която е пръсната из нивото." +
+            " Здравето ни се отнема когато биваме ударени от някой противник или когато преминем през някакво препядствие, като огън. Когато здравето ни се изчерпа нашият герой умира и играта приключва.<br/><span " +
+            "class=\"tab\"></span>Освен тези два индикатора имаме и време. Времето се изписва в долната част на екрана, по средата. То показва, колко време имаме за да преминем нивото. Когато времето изтече, играта" +
+            " приключва с лош край. Времето се възобновява след като преминем част от нивото, примерно средата на нивото.<br/><span class=\"tab\"></span>Освен да използва основната игрова функционалност, потребителят може" +
+            " също да спира и пуска звука на приложението, да променя силата на звука и на музиката и да променя преди игровата сесия трудността и да напусне играта по всяко време. Играта също може да бъде минимизирана." +
+            "<br/><br/><h2>Софтуерни ограничения</h2><br/><span class=\"tab\"></span>За ползване на играта Ryu: The Big Adventure е необходима инсталацията на JRE (Java Runtime Environment). JRE е достъпен от сайта на " +
+            "Oracle.&nbsp;<a href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" target=\"_blank\"><b><u>Link</u></b></a><br/><br/><h2>Допускания и зависимости</h2><br/><span class=\"tab\"></span>" +
+            "Достъпът до дистрибуцията на играта е зависим от GitHub, уеб хранилището за разполагане на софтуерни проекти и техните съвместни разработки върху отдалечен интернет сървър.<br/><span class=\"tab\"></span>" +
+            "Проектът прави допускането и разчита, че порталът GitHub, който се поддържа от трета страна, е достъпен и в изправност.<br/><span class=\"tab\"></span>Прави се също допускането, че крайните потребители " +
+            "разполагат със съвместим персонален компютър с инсталират Java Runtime Environment. Към момента на създаването на проекта, Java езикът е с голяма популярност и повечето компютри имат инсталиран нужният пакет," + 
+            " което спомага за лесното разпространение на играта.<br/><br/><h2>Диаграма на състоянията</h2><br/><span class=\"tab\"></span>Диаграмата на състоянията в този раздел показва как играта Ryu: The Big Adventure " +
             "трябва да обработва заявките на крайния потребител.<br/><span class=\"tab\"></span>Диаграмата е изградена чрез Унифицираният език за моделиране (UML), който е графичен език за конструиране и документиране на " +
-            "елементите на една софтуерна система.<br/><br/><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"" +
-            "target=\"_blank\"><b><u>Оригинален размер</u></b></a><br/><br/><span class=\"tab\"></span>В проекта се използват 4 различни състояния, едно за менюто, второто за настройките, третото е „За Автора“ и" +
-            "последното е за самата игра. Описани са и начините, по които може да се премине от едно състояние към друго, чрез насочени стрелки. Черните точки илюстрират пускането на програмата и съответно изключването й.";
+            "елементите на една софтуерна система.<br/><br/><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"target=\"_blank\"><b><u>Оригинален размер</u></b></a><br/><br/><span" +
+            " class=\"tab\"></span>В проекта се използват 4 различни състояния, едно за менюто, второто за настройките, третото е „За Автора“ и последното е за самата игра. Описани са и начините, по които може да се премине" + 
+            " от едно състояние към друго, чрез насочени стрелки. Черните точки илюстрират пускането на програмата и съответно изключването й.";
 
-        string ryuTextEng2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/>" +
-            "<span class=\"tab\"></span>Spirit energy is displayed in the lower left corner of the screen, in the form of 8 blue rectangles. It's used when performing special " +
-            " moves. After being used, energy regenerates slowly over time. When the player doesn't have enough energy, he can't use special abilities.<br/>" +
-            "<span class=\"tab\"></span>Over the energy indicator there is another one, for the health of Ryu, described as HP. It's displayed in the same way, but with red rectangles. Unlike energy," +
-            " health doesn't regenerate over time. To restore health Ryu must find food which is dropped randomly on the map. Health is taken when the player gets hit or" +
-            " when he goes through some obsticle like fire. When all of our health is depleted Ryu dies and the game ends.<br/><span class=\"tab\"></span>Other than those two indicators there is alos time." +
-            "Time is displayer at the bottom of the screen in the middle. It shows how much time we have to complete the level. When the time ends the game ends. We get more time" +
-            "by reaching certain part of the level.<br/><span class=\"tab\"></span>There are also in-game options. The user can stop and start" +
-            " the sound of the game, to change the volume, to change the game difficulty and to quit at any time. The game can also be" +
-            " minimized.<br/><br/><h2>Software limitations</h2><br/><span class=\"tab\"></span>To play Ryu: The Big Adventure we need JRE " +
-            "(Java Runtime Environment). JRE is available from Oracle's website.&nbsp;<a href=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" target=\"_blank\">" +
-            "<b><u>Link</u></b></a><br/><br/><h2>Acceptances and dependencies</h2><br/><span class=\"tab\"></span>The source code can be found on GitHub, a web-based hosting service" +
-            "for source code management (SCM) and distributed revision control.<br/><span class=\"tab\"></span>The project makes the assumption that GitHub, which is" +
-            " managed by third-party administration is accessible.<br/><span class=\"tab\"></span>There is also the acceptance, that the users have compatible computer with Java Runtime" +
-            "Environment installed on it. At the moment of creating the project, The Java programming language is very popular and most computers have the required package installed, which helps " +
-            "the easy distribution of the game.<br/><br/><h2>State diagram</h2><br/><span class=\"tab\"></span>The state diagram shows how the game Ryu: The Big Adventure " +
-            "handles user commands.<br/><span class=\"tab\"></span>The diagram is created using The Unified Modeling Language (UML), a general-purpose modeling language in the field of software engineering, which is designed to provide a standard way to visualize the design of a system. " +
-            ".<br/><br/><img src=\"/Resources/ryu4.png\" width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"" +
-            "target=\"_blank\"><b><u>Original size</u></b></a><br/><br/><span class=\"tab\"></span>There are 4 different states in the project - menu, options, credits and" +
-            "the game itself. We can see the ways we can pass through different states.";
+        string ryuTextEng2 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em><br/><br/><span class=\"tab\"></span>Spirit energy is displayed" +
+            " in the lower left corner of the screen, in the form of 8 blue rectangles. It's used when performing special moves. After being used, energy regenerates slowly over time. When the player doesn't have enough" +
+            " energy, he can't use special abilities.<br/><span class=\"tab\"></span>Over the energy indicator there is another one, for the health of Ryu, described as HP. It's displayed in the same way, but with red" +
+            " rectangles. Unlike energy, health doesn't regenerate over time. To restore health Ryu must find food which is dropped randomly on the map. Health is taken when the player gets hit or when he goes through some" +
+            " obsticle like fire. When all of our health is depleted Ryu dies and the game ends.<br/><span class=\"tab\"></span>Other than those two indicators there is alos time. Time is displayer at the bottom of the" +
+            " screen in the middle. It shows how much time we have to complete the level. When the time ends the game ends. We get more time by reaching certain part of the level.<br/><span class=\"tab\"></span>There are" +
+            " also in-game options. The user can stop and start the sound of the game, to change the volume, to change the game difficulty and to quit at any time. The game can also be minimized.<br/><br/><h2>Software " +
+            "limitations</h2><br/><span class=\"tab\"></span>To play Ryu: The Big Adventure we need JRE (Java Runtime Environment). JRE is available from Oracle's website.&nbsp;<a href" +
+            "=\"http://www.oracle.com/technetwork/java/javase/downloads/index.html\" target=\"_blank\"><b><u>Link</u></b></a><br/><br/><h2>Acceptances and dependencies</h2><br/><span class=\"tab\"></span>The source code " + 
+            "can be found on GitHub, a web-based hosting service for source code management (SCM) and distributed revision control.<br/><span class=\"tab\"></span>The project makes the assumption that GitHub, which is" +
+            " managed by third-party administration is accessible.<br/><span class=\"tab\"></span>There is also the acceptance, that the users have compatible computer with Java Runtime Environment installed on it. At the" +
+            " moment of creating the project, The Java programming language is very popular and most computers have the required package installed, which helps the easy distribution of the game.<br/><br/><h2>State diagram" +
+            "</h2><br/><span class=\"tab\"></span>The state diagram shows how the game Ryu: The Big Adventure handles user commands.<br/><span class=\"tab\"></span>The diagram is created using The Unified Modeling Language" +
+            " (UML), a general-purpose modeling language in the field of software engineering, which is designed to provide a standard way to visualize the design of a system<br/><br/><img src=\"/Resources/ryu4.png\" " +
+            "width=\"592\" height=\"400\"><a href=\"/Resources/ryu4.png\"target=\"_blank\"><b><u>Original size</u></b></a><br/><br/><span class=\"tab\"></span>There are 4 different states in the project - menu, options," + 
+            " credits and the game itself. We can see the ways we can pass through different states.";
 
         string ryuTextBul3 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/>" +
             "<h2>Реализация</h2><br/><h3>Потребителско меню</h3><br/><span class=\"tab\"></span>Първата цел при създаването на проекта е да се направи начално потребителско меню.<br/><br/><img src=\"/Resources/ryu5.jpg\" width=\"592\">" +
@@ -322,7 +293,7 @@ namespace WebApplication1
             " suppressive fire or taking cover if under fire. The game's artificial intelligence is often cited as being highly advanced,and its efficiency helped the game win GameSpot's \"2005 Best AI Award,\" and earn the #2 ranking on AIGameDev's \"Most Influential AI Games.\"" +
             " <br/><span class=\"tab\"></span>For the purpose of this project, I've used a much simpler A.I.. It's the same for every enemy. What it does is to check the coordinates of Ryu," +
             " to move towards him and to perform hits.<br/><span class=\"tab\"></span>When starting the game, each enemy is created ot the map, but at a passive state and we don't see him. They have " +
-            "a field of action which Ryu must enter in order for them to activate. To prevent clutter of enemies in a same spot, they are created with they're own separate coordinates and fields of action.<br/><span " +
+            "a field of action which Ryu must enter in order for them to activate. To prevent clutter of enemies in a same spot, they are created with their own separate coordinates and fields of action.<br/><span " +
             "class=\"tab\"></span>The field is made in the way that when the enemy is on the screen, he is already active and is moving towards us. One active, he remains like so until the end of his lifespan, which is until his death, the death" +
             " of Ryu or when the timer reaches zero.<br/><img src=\"/Resources/ryu11.jpg\" width=\"592\">";
 
@@ -519,12 +490,12 @@ namespace WebApplication1
             " I've shown the logic of the animation using spritesheets and I've shown some methods of realization, which I've used to create the logic" +
             " of the game Ryu: The Big Adventure.<br/><span class=\"tab\"></span>From here there are many posibilities for further developing the game:<br/><span " +
             "class=\"tab\"></span>The artificial intelligence can be drastically improved. Each of the enemies is create independently," +
-            " which meants that they can have a different A.I. and can do they're own things which can differ them from the others. There are different types of character classes in each game, like a tank, healer, archer and warrior," +
+            " which meants that they can have a different A.I. and can do their own things which can differ them from the others. There are different types of character classes in each game, like a tank, healer, archer and warrior," +
             " each of them specialized in a certain set of skills, with different advantages and disadvantages.<br/><span class=\"tab\"></span>The tank is a class which has the purpose to take hits and to protect" +
             " the rest from damage. He does small amounts of damage, but has a lot of HP and is very hard to kill.<br/><span class=\"tab\"></span>The healer uses magical skills to" +
             " heal his allies and to buff them, increasing they're power. He's easy to kill and doesn't do any kind of damage and so he has to be protected and in the back of every formation, where" +
             " he uses his healings.<br/><span class=\"tab\"></span>The archer and the warrior are the classes which do the most damage. The tank takes the enemies attention, the healer " +
-            "keeps everyone alive and the archer and warrior do the damage.<br/><span class=\"tab\"></span>Each class will need it's own type of A.I." +
+            "keeps everyone alive and the archer and warrior do the damage.<br/><span class=\"tab\"></span>Each class will need its own type of A.I." +
             " ,which has to be a lot different from the others. This combination of classes can cause a lot of problems for the player, forcing him to " +
             "use different type of strategies for each one of them.<br/><span class=\"tab\"></span>A database can be added, which can keep high scores. The score can be based on" +
             " how long it took to complete the level, on what difficulty, how much HP remaining does the player haves at the end and others.<br/><span class=\"tab\"></span>" +
@@ -872,4 +843,4 @@ namespace WebApplication1
             }
         } 
     }
-}
+}//864
