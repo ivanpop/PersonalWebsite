@@ -587,6 +587,11 @@ namespace WebApplication1
                     subjectLabel.Text = "Subject:";
                     messageLabel.Text = "Message:";
                     submitEmailBtn.Text = "Submit";
+                    emailLabel.Text = "*Your E-Mail";
+                    emailRegularExpressionValidator.Text = "The E-Mail adress is incorrect!";
+                    emailRequiredFieldValidator.Text = "Please enter your E-Mail adress!";
+                    messageRequiredFieldValidator.Text = "Please enter a message!";
+                    requiredFieldLabel.Text = "Indicates required field";
                 }
             }
 

@@ -49,18 +49,28 @@
 							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
 							    <asp:Panel ID="contactsPanel" runat="server" Visible="False">
-                                    E-mail:<br />
+                                    <asp:Label ID="emailLabel" runat="server" Text="*Вашият E-Mail:"></asp:Label>
+                                    <br />
                                     <asp:TextBox ID="emailTextBox" runat="server" Width="248px"></asp:TextBox>
+                                    <asp:RegularExpressionValidator ID="emailRegularExpressionValidator" runat="server" ControlToValidate="emailTextBox" ErrorMessage="E-mail адресът е неправилен!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="required"></asp:RegularExpressionValidator>
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="emailRequiredFieldValidator" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Моля въведете вашият E-mail адрес!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
                                     <br />
                                     <asp:Label ID="subjectLabel" runat="server" Text="Тема:"></asp:Label>
                                     <br />
                                     <asp:TextBox ID="subjectBox" runat="server" Width="248px"></asp:TextBox>
                                     <br />
-                                    <asp:Label ID="messageLabel" runat="server" Text="Съобщение:"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="messageLabel" runat="server" Text="*Съобщение:"></asp:Label>
                                     <br />
                                     <asp:TextBox ID="messageBox" runat="server" Height="99px" TextMode="MultiLine" Width="403px"></asp:TextBox>
                                     <br />
-                                    <asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" />
+                                    <asp:RequiredFieldValidator ID="messageRequiredFieldValidator" runat="server" ControlToValidate="messageBox" ErrorMessage="Моля въведете съобщение!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
+                                    <br />
+                                    *
+                                    <asp:Label ID="requiredFieldLabel" runat="server" Text="Обозначава задължителните полета"></asp:Label>
+                                    <br />
+                                    <asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" ValidationGroup="required" />
                                 </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
                                     <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />
@@ -114,8 +124,7 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов</p>
-					<br/>
+					<p>© 2014 Иван Попов<br/>
 				</div>
 			</div>
 		</div>
