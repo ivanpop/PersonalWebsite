@@ -509,7 +509,9 @@ namespace WebApplication1
 
         string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
 
-        int id = 0;
+        byte id = 0, code;
+
+        Random rnd = new Random();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -592,7 +594,38 @@ namespace WebApplication1
                     emailRequiredFieldValidator.Text = "Please enter your E-Mail adress!";
                     messageRequiredFieldValidator.Text = "Please enter a message!";
                     requiredFieldLabel.Text = "Indicates required field";
+                    codeLabel.Text = "*Security code:";
+                    codeRequiredFieldValidator.Text = "Please enter the security code!";
+                    codeCompareValidator.Text = "Wrong code!";
                 }
+
+                code = (byte)rnd.Next(1, 11);
+                codeImg.Text = "<img src=\"/Resources/codes/" + code.ToString() + ".jpg\">";
+
+                switch (code)
+                {
+                    case 1: codeCompareValidator.ValueToCompare = "57195";
+                        break;
+                    case 2: codeCompareValidator.ValueToCompare = "39628";
+                        break;
+                    case 3: codeCompareValidator.ValueToCompare = "90187";
+                        break;
+                    case 4: codeCompareValidator.ValueToCompare = "84793";
+                        break;
+                    case 5: codeCompareValidator.ValueToCompare = "21354";
+                        break;
+                    case 6: codeCompareValidator.ValueToCompare = "75638";
+                        break;
+                    case 7: codeCompareValidator.ValueToCompare = "42475";
+                        break;
+                    case 8: codeCompareValidator.ValueToCompare = "54968";
+                        break;
+                    case 9: codeCompareValidator.ValueToCompare = "23547";
+                        break;
+                    case 10: codeCompareValidator.ValueToCompare = "03412";
+                        break;
+                }
+                
             }
 
             if (Request.QueryString["a"] == "converter")
@@ -714,7 +747,7 @@ namespace WebApplication1
                             break;
                     }                    
                 }
-            }
+            }            
         }
 
         protected void setQueryString(string s1, string s2 = null)

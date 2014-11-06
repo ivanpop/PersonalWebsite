@@ -57,7 +57,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recaptcha.dll" />
+    <Content Include="Resources\codes\1.jpg" />
+    <Content Include="Resources\codes\10.jpg" />
+    <Content Include="Resources\codes\2.jpg" />
+    <Content Include="Resources\codes\3.jpg" />
+    <Content Include="Resources\codes\4.jpg" />
+    <Content Include="Resources\codes\5.jpg" />
+    <Content Include="Resources\codes\6.jpg" />
+    <Content Include="Resources\codes\7.jpg" />
+    <Content Include="Resources\codes\8.jpg" />
+    <Content Include="Resources\codes\9.jpg" />
     <Content Include="Resources\ryu.zip" />
+    <Content Include="Resources\codes\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
