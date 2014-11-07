@@ -506,11 +506,8 @@ namespace WebApplication1
             " </tr></tbody></table>";
 
         string projectsBul = "Тук съм показал някои от проектите върху които работя.<br/><br/>";
-
         string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
-
         byte id = 0, code;
-
         Random rnd = new Random();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -530,22 +527,18 @@ namespace WebApplication1
                 header2.Text = "Personal website";
                 goTop.Text = "Top";
             }
-
             if (Request.QueryString["a"] == "proj")
             {
                 projects.Enabled = false;
                 projectsPanel.Visible = true;
-
                 mainContent.Text = projectsBul;
                 artTitle.Text = "Проекти";
-
                 if (id == 1)
                 {
                     mainContent.Text = projectsEng;
                     artTitle.Text = "Projects";
                 }
             }
-
             if (Request.QueryString["a"] == null)
             {
                 aboutMe.Enabled = false;
@@ -558,30 +551,24 @@ namespace WebApplication1
                     mainContent.Text = aboutMeEng;
                 }
             }
-
             if (Request.QueryString["a"] == "bio")
             {
                 biography.Enabled = false;
                 ivanpopov.Visible = true;
-
                 artTitle.Text = "Автобиография";
                 mainContent.Text = biographyBul;
-
                 if (id == 1)
                 {
                     artTitle.Text = "Biography";
                     mainContent.Text = biographyEng;
                 }
             }
-
             if (Request.QueryString["a"] == "con")
             {
                 contacts.Enabled = false;
                 contactsPanel.Visible = true;
-
                 artTitle.Text = "Контакти";
                 mainContent.Text = contactsBul;
-
                 if (id == 1)
                 {
                     artTitle.Text = "Contacts";
@@ -598,10 +585,8 @@ namespace WebApplication1
                     codeRequiredFieldValidator.Text = "Please enter the security code!";
                     codeCompareValidator.Text = "Wrong code!";
                 }
-
                 code = (byte)rnd.Next(1, 11);
                 codeImg.Text = "<img src=\"/Resources/codes/" + code.ToString() + ".jpg\">";
-
                 switch (code)
                 {
                     case 1: codeCompareValidator.ValueToCompare = "57195";
@@ -624,55 +609,45 @@ namespace WebApplication1
                         break;
                     case 10: codeCompareValidator.ValueToCompare = "03412";
                         break;
-                }
-                
+                }                
             }
-
             if (Request.QueryString["a"] == "converter")
             {
                 projects.Enabled = false;
                 converter.Enabled = false;
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
-
                 artTitle.Text = "Проекти";
                 projectsContent.Text = converterTextBul;
-
                 if (id == 1)
                 {
                     artTitle.Text = "Projects";
                     projectsContent.Text = converterTextEng;
                 }
             }
-
             if (Request.QueryString["a"] == "countdown")
             {
                 projects.Enabled = false;
                 countdown.Enabled = false;
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
-
                 artTitle.Text = "Проекти";
                 projectsContent.Text = stopwatchTextBul;
-
                 if (id == 1)
                 {
                     artTitle.Text = "Projects";
                     projectsContent.Text = stopwatchTextEng;
                 }
             }
-
             if (Request.QueryString["a"] == "ryu")
             {
                 projects.Enabled = false;
                 ryu.Enabled = false;
                 projectsPanel.Visible = true;
                 pagePanel.Visible = true;
-                mainContent.Text = "";
-                                
+                mainContent.Text = "";                                
                 byte page;
                 byte.TryParse(Request.QueryString["p"], out page);
-
                 switch (page)
                 {                        
                     case 2: pageBtn2.Enabled = false;
@@ -694,9 +669,7 @@ namespace WebApplication1
                     default: pageBtn1.Enabled = false;
                         break;
                 }
-
                 artTitle.Text = "Проекти";
-
                 if (id == 0)
                 {
                     switch (Request.QueryString["p"])
@@ -724,7 +697,6 @@ namespace WebApplication1
                 else
                 {
                     artTitle.Text = "Projects";
-
                     switch (Request.QueryString["p"])
                     {
                         case "2": projectsContent.Text = ryuTextEng2;
@@ -753,7 +725,6 @@ namespace WebApplication1
         protected void setQueryString(string s1, string s2 = null)
         {
             var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-
             if (s2 == null)
             {
                 nvc.Remove(s1);
@@ -762,12 +733,10 @@ namespace WebApplication1
             {
                 nvc.Set(s1, s2);
             }
-
             if (s1 != "p" && s1 != "l")
             {
                 nvc.Remove("p");
             }
-
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
             Response.Redirect(url); 
         }
@@ -877,8 +846,50 @@ namespace WebApplication1
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
                 smtp.Credentials = new NetworkCredential("ivanpop@abv.bg", "ipb123");
-                smtp.Send(message);
+                try
+                {
+                    smtp.Send(message);
+                }
+                catch (SmtpFailedRecipientsException ex)
+                {
+                    contactsPanel.Visible = false;
+                    mainContent.Text = "";
+
+                    for (int i = 0; i < ex.InnerExceptions.Length; i++)
+                    {
+                        SmtpStatusCode status = ex.InnerExceptions[i].StatusCode;
+                        if (status == SmtpStatusCode.MailboxBusy ||
+                            status == SmtpStatusCode.MailboxUnavailable)
+                        {                            
+                            artTitle.Text = "Грешка при изпращането на писмото. Ще направя повторен опит за изпращане след 5 секунди.";
+                            if (id == 1)
+                            {
+                                artTitle.Text = "Failed to send message. Retrying in 5 seconds.";
+                            }
+
+                            System.Threading.Thread.Sleep(5000);
+                            smtp.Send(message);
+                        }
+                        else
+                        {
+                            artTitle.Text = "Грешка при изпращането на писмото.";
+                            if (id == 1)
+                            {
+                                artTitle.Text = "Failed to send message.";
+                            }
+                        }
+                    }
+                }
+                contactsPanel.Visible = false;
+                mainContent.Text = "След 5 секунди ще бъдете прехвърлени към началната страница.";
+                artTitle.Text = "Писмото е изпратено успешно.";
+                if (id == 1)
+                {
+                    artTitle.Text = "E-mail sent successful.";
+                    artTitle.Text = "You will be redirected to the home page in 5 seconds.";
+                }
+                Response.AddHeader("REFRESH","5;URL=index.aspx");          
             }
         } 
     }
-}//864
+}

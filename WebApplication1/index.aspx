@@ -82,8 +82,7 @@
                                     <asp:Label ID="requiredFieldLabel" runat="server" Text="Обозначава задължителните полета"></asp:Label>
                                     <br />
                                     &nbsp;<asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" ValidationGroup="required" />
-                                    <br />
-                                    <br />
+                                    &nbsp;<br />
                                 </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
                                     <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />
