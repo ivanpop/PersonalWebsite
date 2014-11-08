@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<title>Иван Попов</title>
-	<link rel="shortcut icon" href="resources\favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="Resources\favicon.ico" type="image/x-icon" />
 	<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />	
 	<meta name="description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
 	<meta name="dcterms.description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
@@ -15,7 +15,7 @@
 	<meta name="geo.placename" content="Plovdiv" />
 	<meta name="geo.position" content="42.135408;24.74529" />
 	<meta name="ICBM" content="42.135408, 24.74529" />
-	<link rel="canonical" href="http://ivanpop.altervista.org/bg" />
+	<link rel="canonical" href="http://www.ivanpop.somee.com/" />
 	<meta name="revisit-after" content="1 day" />
 	<meta name="dcterms.publisher" content="Ivan Popov" />
 	<link type="text/css" rel="stylesheet" media="all" href="Resources/css_styles.css" />
@@ -113,10 +113,10 @@
 						<h2><asp:Label ID="navigation" runat="server" Text="Навигация"></asp:Label></h2>
 						<div class="menu">
 							<ul>
-								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="102px"/></li>
-								<li><asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="102px"/></li>
-                                <li><asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="102px"/></li>
-                                <li><asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="102px"/></li>
+								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="116px"/></li>
+								<li><asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="116px"/></li>
+                                <li><asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="116px"/></li>
+                                <li><asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="116px"/></li>
 							</ul>
 						</div>
 					</div>
@@ -126,8 +126,8 @@
                         </h2>
 						<div class="content">
 							<ul>
-								<li><asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="85px" Enabled="False" /></li>
-								<li><asp:Button ID="switchEngBtn" runat="server" Text="English" OnClick="switchEngBtn_Click" Width="85px"/></li>
+								<li><asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="100px" Enabled="False" /></li>
+								<li><asp:Button ID="switchEngBtn" runat="server" Text="English" OnClick="switchEngBtn_Click" Width="100px"/></li>
 							</ul>
 						</div>
 					</div>

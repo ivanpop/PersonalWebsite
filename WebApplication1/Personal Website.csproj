@@ -68,6 +68,7 @@
     <Content Include="Resources\codes\7.jpg" />
     <Content Include="Resources\codes\8.jpg" />
     <Content Include="Resources\codes\9.jpg" />
+    <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\ryu.zip" />
     <Content Include="Resources\codes\Thumbs.db" />
     <None Include="Web.Debug.config">
