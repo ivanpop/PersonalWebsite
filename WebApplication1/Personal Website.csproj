@@ -72,7 +72,6 @@
     <Content Include="Resources\ryu.zip" />
     <Content Include="Resources\codes\Thumbs.db" />
     <None Include="Properties\PublishProfiles\ivanpop.pubxml" />
-    <None Include="Properties\PublishProfiles\somee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

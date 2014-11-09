@@ -152,8 +152,8 @@
 </form>
   <script type='text/javascript'>
     $(function () {
-        $('#main').hide();
-        $("#main").fadeIn(1000);
+        $('#main, #block-github, #block-user-1, #block-locale-0').hide();
+        $('#main, #block-github, #block-user-1, #block-locale-0').fadeIn(1000);
     });
   </script>
 </body>

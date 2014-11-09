@@ -11,11 +11,11 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        string aboutMeBul = "<p>Здравейте,<br/><br/><span class=\"tab\"></span>Казвам се Иван Попов и съм новозавършил във ФМИТ на Пловдивския Университет \"Паисий Хилендарски\".<br/><br/><span class=\"tab\"></span> " + 
+        string aboutMeBul = "<p>Здравейте,<br/><br/><span class=\"tab\"></span>Казвам се Иван Попов и съм програмист.<br/><br/><span class=\"tab\"></span> " + 
             "Това е моята лична интернет страница.Тук ще намерите информация за мен и актуалните проекти, по които работя активно.<br/><br/><span class=\"tab\"></span>Моите интереси са основно в областта на " + 
             "Информационните Технологии, Езиците за програмиране и Средите за програмиране.";
 
-        string aboutMeEng = "<p>Hello,<br/><br/>My name is Ivan Popov and I am a graduate in FMIT in Plovdiv University \"Paisii Hilendasrki\".<br/><br/>This is my personal web page. Here you will find information" + 
+        string aboutMeEng = "<p>Hello,<br/><br/>My name is Ivan Popov and I'm a programmer<br/><br/>This is my personal web page. Here you will find information" + 
             " about me and project, I work on.<br/><br/>My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
 
         string contactsBul = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>Също така можете да ми изпратите съобщение като използвате формата за контакти.<br><br>";
@@ -30,14 +30,18 @@ namespace WebApplication1
             " target=\"_blank\"><b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат" + 
             "да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>Като хоби имам YouTube канал, в който качвам кадри от " + 
             "игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>" + 
-            "<span class=\"tab\"></span>Целта ми е да работя в IT-сферата и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar" + 
-            "\">2014 г.</span> ПУ \"Паисий Хилендарски\" - Пловдив, висше образование, степен магистър, специалност \"Софтуерни технологии\".<br/><br/><span class=\"round-bar blue-bar\">2013 г.</span> ПУ \"Паисий Хиле" + 
-            "ндарски\" - Пловдив, висше образование, степен бакалавър, специалност \"Информатика\".<br/><br/><span class=\"round-bar blue-bar\">1997 г.</span> ОУ \"Райна Княгиня\" - Пловдив, основно образование.<br/><br/> " +
-            "<hr><br/><br/><h1>Езици</h1><br/><br/>Български – майчин език.<br/><br/>Английски – четене - отлично, писане - много добро, разговор - много добро.<br/><br/>Френски – четене - основно, писане - основно, " + 
-            "разговор - основно.<br/><br/><hr><br/><br/><h1>Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник впоследствие Продуктов консултант, в магазин \"Метро 2 Пловдив\"" + 
-            ".<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в “Highstyle” Ltd.<br/><br/><hr><br/><br/><h1>Други</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#," + 
-            " C++, Java, JavaScript...<br/><br/><b>Технологии и стандарти:</b><br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Програми:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE," +
-            "MS Visual Studio 2013 for Web, Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
+            "<span class=\"tab\"></span>Целта ми е да работя в IT-сферата и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar" +
+            "\">2014 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u> ПУ \"Паисий Хилендарски\"</u></b></a> - Магистър, специалност \"Софтуерни технологии\".<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">2013 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u> ПУ \"Паисий Хилендарски\"</u></b></a>  - Бакалавър, специалност \"Информатика\".<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">2009 г.</span> <a href=\"http://www.pghtt.net/\" target=\"_blank\"><b><u> ПГХТТ</u></b></a> - средно образование.<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">1997 г.</span> <a href=\"http://rainakniaginia.com/\" target=\"_blank\"><b><u> ОУ \"Райна Княгиня\"</u></b></a> - основно образование.<br/><br/><hr><br/><br/><h1>" +
+            "Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник и Продуктов консултант в магазин <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Метро 2 Пловдив\"" +
+            "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
+            "<hr><br/><br/><h1>Компютърни умения</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Технологии и стандарти:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
+            "CSS3, JavaScript, jQuery;<br/><br/><b>Операционни системи:</b><br/><br/>Административни умения с Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu дистрибуции, Arch Linux, OpenSUSE;<br/><br/><b>Програми за " +
+            "разработка:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
+            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Други компютърни умения:</b><br/><br/> Отлични умения с MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Обработка на видео, " + 
+            "аудио и изображения - Adobe Photoshop, GIMP, Adobe Premiere Pro,<br/> Sony Vegas PRO, Audacity;";
 
         string biographyEng = "<span class=\"tab\"></span>I'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;<span class=\"tab\"></span>I graduated from Plovdiv University \"Paisii Hilendarski\" in &nbsp;2013," + 
             " with a bachelor degree in Informatics.<br/><br/><span class=\"tab\"></span>Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
@@ -47,14 +51,18 @@ namespace WebApplication1
             "Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github " +
             "account. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>As a hobby I have a YouTube channel, where I upload gameplay videos in which " +
             "I show my years of experience with the sniper and the shotgun. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span " +
-            "class=\"tab\"></span>My goal is to work in the field of IT and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar\">" +
-            "2014</span> PU \"Paisii Hilendarski\" - Plovdiv, Masters degree, field of \"Software Technologies\".<br/><br/><span class=\"round-bar blue-bar\">2013</span> PU \"Paisii Hilendarski\" - Plovdiv, Bachelors" +
-            " degree, field of \"Informatics\".<br/><br/><span class=\"round-bar blue-bar\">1997</span> Elementary school \"Rayna Knyaginya\" - Plovidv.<br/><br/> <hr><br/><br/><h1>Languages</h1><br/><br/>Bulgarian – " +
-            "mother's language.<br/><br/>English – reading - great, writing - great, speaking - great.<br/><br/>French – reading - basic, writing - basic, speaking - basic.<br/><br/><hr><br/><br/><h1>Working " +
-            "experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate and after that Product consultant in \"Metro Cash&Carry 2 Plovdiv\".<br/><br/><span class=\"round-bar " +
-            "blue-bar\">11/2012 - 04/2013</span> Data entry operator in “Highstyle” Ltd.<br/><br/><hr><br/><br/><h1>Other</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript...<br/><br/>" +
-            "<b>Technologies and standarts:</b><br/><br/>HTML/DHTML, CSS, ASP.NET, jQuery, MySQL...<br/><br/><b>Programs:</b><br/><br/>MS Visual Studio 2013 for Desktop, Eclipse IDE,MS Visual Studio 2013 for Web, " + 
-            "Notepad++;<br/>MS Office, Libre Office, Adobe Photoshop, Adobe Premiere Pro, Audacity";
+            "class=\"tab\"></span>My goal is to work in the field of IT and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar" +
+            "\">2014 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u>PU “Paisii Hilendarski” </u></b></a> - Master's degree, field of \"Software technologies\".<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">2013 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u>PU “Paisii Hilendarski”</u></b></a>  - Bachelor's degree, field of \"Informatics\".<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">2009 г.</span> <a href=\"http://www.pghtt.net/\" target=\"_blank\"><b><u> PGHTT</u></b></a> - secondary.<br/><br/>" +
+            "<span class=\"round-bar blue-bar\">1997 г.</span> <a href=\"http://rainakniaginia.com/\" target=\"_blank\"><b><u> OU “Rayna Knyaginya” </u></b></a> -primary.<br/><br/><hr><br/><br/><h1>" +
+            "Work experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate and Product consultant in <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Metro 2 Plovdiv\"" +
+            "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Data entry operator in <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
+            "<hr><br/><br/><h1>Computer skills</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Technologies and standards:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
+            "CSS3, JavaScript, jQuery;<br/><br/><b>Operating systems:</b><br/><br/>Administrative skills with Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu distributions, Arch Linux, OpenSUSE;<br/><br/><b>Development " +
+            "tools:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
+            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Other computer skills:</b><br/><br/> Excellent skills with MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Video, audio" +
+            "and image editing skills - Adobe Photoshop, GIMP, Adobe Premiere Pro, Sony Vegas PRO, Audacity;";
 
         string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на C# и представлява прост конвертор" +
             " или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a " + 
