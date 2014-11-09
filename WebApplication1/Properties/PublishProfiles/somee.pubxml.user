@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvRdQnmOfVE+y5JNH94y+4wAAAAACAAAAAAAQZgAAAAEAACAAAAAnGoK6xvK1FwsulvutIn5mCaeRyJFgE1pu5LR1u3QEMgAAAAAOgAAAAAIAACAAAACuZBCYaUgCKC5Y8Io80SVVosd+BzA7YBut5bTAJiHNKCAAAABMPA+1rgbaCJOPj6kCWveDB22MHRETI7s7dSI/ggVdzkAAAAARhx1kdB1shsDxCipMWOelTaVUhBmbm5rxzre4TTpHDjQpaEoNJxFPpP6hNeZKxTvLdgb1DGdMNCloSbR3PVjp</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ivanpop.somee.com/www.ivanpop.somee.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/WebApplication1.dll">
+      <publishTime>11/08/2014 19:42:41</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>11/08/2014 14:10:56</publishTime>
+    </File>
+    <File Include="Recaptcha.dll">
+      <publishTime>11/06/2014 21:39:18</publishTime>
+    </File>
+    <File Include="Resources/bg.jpg">
+      <publishTime>09/21/2014 09:07:12</publishTime>
+    </File>
+    <File Include="Resources/codes/1.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/10.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/2.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/3.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/4.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/5.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/6.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/7.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/8.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/9.jpg">
+      <publishTime>11/06/2014 22:17:21</publishTime>
+    </File>
+    <File Include="Resources/codes/Thumbs.db">
+      <publishTime>11/08/2014 12:15:13</publishTime>
+    </File>
+    <File Include="Resources/convertor.exe">
+      <publishTime>10/14/2014 19:04:28</publishTime>
+    </File>
+    <File Include="Resources/convertor1.jpg">
+      <publishTime>10/13/2014 15:14:02</publishTime>
+    </File>
+    <File Include="Resources/countdown timer.exe">
+      <publishTime>10/14/2014 19:39:31</publishTime>
+    </File>
+    <File Include="Resources/css_styles.css">
+      <publishTime>10/30/2014 22:18:56</publishTime>
+    </File>
+    <File Include="Resources/CT1.jpg">
+      <publishTime>10/14/2014 19:24:35</publishTime>
+    </File>
+    <File Include="Resources/CT2.jpg">
+      <publishTime>10/14/2014 19:24:35</publishTime>
+    </File>
+    <File Include="Resources/favicon.ico">
+      <publishTime>11/08/2014 11:55:42</publishTime>
+    </File>
+    <File Include="Resources/header_footer.jpg">
+      <publishTime>10/19/2014 11:51:52</publishTime>
+    </File>
+    <File Include="Resources/icons.gif">
+      <publishTime>09/22/2014 01:52:40</publishTime>
+    </File>
+    <File Include="Resources/ivanpopov.jpg">
+      <publishTime>10/09/2014 13:50:10</publishTime>
+    </File>
+    <File Include="Resources/jquery-2.1.1.js">
+      <publishTime>10/19/2014 12:11:59</publishTime>
+    </File>
+    <File Include="Resources/light.gif">
+      <publishTime>09/21/2014 08:46:06</publishTime>
+    </File>
+    <File Include="Resources/menu-leaf.png">
+      <publishTime>09/22/2014 00:07:27</publishTime>
+    </File>
+    <File Include="Resources/mime-16.png">
+      <publishTime>10/14/2014 19:03:31</publishTime>
+    </File>
+    <File Include="Resources/ryu.zip">
+      <publishTime>10/23/2014 15:50:17</publishTime>
+    </File>
+    <File Include="Resources/ryu1.png">
+      <publishTime>10/15/2014 14:48:59</publishTime>
+    </File>
+    <File Include="Resources/ryu10.png">
+      <publishTime>10/21/2014 15:53:02</publishTime>
+    </File>
+    <File Include="Resources/ryu11.jpg">
+      <publishTime>10/21/2014 15:53:02</publishTime>
+    </File>
+    <File Include="Resources/ryu12.png">
+      <publishTime>10/21/2014 15:53:02</publishTime>
+    </File>
+    <File Include="Resources/ryu2.jpg">
+      <publishTime>10/15/2014 14:48:59</publishTime>
+    </File>
+    <File Include="Resources/ryu3.png">
+      <publishTime>10/15/2014 14:48:59</publishTime>
+    </File>
+    <File Include="Resources/ryu4.png">
+      <publishTime>10/16/2014 19:23:13</publishTime>
+    </File>
+    <File Include="Resources/ryu5.jpg">
+      <publishTime>10/16/2014 19:23:13</publishTime>
+    </File>
+    <File Include="Resources/ryu6.jpg">
+      <publishTime>10/16/2014 19:23:13</publishTime>
+    </File>
+    <File Include="Resources/ryu7.png">
+      <publishTime>10/20/2014 15:32:38</publishTime>
+    </File>
+    <File Include="Resources/ryu8.png">
+      <publishTime>10/21/2014 15:10:53</publishTime>
+    </File>
+    <File Include="Resources/ryu9.png">
+      <publishTime>10/21/2014 15:10:53</publishTime>
+    </File>
+    <File Include="Resources/sidesep.gif">
+      <publishTime>09/21/2014 23:28:10</publishTime>
+    </File>
+    <File Include="Resources/widgetsep.png">
+      <publishTime>09/21/2014 23:48:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/08/2014 19:42:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

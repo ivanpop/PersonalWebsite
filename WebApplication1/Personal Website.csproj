@@ -71,6 +71,8 @@
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\ryu.zip" />
     <Content Include="Resources\codes\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\ivanpop.pubxml" />
+    <None Include="Properties\PublishProfiles\somee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -108,16 +110,16 @@
     <Content Include="Resources\sidesep.gif" />
     <Content Include="Resources\widgetsep.png" />
     <Content Include="Web.config" />
-    <Content Include="index.aspx" />
+    <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
