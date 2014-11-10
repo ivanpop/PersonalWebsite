@@ -38,7 +38,7 @@ namespace WebApplication1
             "Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник и Продуктов консултант в магазин <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Метро 2 Пловдив\"" +
             "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
             "<hr><br/><br/><h1>Компютърни умения</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Технологии и стандарти:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
-            "CSS3, JavaScript, jQuery;<br/><br/><b>Операционни системи:</b><br/><br/>Административни умения с Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu дистрибуции, Arch Linux, OpenSUSE;<br/><br/><b>Програми за " +
+            "CSS3, jQuery;<br/><br/><b>Операционни системи:</b><br/><br/>Административни умения с Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu дистрибуции, Arch Linux, OpenSUSE;<br/><br/><b>Програми за " +
             "разработка:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
             "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Други компютърни умения:</b><br/><br/> Отлични умения с MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Обработка на видео, " + 
             "аудио и изображения - Adobe Photoshop, GIMP, Adobe Premiere Pro,<br/> Sony Vegas PRO, Audacity;";
@@ -59,10 +59,10 @@ namespace WebApplication1
             "Work experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate and Product consultant in <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Metro 2 Plovdiv\"" +
             "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Data entry operator in <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
             "<hr><br/><br/><h1>Computer skills</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Technologies and standards:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
-            "CSS3, JavaScript, jQuery;<br/><br/><b>Operating systems:</b><br/><br/>Administrative skills with Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu distributions, Arch Linux, OpenSUSE;<br/><br/><b>Development " +
+            "CSS3, jQuery;<br/><br/><b>Operating systems:</b><br/><br/>Administrative skills with Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu distributions, Arch Linux, OpenSUSE;<br/><br/><b>Development " +
             "tools:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
-            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Other computer skills:</b><br/><br/> Excellent skills with MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Video, audio" +
-            "and image editing skills - Adobe Photoshop, GIMP, Adobe Premiere Pro, Sony Vegas PRO, Audacity;";
+            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Other computer skills:</b><br/><br/> Excellent skills with MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Video, audio " +
+            "and image editing skills - Adobe Photoshop, GIMP, Adobe Premiere Pro,<br/> Sony Vegas PRO, Audacity;";
 
         string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на C# и представлява прост конвертор" +
             " или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a " + 
@@ -74,14 +74,18 @@ namespace WebApplication1
             "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class=\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a " + 
             "href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td></tr></tbody></table>";
 
-        string stopwatchTextBul = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма за обратно броене" +
+        string stopwatchTextBul1 = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма за обратно броене" +
             " и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. Перфектна програма, ако често варите яйца или готвите. ;) <br/><span " +
             "class=\"tab\"></span>Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и записване на времената на обиколките като текстов файл.<br/><span class=\"tab\"></span>" +
             "Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: " +
             "</b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr " + 
             "class =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td></tr></tbody></table>";
 
-        string stopwatchTextEng = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a countdown timer and a stopwatch" +
+        string stopwatchTextBul2 = "Страницата е в процес на разработка";
+
+        string stopwatchTextEng2 = "Page is under construction";
+
+        string stopwatchTextEng1 = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a countdown timer and a stopwatch" +
             ". When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. Perfect if you often boil eggs or cook. ;) <br/><span class=\"tab\"></span>The stopwatch" +
             " has a precision of a millisecond. There is an option to count a lap, pause and to save the lap times in a text file.<br/><span class=\"tab\"></span>The countdown timer and the stopwatch are completly " +
             "independent on from the other and can work simultaneously.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=" + 
@@ -641,11 +645,44 @@ namespace WebApplication1
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Проекти";
-                projectsContent.Text = stopwatchTextBul;
-                if (id == 1)
+                projectsContent.Text = stopwatchTextBul1;
+                pagePanel.Visible = true;
+                pageBtn3.Visible = false;
+                pageBtn4.Visible = false;
+                pageBtn5.Visible = false;
+                pageBtn6.Visible = false;
+                pageBtn7.Visible = false;
+                pageBtn8.Visible = false;
+                pageBtn9.Visible = false;
+                byte page;
+                byte.TryParse(Request.QueryString["p"], out page);
+                switch (page)
+                {
+                    case 2: pageBtn2.Enabled = false;
+                        break;
+                    default: pageBtn1.Enabled = false;
+                        break;
+                }
+                if (id == 0)
+                {
+                    switch (Request.QueryString["p"])
+                    {
+                        case "2": projectsContent.Text = stopwatchTextBul2;
+                            break;
+                        default: projectsContent.Text = stopwatchTextBul1;
+                            break;
+                    }
+                }
+                else
                 {
                     artTitle.Text = "Projects";
-                    projectsContent.Text = stopwatchTextEng;
+                    switch (Request.QueryString["p"])
+                    {
+                        case "2": projectsContent.Text = stopwatchTextEng2;
+                            break;
+                        default: projectsContent.Text = stopwatchTextEng1;
+                            break;
+                    }
                 }
             }
             if (Request.QueryString["a"] == "ryu")
@@ -802,7 +839,7 @@ namespace WebApplication1
 
         protected void ryuPage1_Click(object sender, EventArgs e)
         {
-            setQueryString("a", "ryu");
+            setQueryString("p");
         }
 
         protected void ryuPage3_Click(object sender, EventArgs e)
