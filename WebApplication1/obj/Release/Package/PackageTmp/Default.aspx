@@ -144,7 +144,7 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов<br/>
+					<p>© 2014 Иван Попов</p><br/>
 				</div>
 			</div>
 		</div>

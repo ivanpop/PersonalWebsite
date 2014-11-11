@@ -6,92 +6,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
+using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
-    {
-        string aboutMeBul = "<p>Здравейте,<br/><br/><span class=\"tab\"></span>Казвам се Иван Попов и съм програмист.<br/><br/><span class=\"tab\"></span> " + 
-            "Това е моята лична интернет страница.Тук ще намерите информация за мен и актуалните проекти, по които работя активно.<br/><br/><span class=\"tab\"></span>Моите интереси са основно в областта на " + 
-            "Информационните Технологии, Езиците за програмиране и Средите за програмиране.";
-
-        string aboutMeEng = "<p>Hello,<br/><br/>My name is Ivan Popov and I'm a programmer<br/><br/>This is my personal web page. Here you will find information" + 
-            " about me and project, I work on.<br/><br/>My interests are mainly in the field of information technology, programming languages ​​and their programming environments.";
-
-        string contactsBul = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>Също така можете да ми изпратите съобщение като използвате формата за контакти.<br><br>";
-
-        string contactsEng = "<span class=\"round-bar blue-bar\">E-mail:</span> ivanpop@abv.bg<br><br><span class=\"round-bar blue-bar\">Skype:</span> ivan9019<br><br>Also you can send me a message using the contacts form below.<br><br>";
-
-        string biographyBul = "<span class=\"tab\"></span>Роден съм на 19.01.1990г. в гр. Пловдив, България.<br/><br/><span class=\"tab\"></span>Завърших висшето си образование, степен бакалавър, в &nbsp;Пловдивски " +
-            "университет \"Паисий Хилендарски\" през 2013 г. &nbsp;със &nbsp;специалност \"Информатика\".<br/><br/><span class=\"tab\"></span>Непосредствено след завършването си записах &nbsp;магистърска &nbsp;степен, в същия" +
-            " университет, със специалност &nbsp;\"Софтуерни &nbsp;технологии\", която също завърших успешно.<br/><br/><span class=\"tab\"></span>От декември 2009г, четири месеца след записването ми в &nbsp;университета," + 
-            " работя в магазин \"Метро Пловдив 2\", от начало &nbsp;като обикновен сътрудник и впоследствие като продуктов &nbsp;консултант.<br/><br/><span class=\"tab\"></span>Работата ми в магазина ме научи да " + 
-            "работя в екип, да работя с клиенти, да си планирам работния ден и приоритизирам задачите си.<br/><br/><span class=\"tab\"></span>През останалото време решавам курсове от <a href=\"https://telerikacademy.com/\"" + 
-            " target=\"_blank\"><b><u>Софтуерна академия \"Телерик\"</b></u></a> и <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>Софтуерен университет</b></u>\"</a>, както и мой лични проекти.Част от тях могат" + 
-            "да се видят в моя Github акаунт. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>Като хоби имам YouTube канал, в който качвам кадри от " + 
-            "игри и показвам дългите години придобит опит със снайпера и двуцевката. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/>" + 
-            "<span class=\"tab\"></span>Целта ми е да работя в IT-сферата и да продължавам да си развивам уменията на програмист.<br/><br/><hr><br/><br/><h1>Образование</h1><br/><br/><span class=\"round-bar blue-bar" +
-            "\">2014 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u> ПУ \"Паисий Хилендарски\"</u></b></a> - Магистър, специалност \"Софтуерни технологии\".<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">2013 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u> ПУ \"Паисий Хилендарски\"</u></b></a>  - Бакалавър, специалност \"Информатика\".<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">2009 г.</span> <a href=\"http://www.pghtt.net/\" target=\"_blank\"><b><u> ПГХТТ</u></b></a> - средно образование.<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">1997 г.</span> <a href=\"http://rainakniaginia.com/\" target=\"_blank\"><b><u> ОУ \"Райна Княгиня\"</u></b></a> - основно образование.<br/><br/><hr><br/><br/><h1>" +
-            "Трудов опит</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Сътрудник и Продуктов консултант в магазин <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Метро 2 Пловдив\"" +
-            "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Оператор въвеждане на данни в <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
-            "<hr><br/><br/><h1>Компютърни умения</h1><br/><br/><b>Езици за програмиране:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Технологии и стандарти:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
-            "CSS3, jQuery;<br/><br/><b>Операционни системи:</b><br/><br/>Административни умения с Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu дистрибуции, Arch Linux, OpenSUSE;<br/><br/><b>Програми за " +
-            "разработка:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
-            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Други компютърни умения:</b><br/><br/> Отлични умения с MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Обработка на видео, " + 
-            "аудио и изображения - Adobe Photoshop, GIMP, Adobe Premiere Pro,<br/> Sony Vegas PRO, Audacity;";
-
-        string biographyEng = "<span class=\"tab\"></span>I'm born on 19.01.1990г. in Plovdiv, Bulgaria.<br/><br/>&nbsp;<span class=\"tab\"></span>I graduated from Plovdiv University \"Paisii Hilendarski\" in &nbsp;2013," + 
-            " with a bachelor degree in Informatics.<br/><br/><span class=\"tab\"></span>Right after that I started studying masters degree, in the same &nbsp;university, in the field of \"Software Technologies\"," +
-            "which I graduated &nbsp;in 2014.<br/><br/><span class=\"tab\"></span>From December 2009, four months after becoming a student in &nbsp;the university, I started working in \"Metro Cash&Carry Plovdiv 2\"," +
-            " &nbsp;from the beginning as a regular associate and afterwards as a &nbsp;product consultant.<br/><br/><span class=\"tab\"></span>My work in the magazine taught me to work in a team, to work with clients," +
-            " to plan my working day and to prioritize my tasks.<br/><br/><span class=\"tab\"></span>In my spare time I follow online courses in <a href=\"https://telerikacademy.com/\" target=\"_blank\"><b><u>Software " +
-            "Academy \"Telerik\"</b></u></a> and <a href=\"https://softuni.bg/\" target=\"_blank\"><b><u>The Software University</b></u>\"</a>, as well as my personal projects. Part of them can be seen in my Github " +
-            "account. <a href=\"https://github.com/ivanpop\" target=\"_blank\"><b><u>Github</u></b></a><br/><br/><span class=\"tab\"></span>As a hobby I have a YouTube channel, where I upload gameplay videos in which " +
-            "I show my years of experience with the sniper and the shotgun. ;)<a href=\"https://www.youtube.com/user/unfragablegaming/\" target=\"_blank\">" + "<b><u>Unfragable Gaming</u></b></a><br/><br/><span " +
-            "class=\"tab\"></span>My goal is to work in the field of IT and to continue to develop my skills as a programmer.<br/><br/><hr><br/><br/><h1>Education</h1><br/><br/><span class=\"round-bar blue-bar" +
-            "\">2014 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u>PU “Paisii Hilendarski” </u></b></a> - Master's degree, field of \"Software technologies\".<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">2013 г.</span> <a href=\"https://uni-plovdiv.bg/\" target=\"_blank\"><b><u>PU “Paisii Hilendarski”</u></b></a>  - Bachelor's degree, field of \"Informatics\".<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">2009 г.</span> <a href=\"http://www.pghtt.net/\" target=\"_blank\"><b><u> PGHTT</u></b></a> - secondary.<br/><br/>" +
-            "<span class=\"round-bar blue-bar\">1997 г.</span> <a href=\"http://rainakniaginia.com/\" target=\"_blank\"><b><u> OU “Rayna Knyaginya” </u></b></a> -primary.<br/><br/><hr><br/><br/><h1>" +
-            "Work experience</h1><br/><br/><span class=\"round-bar blue-bar\">12/2009 - 07/2014</span> Associate and Product consultant in <a href=\"http://www.metro.bg/\" target=\"_blank\"><b><u>\"Metro 2 Plovdiv\"" +
-            "</u></b></a>.<br/><br/><span class=\"round-bar blue-bar\">11/2012 - 04/2013</span> Data entry operator in <a href=\"http://stildecor.bg/\" target=\"_blank\"><b><u>“Highstyle” Ltd</u></b></a>.<br/><br/>" +
-            "<hr><br/><br/><h1>Computer skills</h1><br/><br/><b>Programming languages:</b><br/><br/>C#, C++, Java, JavaScript;<br/><br/><b>Technologies and standards:</b><br/><br/>ASP.NET Web Forms, SQL Server;<br/>HTML5, " +
-            "CSS3, jQuery;<br/><br/><b>Operating systems:</b><br/><br/>Administrative skills with Windows XP, Vista, 7, 8/8.1;<br/>Linux: Ubuntu distributions, Arch Linux, OpenSUSE;<br/><br/><b>Development " +
-            "tools:</b><br/><br/>.NET - MS Visual Studio 2013 for Desktop, MS Visual Studio 2013 for Web, MonoDevelop;<br/>C++ - CodeBlocks, Microsoft Visual Studio 6.0;<br/>Java - Eclipse, NetBeans;<br/>Database - " +
-            "SQL Server Management Studio, phpMyAdmin;<br/>Notepad++;<br/><br/><b>Other computer skills:</b><br/><br/> Excellent skills with MS Word, Excel, PowerPoint, Libre Office, OpenOffice;<br/><br/>Video, audio " +
-            "and image editing skills - Adobe Photoshop, GIMP, Adobe Premiere Pro,<br/> Sony Vegas PRO, Audacity;";
-
-        string converterTextBul = "<br/><br/><h1>Converter</h1><br/><em>Програма за преобразуване на мерни единици.</em><br/><br/><span class=\"tab\"></span>Програмата е написана на C# и представлява прост конвертор" +
-            " или преобразувател на мерни единици.Възможните мерни единици могат да се видят на изображението.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a " + 
-            "href=\"https://github.com/ivanpop/Converter\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td></tr></tbody></table>";
-
-        string converterTextEng = "<br/><br/><h1>Converter</h1><br/><em>Program for converting metric units.</em><br/><br/><span class=\"tab\"></span>The program is written in C# and it's a simple converter of metric " + 
-            "units. Different metric units can be seen in the screenshot.<br/><br/><img src=\"/Resources/convertor1.jpg\"><br/><br/><b>Source: </b><a href=\"https://github.com/ivanpop/Converter\" target=\"_blank\">" +
-            "<b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class=\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a " + 
-            "href=\"../Resources/convertor.exe\">Convertor</a></td><td class=\"size\">49.0 KB</td></tr></tbody></table>";
-
-        string stopwatchTextBul1 = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Обратно броене и секундомер.</em><br/><br/><span class=\"tab\"></span>Написана е на C# и представлява програма за обратно броене" +
-            " и секундомер. При изтичане на времето се чува бийпване. Прогресът може да се види и на таскбара, дори и програмата да е минимализирана. Перфектна програма, ако често варите яйца или готвите. ;) <br/><span " +
-            "class=\"tab\"></span>Секундомера измерва с точност от милисекунда. Има възможност за отчитане на обиколка, пауза и записване на времената на обиколките като текстов файл.<br/><span class=\"tab\"></span>" +
-            "Обратното броене и секундомера са напълно независими един от друг и могат да работят едновременно.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: " +
-            "</b><a href=\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr " + 
-            "class =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td></tr></tbody></table>";
-
-        string stopwatchTextBul2 = "Страницата е в процес на разработка";
-
-        string stopwatchTextEng2 = "Page is under construction";
-
-        string stopwatchTextEng1 = "<br/><br/><h1>Countdown timer and stopwatch</h1><br/><em>Countdown timer and a stopwatch.</em><br/><br/><span class=\"tab\"></span>Written in C#, this is a countdown timer and a stopwatch" +
-            ". When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. Perfect if you often boil eggs or cook. ;) <br/><span class=\"tab\"></span>The stopwatch" +
-            " has a precision of a millisecond. There is an option to count a lap, pause and to save the lap times in a text file.<br/><span class=\"tab\"></span>The countdown timer and the stopwatch are completly " +
-            "independent on from the other and can work simultaneously.<br/><br/><img src=\"/Resources/CT1.jpg\"><br/><br/><img src=\"/Resources/CT2.jpg\"><br/><br/><b>Source: </b><a href=" + 
-            "\"https://github.com/ivanpop/Stopwatch\" target=\"_blank\"><b><u>Github</u></b></a><table class=\"itu-attachment-list withoutstats sticky-enabled sticky-table\" id=\"attachments\"><tbody><tr class " +
-            " =\"odd\"><td class=\"mime mime-zip\"></td><td class=\"file\"><a href=\"../Resources/countdown timer.exe\">Countdown Timer</a></td><td class=\"size\">959.0 KB</td></tr></tbody></table>";
-
+    {           
         string ryuTextBul1 = "<br/><br/><h1>Ryu: The Big Adventure!</h1><br/><em>2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.</em><br/><br/><h2>Описание</h2><br/><span class=\"tab\"></span>" +
             "<b>Ryu: The Big Adventure</b> е подобие на аркадните игри <b>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</b> и още много други.<br/><br/><h2>Функции</h2><br/><span class=\"tab\">" +
             "</span>Играта „Ryu: The Big Adventure” предоставя на потребителите възможността да играят на един типичен хоризонтален Beat 'em up симулатор. Beat 'em up е жанр в компютърните игри, който включва ръкопашен бой" +
@@ -522,6 +443,9 @@ namespace WebApplication1
         string projectsEng = "Here I've shown some of the projects I'm working on.<br/><br/>";
         byte id = 0, code;
         Random rnd = new Random();
+        
+        protected string conS = @"Server=tcp:rlq2jzpufp.database.windows.net,1433;Database=text;User ID=ivanpop@rlq2jzpufp;Password=Popov123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+        protected SqlConnection con;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -555,13 +479,11 @@ namespace WebApplication1
             if (Request.QueryString["a"] == null)
             {
                 aboutMe.Enabled = false;
-                  
-                mainContent.Text = aboutMeBul;
-
+                getText("aboutMeBul");
                 if (id == 1)
                 {
                     artTitle.Text = "About me";
-                    mainContent.Text = aboutMeEng;
+                    getText("aboutMeEng");                    
                 }
             }
             if (Request.QueryString["a"] == "bio")
@@ -569,11 +491,11 @@ namespace WebApplication1
                 biography.Enabled = false;
                 ivanpopov.Visible = true;
                 artTitle.Text = "Автобиография";
-                mainContent.Text = biographyBul;
+                getText("biograpBul");
                 if (id == 1)
                 {
                     artTitle.Text = "Biography";
-                    mainContent.Text = biographyEng;
+                    getText("biograpEng");
                 }
             }
             if (Request.QueryString["a"] == "con")
@@ -581,11 +503,11 @@ namespace WebApplication1
                 contacts.Enabled = false;
                 contactsPanel.Visible = true;
                 artTitle.Text = "Контакти";
-                mainContent.Text = contactsBul;
+                getText("contactBul");
                 if (id == 1)
                 {
                     artTitle.Text = "Contacts";
-                    mainContent.Text = contactsEng;
+                    getText("contactEng");
                     subjectLabel.Text = "Subject:";
                     messageLabel.Text = "Message:";
                     submitEmailBtn.Text = "Submit";
@@ -631,11 +553,11 @@ namespace WebApplication1
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Проекти";
-                projectsContent.Text = converterTextBul;
+                getText("convertBul", 1);
                 if (id == 1)
                 {
                     artTitle.Text = "Projects";
-                    projectsContent.Text = converterTextEng;
+                    getText("convertEng", 1);
                 }
             }
             if (Request.QueryString["a"] == "countdown")
@@ -644,8 +566,7 @@ namespace WebApplication1
                 countdown.Enabled = false;
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
-                artTitle.Text = "Проекти";
-                projectsContent.Text = stopwatchTextBul1;
+                artTitle.Text = "Проекти";                
                 pagePanel.Visible = true;
                 pageBtn3.Visible = false;
                 pageBtn4.Visible = false;
@@ -667,9 +588,9 @@ namespace WebApplication1
                 {
                     switch (Request.QueryString["p"])
                     {
-                        case "2": projectsContent.Text = stopwatchTextBul2;
+                        case "2": getText("stopwBul2", 1);
                             break;
-                        default: projectsContent.Text = stopwatchTextBul1;
+                        default: getText("stopwBul1", 1); ;
                             break;
                     }
                 }
@@ -678,9 +599,9 @@ namespace WebApplication1
                     artTitle.Text = "Projects";
                     switch (Request.QueryString["p"])
                     {
-                        case "2": projectsContent.Text = stopwatchTextEng2;
+                        case "2": getText("stopwEng2", 1);
                             break;
-                        default: projectsContent.Text = stopwatchTextEng1;
+                        default: getText("stopwEng1", 1);
                             break;
                     }
                 }
@@ -766,6 +687,22 @@ namespace WebApplication1
                     }                    
                 }
             }            
+        }
+
+        protected void getText(string id, int index = 0)
+        {
+            con = new SqlConnection(conS);
+            SqlCommand query = new SqlCommand("SELECT mainContent FROM [Table1] WHERE Id='" + id + "';", con);
+            con.Open();
+            if (index == 0)
+            {
+                mainContent.Text = query.ExecuteScalar().ToString();
+            }
+            else
+            {
+                projectsContent.Text = query.ExecuteScalar().ToString();
+            }
+            con.Close();
         }
 
         protected void setQueryString(string s1, string s2 = null)

@@ -4,4 +4,10 @@
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Ivan\\Documents\\Visual\ Studio\ 2013\\PersonalWebsite\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ivan\\Documents\\Visual\ Studio\ 2013\\PersonalWebsite\\WebApplication1\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="ivanpop/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Ivan\\Documents\\Visual\ Studio\ 2013\\PersonalWebsite\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\text.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Ivan\\Documents\\Visual\ Studio\ 2013\\PersonalWebsite\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
 </parameters>
