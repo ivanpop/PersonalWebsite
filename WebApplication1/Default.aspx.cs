@@ -413,15 +413,13 @@ namespace WebApplication1
                     for (int i = 0; i < ex.InnerExceptions.Length; i++)
                     {
                         SmtpStatusCode status = ex.InnerExceptions[i].StatusCode;
-                        if (status == SmtpStatusCode.MailboxBusy ||
-                            status == SmtpStatusCode.MailboxUnavailable)
+                        if (status == SmtpStatusCode.MailboxBusy || status == SmtpStatusCode.MailboxUnavailable)
                         {                            
                             artTitle.Text = "Грешка при изпращането на писмото. Ще направя повторен опит за изпращане след 5 секунди.";
                             if (id == 1)
                             {
                                 artTitle.Text = "Failed to send message. Retrying in 5 seconds.";
                             }
-
                             System.Threading.Thread.Sleep(5000);
                             smtp.Send(message);
                         }
