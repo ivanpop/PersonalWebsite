@@ -177,6 +177,8 @@ namespace WebApplication1
                     artTitle.Text = "Projects";
                     switch (Request.QueryString["p"])
                     {
+                        case "4": getText("stopwEng4", 1);
+                            break;
                         case "3": getText("stopwEng3", 1);
                             break;
                         case "2": getText("stopwEng2", 1);
