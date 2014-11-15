@@ -139,8 +139,7 @@ namespace WebApplication1
                 projectsPanel.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Проекти";                
-                pagePanel.Visible = true;
-                pageBtn5.Visible = false;
+                pagePanel.Visible = true;                
                 pageBtn6.Visible = false;
                 pageBtn7.Visible = false;
                 pageBtn8.Visible = false;
@@ -149,6 +148,8 @@ namespace WebApplication1
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {
+                    case 5: pageBtn5.Enabled = false;
+                        break;
                     case 4: pageBtn4.Enabled = false;
                         break;
                     case 3: pageBtn3.Enabled = false;
@@ -162,6 +163,8 @@ namespace WebApplication1
                 {
                     switch (Request.QueryString["p"])
                     {
+                        case "5": getText("stopwBul5", 1);
+                            break;
                         case "4": getText("stopwBul4", 1);
                             break;
                         case "3": getText("stopwBul3", 1);
