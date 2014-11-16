@@ -15,7 +15,7 @@
 	<meta name="geo.placename" content="Plovdiv" />
 	<meta name="geo.position" content="42.135408;24.74529" />
 	<meta name="ICBM" content="42.135408, 24.74529" />
-	<link rel="canonical" href="http://www.ivanpop.somee.com/" />
+	<link rel="canonical" href="http://ivanpop.azurewebsites.net//" />
 	<meta name="revisit-after" content="1 day" />
 	<meta name="dcterms.publisher" content="Ivan Popov" />
 	<link type="text/css" rel="stylesheet" media="all" href="Resources/css_styles.css" />
@@ -156,5 +156,16 @@
         $('#main, #block-github, #block-user-1, #block-locale-0').fadeIn(1000);
     });
   </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-51152907-1', 'auto');
+        ga('send', 'pageview');
+</script>
 </body>
 </html>

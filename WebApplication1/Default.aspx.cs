@@ -13,9 +13,8 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {   
-        byte id = 0, code;
-        Random rnd = new Random();
-        
+        byte id = 0, code, page;
+        Random rnd = new Random();        
         protected string conS = @"Server=tcp:rlq2jzpufp.database.windows.net,1433;Database=text;User ID=ivanpop@rlq2jzpufp;Password=Popov123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
         protected SqlConnection con;
 
@@ -143,8 +142,7 @@ namespace WebApplication1
                 pageBtn6.Visible = false;
                 pageBtn7.Visible = false;
                 pageBtn8.Visible = false;
-                pageBtn9.Visible = false;
-                byte page;
+                pageBtn9.Visible = false;                
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {
@@ -199,8 +197,7 @@ namespace WebApplication1
                 ryu.Enabled = false;
                 projectsPanel.Visible = true;
                 pagePanel.Visible = true;
-                mainContent.Text = "";                                
-                byte page;
+                mainContent.Text = "";
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {                        
