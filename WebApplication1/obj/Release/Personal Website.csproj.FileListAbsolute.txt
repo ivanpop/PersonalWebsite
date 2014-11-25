@@ -4,3 +4,9 @@ C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\bin\W
 C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Release\Personal Website.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\Ivan\Documents\Visual Studio 2013\PersonalWebsite\WebApplication1\obj\Release\WebApplication1.pdb
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Release\Personal Website.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Release\WebApplication1.dll
+C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Release\WebApplication1.pdb
