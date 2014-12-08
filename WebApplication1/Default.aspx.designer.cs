@@ -229,6 +229,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button converter;
         
         /// <summary>
+        /// ConverterDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ConverterDescr;
+        
+        /// <summary>
         /// countdown control.
         /// </summary>
         /// <remarks>
@@ -238,6 +247,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button countdown;
         
         /// <summary>
+        /// StopwDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StopwDescr;
+        
+        /// <summary>
         /// ryu control.
         /// </summary>
         /// <remarks>
@@ -245,6 +263,33 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ryu;
+        
+        /// <summary>
+        /// RyuDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RyuDescr;
+        
+        /// <summary>
+        /// csDummies control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button csDummies;
+        
+        /// <summary>
+        /// CSDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CSDescr;
         
         /// <summary>
         /// projectsContent control.

@@ -45,6 +45,10 @@ namespace WebApplication1
                 {
                     getText("projEng");
                     artTitle.Text = "Projects";
+                    ConverterDescr.Text = "<em>Program for converting metric units.</em>";
+                    StopwDescr.Text = "<em>Countdown timer and a stopwatch.</em>";
+                    RyuDescr.Text = "<em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em>";
+                    CSDescr.Text = "Solutions from The C# book from Telerik";
                 }
             }
             if (Request.QueryString["a"] == null)
@@ -118,26 +122,19 @@ namespace WebApplication1
                 }                
             }
             if (Request.QueryString["a"] == "converter")
-            {
-                projects.Enabled = false;
-                converter.Enabled = false;
-                projectsPanel.Visible = true;
+            {                                
                 mainContent.Text = "";
-                artTitle.Text = "Проекти";
+                artTitle.Text = "Converter";
                 getText("convertBul", 1);
                 if (id == 1)
-                {
-                    artTitle.Text = "Projects";
+                {                    
                     getText("convertEng", 1);
                 }
             }
             if (Request.QueryString["a"] == "countdown")
-            {
-                projects.Enabled = false;
-                countdown.Enabled = false;
-                projectsPanel.Visible = true;
+            {                                
                 mainContent.Text = "";
-                artTitle.Text = "Проекти";                
+                artTitle.Text = "Countdown timer and stopwatch";                
                 pagePanel.Visible = true;                
                 pageBtn6.Visible = false;
                 pageBtn7.Visible = false;
@@ -174,8 +171,7 @@ namespace WebApplication1
                     }
                 }
                 else
-                {
-                    artTitle.Text = "Projects";
+                {                    
                     switch (Request.QueryString["p"])
                     {
                         case "5": getText("stopwEng5", 1);
@@ -192,10 +188,7 @@ namespace WebApplication1
                 }
             }
             if (Request.QueryString["a"] == "ryu")
-            {
-                projects.Enabled = false;
-                ryu.Enabled = false;
-                projectsPanel.Visible = true;
+            {                               
                 pagePanel.Visible = true;
                 mainContent.Text = "";
                 byte.TryParse(Request.QueryString["p"], out page);
@@ -220,7 +213,7 @@ namespace WebApplication1
                     default: pageBtn1.Enabled = false;
                         break;
                 }
-                artTitle.Text = "Проекти";
+                artTitle.Text = "Ryu: The Big Adventure!";
                 if (id == 0)
                 {
                     switch (Request.QueryString["p"])
@@ -247,7 +240,6 @@ namespace WebApplication1
                 }
                 else
                 {
-                    artTitle.Text = "Projects";
                     switch (Request.QueryString["p"])
                     {
                         case "2": getText("ryuTxt2Eng", 1);

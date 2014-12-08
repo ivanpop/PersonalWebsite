@@ -85,9 +85,22 @@
                                     &nbsp;<br />
                                 </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
-                                    <asp:Button ID="converter" runat="server" Height="41px" Text="Converter" Width="150px" OnClick="converter_Click" />
-                                    <asp:Button ID="countdown" runat="server" Height="41px" OnClick="countdown_Click1" Text="Countdown timer &amp; Stopwatch" Width="190px" />
-                                    <asp:Button ID="ryu" runat="server" Height="41px" OnClick="ryu_Click" Text="Ryu: The Big Adventure!" Width="170px" />
+                                    <ul>
+                                        <li><asp:Button ID="converter" runat="server" Height="25px" Text="Converter" Width="190px" OnClick="converter_Click" /></li>
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="ConverterDescr" runat="server" Text="&lt;em&gt;Програма за преобразуване на мерни единици.&lt;/em&gt;"></asp:Label>
+                                    </ul>
+                                    <ul>
+                                        <li><asp:Button ID="countdown" runat="server" Height="25px" OnClick="countdown_Click1" Text="Countdown timer &amp; Stopwatch" Width="190px" /></li>
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="StopwDescr" runat="server" Text="&lt;em&gt;Обратно броене и секундомер.&lt;/em&gt;"></asp:Label>
+                                    </ul>
+                                    <ul>
+                                        <li><asp:Button ID="ryu" runat="server" Height="25px" OnClick="ryu_Click" Text="Ryu: The Big Adventure!" Width="190px" /></li>
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="RyuDescr" runat="server" Text="&lt;em&gt;2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.&lt;/em&gt;"></asp:Label>
+                                    </ul>
+                                    <ul>
+                                        <li><asp:Button ID="csDummies" runat="server" Height="25px" OnClick="ryu_Click" Text="C# for Dummies" Width="190px" /></li>                                        
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="Задачи от книгата за C# на Телерик"></asp:Label>
+                                    </ul>
                                 </asp:Panel>
                                 &nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
@@ -144,11 +157,7 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов</p><br/>
-				</div>
-			</div>
-		</div>
-	</div>	
+					<p>© 2014 Иван Попов	</div>	
 </form>
   <script type='text/javascript'>
     $(function () {
