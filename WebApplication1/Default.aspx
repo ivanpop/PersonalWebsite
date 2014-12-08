@@ -98,7 +98,7 @@
                                         <span class="tab"></span><span class="tab"></span><asp:Label ID="RyuDescr" runat="server" Text="&lt;em&gt;2D Екшън игра. Написана е на Java и представлява 2D Beat 'em up симулатор.&lt;/em&gt;"></asp:Label>
                                     </ul>
                                     <ul>
-                                        <li><asp:Button ID="csDummies" runat="server" Height="25px" OnClick="ryu_Click" Text="C# for Dummies" Width="190px" /></li>                                        
+                                        <li><asp:Button ID="csDummies" runat="server" Height="25px" OnClick="csDummies_Click" Text="C# for Dummies" Width="190px" /></li>                                        
                                         <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="Задачи от книгата за C# на Телерик"></asp:Label>
                                     </ul>
                                 </asp:Panel>

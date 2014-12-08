@@ -262,7 +262,15 @@ namespace WebApplication1
                             break;
                     }                    
                 }
-            }            
+            }
+            if (Request.QueryString["a"] == "cs")
+            {
+                mainContent.Visible = false;
+                if (id == 0)
+                artTitle.Text = "Страницата е в процес на разработка.";
+                else
+                    artTitle.Text = "Webpage under construction.";
+            }
         }
 
         protected void getText(string id, int index = 0)
@@ -344,6 +352,11 @@ namespace WebApplication1
         {
             setQueryString("a", "ryu");
         }
+
+        protected void csDummies_Click(object sender, EventArgs e)
+        {
+            setQueryString("a", "cs");
+        } 
 
         protected void ryuPage2_Click(object sender, EventArgs e)
         {
@@ -447,6 +460,6 @@ namespace WebApplication1
                 }
                 Response.AddHeader("REFRESH","5;URL=index.aspx");          
             }
-        } 
+        }
     }
 }
