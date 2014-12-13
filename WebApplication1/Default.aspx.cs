@@ -265,11 +265,8 @@ namespace WebApplication1
             }
             if (Request.QueryString["a"] == "cs")
             {
-                mainContent.Visible = false;
-                if (id == 0)
-                artTitle.Text = "Страницата е в процес на разработка.";
-                else
-                    artTitle.Text = "Webpage under construction.";
+                mainContent.Visible = false;               
+                artTitle.Text = "C# for Dummies.";                
             }
         }
 
