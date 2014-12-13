@@ -265,7 +265,8 @@ namespace WebApplication1
             }
             if (Request.QueryString["a"] == "cs")
             {
-                mainContent.Visible = false;               
+                mainContent.Visible = false;
+                chaptersPanel.Visible = true;
                 artTitle.Text = "C# for Dummies.";                
             }
         }

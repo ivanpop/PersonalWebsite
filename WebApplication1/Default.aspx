@@ -102,6 +102,34 @@
                                         <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="Задачи от книгата за C# на Телерик"></asp:Label>
                                     </ul>
                                 </asp:Panel>
+							    <asp:Panel ID="chaptersPanel" runat="server" Visible="False">
+                                    <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter2Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 2. Примитивни типове и променливи" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 3. Оператори и изрази" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 6. Цикли" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 7. Масиви" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 8. Бройни системи" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 10. Рекурсия" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 12. Обработка на изключения" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter13Btn" runat="server" Height="25px" Text="Глава 13. Символни низове" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter14Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 14. Дефиниране на класове" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter15Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 15. Текстови файлове" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter16Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 16. Линейни структури от данни" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter17Btn" runat="server" Height="25px" Text="Глава 17. Дървета и графи" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter18Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 18. Речници, хеш-таблици и множества" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter19Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 19. Структури от данни - съпоставка и препоръки" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter20Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 20. Принципи на ООП" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter21Btn" runat="server" Height="25px" Text="Глава 21. Качествен програмен код" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter22Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 22. Ламбда изрази и LINQ заявки" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter23Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 23. Как да решаваме задачи по програмиране?" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter24Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 24. Практически задачи за изпит - тема 1" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter25Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 25. Практически задачи за изпит - тема 1" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter26Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 26. Практически задачи за изпит - тема 1" Width="380px" Enabled="False" /></li></ul>
+                                </asp:Panel>
                                 &nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="projectsContent" runat="server"></asp:Label>
@@ -157,7 +185,8 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов	</div>	
+					<p>© 2014 Иван Попов	/div>	
+v>	
 </form>
   <script type='text/javascript'>
     $(function () {

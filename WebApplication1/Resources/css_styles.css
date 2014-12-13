@@ -347,7 +347,7 @@ fieldset#edit-appearance div#groupLayout,div#allButtons{border:0;padding:0 0 0 0
 .filefield-element div.ahah-progress,.filefield-element div.throbber{display:inline;float:none;padding:1px 13px 2px 3px;}
 .filefield-element div.ahah-progress-bar{display:none;margin-top:4px;width:28em;padding:0;}.filefield-element div.ahah-progress-bar div.bar{margin:0;}
 span.ext{background:url(/sites/all/modules/extlink/extlink.png) right center no-repeat;padding-right:12px;}span.mailto{background:url(/sites/all/modules/extlink/mailto.png) right center no-repeat;padding-right:12px;}@media print{span.ext,span.mailto{display:none;padding:0;}}
-div.fieldgroup{margin:.5em 0 1em 0;}adding-left:1em;}
+div.fieldgroup{margin:.5em 0 1em 0;}div.fieldgroup .content{padding-left:1em;}
 *{margin:0 0 0 0px;
 padding:0;
 }
