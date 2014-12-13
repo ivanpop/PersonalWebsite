@@ -267,7 +267,36 @@ namespace WebApplication1
             {
                 mainContent.Visible = false;
                 chaptersPanel.Visible = true;
-                artTitle.Text = "C# for Dummies.";                
+                artTitle.Text = "C# for Dummies.";
+                if (id == 1)
+                {
+                    chapter1Btn.Text = "Chapter 1. Introduction to Programming";
+                    chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";
+                    chapter3Btn.Text = "Chapter 3. Operators and Expressions";
+                    chapter4Btn.Text = "Chapter 4. Console Input and Output";
+                    chapter5Btn.Text = "Chapter 5. Conditional Statements";
+                    chapter6Btn.Text = "Chapter 6. Loops";
+                    chapter7Btn.Text = "Chapter 7. Arrays";
+                    chapter8Btn.Text = "Chapter 8. Numeral Systems";
+                    chapter9Btn.Text = "Chapter 9. Methods";
+                    chapter10Btn.Text = "Chapter 10. Recursion";
+                    chapter11Btn.Text = "Chapter 11. Creating and Using Objects";
+                    chapter12Btn.Text = "Chapter 12. Exception Handling";
+                    chapter13Btn.Text = "Chapter 13. Strings and Text Processing";
+                    chapter14Btn.Text = "Chapter 14. Defining Classes";
+                    chapter15Btn.Text = "Chapter 15. Text Files";
+                    chapter16Btn.Text = "Chapter 16. Linear Data Structures";
+                    chapter17Btn.Text = "Chapter 17. Trees and Graphs";
+                    chapter18Btn.Text = "Chapter 18. Dictionaries, Hash-Tables and Sets";
+                    chapter19Btn.Text = "Chapter 19. Data Structures and Algorithm Complexity";
+                    chapter20Btn.Text = "Chapter 20. Object-Oriented Programming Principles";
+                    chapter21Btn.Text = "Chapter 21. High-Quality Programming Code";
+                    chapter22Btn.Text = "Chapter 22. Lambda Expressions and LINQ";
+                    chapter23Btn.Text = "Chapter 23. Methodology of Problem Solving";
+                    chapter24Btn.Text = "Chapter 24. Sample Programming Exam – Topic #1";
+                    chapter25Btn.Text = "Chapter 25. Sample Programming Exam – Topic #2";
+                    chapter26Btn.Text = "Chapter 26. Sample Programming Exam – Topic #3";                    
+                }
             }
         }
 
