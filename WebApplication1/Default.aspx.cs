@@ -270,13 +270,21 @@ namespace WebApplication1
                 chaptersPanel.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? false : true;
                 backBtn.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? true : false;
                 byte.TryParse(Request.QueryString["p"], out page);
-                switch (page)
+                if (id == 0)
                 {
-                    case 1: getText("CSBul1", 1);
-                        break;
+                    switch (page)
+                    {
+                        case 1: getText("CSBul1", 1);
+                            break;
+                    }
                 }
-                if (id == 1)
+                else
                 {
+                    switch (page)
+                    {
+                        case 1: getText("CSEng1", 1);
+                            break;
+                    }
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
                     chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";
                     chapter3Btn.Text = "Chapter 3. Operators and Expressions";
@@ -302,7 +310,8 @@ namespace WebApplication1
                     chapter23Btn.Text = "Chapter 23. Methodology of Problem Solving";
                     chapter24Btn.Text = "Chapter 24. Sample Programming Exam – Topic #1";
                     chapter25Btn.Text = "Chapter 25. Sample Programming Exam – Topic #2";
-                    chapter26Btn.Text = "Chapter 26. Sample Programming Exam – Topic #3";                    
+                    chapter26Btn.Text = "Chapter 26. Sample Programming Exam – Topic #3";
+                    backBtn.Text = "Back";
                 }
             }
         }
