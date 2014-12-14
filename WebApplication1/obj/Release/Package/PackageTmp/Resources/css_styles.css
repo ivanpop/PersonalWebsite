@@ -353,6 +353,7 @@ padding:0;
 }
 abbr[title],acronym[title]{border-bottom:thin dotted;cursor:help;}
 body{background:#BEC3C6 url(bg.jpg) repeat-x;color:#555;font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;font-size:12px;}
+body{background:#BEC3C6 url(bg.jpg) repeat-x;color:#555;font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;font-size:12px;}
 h1,h2,h3,h4,h5,h6{font-weight:bolder;letter-spacing:-0.07em;font-family:Arial;padding-top:0.25em;padding-bottom:0.5em;}
 h1{font-size:200%;padding:0px;}
 h2{font-size:170%; margin-left: 10px;}
@@ -409,7 +410,7 @@ input.textfield,textarea{background:#FFF url(../resources/textfield.gif) top rep
 #menus li li.first a{border-top:none;}
 #menus li li a:hover{font-weight:bolder;}
 #content{background:#FFF url(sidesep.gif) right repeat-y;min-height:400px;}
-#main{background:#FFF;width:605px;padding:5px 15px 10px;float:left;min-height:400px;}
+#main{background:#FFF;width:660px;padding:5px 15px 10px;float:left;min-height:400px;}
 #main li{margin-left:35px;}
 #main .taxonomy li,#main .tabs li{margin-left:0px;}
 #notice{color:#080;}
@@ -452,7 +453,7 @@ h2.nodeTitle:hover a{color:#2970A6;}
 #pagenavi{font-size:11px;}
 #pagenavi .newer a,#postnavi .prev a{background:url(icons.gif) 0 -224px no-repeat;padding-left:22px;float:left;height:16px;line-height:16px;}
 #pagenavi .older a,#postnavi .next a{background:url(icons.gif) 100% -240px no-repeat;padding-right:22px;float:right;height:16px;line-height:16px;}
-#sidebar{background:#F7F7F7;width:300px;float:right;font-size:95%;background:#F7F7F7;line-height:145%;overflow:hidden;padding:0 0 5px 0;}
+#sidebar{background:#F7F7F7;float:right;width:240px;font-size:95%;background:#F7F7F7;line-height:145%;overflow:hidden;padding:0 0 5px 0;}
 #sidebar .content,#sidebar li{font-size:12px;padding-left:5px;margin-top:5px;}
 #sidebar .block{background:url(widgetsep.png) bottom no-repeat;padding:10px 15px 19px;}
 #sidebar{font-size:95%;}
