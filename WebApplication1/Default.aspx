@@ -103,7 +103,7 @@
                                     </ul>
                                 </asp:Panel>
 							    <asp:Panel ID="chaptersPanel" runat="server" Visible="False">
-                                    <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="CSBul1_Click" /></li></ul>
                                     <ul><li><asp:Button ID="chapter2Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 2. Примитивни типове и променливи" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 3. Оператори и изрази" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" Enabled="False" /></li></ul>
@@ -133,6 +133,8 @@
                                 &nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="projectsContent" runat="server"></asp:Label>
+							    <br />
+                                <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" />
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
                                     <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
@@ -185,8 +187,10 @@
 				</div>
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
-					<p>© 2014 Иван Попов	/div>	
-v>	
+					<p>© 2014 Иван Попов	</p></div>	
+                </div>
+            </div>
+        </div>    	
 </form>
   <script type='text/javascript'>
     $(function () {

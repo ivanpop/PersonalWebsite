@@ -264,10 +264,17 @@ namespace WebApplication1
                 }
             }
             if (Request.QueryString["a"] == "cs")
-            {
-                mainContent.Visible = false;
-                chaptersPanel.Visible = true;
-                artTitle.Text = "C# for Dummies.";
+            {                
+                mainContent.Visible = false;                
+                artTitle.Text = "C# for Dummies.";                
+                chaptersPanel.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? false : true;
+                backBtn.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? true : false;
+                byte.TryParse(Request.QueryString["p"], out page);
+                switch (page)
+                {
+                    case 1: getText("CSBul1", 1);
+                        break;
+                }
                 if (id == 1)
                 {
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
@@ -430,6 +437,16 @@ namespace WebApplication1
             setQueryString("p", "9");
         }
 
+        protected void CSBul1_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "1");
+        }
+
+        protected void backBtn_Click(object sender, EventArgs e)
+        {
+            setQueryString("p");
+        }
+
         protected void submitEmailBtn_Click(object sender, EventArgs e)
         {
             using (MailMessage message = new MailMessage())
@@ -487,6 +504,6 @@ namespace WebApplication1
                 }
                 Response.AddHeader("REFRESH","5;URL=index.aspx");          
             }
-        }
+        }        
     }
 }
