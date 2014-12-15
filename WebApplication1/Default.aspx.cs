@@ -99,26 +99,16 @@ namespace WebApplication1
                 codeImg.Text = "<img src=\"/Resources/codes/" + code.ToString() + ".jpg\">";
                 switch (code)
                 {
-                    case 1: codeCompareValidator.ValueToCompare = "57195";
-                        break;
-                    case 2: codeCompareValidator.ValueToCompare = "39628";
-                        break;
-                    case 3: codeCompareValidator.ValueToCompare = "90187";
-                        break;
-                    case 4: codeCompareValidator.ValueToCompare = "84793";
-                        break;
-                    case 5: codeCompareValidator.ValueToCompare = "21354";
-                        break;
-                    case 6: codeCompareValidator.ValueToCompare = "75638";
-                        break;
-                    case 7: codeCompareValidator.ValueToCompare = "42475";
-                        break;
-                    case 8: codeCompareValidator.ValueToCompare = "54968";
-                        break;
-                    case 9: codeCompareValidator.ValueToCompare = "23547";
-                        break;
-                    case 10: codeCompareValidator.ValueToCompare = "03412";
-                        break;
+                    case 1: codeCompareValidator.ValueToCompare = "57195"; break;
+                    case 2: codeCompareValidator.ValueToCompare = "39628"; break;
+                    case 3: codeCompareValidator.ValueToCompare = "90187"; break;
+                    case 4: codeCompareValidator.ValueToCompare = "84793"; break;
+                    case 5: codeCompareValidator.ValueToCompare = "21354"; break;
+                    case 6: codeCompareValidator.ValueToCompare = "75638"; break;
+                    case 7: codeCompareValidator.ValueToCompare = "42475"; break;
+                    case 8: codeCompareValidator.ValueToCompare = "54968"; break;
+                    case 9: codeCompareValidator.ValueToCompare = "23547"; break;
+                    case 10: codeCompareValidator.ValueToCompare = "03412"; break;
                 }                
             }
             if (Request.QueryString["a"] == "converter")
@@ -126,66 +116,41 @@ namespace WebApplication1
                 mainContent.Text = "";
                 artTitle.Text = "Converter";
                 getText("convertBul", 1);
-                if (id == 1)
-                {                    
-                    getText("convertEng", 1);
-                }
+                if (id == 1) getText("convertEng", 1);
             }
             if (Request.QueryString["a"] == "countdown")
             {                                
                 mainContent.Text = "";
                 artTitle.Text = "Countdown timer and stopwatch";                
-                pagePanel.Visible = true;                
-                pageBtn6.Visible = false;
-                pageBtn7.Visible = false;
-                pageBtn8.Visible = false;
-                pageBtn9.Visible = false;                
+                pagePanel.Visible = true;
+                pageBtn6.Visible = pageBtn7.Visible = pageBtn8.Visible = pageBtn9.Visible = false;               
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {
-                    case 5: pageBtn5.Enabled = false;
-                        break;
-                    case 4: pageBtn4.Enabled = false;
-                        break;
-                    case 3: pageBtn3.Enabled = false;
-                        break;
-                    case 2: pageBtn2.Enabled = false;
-                        break;
-                    default: pageBtn1.Enabled = false;
-                        break;
+                    case 5: pageBtn5.Enabled = false; break;
+                    case 4: pageBtn4.Enabled = false; break;
+                    case 3: pageBtn3.Enabled = false; break;
+                    case 2: pageBtn2.Enabled = false; break;
+                    default: pageBtn1.Enabled = false; break;
                 }
                 if (id == 0)
-                {
                     switch (Request.QueryString["p"])
                     {
-                        case "5": getText("stopwBul5", 1);
-                            break;
-                        case "4": getText("stopwBul4", 1);
-                            break;
-                        case "3": getText("stopwBul3", 1);
-                            break;
-                        case "2": getText("stopwBul2", 1);
-                            break;
-                        default: getText("stopwBul1", 1); ;
-                            break;
+                        case "5": getText("stopwBul5", 1); break;
+                        case "4": getText("stopwBul4", 1); break;
+                        case "3": getText("stopwBul3", 1); break;
+                        case "2": getText("stopwBul2", 1); break;
+                        default: getText("stopwBul1", 1); break;
                     }
-                }
-                else
-                {                    
+                else                    
                     switch (Request.QueryString["p"])
                     {
-                        case "5": getText("stopwEng5", 1);
-                            break;
-                        case "4": getText("stopwEng4", 1);
-                            break;
-                        case "3": getText("stopwEng3", 1);
-                            break;
-                        case "2": getText("stopwEng2", 1);
-                            break;
-                        default: getText("stopwEng1", 1);
-                            break;
-                    }
-                }
+                        case "5": getText("stopwEng5", 1); break;
+                        case "4": getText("stopwEng4", 1); break;
+                        case "3": getText("stopwEng3", 1); break;
+                        case "2": getText("stopwEng2", 1); break;
+                        default: getText("stopwEng1", 1); break;
+                    }                
             }
             if (Request.QueryString["a"] == "ryu")
             {                               
@@ -194,74 +159,43 @@ namespace WebApplication1
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {                        
-                    case 2: pageBtn2.Enabled = false;
-                        break;
-                    case 3: pageBtn3.Enabled = false;
-                        break;
-                    case 4: pageBtn4.Enabled = false;
-                        break;
-                    case 5: pageBtn5.Enabled = false;
-                        break;
-                    case 6: pageBtn6.Enabled = false;
-                        break;
-                    case 7: pageBtn7.Enabled = false;
-                        break;
-                    case 8: pageBtn8.Enabled = false;
-                        break;
-                    case 9: pageBtn9.Enabled = false;
-                        break;
-                    default: pageBtn1.Enabled = false;
-                        break;
+                    case 2: pageBtn2.Enabled = false; break;
+                    case 3: pageBtn3.Enabled = false; break;
+                    case 4: pageBtn4.Enabled = false; break;
+                    case 5: pageBtn5.Enabled = false; break;
+                    case 6: pageBtn6.Enabled = false; break;
+                    case 7: pageBtn7.Enabled = false; break;
+                    case 8: pageBtn8.Enabled = false; break;
+                    case 9: pageBtn9.Enabled = false; break;
+                    default: pageBtn1.Enabled = false; break;
                 }
                 artTitle.Text = "Ryu: The Big Adventure!";
                 if (id == 0)
-                {
                     switch (Request.QueryString["p"])
                     {
-                        case "2": getText("ryuTxt2Bul", 1);
-                            break;
-                        case "3": getText("ryuTxt3Bul", 1);
-                            break;
-                        case "4": getText("ryuTxt4Bul", 1);
-                            break;
-                        case "5": getText("ryuTxt5Bul", 1);
-                            break;
-                        case "6": getText("ryuTxt6Bul", 1);
-                            break;
-                        case "7": getText("ryuTxt7Bul", 1);
-                            break;
-                        case "8": getText("ryuTxt8Bul", 1);
-                            break;
-                        case "9": getText("ryuTxt9Bul", 1);
-                            break;
-                        default: getText("ryuTxt1Bul", 1);
-                            break;
+                        case "2": getText("ryuTxt2Bul", 1); break;
+                        case "3": getText("ryuTxt3Bul", 1); break;
+                        case "4": getText("ryuTxt4Bul", 1); break;
+                        case "5": getText("ryuTxt5Bul", 1); break;
+                        case "6": getText("ryuTxt6Bul", 1); break;
+                        case "7": getText("ryuTxt7Bul", 1); break;
+                        case "8": getText("ryuTxt8Bul", 1); break;
+                        case "9": getText("ryuTxt9Bul", 1); break;
+                        default: getText("ryuTxt1Bul", 1); break;
                     }
-                }
                 else
-                {
                     switch (Request.QueryString["p"])
                     {
-                        case "2": getText("ryuTxt2Eng", 1);
-                            break;
-                        case "3": getText("ryuTxt3Eng", 1);
-                            break;
-                        case "4": getText("ryuTxt4Eng", 1);
-                            break;
-                        case "5": getText("ryuTxt5Eng", 1);
-                            break;
-                        case "6": getText("ryuTxt6Eng", 1);
-                            break;
-                        case "7": getText("ryuTxt7Eng", 1);
-                            break;
-                        case "8": getText("ryuTxt8Eng", 1);
-                            break;
-                        case "9": getText("ryuTxt9Eng", 1);
-                            break;
-                        default: getText("ryuTxt1Eng", 1);
-                            break;
-                    }                    
-                }
+                        case "2": getText("ryuTxt2Eng", 1); break;
+                        case "3": getText("ryuTxt3Eng", 1); break;
+                        case "4": getText("ryuTxt4Eng", 1); break;
+                        case "5": getText("ryuTxt5Eng", 1); break;
+                        case "6": getText("ryuTxt6Eng", 1); break;
+                        case "7": getText("ryuTxt7Eng", 1); break;
+                        case "8": getText("ryuTxt8Eng", 1); break;
+                        case "9": getText("ryuTxt9Eng", 1); break;
+                        default: getText("ryuTxt1Eng", 1); break;
+                    }
             }
             if (Request.QueryString["a"] == "cs")
             {                
@@ -271,23 +205,17 @@ namespace WebApplication1
                 backBtn.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? true : false;
                 byte.TryParse(Request.QueryString["p"], out page);
                 if (id == 0)
-                {
                     switch (page)
                     {
-                        case 1: getText("CSBul1", 1);
-                            break;
-                        case 2: getText("CSBul2", 1);
-                            break;
+                        case 1: getText("CSBul1", 1); break;
+                        case 2: getText("CSBul2", 1); break;
                     }
-                }
                 else
                 {
                     switch (page)
                     {
-                        case 1: getText("CSEng1", 1);
-                            break;
-                        case 2: getText("CSEng2", 1);
-                            break;
+                        case 1: getText("CSEng1", 1); break;
+                        case 2: getText("CSEng2", 1); break;
                     }
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
                     chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";
@@ -325,36 +253,22 @@ namespace WebApplication1
             con = new SqlConnection(conS);
             SqlCommand query = new SqlCommand("SELECT mainContent FROM [Table1] WHERE Id='" + id + "';", con);
             con.Open();
-            if (index == 0)
-            {
-                mainContent.Text = query.ExecuteScalar().ToString();
-            }
-            else
-            {
-                projectsContent.Text = query.ExecuteScalar().ToString();
-            }
+            if (index == 0) mainContent.Text = query.ExecuteScalar().ToString();
+            else projectsContent.Text = query.ExecuteScalar().ToString();
             con.Close();
         }
 
         protected void setQueryString(string s1, string s2 = null)
         {
             var nvc = HttpUtility.ParseQueryString(Request.Url.Query);
-            if (s2 == null)
-            {
-                nvc.Remove(s1);
-            }
-            else
-            {
-                nvc.Set(s1, s2);
-            }
-            if (s1 != "p" && s1 != "l")
-            {
-                nvc.Remove("p");
-            }
+            if (s2 == null) nvc.Remove(s1);
+            else nvc.Set(s1, s2);
+            if (s1 != "p" && s1 != "l") nvc.Remove("p");
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
             Response.Redirect(url); 
         }
-        
+
+        #region buttonEvents
         protected void switchEngBtn_Click(object sender, EventArgs e)
         {
             setQueryString("l", "en");
@@ -495,20 +409,14 @@ namespace WebApplication1
                         if (status == SmtpStatusCode.MailboxBusy || status == SmtpStatusCode.MailboxUnavailable)
                         {                            
                             artTitle.Text = "Грешка при изпращането на писмото. Ще направя повторен опит за изпращане след 5 секунди.";
-                            if (id == 1)
-                            {
-                                artTitle.Text = "Failed to send message. Retrying in 5 seconds.";
-                            }
+                            if (id == 1) artTitle.Text = "Failed to send message. Retrying in 5 seconds.";
                             System.Threading.Thread.Sleep(5000);
                             smtp.Send(message);
                         }
                         else
                         {
                             artTitle.Text = "Грешка при изпращането на писмото.";
-                            if (id == 1)
-                            {
-                                artTitle.Text = "Failed to send message.";
-                            }
+                            if (id == 1) artTitle.Text = "Failed to send message.";
                         }
                     }
                 }
@@ -522,6 +430,7 @@ namespace WebApplication1
                 }
                 Response.AddHeader("REFRESH","5;URL=index.aspx");          
             }
-        }        
+        }
+        #endregion
     }
 }
