@@ -276,6 +276,8 @@ namespace WebApplication1
                     {
                         case 1: getText("CSBul1", 1);
                             break;
+                        case 2: getText("CSBul2", 1);
+                            break;
                     }
                 }
                 else
@@ -284,6 +286,8 @@ namespace WebApplication1
                     {
                         case 1: getText("CSEng1", 1);
                             break;
+                        //case 2: getText("CSEng2", 1);
+                            //break;
                     }
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
                     chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";
@@ -449,6 +453,11 @@ namespace WebApplication1
         protected void CSBul1_Click(object sender, EventArgs e)
         {
             setQueryString("p", "1");
+        }
+
+        protected void CSBul2_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "2");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
