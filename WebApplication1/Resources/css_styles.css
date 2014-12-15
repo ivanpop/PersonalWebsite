@@ -1,9 +1,7 @@
 ﻿#upload-attachments{margin:10px 0 0;}
 #edit-upload-wrapper{background:transparent url(/sites/all/modules/itweak_upload/images/attachment.png) no-repeat left center;padding-left:30px;}
 #upload-attachments{background:transparent;border-collapse:separate !important;border-spacing:0 6px;border:none;}
-#upload-attachments tr,
-#upload-attachments th,
-#upload-attachments td{background:transparent;border:none;}
+#upload-attachments tr, #upload-attachments th, #upload-attachments td{background:transparent;border:none;}
 #attach-wrapper tbody{border:none;}
 #attach-wrapper .list{white-space:nowrap;}
 #attach-wrapper .file a{cursor:pointer;font-size:85%;margin-left:1em;}
@@ -348,13 +346,10 @@ fieldset#edit-appearance div#groupLayout,div#allButtons{border:0;padding:0 0 0 0
 .filefield-element div.ahah-progress-bar{display:none;margin-top:4px;width:28em;padding:0;}.filefield-element div.ahah-progress-bar div.bar{margin:0;}
 span.ext{background:url(/sites/all/modules/extlink/extlink.png) right center no-repeat;padding-right:12px;}span.mailto{background:url(/sites/all/modules/extlink/mailto.png) right center no-repeat;padding-right:12px;}@media print{span.ext,span.mailto{display:none;padding:0;}}
 div.fieldgroup{margin:.5em 0 1em 0;}div.fieldgroup .content{padding-left:1em;}
-*{margin:0 0 0 0px;
-padding:0;
-}
+*{margin:0 0 0 0px;padding:0;}
 abbr[title],acronym[title]{border-bottom:thin dotted;cursor:help;}
 body{background:#BEC3C6 url(bg.jpg) repeat-x;color:#555;font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;font-size:12px;}
-body{background:#BEC3C6 url(bg.jpg) repeat-x;color:#555;font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;font-size:12px;}
-h1,h2,h3,h4,h5,h6{font-weight:bolder;letter-spacing:-0.07em;font-family:Arial;padding-top:0.25em;padding-bottom:0.5em;}
+h1,h2,h3,h4,h5,h6{font-weight:bolder;font-family:Arial;padding-top:0.25em;padding-bottom:0.5em;}
 h1{font-size:200%;padding:0px;}
 h2{font-size:170%; margin-left: 10px;}
 h3{font-size:150%; margin-left: 20px;}
@@ -453,7 +448,7 @@ h2.nodeTitle:hover a{color:#2970A6;}
 #pagenavi{font-size:11px;}
 #pagenavi .newer a,#postnavi .prev a{background:url(icons.gif) 0 -224px no-repeat;padding-left:22px;float:left;height:16px;line-height:16px;}
 #pagenavi .older a,#postnavi .next a{background:url(icons.gif) 100% -240px no-repeat;padding-right:22px;float:right;height:16px;line-height:16px;}
-#sidebar{background:#F7F7F7;float:right;width:240px;font-size:95%;background:#F7F7F7;line-height:145%;overflow:hidden;padding:0 0 5px 0;}
+#sidebar{background:#F7F7F7;float:right;width:240px;font-size:95%;background:#F7F7F7;overflow:hidden;padding:0 0 5px 0;}
 #sidebar .content,#sidebar li{font-size:12px;padding-left:5px;margin-top:5px;}
 #sidebar .block{background:url(widgetsep.png) bottom no-repeat;padding:10px 15px 19px;}
 #sidebar{font-size:95%;}
