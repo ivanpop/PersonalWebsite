@@ -39,6 +39,28 @@
 					</div>									
 			</div>						
 			<div id="content">
+                <div id="sidebar">
+					<div id="block-user-1" class="block block-user">					
+						<h2><asp:Label ID="navigation" runat="server" Text="Навигация"></asp:Label></h2>
+						<div class="menu">
+							<asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="116px"/>
+							<asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="116px"/>
+                            <asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="116px"/>
+                            <asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="116px"/>
+						</div>
+					</div>
+					<div id="block-locale-0" class="block block-locale">
+						<h2>
+                            <asp:Label ID="lang" runat="server" Text="Езици"></asp:Label>
+                        </h2>
+						<div class="menu">
+							<asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="100px" Enabled="False" />
+							<asp:Button ID="switchEngBtn" runat="server" Text="English" OnClick="switchEngBtn_Click" Width="100px"/>
+						</div>
+					</div>                    
+				</div>
+				<div class="clear">
+				</div>
 				<div id="main">
 					<h1 class="title">
                         <asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label><br/><br/>
@@ -83,6 +105,7 @@
                                     <br />
                                     &nbsp;<asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" ValidationGroup="required" />
                                     &nbsp;<br />
+                                    <br />
                                 </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
                                     <ul>
@@ -150,41 +173,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div id="sidebar">
-					<div id="block-user-1" class="block block-user">					
-						<h2><asp:Label ID="navigation" runat="server" Text="Навигация"></asp:Label></h2>
-						<div class="menu">
-							<ul>
-								<li><asp:Button ID="aboutMe" runat="server" Text="За мен" OnClick="aboutMe_Click" Width="116px"/></li>
-								<li><asp:Button ID="biography" runat="server" Text="Автобиография" OnClick="biography_Click" Width="116px"/></li>
-                                <li><asp:Button ID="projects" runat="server" Text="Проекти" OnClick="projects_Click" Width="116px"/></li>
-                                <li><asp:Button ID="contacts" runat="server" Text="Контакти" OnClick="contacts_Click" Width="116px"/></li>
-							</ul>
-						</div>
-					</div>
-					<div id="block-locale-0" class="block block-locale">
-						<h2>
-                            <asp:Label ID="lang" runat="server" Text="Езици"></asp:Label>
-                        </h2>
-						<div class="content">
-							<ul>
-								<li><asp:Button ID="switchBulBtn" runat="server" Text="Български" OnClick="switchBulBtn_Click" Width="100px" Enabled="False" /></li>
-								<li><asp:Button ID="switchEngBtn" runat="server" Text="English" OnClick="switchEngBtn_Click" Width="100px"/></li>
-							</ul>
-						</div>
-					</div>
-                    <div id="block-github" class="block block-locale">
-						<h2>
-                            <asp:Label ID="github" runat="server" Text="GitHub"></asp:Label>
-                        </h2>
-						<div class="content">
-							<iframe src="https://githubbadge.appspot.com/ivanpop?s=1" style="border: 0;height: 142px;width: 220px;overflow: hidden;"></iframe>
-						</div>
-					</div>
-				</div>
-				<div class="clear">
-				</div>
+				</div>				
 				<div id="footer">
 					<a id="gotop" href="#"><asp:Label ID="goTop" runat="server" Text="Горе"></asp:Label></a>
 					<p>© 2014 Иван Попов	</p></div>	
@@ -194,8 +183,8 @@
 </form>
   <script type='text/javascript'>
     $(function () {
-        $('#main, #block-github, #block-user-1, #block-locale-0').hide();
-        $('#main, #block-github, #block-user-1, #block-locale-0').fadeIn(1000);
+        $('#main, #sidebar').hide();
+        $('#main, #sidebar').fadeIn(1000);
     });
   </script>
     <script>

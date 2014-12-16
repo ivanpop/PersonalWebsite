@@ -130,7 +130,7 @@
     <Content Include="Resources\ryu4.png" />
     <Content Include="Resources\ryu5.jpg" />
     <Content Include="Resources\ryu6.jpg" />
-    <Content Include="Resources\sidesep.gif" />
+    <Content Include="Resources\textfield.gif" />
     <Content Include="Resources\widgetsep.png" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
