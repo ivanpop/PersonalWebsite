@@ -30,15 +30,14 @@ a:hover{text-decoration:underline;}
 .post .content ul{padding-bottom:10px;}
 .post .content table{background:#FFF;border:1px solid #CCC;margin:5px 0 10px;}
 .post .content table tr td{border-top:1px solid #CCC;padding:2px 10px;}
-#sidebar{font-size:95%;line-height:145%;overflow:hidden;padding:10px 0 5px 0;background:url(widgetsep.png) bottom no-repeat;background-size: 800px 6px;}
-#sidebar .block{padding:10px 15px 19px;}
+#topbar{font-size:95%;line-height:145%;overflow:hidden;padding:10px 0 5px 0;background:url(widgetsep.png) bottom no-repeat;background-size: 800px 6px;}
+#topbar .block{padding:10px 15px 19px;}
 #footer{background:url(header_footer.jpg) 0 -132px no-repeat;display:block;height:83px;border-top:1px solid #CCC;font-size:11px;line-height:130%;padding:5px 0 0 15px;text-align:center;}
 #footer a{color:#2A2A2A;}
 a#gotop{background:url(icons.gif) 0 -304px no-repeat;position:absolute;float:left;height:16px;line-height:18px;display:block;padding-left:16px;text-decoration:none;}
 td{padding:0.2em;}
 span.tab{padding: 0 15px;}
 img {border:2px solid #021a40;padding: 1px;}
-fig {padding-left: 10px;}
-#block-user-1 {float:left;}
-#block-locale-0 {float:right;}
+#navbar {float:left;}
+#langbar {float:right;}
 #contactsPanel {padding: 0px 10px;}
