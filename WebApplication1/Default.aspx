@@ -174,8 +174,8 @@
 </form>
   <script type='text/javascript'>
     $(function () {
-        $('#main, #sidebar').hide();
-        $('#main, #sidebar').fadeIn(1000);
+        $('#main, #topbar').hide();
+        $('#main, #topbar').fadeIn(1000);
     });
   </script>
     <script>
