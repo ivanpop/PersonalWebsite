@@ -1,0 +1,34 @@
+private static int PthBit(uint number, int position)
+{
+	uint pthBit = (number >> position) & 1;
+	return (int)pthBit;
+}
+
+private static uint ModifiedNumber(uint number, int position, int bitValue)
+{
+	uint actualP = (uint)bitValue << position;
+	number = number & (~((uint)1 << position));
+	uint result = number | actualP;
+	return result;
+}
+
+static void Main(string[] args)
+{
+	Console.Write("Enter number: ");
+	uint number = uint.Parse(Console.ReadLine());
+
+	int bitAtPosition3 = PthBit(number, 3);
+	int bitAtPosition4 = PthBit(number, 4);
+	int bitAtPosition5 = PthBit(number, 5);
+	int bitAtPosition24 = PthBit(number, 24);
+	int bitAtPosition25 = PthBit(number, 25);
+	int bitAtPosition26 = PthBit(number, 26);
+
+	number = ModifiedNumber(number, 3, bitAtPosition24);
+	number = ModifiedNumber(number, 4, bitAtPosition25);
+	number = ModifiedNumber(number, 5, bitAtPosition26);
+	number = ModifiedNumber(number, 24, bitAtPosition3);
+	number = ModifiedNumber(number, 25, bitAtPosition4);
+	number = ModifiedNumber(number, 26, bitAtPosition5);
+	Console.WriteLine(number);
+}
