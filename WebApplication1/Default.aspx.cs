@@ -210,6 +210,7 @@ namespace WebApplication1
                         case 1: getText("CSBul1", 1); break;
                         case 2: getText("CSBul2", 1); break;
                         case 3: getText("CSBul3", 1); break;
+                        case 4: getText("CSBul4", 1); break;
                     }
                 else
                 {
@@ -379,6 +380,11 @@ namespace WebApplication1
         protected void CSBul3_Click(object sender, EventArgs e)
         {
             setQueryString("p", "3");
+        }
+
+        protected void CSBul4_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "4");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
