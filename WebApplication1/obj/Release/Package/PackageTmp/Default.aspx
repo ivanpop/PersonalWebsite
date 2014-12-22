@@ -120,7 +120,7 @@
                                     <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="CSBul1_Click" /></li></ul>
                                     <ul><li><asp:Button ID="chapter2Btn" runat="server" Height="25px" OnClick="CSBul2_Click" Text="Глава 2. Примитивни типове и променливи" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="CSBul3_Click" Text="Глава 3. Оператори и изрази" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="CSBul4_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 6. Цикли" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 7. Масиви" Width="380px" Enabled="False" /></li></ul>
