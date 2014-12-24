@@ -90,13 +90,9 @@
     <Content Include="Resources\CSResources\ch2-8.jpg" />
     <Content Include="Resources\CSResources\ch2-9.jpg" />
     <Content Include="Resources\CSResources\ch3-1.jpg" />
-    <Content Include="Resources\CSResources\ch3-10.jpg" />
-    <Content Include="Resources\CSResources\ch3-11.jpg" />
     <Content Include="Resources\CSResources\ch3-12.jpg" />
     <Content Include="Resources\CSResources\ch3-13.jpg" />
     <Content Include="Resources\CSResources\ch3-14.jpg" />
-    <Content Include="Resources\CSResources\ch3-15.txt" />
-    <Content Include="Resources\CSResources\ch3-16.txt" />
     <Content Include="Resources\CSResources\ch3-2.jpg" />
     <Content Include="Resources\CSResources\ch3-3.jpg" />
     <Content Include="Resources\CSResources\ch3-4.jpg" />
@@ -104,7 +100,6 @@
     <Content Include="Resources\CSResources\ch3-6.jpg" />
     <Content Include="Resources\CSResources\ch3-7.jpg" />
     <Content Include="Resources\CSResources\ch3-8.jpg" />
-    <Content Include="Resources\CSResources\ch3-9.jpg" />
     <Content Include="Resources\CSResources\ch4-1.jpg" />
     <Content Include="Resources\CSResources\ch4-10.jpg" />
     <Content Include="Resources\CSResources\ch4-11.jpg" />
