@@ -109,6 +109,9 @@
     <Content Include="Resources\CSResources\ch4-4.jpg" />
     <Content Include="Resources\CSResources\ch4-5.jpg" />
     <Content Include="Resources\CSResources\ch4-6.jpg" />
+    <Content Include="Resources\CSResources\ch5-1.jpg" />
+    <Content Include="Resources\CSResources\ch5-5.jpg" />
+    <Content Include="Resources\CSResources\ch5-7.jpg" />
     <Content Include="Resources\CT3.jpg" />
     <Content Include="Resources\CT4.jpg" />
     <Content Include="Resources\CT5.gif" />
