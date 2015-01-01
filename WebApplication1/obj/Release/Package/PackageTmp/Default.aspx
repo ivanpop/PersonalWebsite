@@ -122,7 +122,7 @@
                                     <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="CSBul3_Click" Text="Глава 3. Оператори и изрази" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="CSBul4_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="CSBul5_Click" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 6. Цикли" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="CSBul6_Click" Text="Глава 6. Цикли" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 7. Масиви" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 8. Бройни системи" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
