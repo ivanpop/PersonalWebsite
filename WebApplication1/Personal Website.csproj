@@ -127,6 +127,8 @@
     <Content Include="Resources\CSResources\ch6-8.png" />
     <Content Include="Resources\CSResources\ch6-9.jpg" />
     <Content Include="Resources\CSResources\ch6-9.png" />
+    <Content Include="Resources\CSResources\ch7-12.gif" />
+    <Content Include="Resources\CSResources\ch7-14.jpeg" />
     <Content Include="Resources\CT3.jpg" />
     <Content Include="Resources\CT4.jpg" />
     <Content Include="Resources\CT5.gif" />
