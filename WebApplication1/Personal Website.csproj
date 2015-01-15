@@ -129,6 +129,15 @@
     <Content Include="Resources\CSResources\ch6-9.png" />
     <Content Include="Resources\CSResources\ch7-12.gif" />
     <Content Include="Resources\CSResources\ch7-14.jpeg" />
+    <Content Include="Resources\CSResources\ch8-1.jpg" />
+    <Content Include="Resources\CSResources\ch8-2.jpg" />
+    <Content Include="Resources\CSResources\ch8-3.jpg" />
+    <Content Include="Resources\CSResources\ch8-4.jpg" />
+    <Content Include="Resources\CSResources\ch8-5.jpg" />
+    <Content Include="Resources\CSResources\ch8-6.jpg" />
+    <Content Include="Resources\CSResources\ch8-7.jpg" />
+    <Content Include="Resources\CSResources\ch8-8.jpg" />
+    <Content Include="Resources\CSResources\ch8-9.jpg" />
     <Content Include="Resources\CT3.jpg" />
     <Content Include="Resources\CT4.jpg" />
     <Content Include="Resources\CT5.gif" />
