@@ -124,7 +124,7 @@
                                     <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="CSBul5_Click" /></li></ul>
                                     <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="CSBul6_Click" Text="Глава 6. Цикли" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="CSBul7_Click" Text="Глава 7. Масиви" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 8. Бройни системи" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="CSBul8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 10. Рекурсия" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" Enabled="False" /></li></ul>

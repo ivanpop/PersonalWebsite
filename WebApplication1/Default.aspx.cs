@@ -15,7 +15,7 @@ namespace WebApplication1
     {   
         byte id = 0, code, page;
         Random rnd = new Random();        
-        protected string conS = @"Server=tcp:rlq2jzpufp.database.windows.net,1433;Database=text;User ID=ivanpop@rlq2jzpufp;Password=Popov123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
+        protected string conS = @"Server=tcp:rlq2jzpufp.database.windows.net,1433;Database=text;User ID=ivanpop@rlq2jzpufp;Password=Ivan4503;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
         protected SqlConnection con;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -214,6 +214,7 @@ namespace WebApplication1
                         case 5: getText("CSBul5", 1); break;
                         case 6: getText("CSBul6", 1); break;
                         case 7: getText("CSBul7", 1); break;
+                        case 8: getText("CSBul8", 1); break;
                     }
                 else
                 {
@@ -407,6 +408,11 @@ namespace WebApplication1
         protected void CSBul7_Click(object sender, EventArgs e)
         {
             setQueryString("p", "7");
+        }
+
+        protected void CSBul8_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "8");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
