@@ -227,6 +227,7 @@ namespace WebApplication1
                         case 5: getText("CSEng5", 1); break;
                         case 6: getText("CSEng6", 1); break;
                         case 7: getText("CSEng7", 1); break;
+                        case 8: getText("CSEng8", 1); break;
                     }
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
                     chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";

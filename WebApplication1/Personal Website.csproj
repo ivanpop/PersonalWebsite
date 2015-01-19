@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recaptcha.dll" />
+    <Content Include="Resources\benz.jpg" />
     <Content Include="Resources\codes\1.jpg" />
     <Content Include="Resources\codes\10.jpg" />
     <Content Include="Resources\codes\2.jpg" />
@@ -144,6 +145,7 @@
     <Content Include="Resources\CT6.png" />
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\ryu.zip" />
+    <None Include="Properties\PublishProfiles\ivanpop %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ivanpop.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
