@@ -207,7 +207,8 @@ namespace WebApplication1
                 if (id == 0)
                     switch (page)
                     {
-                        case 1: getText("CSBul1", 1); break;
+                        //case 1: getText("CSBul1", 1); break;
+                        case 1: projectsContent.Text = CS.CSBul1; break;
                         case 2: getText("CSBul2", 1); break;
                         case 3: getText("CSBul3", 1); break;
                         case 4: getText("CSBul4", 1); break;
@@ -261,7 +262,7 @@ namespace WebApplication1
         }
 
         protected void getText(string id, int index = 0)
-        {
+        {            
             con = new SqlConnection(conS);
             SqlCommand query = new SqlCommand("SELECT mainContent FROM [Table1] WHERE Id='" + id + "';", con);
             con.Open();
