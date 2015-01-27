@@ -10,3 +10,9 @@ C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplicatio
 C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\Personal Website.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Ivan\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\Personal Website.csprojResolveAssemblyReference.cache
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.pdb

@@ -207,15 +207,14 @@ namespace WebApplication1
                 if (id == 0)
                     switch (page)
                     {
-                        //case 1: getText("CSBul1", 1); break;
                         case 1: projectsContent.Text = CS.CSBul1; break;
-                        case 2: getText("CSBul2", 1); break;
-                        case 3: getText("CSBul3", 1); break;
-                        case 4: getText("CSBul4", 1); break;
-                        case 5: getText("CSBul5", 1); break;
-                        case 6: getText("CSBul6", 1); break;
-                        case 7: getText("CSBul7", 1); break;
-                        case 8: getText("CSBul8", 1); break;
+                        case 2: projectsContent.Text = CS.CSBul2; break;
+                        case 3: projectsContent.Text = CS.CSBul3; break;
+                        case 4: projectsContent.Text = CS.CSBul4; break;
+                        case 5: projectsContent.Text = CS.CSBul5; break;
+                        case 6: projectsContent.Text = CS.CSBul6; break;
+                        case 7: projectsContent.Text = CS.CSBul7; break;
+                        case 8: projectsContent.Text = CS.CSBul8; break;
                     }
                 else
                 {
@@ -230,6 +229,7 @@ namespace WebApplication1
                         case 7: getText("CSEng7", 1); break;
                         case 8: getText("CSEng8", 1); break;
                     }
+
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
                     chapter2Btn.Text = "Chapter 2. Primitive Types and Variables";
                     chapter3Btn.Text = "Chapter 3. Operators and Expressions";
