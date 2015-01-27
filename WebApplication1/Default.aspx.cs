@@ -215,19 +215,21 @@ namespace WebApplication1
                         case 6: projectsContent.Text = CS.CSBul6; break;
                         case 7: projectsContent.Text = CS.CSBul7; break;
                         case 8: projectsContent.Text = CS.CSBul8; break;
+                        case 9: projectsContent.Text = CS.CSBul9; break;
                     }
                 else
                 {
                     switch (page)
                     {
-                        case 1: getText("CSEng1", 1); break;
-                        case 2: getText("CSEng2", 1); break;
-                        case 3: getText("CSEng3", 1); break;
-                        case 4: getText("CSEng4", 1); break;
-                        case 5: getText("CSEng5", 1); break;
-                        case 6: getText("CSEng6", 1); break;
-                        case 7: getText("CSEng7", 1); break;
-                        case 8: getText("CSEng8", 1); break;
+                        case 1: projectsContent.Text = CS.CSEng1; break;
+                        case 2: projectsContent.Text = CS.CSEng2; break;
+                        case 3: projectsContent.Text = CS.CSEng3; break;
+                        case 4: projectsContent.Text = CS.CSEng4; break;
+                        case 5: projectsContent.Text = CS.CSEng5; break;
+                        case 6: projectsContent.Text = CS.CSEng6; break;
+                        case 7: projectsContent.Text = CS.CSEng7; break;
+                        case 8: projectsContent.Text = CS.CSEng8; break;
+                        case 9: projectsContent.Text = CS.CSEng9; break;
                     }
 
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
