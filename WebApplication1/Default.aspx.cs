@@ -173,28 +173,28 @@ namespace WebApplication1
                 if (id == 0)
                     switch (Request.QueryString["p"])
                     {
-                        case "2": getText("ryuTxt2Bul", 1); break;
-                        case "3": getText("ryuTxt3Bul", 1); break;
-                        case "4": getText("ryuTxt4Bul", 1); break;
-                        case "5": getText("ryuTxt5Bul", 1); break;
-                        case "6": getText("ryuTxt6Bul", 1); break;
-                        case "7": getText("ryuTxt7Bul", 1); break;
-                        case "8": getText("ryuTxt8Bul", 1); break;
-                        case "9": getText("ryuTxt9Bul", 1); break;
-                        default: getText("ryuTxt1Bul", 1); break;
+                        case "2": projectsContent.Text = Ryu.ryuTxt2Bul; break;
+                        case "3": projectsContent.Text = Ryu.ryuTxt3Bul; break;
+                        case "4": projectsContent.Text = Ryu.ryuTxt4Bul; break;
+                        case "5": projectsContent.Text = Ryu.ryuTxt5Bul; break;
+                        case "6": projectsContent.Text = Ryu.ryuTxt6Bul; break;
+                        case "7": projectsContent.Text = Ryu.ryuTxt7Bul; break;
+                        case "8": projectsContent.Text = Ryu.ryuTxt8Bul; break;
+                        case "9": projectsContent.Text = Ryu.ryuTxt9Bul; break;
+                        default: projectsContent.Text = Ryu.ryuTxt1Bul; break;
                     }
                 else
                     switch (Request.QueryString["p"])
                     {
-                        case "2": getText("ryuTxt2Eng", 1); break;
-                        case "3": getText("ryuTxt3Eng", 1); break;
-                        case "4": getText("ryuTxt4Eng", 1); break;
-                        case "5": getText("ryuTxt5Eng", 1); break;
-                        case "6": getText("ryuTxt6Eng", 1); break;
-                        case "7": getText("ryuTxt7Eng", 1); break;
-                        case "8": getText("ryuTxt8Eng", 1); break;
-                        case "9": getText("ryuTxt9Eng", 1); break;
-                        default: getText("ryuTxt1Eng", 1); break;
+                        case "2": projectsContent.Text = Ryu.ryuTxt2Eng; break;
+                        case "3": projectsContent.Text = Ryu.ryuTxt3Eng; break;
+                        case "4": projectsContent.Text = Ryu.ryuTxt4Eng; break;
+                        case "5": projectsContent.Text = Ryu.ryuTxt5Eng; break;
+                        case "6": projectsContent.Text = Ryu.ryuTxt6Eng; break;
+                        case "7": projectsContent.Text = Ryu.ryuTxt7Eng; break;
+                        case "8": projectsContent.Text = Ryu.ryuTxt8Eng; break;
+                        case "9": projectsContent.Text = Ryu.ryuTxt9Eng; break;
+                        default: projectsContent.Text = Ryu.ryuTxt1Eng; break;
                     }
             }
             if (Request.QueryString["a"] == "cs")
