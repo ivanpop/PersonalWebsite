@@ -197,6 +197,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ryu.cs" />
+    <Compile Include="Stopwatch.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -136,20 +136,20 @@ namespace WebApplication1
                 if (id == 0)
                     switch (Request.QueryString["p"])
                     {
-                        case "5": getText("stopwBul5", 1); break;
-                        case "4": getText("stopwBul4", 1); break;
-                        case "3": getText("stopwBul3", 1); break;
-                        case "2": getText("stopwBul2", 1); break;
-                        default: getText("stopwBul1", 1); break;
+                        case "5": projectsContent.Text = Stopwatch.stopwBul5; break;
+                        case "4": projectsContent.Text = Stopwatch.stopwBul4; break;
+                        case "3": projectsContent.Text = Stopwatch.stopwBul3; break;
+                        case "2": projectsContent.Text = Stopwatch.stopwBul2; break;
+                        default: projectsContent.Text = Stopwatch.stopwBul1; break;
                     }
                 else                    
                     switch (Request.QueryString["p"])
                     {
-                        case "5": getText("stopwEng5", 1); break;
-                        case "4": getText("stopwEng4", 1); break;
-                        case "3": getText("stopwEng3", 1); break;
-                        case "2": getText("stopwEng2", 1); break;
-                        default: getText("stopwEng1", 1); break;
+                        case "5": projectsContent.Text = Stopwatch.stopwEng5; break;
+                        case "4": projectsContent.Text = Stopwatch.stopwEng4; break;
+                        case "3": projectsContent.Text = Stopwatch.stopwEng3; break;
+                        case "2": projectsContent.Text = Stopwatch.stopwEng2; break;
+                        default: projectsContent.Text = Stopwatch.stopwEng1; break;
                     }                
             }
             if (Request.QueryString["a"] == "ryu")
