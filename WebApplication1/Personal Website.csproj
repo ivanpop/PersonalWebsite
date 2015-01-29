@@ -198,6 +198,7 @@
     </Compile>
     <Compile Include="Ryu.cs" />
     <Compile Include="Stopwatch.cs" />
+    <Compile Include="Strings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
