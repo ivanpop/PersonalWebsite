@@ -38,9 +38,12 @@ namespace WebApplication1
                 projects.Enabled = false;
                 projectsPanel.Visible = true;
 
-                mainContent.Text = Strings.projBul;
-                artTitle.Text = "Проекти";
-                if (id == 1)
+                if (id == 0)
+                {
+                    mainContent.Text = Strings.projBul;
+                    artTitle.Text = "Проекти";
+                }
+                else
                 {
                     mainContent.Text = Strings.projEng;
                     artTitle.Text = "Projects";
@@ -53,8 +56,8 @@ namespace WebApplication1
             if (Request.QueryString["a"] == null)
             {
                 aboutMe.Enabled = false;
-                mainContent.Text = Strings.aboutMeBul;
-                if (id == 1)
+                if (id == 0) mainContent.Text = Strings.aboutMeBul;
+                else
                 {
                     artTitle.Text = "About me";
                     mainContent.Text = Strings.aboutMeEng;
@@ -64,9 +67,12 @@ namespace WebApplication1
             {
                 biography.Enabled = false;
                 ivanpopov.Visible = true;
-                artTitle.Text = "Автобиография";
-                mainContent.Text = Strings.biograpBul;
-                if (id == 1)
+                if (id == 0)
+                {
+                    artTitle.Text = "Автобиография";
+                    mainContent.Text = Strings.biograpBul;
+                }                
+                else
                 {
                     artTitle.Text = "Biography";
                     mainContent.Text = Strings.biograpEng;
@@ -76,9 +82,12 @@ namespace WebApplication1
             {
                 contacts.Enabled = false;
                 contactsPanel.Visible = true;
-                artTitle.Text = "Контакти";
-                mainContent.Text = Strings.contactBul;
-                if (id == 1)
+                if (id == 0)
+                {
+                    artTitle.Text = "Контакти";
+                    mainContent.Text = Strings.contactBul;
+                }                
+                else
                 {
                     artTitle.Text = "Contacts";
                     mainContent.Text = Strings.contactEng;
@@ -114,8 +123,8 @@ namespace WebApplication1
             {                                
                 mainContent.Text = "";
                 artTitle.Text = "Converter";
-                projectsContent.Text = Strings.convertBul;
-                if (id == 1) projectsContent.Text = Strings.convertEng;
+                if (id == 0) projectsContent.Text = Strings.convertBul;
+                else projectsContent.Text = Strings.convertEng;
             }
             if (Request.QueryString["a"] == "countdown")
             {                                
