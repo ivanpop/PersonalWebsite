@@ -15,8 +15,6 @@ namespace WebApplication1
     {   
         byte id = 0, code, page;
         Random rnd = new Random();        
-        protected string conS = @"Server=tcp:rlq2jzpufp.database.windows.net,1433;Database=text;User ID=ivanpop@rlq2jzpufp;Password=Ivan4503;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
-        protected SqlConnection con;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -262,16 +260,6 @@ namespace WebApplication1
                     backBtn.Text = "Back";
                 }
             }
-        }
-
-        protected void getText(string id, int index = 0)
-        {            
-            con = new SqlConnection(conS);
-            SqlCommand query = new SqlCommand("SELECT mainContent FROM [Table1] WHERE Id='" + id + "';", con);
-            con.Open();
-            if (index == 0) mainContent.Text = query.ExecuteScalar().ToString();
-            else projectsContent.Text = query.ExecuteScalar().ToString();
-            con.Close();
         }
 
         protected void setQueryString(string s1, string s2 = null)
