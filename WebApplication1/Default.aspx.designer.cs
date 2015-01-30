@@ -724,33 +724,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Button pageBtn9;
         
         /// <summary>
-        /// commentsBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button commentsBtn;
-        
-        /// <summary>
-        /// commentsPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel commentsPanel;
-        
-        /// <summary>
-        /// disqueLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label disqueLabel;
-        
-        /// <summary>
         /// goTop control.
         /// </summary>
         /// <remarks>
