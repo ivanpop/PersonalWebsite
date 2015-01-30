@@ -12,9 +12,9 @@ using System.Web.Configuration;
 namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
-    {   
+    {
         byte id = 0, code, page;
-        Random rnd = new Random();        
+        Random rnd = new Random();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -71,7 +71,7 @@ namespace WebApplication1
                 {
                     artTitle.Text = "Автобиография";
                     mainContent.Text = Strings.biograpBul;
-                }                
+                }
                 else
                 {
                     artTitle.Text = "Biography";
@@ -86,7 +86,7 @@ namespace WebApplication1
                 {
                     artTitle.Text = "Контакти";
                     mainContent.Text = Strings.contactBul;
-                }                
+                }
                 else
                 {
                     artTitle.Text = "Contacts";
@@ -117,21 +117,23 @@ namespace WebApplication1
                     case 8: codeCompareValidator.ValueToCompare = "54968"; break;
                     case 9: codeCompareValidator.ValueToCompare = "23547"; break;
                     case 10: codeCompareValidator.ValueToCompare = "03412"; break;
-                }                
+                }
             }
             if (Request.QueryString["a"] == "converter")
-            {                                
+            {
+                commentsBtn.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Converter";
                 if (id == 0) projectsContent.Text = Strings.convertBul;
                 else projectsContent.Text = Strings.convertEng;
             }
             if (Request.QueryString["a"] == "countdown")
-            {                                
+            {
+                commentsBtn.Visible = true;
                 mainContent.Text = "";
-                artTitle.Text = "Countdown timer and stopwatch";                
+                artTitle.Text = "Countdown timer and stopwatch";
                 pagePanel.Visible = true;
-                pageBtn6.Visible = pageBtn7.Visible = pageBtn8.Visible = pageBtn9.Visible = false;               
+                pageBtn6.Visible = pageBtn7.Visible = pageBtn8.Visible = pageBtn9.Visible = false;
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
                 {
@@ -150,7 +152,7 @@ namespace WebApplication1
                         case "2": projectsContent.Text = Stopwatch.stopwBul2; break;
                         default: projectsContent.Text = Stopwatch.stopwBul1; break;
                     }
-                else                    
+                else
                     switch (Request.QueryString["p"])
                     {
                         case "5": projectsContent.Text = Stopwatch.stopwEng5; break;
@@ -158,15 +160,15 @@ namespace WebApplication1
                         case "3": projectsContent.Text = Stopwatch.stopwEng3; break;
                         case "2": projectsContent.Text = Stopwatch.stopwEng2; break;
                         default: projectsContent.Text = Stopwatch.stopwEng1; break;
-                    }                
+                    }
             }
             if (Request.QueryString["a"] == "ryu")
-            {                               
-                pagePanel.Visible = true;
+            {
+                pagePanel.Visible = commentsBtn.Visible = true;
                 mainContent.Text = "";
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
-                {                        
+                {
                     case 2: pageBtn2.Enabled = false; break;
                     case 3: pageBtn3.Enabled = false; break;
                     case 4: pageBtn4.Enabled = false; break;
@@ -206,9 +208,10 @@ namespace WebApplication1
                     }
             }
             if (Request.QueryString["a"] == "cs")
-            {                
-                mainContent.Visible = false;                
-                artTitle.Text = "C# for Dummies.";                
+            {
+                if (Request.QueryString["p"] != "") commentsBtn.Visible = true;
+                mainContent.Visible = false;
+                artTitle.Text = "C# for Dummies.";
                 chaptersPanel.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? false : true;
                 backBtn.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? true : false;
                 byte.TryParse(Request.QueryString["p"], out page);
@@ -278,7 +281,7 @@ namespace WebApplication1
             else nvc.Set(s1, s2);
             if (s1 != "p" && s1 != "l") nvc.Remove("p");
             string url = Request.Url.AbsolutePath + "?" + nvc.ToString();
-            Response.Redirect(url); 
+            Response.Redirect(url);
         }
 
         #region buttonEvents
@@ -330,7 +333,7 @@ namespace WebApplication1
         protected void csDummies_Click(object sender, EventArgs e)
         {
             setQueryString("a", "cs");
-        } 
+        }
 
         protected void ryuPage2_Click(object sender, EventArgs e)
         {
@@ -425,7 +428,7 @@ namespace WebApplication1
         protected void submitEmailBtn_Click(object sender, EventArgs e)
         {
             using (MailMessage message = new MailMessage())
-            {                
+            {
                 message.From = new MailAddress(emailTextBox.Text.ToString());
                 message.To.Add(new MailAddress("unfragablegaming@gmail.com"));
                 message.Subject = "Message from My Site: " + subjectBox.Text.ToString();
@@ -450,7 +453,7 @@ namespace WebApplication1
                     {
                         SmtpStatusCode status = ex.InnerExceptions[i].StatusCode;
                         if (status == SmtpStatusCode.MailboxBusy || status == SmtpStatusCode.MailboxUnavailable)
-                        {                            
+                        {
                             artTitle.Text = "Грешка при изпращането на писмото. Ще направя повторен опит за изпращане след 5 секунди.";
                             if (id == 1) artTitle.Text = "Failed to send message. Retrying in 5 seconds.";
                             System.Threading.Thread.Sleep(5000);
@@ -471,9 +474,41 @@ namespace WebApplication1
                     artTitle.Text = "E-mail sent successful.";
                     artTitle.Text = "You will be redirected to the home page in 5 seconds.";
                 }
-                Response.AddHeader("REFRESH","5;URL=index.aspx");          
+                Response.AddHeader("REFRESH", "5;URL=index.aspx");
             }
         }
+
+        protected void commentsBtn_Click(object sender, EventArgs e)
+        {
+            commentsPanel.Visible = true;
+
+            if (Request.QueryString["a"] == "converter")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptConEN;
+                else disqueLabel.Text = Strings.disqueScriptConBG;
+            }
+
+            if (Request.QueryString["a"] == "countdown")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptCountdownEN;
+                else disqueLabel.Text = Strings.disqueScriptCountdownBG;
+            }
+
+            if (Request.QueryString["a"] == "ryu")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptRyuEN;
+                else disqueLabel.Text = Strings.disqueScriptRyuBG;
+            }
+
+            if (Request.QueryString["a"] == "cs")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptCSEN;
+                else disqueLabel.Text = Strings.disqueScriptCSBG;
+            }
+
+            commentsPanel.Controls.Add(disqueLabel);
+        }
+
         #endregion
     }
 }

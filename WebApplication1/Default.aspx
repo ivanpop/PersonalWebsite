@@ -149,6 +149,7 @@
                                 <asp:Label ID="projectsContent" runat="server"></asp:Label>
 							    <br />
                                 <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" Width="80px" />
+							    <br />
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
                                     <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
@@ -160,6 +161,12 @@
                                     <asp:Button ID="pageBtn7" runat="server" OnClick="ryuPage7_Click" Text="7" Width="20px" />
                                     <asp:Button ID="pageBtn8" runat="server" OnClick="ryuPage8_Click" Text="8" Width="20px" />
                                     <asp:Button ID="pageBtn9" runat="server" OnClick="ryuPage9_Click" Text="9" Width="20px" />
+                                </asp:Panel>
+							    <br />
+                                <asp:Button ID="commentsBtn" runat="server" OnClick="commentsBtn_Click" Text="Коментар" Visible="False" />
+                                <br />
+                                <asp:Panel ID="commentsPanel" runat="server" Visible="False">
+                                    <asp:Label ID="disqueLabel" runat="server" Text="Label"></asp:Label>
                                 </asp:Panel>
 							</div>
 						</div>                        
