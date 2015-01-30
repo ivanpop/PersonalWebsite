@@ -120,14 +120,16 @@ namespace WebApplication1
                 }                
             }
             if (Request.QueryString["a"] == "converter")
-            {                                
+            {
+                commentsBtn.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Converter";
                 if (id == 0) projectsContent.Text = Strings.convertBul;
                 else projectsContent.Text = Strings.convertEng;
             }
             if (Request.QueryString["a"] == "countdown")
-            {                                
+            {
+                commentsBtn.Visible = true;
                 mainContent.Text = "";
                 artTitle.Text = "Countdown timer and stopwatch";                
                 pagePanel.Visible = true;
@@ -161,8 +163,8 @@ namespace WebApplication1
                     }                
             }
             if (Request.QueryString["a"] == "ryu")
-            {                               
-                pagePanel.Visible = true;
+            {                
+                pagePanel.Visible = commentsBtn.Visible = true;
                 mainContent.Text = "";
                 byte.TryParse(Request.QueryString["p"], out page);
                 switch (page)
@@ -206,7 +208,8 @@ namespace WebApplication1
                     }
             }
             if (Request.QueryString["a"] == "cs")
-            {                
+            {
+                if (Request.QueryString["p"] != "") commentsBtn.Visible = true;
                 mainContent.Visible = false;                
                 artTitle.Text = "C# for Dummies.";                
                 chaptersPanel.Visible = Convert.ToInt32(Request.QueryString["p"]) > 0 ? false : true;
@@ -474,6 +477,38 @@ namespace WebApplication1
                 Response.AddHeader("REFRESH","5;URL=index.aspx");          
             }
         }
+
+        protected void commentsBtn_Click(object sender, EventArgs e)
+        {
+            commentsPanel.Visible = true;
+
+            if (Request.QueryString["a"] == "converter")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptConEN;
+                else disqueLabel.Text = Strings.disqueScriptConBG;
+            }
+
+            if (Request.QueryString["a"] == "countdown")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptCountdownEN;
+                else disqueLabel.Text = Strings.disqueScriptCountdownBG;
+            }
+
+            if (Request.QueryString["a"] == "ryu")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptRyuEN;
+                else disqueLabel.Text = Strings.disqueScriptRyuBG;
+            }
+
+            if (Request.QueryString["a"] == "cs")
+            {
+                if (Request.QueryString["l"] == "en") disqueLabel.Text = Strings.disqueScriptCSEN;
+                else disqueLabel.Text = Strings.disqueScriptCSBG;
+            }
+
+            commentsPanel.Controls.Add(disqueLabel);
+        }
+
         #endregion
     }
 }
