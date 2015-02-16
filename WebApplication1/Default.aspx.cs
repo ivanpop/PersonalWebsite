@@ -242,6 +242,7 @@ namespace WebApplication1
                         case 7: projectsContent.Text = CS.CSEng7; break;
                         case 8: projectsContent.Text = CS.CSEng8; break;
                         case 9: projectsContent.Text = CS.CSEng9; break;
+                        case 10: projectsContent.Text = CS.CSEng10; break;
                     }
 
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
