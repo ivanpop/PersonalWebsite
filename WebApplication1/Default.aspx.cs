@@ -227,6 +227,7 @@ namespace WebApplication1
                         case 7: projectsContent.Text = CS.CSBul7; break;
                         case 8: projectsContent.Text = CS.CSBul8; break;
                         case 9: projectsContent.Text = CS.CSBul9; break;
+                        case 10: projectsContent.Text = CS.CSBul10; break;
                     }
                 else
                 {
@@ -418,6 +419,16 @@ namespace WebApplication1
         protected void CSBul8_Click(object sender, EventArgs e)
         {
             setQueryString("p", "8");
+        }
+
+        protected void CSBul9_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "9");
+        }
+
+        protected void CSBul10_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "10");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
