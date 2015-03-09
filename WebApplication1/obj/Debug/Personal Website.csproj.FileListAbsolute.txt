@@ -16,3 +16,9 @@ C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication
 C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\Personal Website.csprojResolveAssemblyReference.cache
 C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Mun\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll.config
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.dll
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\bin\WebApplication1.pdb
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\Personal Website.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.dll
+E:\Documents\GitHub\PersonalWebsite\WebApplication1\obj\Debug\WebApplication1.pdb
