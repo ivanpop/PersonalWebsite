@@ -85,6 +85,10 @@
     <Content Include="Resources\CSResources\ch10-5-2.jpg" />
     <Content Include="Resources\CSResources\ch10-7.jpg" />
     <Content Include="Resources\CSResources\ch11-1.jpg" />
+    <Content Include="Resources\CSResources\ch11-15-1.gif" />
+    <Content Include="Resources\CSResources\ch11-15-2.gif" />
+    <Content Include="Resources\CSResources\ch11-15-3.gif" />
+    <Content Include="Resources\CSResources\ch11-15-4.gif" />
     <Content Include="Resources\CSResources\ch11-2.jpg" />
     <Content Include="Resources\CSResources\ch11-3.jpg" />
     <Content Include="Resources\CSResources\ch11-4.jpg" />
