@@ -125,9 +125,9 @@
                                     <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="CSBul6_Click" Text="Глава 6. Цикли" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="CSBul7_Click" Text="Глава 7. Масиви" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="CSBul8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 10. Рекурсия" Width="380px" Enabled="False" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="CSBul9_Click" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="CSBul10_Click" Text="Глава 10. Рекурсия" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="CSBul11_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 12. Обработка на изключения" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter13Btn" runat="server" Height="25px" Text="Глава 13. Символни низове" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter14Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 14. Дефиниране на класове" Width="380px" Enabled="False" /></li></ul>
@@ -149,6 +149,7 @@
                                 <asp:Label ID="projectsContent" runat="server"></asp:Label>
 							    <br />
                                 <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" Width="80px" />
+							    <br />
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
                                     <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
@@ -160,6 +161,12 @@
                                     <asp:Button ID="pageBtn7" runat="server" OnClick="ryuPage7_Click" Text="7" Width="20px" />
                                     <asp:Button ID="pageBtn8" runat="server" OnClick="ryuPage8_Click" Text="8" Width="20px" />
                                     <asp:Button ID="pageBtn9" runat="server" OnClick="ryuPage9_Click" Text="9" Width="20px" />
+                                </asp:Panel>
+							    <br />
+                                <asp:Button ID="commentsBtn" runat="server" OnClick="commentsBtn_Click" Text="Коментар" Visible="False" />
+                                <br />
+                                <asp:Panel ID="commentsPanel" runat="server" Visible="False">
+                                    <asp:Label ID="disqueLabel" runat="server" Text="Label"></asp:Label>
                                 </asp:Panel>
 							</div>
 						</div>                        

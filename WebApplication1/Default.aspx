@@ -127,7 +127,7 @@
                                     <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="CSBul8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="CSBul9_Click" /></li></ul>
                                     <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="CSBul10_Click" Text="Глава 10. Рекурсия" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" Enabled="False" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="CSBul11_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 12. Обработка на изключения" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter13Btn" runat="server" Height="25px" Text="Глава 13. Символни низове" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter14Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 14. Дефиниране на класове" Width="380px" Enabled="False" /></li></ul>
