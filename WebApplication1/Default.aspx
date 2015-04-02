@@ -115,6 +115,10 @@
                                         <li><asp:Button ID="csDummies" runat="server" Height="25px" OnClick="csDummies_Click" Text="C# for Dummies" Width="190px" /></li>                                        
                                         <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="Задачи от книгата за C# на Телерик"></asp:Label>
                                     </ul>
+                                    <ul>
+                                        <li><asp:Button ID="mmu" runat="server" Height="25px" OnClick="mmu_Click" Text="International Trading Data" Width="190px" /></li>                                        
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="mmuDescr" runat="server" Text="Задание от MMU"></asp:Label>
+                                    </ul>
                                 </asp:Panel>
 							    <asp:Panel ID="chaptersPanel" runat="server" Visible="False">
                                     <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="CSBul1_Click" /></li></ul>

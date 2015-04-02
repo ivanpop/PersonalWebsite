@@ -50,7 +50,8 @@ namespace WebApplication1
                     ConverterDescr.Text = "<em>Program for converting metric units.</em>";
                     StopwDescr.Text = "<em>Countdown timer and a stopwatch.</em>";
                     RyuDescr.Text = "<em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em>";
-                    CSDescr.Text = "Solutions from The C# book from Telerik";
+                    CSDescr.Text = "<em>Solutions from The C# book from Telerik.</em>";
+                    mmuDescr.Text = "<em>MMU Assignment</em>";
                 }
             }
             if (Request.QueryString["a"] == null)
@@ -126,6 +127,14 @@ namespace WebApplication1
                 artTitle.Text = "Converter";
                 if (id == 0) projectsContent.Text = Strings.convertBul;
                 else projectsContent.Text = Strings.convertEng;
+            }
+            if (Request.QueryString["a"] == "mmu")
+            {
+                commentsBtn.Visible = true;
+                mainContent.Text = "";
+                artTitle.Text = "International Trading Data";
+                if (id == 0) projectsContent.Text = Strings.mmuBul;
+                else projectsContent.Text = Strings.mmuEng;
             }
             if (Request.QueryString["a"] == "countdown")
             {
@@ -337,6 +346,11 @@ namespace WebApplication1
         protected void csDummies_Click(object sender, EventArgs e)
         {
             setQueryString("a", "cs");
+        }
+
+        protected void mmu_Click(object sender, EventArgs e)
+        {
+            setQueryString("a", "mmu");
         }
 
         protected void ryuPage2_Click(object sender, EventArgs e)
