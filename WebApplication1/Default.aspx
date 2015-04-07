@@ -59,7 +59,7 @@
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
-							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
+							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" CssClass="bioImg" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
 							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
 							    <asp:Panel ID="contactsPanel" runat="server" Visible="False" BorderStyle="Solid" BorderWidth="2px">
                                     &nbsp;<br/>
