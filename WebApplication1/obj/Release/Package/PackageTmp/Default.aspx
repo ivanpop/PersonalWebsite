@@ -59,43 +59,43 @@
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
-							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left"  />                                							
+							    <asp:Image ID="ivanpopov" runat="server" ImageUrl="~/Resources/ivanpopov.jpg" Visible="False" BorderStyle="Ridge" BorderWidth="1px" ImageAlign="Left" CssClass="bioimg"  />                                							
 							    <asp:Label ID="mainContent" runat="server" CssClass="StatusLabel" Text="Label"></asp:Label>
 							    <asp:Panel ID="contactsPanel" runat="server" Visible="False" BorderStyle="Solid" BorderWidth="2px">
-                                    &nbsp;<br/>
+                                    <br/>
                                     <asp:Label ID="emailLabel" runat="server" Text="*Вашият E-Mail:"></asp:Label>
                                     <br/>
-                                    &nbsp;<asp:TextBox ID="emailTextBox" runat="server" Width="248px"></asp:TextBox>
+                                    <asp:TextBox ID="emailTextBox" runat="server" Width="248px"></asp:TextBox>
                                     <asp:RegularExpressionValidator ID="emailRegularExpressionValidator" runat="server" ControlToValidate="emailTextBox" ErrorMessage="E-mail адресът е неправилен!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="required"></asp:RegularExpressionValidator>
                                     <br />
-                                    &nbsp;<asp:RequiredFieldValidator ID="emailRequiredFieldValidator" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Моля въведете вашият E-mail адрес!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="emailRequiredFieldValidator" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Моля въведете вашият E-mail адрес!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
                                     <br />
-                                    &nbsp;<asp:Label ID="subjectLabel" runat="server" Text="Тема:"></asp:Label>
+                                    <asp:Label ID="subjectLabel" runat="server" Text="Тема:"></asp:Label>
                                     <br />
-                                    &nbsp;<asp:TextBox ID="subjectBox" runat="server" Width="248px"></asp:TextBox>
+                                    <asp:TextBox ID="subjectBox" runat="server" Width="248px"></asp:TextBox>
                                     <br />
                                     <br />
-                                    &nbsp;<asp:Label ID="messageLabel" runat="server" Text="*Съобщение:"></asp:Label>
+                                    <asp:Label ID="messageLabel" runat="server" Text="*Съобщение:"></asp:Label>
                                     <br />
-                                    &nbsp;<asp:TextBox ID="messageBox" runat="server" Height="99px" TextMode="MultiLine" Width="403px"></asp:TextBox>
+                                    <asp:TextBox ID="messageBox" runat="server" Height="99px" TextMode="MultiLine" Width="403px"></asp:TextBox>
                                     <br />
-                                    &nbsp;<asp:RequiredFieldValidator ID="messageRequiredFieldValidator" runat="server" ControlToValidate="messageBox" ErrorMessage="Моля въведете съобщение!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="messageRequiredFieldValidator" runat="server" ControlToValidate="messageBox" ErrorMessage="Моля въведете съобщение!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
                                     <br />
-                                    &nbsp;<asp:Label ID="codeLabel" runat="server" Text="*Защитен код:"></asp:Label>
+                                    <asp:Label ID="codeLabel" runat="server" Text="*Защитен код:"></asp:Label>
                                     <br />
-                                    &nbsp;<asp:Label ID="codeImg" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="codeImg" runat="server" Text="Label"></asp:Label>
                                     <br />
-                                    &nbsp;<asp:TextBox ID="codeBox" runat="server" Width="113px"></asp:TextBox>
+                                    <asp:TextBox ID="codeBox" runat="server" Width="113px"></asp:TextBox>
                                     <asp:CompareValidator ID="codeCompareValidator" runat="server" ControlToValidate="codeBox" ErrorMessage="Кодът е грешен!" ForeColor="Red" ValidationGroup="required"></asp:CompareValidator>
                                     <br />
-                                    &nbsp;<asp:RequiredFieldValidator ID="codeRequiredFieldValidator" runat="server" ControlToValidate="codeBox" ErrorMessage="Моля въведете защитният код!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="codeRequiredFieldValidator" runat="server" ControlToValidate="codeBox" ErrorMessage="Моля въведете защитният код!" ForeColor="Red" ValidationGroup="required"></asp:RequiredFieldValidator>
                                     <br />
                                     <br />
-                                    &nbsp;*
+                                    *
                                     <asp:Label ID="requiredFieldLabel" runat="server" Text="Обозначава задължителните полета"></asp:Label>
                                     <br />
-                                    &nbsp;<asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" ValidationGroup="required" />
-                                    &nbsp;<br />
+                                    <asp:Button ID="submitEmailBtn" runat="server" Text="Изпрати" Width="75px" OnClick="submitEmailBtn_Click" ValidationGroup="required" />
+                                    <br />
                                     <br />
                                 </asp:Panel>
 							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
@@ -127,7 +127,7 @@
                                     <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="CSBul8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="CSBul9_Click" /></li></ul>
                                     <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="CSBul10_Click" Text="Глава 10. Рекурсия" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="CSBul11_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 12. Обработка на изключения" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter13Btn" runat="server" Height="25px" Text="Глава 13. Символни низове" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter14Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 14. Дефиниране на класове" Width="380px" Enabled="False" /></li></ul>
@@ -144,12 +144,8 @@
                                     <ul><li><asp:Button ID="chapter25Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 25. Практически задачи за изпит - тема 1" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter26Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 26. Практически задачи за изпит - тема 1" Width="380px" Enabled="False" /></li></ul>
                                 </asp:Panel>
-                                &nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;
-                                <asp:Label ID="projectsContent" runat="server"></asp:Label>
-							    <br />
-                                <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" Width="80px" />
-							    <br />
+                                <asp:Label ID="projectsContent" runat="server"></asp:Label>							    
+                                <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" Width="80px" />							    
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
                                     <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
@@ -161,10 +157,8 @@
                                     <asp:Button ID="pageBtn7" runat="server" OnClick="ryuPage7_Click" Text="7" Width="20px" />
                                     <asp:Button ID="pageBtn8" runat="server" OnClick="ryuPage8_Click" Text="8" Width="20px" />
                                     <asp:Button ID="pageBtn9" runat="server" OnClick="ryuPage9_Click" Text="9" Width="20px" />
-                                </asp:Panel>
-							    <br />
-                                <asp:Button ID="commentsBtn" runat="server" OnClick="commentsBtn_Click" Text="Коментар" Visible="False" />
-                                <br />
+                                </asp:Panel>							    
+                                <asp:Button ID="commentsBtn" runat="server" OnClick="commentsBtn_Click" Text="Коментар" Visible="False" />                                
                                 <asp:Panel ID="commentsPanel" runat="server" Visible="False">
                                     <asp:Label ID="disqueLabel" runat="server" Text="Label"></asp:Label>
                                 </asp:Panel>

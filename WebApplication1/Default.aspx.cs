@@ -50,8 +50,7 @@ namespace WebApplication1
                     ConverterDescr.Text = "<em>Program for converting metric units.</em>";
                     StopwDescr.Text = "<em>Countdown timer and a stopwatch.</em>";
                     RyuDescr.Text = "<em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em>";
-                    CSDescr.Text = "<em>Solutions from The C# book from Telerik.</em>";
-                    mmuDescr.Text = "<em>MMU Assignment</em>";
+                    CSDescr.Text = "Solutions from The C# book from Telerik";
                 }
             }
             if (Request.QueryString["a"] == null)
@@ -127,14 +126,6 @@ namespace WebApplication1
                 artTitle.Text = "Converter";
                 if (id == 0) projectsContent.Text = Strings.convertBul;
                 else projectsContent.Text = Strings.convertEng;
-            }
-            if (Request.QueryString["a"] == "mmu")
-            {
-                commentsBtn.Visible = true;
-                mainContent.Text = "";
-                artTitle.Text = "International Trading Data";
-                if (id == 0) projectsContent.Text = Strings.mmuBul;
-                else projectsContent.Text = Strings.mmuEng;
             }
             if (Request.QueryString["a"] == "countdown")
             {
@@ -237,7 +228,6 @@ namespace WebApplication1
                         case 8: projectsContent.Text = CS.CSBul8; break;
                         case 9: projectsContent.Text = CS.CSBul9; break;
                         case 10: projectsContent.Text = CS.CSBul10; break;
-                        case 11: projectsContent.Text = CS.CSBul11; break;
                     }
                 else
                 {
@@ -253,7 +243,6 @@ namespace WebApplication1
                         case 8: projectsContent.Text = CS.CSEng8; break;
                         case 9: projectsContent.Text = CS.CSEng9; break;
                         case 10: projectsContent.Text = CS.CSEng10; break;
-                        case 11: projectsContent.Text = CS.CSEng11; break;
                     }
 
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
@@ -346,11 +335,6 @@ namespace WebApplication1
         protected void csDummies_Click(object sender, EventArgs e)
         {
             setQueryString("a", "cs");
-        }
-
-        protected void mmu_Click(object sender, EventArgs e)
-        {
-            setQueryString("a", "mmu");
         }
 
         protected void ryuPage2_Click(object sender, EventArgs e)
@@ -446,11 +430,6 @@ namespace WebApplication1
         protected void CSBul10_Click(object sender, EventArgs e)
         {
             setQueryString("p", "10");
-        }
-
-        protected void CSBul11_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "11");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
