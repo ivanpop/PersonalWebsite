@@ -228,6 +228,8 @@ namespace WebApplication1
                         case 8: projectsContent.Text = CS.CSBul8; break;
                         case 9: projectsContent.Text = CS.CSBul9; break;
                         case 10: projectsContent.Text = CS.CSBul10; break;
+                        case 11: projectsContent.Text = CS.CSBul11; break;
+                        case 12: projectsContent.Text = CS.CSBul12; break;
                     }
                 else
                 {
@@ -243,6 +245,8 @@ namespace WebApplication1
                         case 8: projectsContent.Text = CS.CSEng8; break;
                         case 9: projectsContent.Text = CS.CSEng9; break;
                         case 10: projectsContent.Text = CS.CSEng10; break;
+                        case 11: projectsContent.Text = CS.CSEng11; break;
+                        case 12: projectsContent.Text = CS.CSEng12; break;
                     }
 
                     chapter1Btn.Text = "Chapter 1. Introduction to Programming";
@@ -430,6 +434,16 @@ namespace WebApplication1
         protected void CSBul10_Click(object sender, EventArgs e)
         {
             setQueryString("p", "10");
+        }
+
+        protected void CSBul11_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "11");
+        }
+
+        protected void CSBul12_Click(object sender, EventArgs e)
+        {
+            setQueryString("p", "12");
         }
 
         protected void backBtn_Click(object sender, EventArgs e)
