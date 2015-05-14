@@ -341,110 +341,70 @@ namespace WebApplication1
             setQueryString("a", "cs");
         }
 
-        protected void ryuPage2_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "2");
-        }
-
-        protected void ryuPage1_Click(object sender, EventArgs e)
-        {
-            setQueryString("p");
-        }
-
-        protected void ryuPage3_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "3");
-        }
-
-        protected void ryuPage4_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "4");
-        }
-
-        protected void ryuPage5_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "5");
-        }
-
-        protected void ryuPage6_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "6");
-        }
-
-        protected void ryuPage7_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "7");
-        }
-
-        protected void ryuPage8_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "8");
-        }
-
-        protected void ryuPage9_Click(object sender, EventArgs e)
-        {
-            setQueryString("p", "9");
-        }
-
-        protected void CSBul1_Click(object sender, EventArgs e)
+        protected void CSPage1_Click(object sender, EventArgs e)
         {
             setQueryString("p", "1");
         }
 
-        protected void CSBul2_Click(object sender, EventArgs e)
+        protected void Page1_Click(object sender, EventArgs e)
+        {
+            setQueryString("p");
+        }
+
+        protected void Page2_Click(object sender, EventArgs e)
         {
             setQueryString("p", "2");
         }
 
-        protected void CSBul3_Click(object sender, EventArgs e)
+        protected void Page3_Click(object sender, EventArgs e)
         {
             setQueryString("p", "3");
         }
 
-        protected void CSBul4_Click(object sender, EventArgs e)
+        protected void Page4_Click(object sender, EventArgs e)
         {
             setQueryString("p", "4");
         }
 
-        protected void CSBul5_Click(object sender, EventArgs e)
+        protected void Page5_Click(object sender, EventArgs e)
         {
             setQueryString("p", "5");
         }
 
-        protected void CSBul6_Click(object sender, EventArgs e)
+        protected void Page6_Click(object sender, EventArgs e)
         {
             setQueryString("p", "6");
         }
 
-        protected void CSBul7_Click(object sender, EventArgs e)
+        protected void Page7_Click(object sender, EventArgs e)
         {
             setQueryString("p", "7");
         }
 
-        protected void CSBul8_Click(object sender, EventArgs e)
+        protected void Page8_Click(object sender, EventArgs e)
         {
             setQueryString("p", "8");
         }
 
-        protected void CSBul9_Click(object sender, EventArgs e)
+        protected void Page9_Click(object sender, EventArgs e)
         {
             setQueryString("p", "9");
         }
 
-        protected void CSBul10_Click(object sender, EventArgs e)
+        protected void Page10_Click(object sender, EventArgs e)
         {
             setQueryString("p", "10");
         }
 
-        protected void CSBul11_Click(object sender, EventArgs e)
+        protected void Page11_Click(object sender, EventArgs e)
         {
             setQueryString("p", "11");
         }
 
-        protected void CSBul12_Click(object sender, EventArgs e)
+        protected void Page12_Click(object sender, EventArgs e)
         {
             setQueryString("p", "12");
-        }
+        }        
 
         protected void backBtn_Click(object sender, EventArgs e)
         {

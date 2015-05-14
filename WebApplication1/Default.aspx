@@ -117,18 +117,18 @@
                                     </ul>
                                 </asp:Panel>
 							    <asp:Panel ID="chaptersPanel" runat="server" Visible="False">
-                                    <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="CSBul1_Click" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter2Btn" runat="server" Height="25px" OnClick="CSBul2_Click" Text="Глава 2. Примитивни типове и променливи" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="CSBul3_Click" Text="Глава 3. Оператори и изрази" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="CSBul4_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="CSBul5_Click" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="CSBul6_Click" Text="Глава 6. Цикли" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="CSBul7_Click" Text="Глава 7. Масиви" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="CSBul8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="CSBul9_Click" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="CSBul10_Click" Text="Глава 10. Рекурсия" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="CSBul11_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" /></li></ul>
-                                    <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="CSBul12_Click" Text="Глава 12. Обработка на изключения" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter1Btn" runat="server" Height="25px" Text="Глава 1. Въведение в програмирането" Width="380px" OnClick="CSPage1_Click" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter2Btn" runat="server" Height="25px" OnClick="Page2_Click" Text="Глава 2. Примитивни типове и променливи" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter3Btn" runat="server" Height="25px" OnClick="Page3_Click" Text="Глава 3. Оператори и изрази" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter4Btn" runat="server" Height="25px" OnClick="Page4_Click" Text="Глава 4. Вход и изход от конзолата" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter5Btn" runat="server" Height="25px" Text="Глава 5. Условни конструкции" Width="380px" OnClick="Page5_Click" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter6Btn" runat="server" Height="25px" OnClick="Page6_Click" Text="Глава 6. Цикли" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter7Btn" runat="server" Height="25px" OnClick="Page7_Click" Text="Глава 7. Масиви" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter8Btn" runat="server" Height="25px" OnClick="Page8_Click" Text="Глава 8. Бройни системи" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter9Btn" runat="server" Height="25px" Text="Глава 9. Методи" Width="380px" OnClick="Page9_Click" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter10Btn" runat="server" Height="25px" OnClick="Page10_Click" Text="Глава 10. Рекурсия" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter11Btn" runat="server" Height="25px" OnClick="Page11_Click" Text="Глава 11. Създаване и използване на обекти" Width="380px" /></li></ul>
+                                    <ul><li><asp:Button ID="chapter12Btn" runat="server" Height="25px" OnClick="Page12_Click" Text="Глава 12. Обработка на изключения" Width="380px" /></li></ul>
                                     <ul><li><asp:Button ID="chapter13Btn" runat="server" Height="25px" Text="Глава 13. Символни низове" Width="380px" OnClick="csDummies_Click" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter14Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 14. Дефиниране на класове" Width="380px" Enabled="False" /></li></ul>
                                     <ul><li><asp:Button ID="chapter15Btn" runat="server" Height="25px" OnClick="csDummies_Click" Text="Глава 15. Текстови файлове" Width="380px" Enabled="False" /></li></ul>
@@ -148,15 +148,15 @@
                                 <asp:Button ID="backBtn" runat="server" OnClick="backBtn_Click" Text="Обратно" Visible="False" Width="80px" />							    
 							    <asp:Panel ID="pagePanel" runat="server" Visible="False" Width="412px">
                                     <asp:Label ID="pageLbl" runat="server" Text="&lt;br/&gt;&lt;br/&gt;Страница: "></asp:Label>
-                                    <asp:Button ID="pageBtn1" runat="server" OnClick="ryuPage1_Click" Text="1" Width="20px" />
-                                    <asp:Button ID="pageBtn2" runat="server" OnClick="ryuPage2_Click" Text="2" Width="20px" />
-                                    <asp:Button ID="pageBtn3" runat="server" OnClick="ryuPage3_Click" Text="3" Width="20px" />
-                                    <asp:Button ID="pageBtn4" runat="server" OnClick="ryuPage4_Click" Text="4" Width="20px" />
-                                    <asp:Button ID="pageBtn5" runat="server" OnClick="ryuPage5_Click" Text="5" Width="20px" />
-                                    <asp:Button ID="pageBtn6" runat="server" OnClick="ryuPage6_Click" Text="6" Width="20px" />
-                                    <asp:Button ID="pageBtn7" runat="server" OnClick="ryuPage7_Click" Text="7" Width="20px" />
-                                    <asp:Button ID="pageBtn8" runat="server" OnClick="ryuPage8_Click" Text="8" Width="20px" />
-                                    <asp:Button ID="pageBtn9" runat="server" OnClick="ryuPage9_Click" Text="9" Width="20px" />
+                                    <asp:Button ID="pageBtn1" runat="server" OnClick="Page1_Click" Text="1" Width="20px" />
+                                    <asp:Button ID="pageBtn2" runat="server" OnClick="Page2_Click" Text="2" Width="20px" />
+                                    <asp:Button ID="pageBtn3" runat="server" OnClick="Page3_Click" Text="3" Width="20px" />
+                                    <asp:Button ID="pageBtn4" runat="server" OnClick="Page4_Click" Text="4" Width="20px" />
+                                    <asp:Button ID="pageBtn5" runat="server" OnClick="Page5_Click" Text="5" Width="20px" />
+                                    <asp:Button ID="pageBtn6" runat="server" OnClick="Page6_Click" Text="6" Width="20px" />
+                                    <asp:Button ID="pageBtn7" runat="server" OnClick="Page7_Click" Text="7" Width="20px" />
+                                    <asp:Button ID="pageBtn8" runat="server" OnClick="Page8_Click" Text="8" Width="20px" />
+                                    <asp:Button ID="pageBtn9" runat="server" OnClick="Page9_Click" Text="9" Width="20px" />
                                 </asp:Panel>							    
                                 <asp:Button ID="commentsBtn" runat="server" OnClick="commentsBtn_Click" Text="Коментар" Visible="False" />                                
                                 <asp:Panel ID="commentsPanel" runat="server" Visible="False">
@@ -173,22 +173,22 @@
             </div>
         </div>    	
 </form>
-  <script type='text/javascript'>
-    $(function () {
-        $('#main, #topbar').hide();
-        $('#main, #topbar').fadeIn(1000);
-    });
-  </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<script type='text/javascript'>
+$(function () {
+    $('#main, #topbar').hide();
+    $('#main, #topbar').fadeIn(1000);
+});
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-51152907-1', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-51152907-1', 'auto');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>
