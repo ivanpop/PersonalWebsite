@@ -23,7 +23,7 @@ namespace WebApplication1
                 id++;
                 switchBulBtn.Enabled = true;
                 switchEngBtn.Enabled = false;
-                lang.Text = "English";
+                lang.Text = "Languages";
                 navigation.Text = "Navigation";
                 aboutMe.Text = "About me";
                 biography.Text = "Biography";
@@ -50,7 +50,7 @@ namespace WebApplication1
                     ConverterDescr.Text = "<em>Program for converting metric units.</em>";
                     StopwDescr.Text = "<em>Countdown timer and a stopwatch.</em>";
                     RyuDescr.Text = "<em>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</em>";
-                    CSDescr.Text = "Solutions from The C# book from Telerik";
+                    CSDescr.Text = "<em>Solutions from The C# book from Telerik</em>";
                 }
             }
             if (Request.QueryString["a"] == null)

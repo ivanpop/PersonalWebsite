@@ -98,11 +98,7 @@
                                     <br />
                                     <br />
                                 </asp:Panel>
-							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">
-                                    <ul>
-                                        <li><asp:Button ID="converter" runat="server" Height="25px" Text="Converter" Width="190px" OnClick="converter_Click" /></li>
-                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="ConverterDescr" runat="server" Text="&lt;em&gt;Програма за преобразуване на мерни единици.&lt;/em&gt;"></asp:Label>
-                                    </ul>
+							    <asp:Panel ID="projectsPanel" runat="server" Visible="False">                                    
                                     <ul>
                                         <li><asp:Button ID="countdown" runat="server" Height="25px" OnClick="countdown_Click1" Text="Countdown timer &amp; Stopwatch" Width="190px" /></li>
                                         <span class="tab"></span><span class="tab"></span><asp:Label ID="StopwDescr" runat="server" Text="&lt;em&gt;Обратно броене и секундомер.&lt;/em&gt;"></asp:Label>
@@ -113,7 +109,11 @@
                                     </ul>
                                     <ul>
                                         <li><asp:Button ID="csDummies" runat="server" Height="25px" OnClick="csDummies_Click" Text="C# for Dummies" Width="190px" /></li>                                        
-                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="Задачи от книгата за C# на Телерик"></asp:Label>
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="CSDescr" runat="server" Text="&lt;em&gt;Задачи от книгата за C# на Телерик&lt;/em&gt;"></asp:Label>
+                                    </ul>
+                                    <ul>
+                                        <li><asp:Button ID="converter" runat="server" Height="25px" Text="Converter" Width="190px" OnClick="converter_Click" /></li>
+                                        <span class="tab"></span><span class="tab"></span><asp:Label ID="ConverterDescr" runat="server" Text="&lt;em&gt;Програма за преобразуване на мерни единици.&lt;/em&gt;"></asp:Label>
                                     </ul>
                                 </asp:Panel>
 							    <asp:Panel ID="chaptersPanel" runat="server" Visible="False">

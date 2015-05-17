@@ -292,24 +292,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Panel projectsPanel;
         
         /// <summary>
-        /// converter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button converter;
-        
-        /// <summary>
-        /// ConverterDescr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ConverterDescr;
-        
-        /// <summary>
         /// countdown control.
         /// </summary>
         /// <remarks>
@@ -362,6 +344,24 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CSDescr;
+        
+        /// <summary>
+        /// converter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button converter;
+        
+        /// <summary>
+        /// ConverterDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ConverterDescr;
         
         /// <summary>
         /// chaptersPanel control.
