@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<title>Иван Попов</title>
+	<title>Иван Попов - За мен</title>
 	<link rel="shortcut icon" href="Resources\favicon.ico" type="image/x-icon" />
 	<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />	
 	<meta name="description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
 	<meta name="dcterms.description" content="Това е моята лична Интернет страница. Тук ще намерите информация за мен и актуалните проекти, по които работя." />
-	<meta name="keywords" content="Ivan Popov ,Иван Попов" />
+	<meta name="keywords" content="Ivan, Popov, Иван, Попов, лична, страница, personal, it, programmer, програмист" />
 	<meta name="geo.region" content="BG-16" />
 	<meta name="geo.placename" content="Plovdiv" />
 	<meta name="geo.position" content="42.135408;24.74529" />
@@ -34,7 +34,7 @@
                         <asp:Label ID="header2" runat="server" Text="Лична Интернет Страница"></asp:Label>
                     </div>
 				</div>									
-			</div>						
+			</div>
 			<div id="content">
                 <div id="topbar">
 					<div id="navbar" class="block navbar">					
@@ -55,7 +55,7 @@
 					</div>                                        
 				</div>
 				<div id="main">
-					<h1><asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label><br/><br/></h1>
+					<h1><asp:Label ID="artTitle" runat="server" Text="За мен"></asp:Label></h1><br/><br/>
 					<div class="node">
 						<div class="post">
 							<div class="content">                                							
@@ -171,7 +171,7 @@
 					<p>© 2015 Иван Попов</p></div>	
                 </div>
             </div>
-        </div>    	
+    </div>    	
 </form>
 <script type='text/javascript'>
 $(function () {

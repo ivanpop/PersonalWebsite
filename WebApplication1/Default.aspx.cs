@@ -308,7 +308,7 @@ namespace WebApplication1
 
         protected void biography_Click(object sender, EventArgs e)
         {
-            setQueryString("a", "bio");
+            Response.Redirect("Bio.aspx");
         }
 
         protected void projects_Click(object sender, EventArgs e)
