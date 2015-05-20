@@ -308,7 +308,7 @@ namespace WebApplication1
 
         protected void biography_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Bio.aspx");
+            Response.Redirect("WebForm2.aspx");
         }
 
         protected void projects_Click(object sender, EventArgs e)
