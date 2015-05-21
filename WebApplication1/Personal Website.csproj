@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bio.aspx" />
+    <Content Include="Bioold.aspx" />
     <Content Include="Recaptcha.dll" />
     <Content Include="Resources\codes\1.jpg" />
     <Content Include="Resources\codes\10.jpg" />
@@ -157,7 +157,7 @@
     <Content Include="Resources\CT6.png" />
     <Content Include="Resources\favicon.ico" />
     <Content Include="Resources\ryu.zip" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="Bio.aspx" />
     <None Include="Properties\PublishProfiles\ivanpop %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ivanpop.pubxml" />
     <Content Include="Site1.Master" />
@@ -201,12 +201,12 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bio.aspx.cs">
-      <DependentUpon>Bio.aspx</DependentUpon>
+    <Compile Include="Bioold.aspx.cs">
+      <DependentUpon>Bioold.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Bio.aspx.designer.cs">
-      <DependentUpon>Bio.aspx</DependentUpon>
+    <Compile Include="Bioold.aspx.designer.cs">
+      <DependentUpon>Bioold.aspx</DependentUpon>
     </Compile>
     <Compile Include="CS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,12 +227,12 @@
     </Compile>
     <Compile Include="Stopwatch.cs" />
     <Compile Include="Strings.cs" />
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Bio.aspx.cs">
+      <DependentUpon>Bio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Bio.aspx.designer.cs">
+      <DependentUpon>Bio.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

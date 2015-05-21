@@ -1,4 +1,9 @@
-﻿table.itu-attachment-list{margin:0;border:none;border-collapse:collapse !important;width:100% !important;*border:1px solid #DDD !important;}
+﻿#main li{margin-left:35px;}
+.post .content{padding:5px 0 5px 5px;line-height:145%;overflow:hidden;}
+.post .content ul{padding-bottom:10px;}
+.post .content table{background:#FFF;border:1px solid #CCC;margin:5px 0 10px;}
+.post .content table tr td{border-top:1px solid #CCC;padding:2px 10px;}
+table.itu-attachment-list{margin:0;border:none;border-collapse:collapse !important;width:100% !important;*border:1px solid #DDD !important;}
 .itu-attachment-list .mime-zip{background-position:center -576px !important;}
 table.itu-attachment-list tbody tr:hover{background:#DDD !important;}
 table.itu-attachment-list .mime{background:transparent url(mime-16.png) no-repeat center 0;padding:0 7px;margin:0;width:16px;min-width:16px;height:22px;min-height:22px;}
@@ -13,7 +18,7 @@ h3{font-size:150%; margin-left: 20px;}
 h4{font-size:130%; margin-left: 25px;}
 h5{font-size:110%; margin-left: 30px;}
 h6{font-size:100%; margin-left: 35px;}
-img{border:0;padding:5px;}
+img {border: 0;padding: 5px;}
 a:hover img.sided{border-color:#A6A6A6;}
 a{color:#2970A6;text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -25,13 +30,8 @@ a:hover{text-decoration:underline;}
 #tagline{color:#FFF;border-top:1px solid #FFF;text-decoration:none;font-size:10px;float:left;padding:0 3px;}
 #content{background:#FFFFFF right repeat-y;min-height:400px;}
 #main{background:#FFF;padding:5px 15px 10px;min-height:400px;}
-#main li{margin-left:35px;}
-.post .content{padding:5px 0 5px 5px;line-height:145%;overflow:hidden;}
-.post .content ul{padding-bottom:10px;}
-.post .content table{background:#FFF;border:1px solid #CCC;margin:5px 0 10px;}
-.post .content table tr td{border-top:1px solid #CCC;padding:2px 10px;}
 #topbar{font-size:95%;line-height:145%;overflow:hidden;padding:10px 0 5px 0;background:url(widgetsep.png) bottom no-repeat;background-size: 800px 6px;}
-#topbar .block{padding:10px 15px 19px;}
+#topbar .block {padding: 10px 15px 19px;width: 676px;}
 #footer{background:url(header_footer.jpg) 0 -132px no-repeat;display:block;height:83px;border-top:1px solid #CCC;font-size:11px;line-height:130%;padding:5px 0 0 15px;text-align:center;}
 #footer a{color:#2A2A2A;}
 a#gotop{background:url(icons.gif) 0 -304px no-repeat;position:absolute;float:left;height:16px;line-height:18px;display:block;padding-left:16px;text-decoration:none;}
@@ -43,3 +43,8 @@ img {border:2px solid #021a40;padding: 1px;}
 #contactsPanel {padding: 0px 10px;}
 #ivanpopov {margin: 12px;}
 #commentsBtn {margin-top: 30px; margin-left: 35px;}
+.menu {background-color: rgb(10,110,178); border-radius: 5px 5px 5px 5px;width:490px; color: rgb(243,243,243); height:40px; padding:0px;margin:0px 0px 10px;}
+.menu ul li:hover{background-color: rgb(14,79,114);border-right:1px solid rgb(14, 89, 130);}
+.menu ul li a{font-size:14px; float: left;font-weight: bold;line-height:40px;padding:0px 20px;color: rgb(255,255,255);text-decoration:none;}
+.menu ul li {float:left;display:block;list-style:none;border-right:1px solid rgb(10,85,125);border-left:1px solid rgb(67,153,200);}
+.navigation_last_item{border-radius:4px;}
