@@ -3,4 +3,5 @@ PersonalWebsite
 
 Personal Website
 
-The website is published on ivanpop.azurewebsites.net
+My previous personal website, before MvcSite was created.
+MvcSite is my current website, which is hosten on https://ivanpop.azurewebsites.net/
